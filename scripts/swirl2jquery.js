@@ -59,7 +59,7 @@ $(window).on('load', () => {
 //TODO - find a way to make the animation only start on hover (stays on still image before then)
 //HOWTO - pick starting keyframe - simply change the img src on html doc to match the file/keyframe number you want it to start on (see below for possible issue if multiple animations are being controlled by same jquery)
     //HOWTO - animations start staggered then sync up- if multiple animations are being controlled by the same jquery doc, then once one of the animations gets to the point where its sequence number is the same as the total number of imgs in the sequence, all of the animations will be reset not just that one, so if one starts on a different keyframe than the others, it will change back to being in sync with them after that first reset
-        //TODO - figure out issue with this: multiple JQuery JS files targetting the same images src folder .. the swirl2jquery.js isn't animating but the swirlqueryanimation.js animations are animating ... possible issue with 2 jquery scripts trying to pull from the same sequence directory at once? 
+//TODO - figure out issue with this: multiple JQuery JS files targetting the same images src folder .. the swirl2jquery.js isn't animating but the swirlqueryanimation.js animations are animating ... possible issue with 2 jquery scripts trying to pull from the same sequence directory at once? 
                 //test1: separate directory for swirl2query.js images | result: same issue 
                 //test2: switch <script src="jqueryfilename"> order in html doc | result: only the first jquery doc linked works
                   //fix1: move both scripts to the head rather than the body | result: FAILURE now none of them are animated
