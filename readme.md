@@ -1,9 +1,11 @@
 Client Site: Room to Roam Records
 
 
+
 1. JQUERY ANIMATIONS
     lottie/bodymovin are gone - they were pointless
         have been replaced by a simple jquery img src changing script (currently titled swirljqueryanimation.js)
+
 
     TODO: 
     - make documention for jquery animation files and existing documention notes from swirljqueryanimation.js to this readme instead 
