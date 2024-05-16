@@ -1,38 +1,38 @@
 // inspiration: https://www.sitepoint.com/frame-by-frame-animation-css-javascript/#1framebyframeanimationbychangingtheimagessource
 
 //CHANGE class of $element below to match the HTML class of the img we're targeting
-const $element = $('.swirl1');
+const $element1 = $('.swirl1');
 //CHANGE the path below to match the folder containing the src imgs
-const imagePath = '../scripts/swirl1/images';
-const totalFrames = 99;
-const animationDuration = 7150;
+const imagePath1 = '../scripts/swirl1/images2';
+const totalFrames1 = 99;
+const animationDuration1 = 7150;
 // TODO - figure out a proper formula for converting FPS into the above numbers
-const timePerFrame = animationDuration / totalFrames;
-let timeWhenLastUpdate;
-let timeFromLastUpdate;
-let frameNumber = 1;
+const timePerFrame1 = animationDuration1 / totalFrames1;
+let timeWhenLastUpdate1;
+let timeFromLastUpdate1;
+let frameNumber1 = 1;
 
 // 'step' function will be called each time browser rerender the content
 // we achieve that by passing 'step' as a parameter to the 'requestAnimationFrame' function
-function step(startTime) {
+function step(startTime1) {
   // 'startTime' is provided by requestAnimationName function, and we can consider it as current time
   // first of all we calculate how much time has passed from the last time when frame was update
-  if (!timeWhenLastUpdate) timeWhenLastUpdate = startTime;
-  timeFromLastUpdate = startTime - timeWhenLastUpdate;
+  if (!timeWhenLastUpdate1) timeWhenLastUpdate1 = startTime1;
+  timeFromLastUpdate1 = startTime1 - timeWhenLastUpdate1;
   
   // then we check if it is time to update the frame
-  if (timeFromLastUpdate > timePerFrame) {
+  if (timeFromLastUpdate1 > timePerFrame1) {
     // and update it accordingly
     //CHANGE name and extension in +'' field accordingly to match sequence naming system
-    $element.attr('src', imagePath + `/seq_0_${frameNumber}.jpg`);
+    $element1.attr('src', imagePath1 + `/seq_1_${frameNumber1}.jpg`);
     // reset the last update time
-    timeWhenLastUpdate = startTime;
+    timeWhenLastUpdate1 = startTime1;
     
     // then increase the frame number or reset it if it is the last frame
-    if (frameNumber >= totalFrames) {
-      frameNumber = 1;
+    if (frameNumber1 >= totalFrames1) {
+      frameNumber1 = 1;
     } else {
-      frameNumber = frameNumber + 1;
+      frameNumber1 = frameNumber1 + 1;
     }        
   }
   
@@ -44,8 +44,8 @@ function step(startTime) {
 // that will force browser to download the images
 //CHANGE path/image name to match, IF MULTIPLE JQUERY ANIMATIONS CHANGE DIV ID FORMAT TO BE UNIQUE TO EACH - unless using the same img base for each animation
 $(document).ready(() => {
-  for (var i = 1; i < totalFrames + 1; i++) {
-    $('body').append(`<div id="preload-image-${i}" style="background-image: url('${imagePath}/seq_0_${i}.jpg');"></div>`);
+  for (var i = 1; i < totalFrames1 + 1; i++) {
+    $('body').append(`<div id="preload-image-${i}" style="background-image: url('${imagePath1}/seq_1_${i}.jpg');"></div>`);
   }
 });
 
