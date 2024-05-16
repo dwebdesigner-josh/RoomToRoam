@@ -9,31 +9,37 @@
 *{margin: 0;}
 html,body {margin: 0; height: 100%; width: 100%; background-color:#12161d;}
 body {display: flex;}
-#swirl1 {flex: 1; height: 300px;}
+
+/*animation container*/
+.swirl1,.swirl2 {
+  width: 100px;
+  display: block;
+  margin: auto; 
+}
 
 </style>
+<!--jquery plugin-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 </head>
 
 
 <body>
-    <div id="swirl1">
-        
-        <script src="./scripts/lottie.js"></script>
-        <script src="./scripts/swirl1.js"></script>
-        
-    </div>
-    <div id="swirl1">
-        
-        <script src="./scripts/lottie.js"></script>
-        <script src="./scripts/swirl1.js"></script>
-        
-    </div>
-    <div id="swirl1">
-        
-        <script src="./scripts/lottie.js"></script>
-        <script src="./scripts/swirl1.js"></script>
-        
-    </div>
+    <!-- swirl animation containers -->   
+
+    <img class="swirl1" src="./scripts/swirl1/images/seq_0_1.jpg" alt="stardust swirl animation"/>
+    <!--test: stagger animations by making one img a separate class and controlling it with a separate jquery js file-->
+    <!--TODO: see if you can stagger them like this using only the 1 jquery js file-->
+    <img class="swirl2" src="./scripts/swirl1/images2/seq_0_33.jpg" alt="stardust swirl animation"/>
+   
+    <img class="swirl1" src="./scripts/swirl1/images/seq_0_1.jpg" alt="stardust swirl animation"/>
+    <!--swirl animation jquery js file controlling the img sequence animation-->
+   
+
+<!--make sure the jquery scripts remain a the bottom of the body (just before the closing body tag) as the rest of the page must load first and priority shouldn't be placed on them (if they're at the top the browser will load them before the actual content of)-->
+
+<script src="./scripts/swirljqueryanimation.js"></script>
+<script src="./scripts/swirl2jquery.js"></script>   
+    
 </body>
 </html>
