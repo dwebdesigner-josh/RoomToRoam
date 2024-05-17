@@ -53,7 +53,7 @@ function step(startTime) {
   //}
 //});
 
-//document ready vs window on load: The ready event occurs after the HTML document has been loaded, while the onload event occurs later, when all content (e.g. images) also has been loaded.
+//document ready vs window on load: The ready event occurs after the HTML document has been loaded, while the onload event occurs later, when all content (e.g. images) also has been loaded (so why is there is stutter with the animation on the first loading of the page? What is loading? Probably something with the script itself I'd guess)
 
 // start animation after waiting for page content to load
 //$(window).on('load', () => {
@@ -61,9 +61,12 @@ function step(startTime) {
 //});
 
 //FOR HOVER START INSTEAD OF WINDOW LOAD START:
+//https://api.jquery.com/hover/
   $($element).hover( () => {
   requestAnimationFrame(step);
   });
+        //STUTTER animation stutter occurs on first page load for about 5 seconds, after that first load it never stutters again, even with hover effect being used (seems to be fixed by cache/cookie of some kind)... however it does stutter for a second when switching tabs and moving back to the site but not nearly as bad...
+
 
 })();
 //The empty parentheses () indicate that the function takes no argument(s), and are required by the syntax. Arrow function expressions are also anonymous, whether they take arguments or not. That just means they don't have a specific name.
