@@ -4,6 +4,7 @@
 const $element = $('.swirl1');
 //CHANGE the path below to match the folder containing the src imgs
 const imagePath = '/RoomToRoam/scripts/swirl1/images';
+//TEST PATH TO MATCH GITHUB PAGES: '/RoomToRoam/scripts/swirl1/images'
 const totalFrames = 99;
 const animationDuration = 7150;
 // TODO - figure out a proper formula for converting FPS into the above numbers
