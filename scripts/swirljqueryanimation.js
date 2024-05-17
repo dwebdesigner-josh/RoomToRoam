@@ -56,7 +56,3 @@ $(window).on('load', () => {
 });
 
 })();
-
-//TODO - find a way to make the animation only start on hover (stays on still image before then)
-//HOWTO - pick starting keyframe - simply change the img src on html doc to match the file/keyframe number you want it to start on (see below for possible issue if multiple animations are being controlled by same jquery)
-    //HOWTO - animations start staggered then sync up- if multiple animations are being controlled by the same jquery doc, then once one of the animations gets to the point where its sequence number is the same as the total number of imgs in the sequence, all of the animations will be reset not just that one, so if one starts on a different keyframe than the others, it will change back to being in sync with them after that first reset

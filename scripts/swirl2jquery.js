@@ -10,6 +10,7 @@ const animationDuration = 7150;
 const timePerFrame = animationDuration / totalFrames;
 let timeWhenLastUpdate;
 let timeFromLastUpdate;
+//CHANGE number set here is the starting frame number
 let frameNumber = 33;
 
 // 'step' function will be called each time browser rerender the content
@@ -51,6 +52,7 @@ function step(startTime) {
 //});
 
 // wait for images to be downloaded and start the animation
+
 $(window).on('load', () => {
   requestAnimationFrame(step);
 });
