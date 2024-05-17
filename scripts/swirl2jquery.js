@@ -10,7 +10,7 @@ const animationDuration = 7150;
 const timePerFrame = animationDuration / totalFrames;
 let timeWhenLastUpdate;
 let timeFromLastUpdate;
-let frameNumber = 1;
+let frameNumber = 33;
 
 // 'step' function will be called each time browser rerender the content
 // we achieve that by passing 'step' as a parameter to the 'requestAnimationFrame' function
