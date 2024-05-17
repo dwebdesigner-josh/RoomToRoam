@@ -1,5 +1,5 @@
 // inspiration: https://www.sitepoint.com/frame-by-frame-animation-css-javascript/#1framebyframeanimationbychangingtheimagessource
-
+(() => {
 //CHANGE class of $element below to match the HTML class of the img we're targeting
 const $element = $('.swirl2');
 //CHANGE the path below to match the folder containing the src imgs
@@ -54,6 +54,8 @@ function step(startTime) {
 $(window).on('load', () => {
   requestAnimationFrame(step);
 });
+
+})();
 //The empty parentheses () indicate that the function takes no argument(s), and are required by the syntax. Arrow function expressions are also anonymous, whether they take arguments or not. That just means they don't have a specific name.
 
 //TODO - find a way to make the animation only start on hover (stays on still image before then)
@@ -68,3 +70,5 @@ $(window).on('load', () => {
 //TODO: once this is fixed, change names back in images2 folder/get rid of images 2 folder most likely as it's a waste of loading times and uses extra data for no reason (originally only made it to try to fix this issue and it didn't)
                   //fix4: route swirl2jquery.js back to the images src folder rather than having a separate one, and get rid of the div creation script in swirl2jquery ($body append....)
                   //fix5: change name of all variables in swirljqueryanimation.js script so that both scripts aren't using the same variable names (did this because of an error showing up in chrome dev tools which said soandso variable has already been defined) | RESULT: error now gone, but now only the second placed script in the html doc runs (not matter which script it is, only the second loaded one runs.. WTF!!!)
+                  //FIX FINAL: per GPT, and https://developer.mozilla.org/en-US/docs/Glossary/IIFE , I used an IIFE to enclose both jquery scripts and it solved the issue  SYNTAX:   OPEN:  (() => {   CLOSE:    })(); 
+                  //SOLVED

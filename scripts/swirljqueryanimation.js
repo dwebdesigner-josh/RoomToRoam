@@ -1,5 +1,5 @@
 // inspiration: https://www.sitepoint.com/frame-by-frame-animation-css-javascript/#1framebyframeanimationbychangingtheimagessource
-
+(() => {
 //CHANGE class of $element below to match the HTML class of the img we're targeting
 const $element1 = $('.swirl1');
 //CHANGE the path below to match the folder containing the src imgs
@@ -54,7 +54,7 @@ $(window).on('load', () => {
   requestAnimationFrame(step);
 });
 
-
+})();
 
 //TODO - find a way to make the animation only start on hover (stays on still image before then)
 //HOWTO - pick starting keyframe - simply change the img src on html doc to match the file/keyframe number you want it to start on (see below for possible issue if multiple animations are being controlled by same jquery)
