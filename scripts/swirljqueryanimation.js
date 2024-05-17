@@ -51,9 +51,11 @@ function step(startTime) {
   //}
 //});
 
-// wait for images to be downloaded and start the animation
+// start animation after waiting for page content to load
 $(window).on('load', () => {
   requestAnimationFrame(step);
 });
+
+
 
 })();

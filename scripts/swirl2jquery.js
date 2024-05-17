@@ -53,11 +53,17 @@ function step(startTime) {
   //}
 //});
 
-// wait for images to be downloaded and start the animation
+//document ready vs window on load: The ready event occurs after the HTML document has been loaded, while the onload event occurs later, when all content (e.g. images) also has been loaded.
 
-$(window).on('load', () => {
+// start animation after waiting for page content to load
+//$(window).on('load', () => {
+  //requestAnimationFrame(step);
+//});
+
+//FOR HOVER START INSTEAD OF WINDOW LOAD START:
+  $($element).hover( () => {
   requestAnimationFrame(step);
-});
+  });
 
 })();
 //The empty parentheses () indicate that the function takes no argument(s), and are required by the syntax. Arrow function expressions are also anonymous, whether they take arguments or not. That just means they don't have a specific name.
