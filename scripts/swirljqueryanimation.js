@@ -3,7 +3,7 @@
 //CHANGE class of $element below to match the HTML class of the img we're targeting
 const $element = $('.swirl1');
 //CHANGE the path below to match the folder containing the src imgs
-const imagePath = 'swirl1/images';
+const imagePath = 'RoomToRoam/scripts/swirl1/images';
 const totalFrames = 99;
 const animationDuration = 7150;
 // TODO - figure out a proper formula for converting FPS into the above numbers
