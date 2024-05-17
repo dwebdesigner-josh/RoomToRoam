@@ -44,11 +44,11 @@ function step(startTime) {
 // and set their background-image attribute to required images
 // that will force browser to download the images
 //CHANGE path/image name to match, IF MULTIPLE JQUERY ANIMATIONS CHANGE DIV ID FORMAT TO BE UNIQUE TO EACH - unless using the same img base for each animation, in which case REMOVE this from all but one script
-$(document).ready(() => {
-  for (var i = 1; i < totalFrames + 1; i++) {
-    $('body').append(`<div id="preload-image-${i}" style="background-image: url('${imagePath}/seq_0_${i}.jpg');"></div>`);
-  }
-});
+//$(document).ready(() => {
+  //for (var i = 1; i < totalFrames + 1; i++) {
+    //$('body').append(`<div id="preload-image-${i}" style="background-image: url('${imagePath}/seq_0_${i}.jpg');"></div>`);
+  //}
+//});
 
 // wait for images to be downloaded and start the animation
 $(window).on('load', () => {
