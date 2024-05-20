@@ -3,17 +3,17 @@
 //CHANGE class of $element below to match the HTML class of the img we're targeting
 const $element = $('.swirl2');
 //CHANGE the path below to match the folder containing the src imgs
-const imagePath = '/RoomToRoam/scripts/swirl1/images';
-//TEST PATH TO MATCH GITHUB PAGES: '/RoomToRoam/scripts/swirl1/images'
-//Original path '../scripts/swirl1/images'
-const totalFrames = 99;
-const animationDuration = 7150;
+const imagePath = '../scripts/swirlv2';
+//TEST PATH TO MATCH GITHUB PAGES: '/RoomToRoam/scripts/...'
+//Original path '../scripts/... or ./...'
+const totalFrames = 59;
+const animationDuration = 3972;
 // TODO - figure out a proper formula for converting FPS into the above numbers
 const timePerFrame = animationDuration / totalFrames;
 let timeWhenLastUpdate;
 let timeFromLastUpdate;
 //CHANGE number set here is the starting frame number
-let frameNumber = 33;
+let frameNumber = 1;
 
 // 'step' function will be called each time browser rerender the content
 // we achieve that by passing 'step' as a parameter to the 'requestAnimationFrame' function
@@ -27,7 +27,7 @@ function step(startTime) {
   if (timeFromLastUpdate > timePerFrame) {
     // and update it accordingly
     //CHANGE name and extension in +'' field accordingly to match sequence naming system
-    $element.attr('src', imagePath + `/seq_0_${frameNumber}.jpg`);
+    $element.attr('src', imagePath + `/swirlv2seq_${frameNumber}.jpg`);
     // reset the last update time
     timeWhenLastUpdate = startTime;
     
