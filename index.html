@@ -10,6 +10,10 @@
 html,body {margin: 0; height: 100%; width: 100%; background-color:#12161c;}
 body {display: flex;}
 
+/*header*/
+#tree:hover {/*TODO: input a growth transition here*/}
+
+
 /*animation containers*/
 .swirl1,.swirl2 {
   width: 100px;
@@ -17,7 +21,10 @@ body {display: flex;}
   margin: auto; 
 }
 
+
+
 </style>
+
 <!--jquery plugin-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
@@ -25,18 +32,44 @@ body {display: flex;}
 
 
 <body>
+
+  <nav>
+    <button class="nav">Artists</button>
+    <button class="nav">Music</button>
+    <button class="nav">Visuals</button>
+    <button class="nav">Reviews</button>
+    <button class="nav">Connect</button>
+  </nav>
+<!--TODO: add nav-containing menu button for mobile/responsive design-->
+
+<main>
+
+  <header>
+      <img src="" alt="Room to Roam Logo" id="roots">
+      <img src="" alt="" id="tree">
+        <!--TODO: add img src for each of the above-->
+        <!--keep alt as null (blank) value for tree img-->
+  </header>
+
+<!--make sure to use landmark elements rather than divs for sections of the page (nav, main, header, section,...)-->
+
+
+
+  <div id="swirlcontainer">
     <!-- swirl animation containers -->   
     <img class="swirl1" src="./scripts/swirl1/images/seq_0_1.jpg" alt="stardust swirl animation"/>
     <img class="swirl2" src="./scripts/swirlv2/swirlv2seq_1.jpg" alt="stardust swirl animation"/>
     <img class="swirl1" src="./scripts/swirl1/images/seq_0_1.jpg" alt="stardust swirl animation"/>
-    
-<!--swirl animation jquery js file controlling the img sequence animation-->
-<!--make sure the jquery scripts remain at the bottom of the body (just before the closing body tag) as the rest of the page must load first and priority shouldn't be placed on them (if they're at the top the browser will load them before the actual content of)-->
+  </div>
+
+
+
+</main>
+
+<!--jquery animation files : KEEP AT BOTTOM OF BODY-->
+<!--with these at bottom, content loads before these scripts-->
 <script src="./scripts/swirljqueryanimation.js"></script>
 <script src="./scripts/swirl2jquery.js"></script>  
-
-
-
     
 </body>
 </html>
