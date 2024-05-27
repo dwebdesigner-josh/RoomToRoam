@@ -17,8 +17,14 @@ body {
 
 /*nav*/
 
-nav {
-  width: 100%;
+#navsecondary {
+  align-self: end;
+  margin-right: 5%;
+}
+
+#navprimary {
+  margin-left:5%;
+  margin-right:5%;
   display: flex;
   flex-direction: row;
 }
@@ -57,14 +63,16 @@ section {width: 100%; height:fit-content;}
 
 <body>
 
-  <nav>
-    <button class="nav">Artists</button>
-    <button class="nav">Music</button>
-    <button class="nav">Visuals</button>
-    <button class="nav">Reviews</button>
-    <button class="nav">Connect</button>
-  </nav>
+ 
 <!--TODO: add nav-containing menu button for mobile/responsive design-->
+
+<nav id="navsecondary">
+  <button class="nav">Artists</button>
+  <button class="nav">Music</button>
+  <button class="nav">Visuals</button>
+  <button class="nav">Reviews</button>
+  <button class="nav">Connect</button>
+</nav>
 
 <main>
 
@@ -80,6 +88,13 @@ section {width: 100%; height:fit-content;}
         <!--TODO: add img src for each of the above-->
         <!--keep alt as null (blank) value for tree img-->
   </header>
+  <nav id="navprimary">
+    <button class="nav">Artists</button>
+    <button class="nav">Music</button>
+    <button class="nav">Visuals</button>
+    <button class="nav">Reviews</button>
+    <button class="nav">Connect</button>
+  </nav>
 
 <!--make sure to use landmark elements rather than divs for sections of the page (nav, main, header, section,...)-->
 
