@@ -32,13 +32,13 @@ header {
   grid-template: 100%/100%;
 }
 header>.logo {width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
-
 header>div {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
 #tree {flex:none; height: 70%;}
 #tree:hover {transform: scale(1.3) translateY(-5%);} /*TODO: input a growth transition CSS animation here*/ 
 /*translate added to offset the growth of the tree to make sure the roots still look connected*/
+h1{position: relative; top: 35%; left:3%; font-size: 9vw; color:#e3f5ff;}
 
-
+/*TODO: fix styling of header so its elements can be zoomed*/
 
 
 section {width: 100%; height:fit-content;}
@@ -72,6 +72,10 @@ section {width: 100%; height:fit-content;}
       <div class="logo">
         <img src="/images/logotreeroughV4.png" alt="" id="tree">
       </div>
+      <div class="logo">
+      <h1 class="logo">Room to Roam</h1>
+      </div>
+
         <!--TODO: add img src for each of the above-->
         <!--keep alt as null (blank) value for tree img-->
   </header>
