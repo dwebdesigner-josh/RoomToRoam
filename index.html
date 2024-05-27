@@ -7,12 +7,19 @@
     <!--<link rel="icon" href="add favicon here">-->
 <style>
 *{margin: 0;}
-html,body {margin: 0; height: 100%; width: 100%; background-color:#12161c;}
-body {display: flex;}
+html,body {margin: 0; height: 100%; width: 100%; background-color:#12171d;/*oldcolorwas12161c*/}
+body {
+  display: flex;
+  flex-direction: column;
+}
 
 /*header*/
-#tree:hover {/*TODO: input a growth transition here*/}
 
+header {width: 100%;}
+header img{width: 100%; position: absolute; top: 0px; left: 0px;}
+header #tree {z-index: 2;}
+header #roots {z-index: 1;}
+header #tree:hover {transform: scale(1.2);/*TODO: input a growth transition CSS animation here*/}
 
 /*animation containers*/
 .swirl1,.swirl2 {
@@ -45,26 +52,38 @@ body {display: flex;}
 <main>
 
   <header>
-      <img src="" alt="Room to Roam Logo" id="roots">
-      <img src="" alt="" id="tree">
+      <img src="/images/logorootsroughV3.png" alt="Room to Roam Logo" id="roots">
+      <img src="/images/logotreeroughV3.png" alt="" id="tree">
         <!--TODO: add img src for each of the above-->
         <!--keep alt as null (blank) value for tree img-->
   </header>
 
 <!--make sure to use landmark elements rather than divs for sections of the page (nav, main, header, section,...)-->
 
+  <section id="mission-statement">
+  </section>
 
+  <section id="highlight-reel">
+  </section>
 
-  <div id="swirlcontainer">
+  <section id="swirl-container">
     <!-- swirl animation containers -->   
     <img class="swirl1" src="./scripts/swirl1/images/seq_0_1.jpg" alt="stardust swirl animation"/>
     <img class="swirl2" src="./scripts/swirlv2/swirlv2seq_1.jpg" alt="stardust swirl animation"/>
     <img class="swirl1" src="./scripts/swirl1/images/seq_0_1.jpg" alt="stardust swirl animation"/>
-  </div>
+  </section>
 
-
+  <section id="reviews">
+    <article></article>
+    <article></article>
+    <article></article>
+  </section>
 
 </main>
+
+<footer>
+
+</footer>
 
 <!--jquery animation files : KEEP AT BOTTOM OF BODY-->
 <!--with these at bottom, content loads before these scripts-->
