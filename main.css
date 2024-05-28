@@ -74,3 +74,30 @@ section {width: 100%; height:fit-content;}
 /*TODO - change width of all container elements (or just the html/body elements?) to a query based size so that the containers and their children can be zoomed - changing just the container this way should work, as the children are percentages of the container size not the viewport*/
 
 
+#STARTEST {
+  width:100%;
+  aspect-ratio:456/347;
+  background-image: url(/images/startestframe1.jpg);
+  background-repeat: no-repeat;
+}
+
+#STARTEST>img {
+  visibility:hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+}
+
+#STARTEST:hover>img{
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+
+#STARTEST2 {
+  width:100%;
+  aspect-ratio:456/347;
+  background-image: url(/images/startestframe1.jpg);
+  background-repeat: no-repeat;
+}

@@ -1,6 +1,7 @@
 Client Site: Room to Roam Records
 
 
+TODO NOTES:
 
 1. TODO - general: 
     - consider a loading screen on first visit or landing page overlay on the home screen or something of that sort, as the highlight image is also going to take a couple seconds to load so it's not just a matter of the jquery animations
@@ -8,7 +9,7 @@ Client Site: Room to Roam Records
             see this site for the CSS transition on load: https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
         - possible fix: simply hide the page on a delay until everything is ready: https://stackoverflow.com/questions/9550760/hide-page-until-everything-is-loaded-advanced
             ex: https://www.therecordco.org/
-
+        - https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading
     - remove unused files once site is done (swirl2 js files and image bank most likely won't be used)
 
     - before publishing the site, change imagePath back to proper format on scripts (currently has /RoomToRoam the start of the path to appease the github pages file structure)
@@ -31,7 +32,17 @@ Client Site: Room to Roam Records
     - change starting frame: not on <img src=""> element, that just determines what image shows as the place holder while the page/script loads.. to determine the starting frame of the animation, in the script change let frameNumber1 = #; where # is the starting frame number
 
 
-3. Research on JQUERY STUTTER ISSUE ON FIRST TIME LOADING OF THE SITE (only the first few seconds) .. also a smaller stutter occurs when switching tabs and switching back
+
+RESEARCH NOTES:
+
+
+- STARTEST - CSS opacity and visibility transition animation using star background img and star img overlayed 
+    - https://stackoverflow.com/questions/8449933/how-to-transition-css-display-opacity-properties
+        for opacity transition
+    - animation-iteration-count: infinite;
+        for looping/automatic keyframe animation
+
+- JQUERY STUTTER ISSUE ON FIRST TIME LOADING OF THE SITE (only the first few seconds) .. also a smaller stutter occurs when switching tabs and switching back
     - find way to delay jquery scripts from executing the animation (requestAnimationFrame(step);) until after all images from the asset folder have been cached/loaded - will prevent an initial stutter that shows up in the animation when it first starts 
         test1: cause of stutter is not with image cache as stutter happens on the first time a script is used even when its cache of imgs is shared with an already used/cached different script
             result: this is some type of loading issue with the script itself not the image base
