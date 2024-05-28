@@ -21,8 +21,9 @@ body {
   display: flex;
   flex-direction: row;
 }
-nav button{flex-grow:1;}
-.nav {z-index: 10;}
+nav button{flex-grow:1; z-index:11;}
+.nav {z-index: 10;} 
+/*TODO - fix buttons so that the tree transform scale doesn't block them from being used, as z-index doesn't seem to actually put them over the tree img in terms of being clickable*/
 
 /*header*/
 
@@ -34,9 +35,17 @@ header {
 header>.logo {width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
 header>div {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
 #roots {z-index: 1;}
-#tree {flex:none; height: 70%; z-index: 2;}
-#tree:hover {transform: scale(1.3) translateY(-5%);} /*TODO: input a growth transition CSS animation here*/ 
-/*translate added to offset the growth of the tree to make sure the roots still look connected*/
+#tree {
+  flex:none; height: 70%; z-index: 2;
+  transition: transform .5s ease-in-out;
+  /*TODO: input a growth transition CSS animation here*/ 
+}
+#tree:hover {
+  transform: scale(1.2) translateY(-5%); /*translate added to offset the growth of the tree to make sure the roots still look connected*/
+} 
+
+
+
 h1{position: relative; height: 1lh; top: 35%; left:3%; font-size: 9vw; color:#e3f5ff; z-index: 3;}
 
 /*TODO: fix styling of header so its elements can be zoomed*/
@@ -100,4 +109,13 @@ section {width: 100%; height:fit-content;}
   aspect-ratio:456/347;
   background-image: url(/images/startestframe1.jpg);
   background-repeat: no-repeat;
+}
+
+#STARTEST2>img{
+  animation: 1s startest2 infinite alternate;
+}
+
+@keyframes startest2 {
+  from{opacity: 0;visibility:hidden;}
+  to{opacity:1;visibility: visible;}
 }
