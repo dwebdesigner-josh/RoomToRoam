@@ -8,6 +8,7 @@ Client Site: Room to Roam Records
 
 
     TODO: 
+    - remove unused files once site is done (swirl2 js files and image bank most likely won't be used)
     - before publishing the site, change imagePath back to proper format on scripts (currently has /RoomToRoam the start of the path to appease the github pages file structure)
 
 2. JQUERY STUTTER ISSUE ON FIRST TIME LOADING OF THE SITE (only the first few seconds) .. also a smaller stutter occurs when switching tabs and switching back

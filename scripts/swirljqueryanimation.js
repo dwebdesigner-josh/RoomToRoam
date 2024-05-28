@@ -56,6 +56,7 @@ $(window).on('load', () => {
   requestAnimationFrame(step);
 });
 
+// TODO - consider adding a delay timer to the above ^ to avoid visible buffering 
 
 
 })();
