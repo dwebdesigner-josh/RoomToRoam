@@ -4,13 +4,20 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
+   /*star background*/
+   background-image: url(/images/starV1frame1.png);
+   background-repeat: repeat;
+   background-attachment:fixed;
+   /*TODO - play with these settings and consider animating the background img using method from STARTEST*/
 }
-
+  
 /*nav*/
 
 #navsecondary {
   align-self: end;
   margin-right: 5%;
+  position: fixed;
+  z-index: 10;
 }
 
 #navprimary {
@@ -23,7 +30,7 @@ body {
 }
 nav button{flex-grow:1; z-index:11;}
 .nav {z-index: 10;} 
-/*TODO - fix buttons so that the tree transform scale doesn't block them from being used, as z-index doesn't seem to actually put them over the tree img in terms of being clickable*/
+/*FIX FOUND - z-index 10 also applied to the nav container (not just the buttons) - fix buttons so that the tree transform scale doesn't block them from being used, as z-index doesn't seem to actually put them over the tree img in terms of being clickable*/
 
 /*header*/
 
@@ -82,7 +89,8 @@ section {width: 100%; height:fit-content;}
 
 /*TODO - change width of all container elements (or just the html/body elements?) to a query based size so that the containers and their children can be zoomed - changing just the container this way should work, as the children are percentages of the container size not the viewport*/
 
-
+/*TODO - consider adding the startest animations below to various parts of the site (keyframe animation for background or hover animation for element interaction*/
+/*
 #STARTEST {
   width:100%;
   aspect-ratio:456/347;
@@ -119,3 +127,4 @@ section {width: 100%; height:fit-content;}
   0%{opacity: 0;visibility:hidden;}
   100%{opacity: 1;visibility: visible;}
 }
+*/
