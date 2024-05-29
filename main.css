@@ -1,4 +1,10 @@
-*{margin: 0;}
+*{
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style:normal;
+  font-weight:300;
+}
 html,body {margin: 0; width: 100%; background-color:#12171d;/*oldcolorwas12161c*/}
 html {height: 100%; }
 
@@ -18,22 +24,43 @@ body {
 /*nav*/
 
 #navsecondary {
+  z-index: 10;
   align-self: end;
   margin-right: 5%;
   position: fixed;
-  z-index: 10;
+  
 }
 
 #navprimary {
+  z-index: 8;
   margin-left:5%;
   margin-right:5%;
   margin-top: -12%;
   margin-bottom: 5%;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
-nav button{flex-grow:1; z-index:11;}
-.nav {z-index: 10;} 
+#secondary button{
+  z-index: 11; 
+  font-weight: 500;
+  
+}
+
+#navprimary button {
+  z-index:9; 
+  font-weight: 500;
+  background-color: #92b39c;
+  border-width: 2px;
+  border-color: #687971;
+  border-style: groove;
+  border-radius: 50%;
+  height: 5vw;
+  min-width: fit-content;
+  width: 10vw;
+}
+
+
 /*FIX FOUND - z-index 10 also applied to the nav container (not just the buttons) - fix buttons so that the tree transform scale doesn't block them from being used, as z-index doesn't seem to actually put them over the tree img in terms of being clickable*/
 
 /*header*/
@@ -91,6 +118,18 @@ section {width: 100%; height:fit-content;}
 #swirl-container{display:flex; width: 100%; z-index: 1;}
 #swirl-container>img{flex:1; max-width: 33%; z-index: 1;}
 
+
+/*section - reviews*/
+#reviews{
+  width: 100%;
+  
+}
+
+
+
+
+
+
 /*TODO - change width of all container elements (or just the html/body elements?) to a query based size so that the containers and their children can be zoomed - changing just the container this way should work, as the children are percentages of the container size not the viewport*/
 
 /*TODO - consider adding the startest animations below to various parts of the site (keyframe animation for background or hover animation for element interaction*/
@@ -132,3 +171,4 @@ section {width: 100%; height:fit-content;}
   100%{opacity: 1;visibility: visible;}
 }
 */
+
