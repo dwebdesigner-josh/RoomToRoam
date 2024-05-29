@@ -39,6 +39,7 @@ RESEARCH NOTES:
 - STARTEST - CSS opacity and visibility transition animation using star background img and star img overlayed 
     - https://stackoverflow.com/questions/8449933/how-to-transition-css-display-opacity-properties
         for opacity transition
+            - HOVER EFFECT TRANSITION LOOKS GREAT FOR ANOTHER USE SOMEWHERE ON THE SITE (like purposely have the animation only flicker the stars when something on the site is clicked/hovered over-maybe use for a review article read more link or something like that)
     - animation-iteration-count: infinite;
         for looping/automatic keyframe animation
 

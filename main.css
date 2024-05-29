@@ -86,7 +86,7 @@ section {width: 100%; height:fit-content;}
 #STARTEST {
   width:100%;
   aspect-ratio:456/347;
-  background-image: url(/images/startestframe1.jpg);
+  background-image: url(/images/starV1frame1.png);
   background-repeat: no-repeat;
 }
 
@@ -107,15 +107,15 @@ section {width: 100%; height:fit-content;}
 #STARTEST2 {
   width:100%;
   aspect-ratio:456/347;
-  background-image: url(/images/startestframe1.jpg);
+  background-image: url(/images/starV1frame1.png);
   background-repeat: no-repeat;
 }
 
 #STARTEST2>img{
-  animation: 1s startest2 infinite alternate;
+  animation: .75s startest2 infinite alternate;
 }
 
 @keyframes startest2 {
-  from{opacity: 0;visibility:hidden;}
-  to{opacity:1;visibility: visible;}
+  0%{opacity: 0;visibility:hidden;}
+  100%{opacity: 1;visibility: visible;}
 }
