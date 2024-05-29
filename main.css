@@ -1,6 +1,9 @@
 *{margin: 0;}
-html,body {margin: 0; height: 100%; width: 100%; background-color:#12171d;/*oldcolorwas12161c*/}
+html,body {margin: 0; width: 100%; background-color:#12171d;/*oldcolorwas12161c*/}
+html {height: 100%; }
+
 body {
+  min-height: 100%; /*FIX FOUND - this fixed the repeat img only showing for part of the page, as the body was only reaching the viewport's pixel height when body was set to height: 100%; solution was to keep html as that setting, but set body to min-height 100% instead of definitive height to 100%*/
   display: flex;
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
@@ -8,7 +11,8 @@ body {
    background-image: url(/images/starV1frame1.png);
    background-repeat: repeat;
    background-attachment:fixed;
-   /*TODO - play with these settings and consider animating the background img using method from STARTEST*/
+   /*TODO - play with these settings and consider animating the background img using method from STARTEST
+   need to experiment with this more later (scrolling, animation with startest methods, full page coverage-FIX FOUND- min-height:100%; on body instead of height:100%;)*/
 }
   
 /*nav*/
