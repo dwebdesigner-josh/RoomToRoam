@@ -2,7 +2,6 @@
   margin: 0;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-style:normal;
   font-weight:300;
 }
 html,body {margin: 0; width: 100%; background-color:#12171d;/*oldcolorwas12161c*/}
@@ -133,15 +132,21 @@ section {width: 100%; height:fit-content;}
   color: #e3f5ff;
   display: flex;
   flex-direction: column;
-  height: 1200px;
+  height: 120vw;
   justify-content: space-evenly;
+}
+
+#reviews>h2{
+  text-shadow: 1px 1px 1px black;
+  padding-top: 8px;
+  border-top: 1px inset #e3f5ff;
 }
 
 article {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 300px;
+  height: 30vw;
 }
 
 #article2{
@@ -149,15 +154,24 @@ article {
 }
 
 article>img {
-  height: 100%;
   aspect-ratio: 1/1;
-  flex: 1 1 0;
+  height: 90%;
+  box-shadow: 0px 0px 4px black;
+  
 }
-article>p {
-  flex: 2 1 0;
-  max-height: 80%;
+
+article>.text-container{
+  height: 90%;
+  width: 63%;
+ 
+}
+
+article p{
+  height: 69%; /*set to 69 instead of original 70 to keep last line cutoff happening consistently across vw's (not a special value this one just happened to work for that*/
   overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: wrap;
+  text-shadow: 1px 1px 1px black; /*possibly remove but it seems it may increase readability although the background is already close to black*/
+ 
 }
 
 /*TODO - add a continue arrow or animation or both under and to right of text, fix text overflow to actually show ellipsis or something*/

@@ -4,6 +4,9 @@ Client Site: Room to Roam Records
 TODO NOTES:
 
 1. TODO - general: 
+    -pixelation issue on highlight background when scaled down viewport width - see screenshot in room to roam notes folder
+        possible issue/fix:
+        https://css-tricks.com/forums/topic/scaling-down-images-with-css-makes-them-blurry/
     - consider a loading screen on first visit or landing page overlay on the home screen or something of that sort, as the highlight image is also going to take a couple seconds to load so it's not just a matter of the jquery animations
         - possible fix - hide all elements like large images and jquery animations until the page is loaded, with a css transition animation or some similar quick to load effect as sort of the page loading animation - see https://therecordcompany.net/ (all elements hidden until fully loaded) 
             see this site for the CSS transition on load: https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
