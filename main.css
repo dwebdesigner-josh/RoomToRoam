@@ -30,6 +30,12 @@ body {
   
 }
 
+#navsecondary button{
+  z-index: 11; 
+  font-weight: 500;
+  
+}
+/*
 #navprimary {
   z-index: 8;
   margin-left:5%;
@@ -39,11 +45,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-}
-#navsecondary button{
-  z-index: 11; 
-  font-weight: 500;
-  
 }
 
 #navprimary button {
@@ -58,6 +59,7 @@ body {
   min-width: fit-content;
   width: 10vw;
 }
+*/
 
 
 /*FIX FOUND - z-index 10 also applied to the nav container (not just the buttons) - fix buttons so that the tree transform scale doesn't block them from being used, as z-index doesn't seem to actually put them over the tree img in terms of being clickable*/
@@ -105,15 +107,20 @@ section {width: 100%; height:fit-content;}
 #highlight {
   width: 100%;
   aspect-ratio: 1350/1410; /*aspect ratio matches background image*/
-  margin-top: -50px;
-  margin-bottom: -33%;
+  margin-top: -8%;
+  margin-bottom: -13%;
   z-index: 3;
 }
-#highlight>img{
-  aspect-ratio:1350/1410;
+#highlight>#roots-missionstatement{
+  aspect-ratio: 1350/390;
+  width: 100%;
+ /* z-index: 3; */
+}
+#highlight>#roots-highlight{
+  aspect-ratio:1350/690;
   width: 100%;
   z-index: 3;
-  position: absolute;
+  
 
 }
 .highlightitem {margin: 0; z-index: 4;}
