@@ -1,207 +1,211 @@
-*{
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:300;
-}
-html,body {margin: 0; width: 100%; background-color:#12171d;/*oldcolorwas12161c*/}
-html {height: 100%; }
+/*UNIVERSAL*/
 
-body {
-  min-height: 100%; /*FIX FOUND - this fixed the repeat img only showing for part of the page, as the body was only reaching the viewport's pixel height when body was set to height: 100%; solution was to keep html as that setting, but set body to min-height 100% instead of definitive height to 100%*/
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden; /*prevent horizontal scroll bar*/
-   /*star background*/
-   background-image: url(/images/starV1frame1.png);
-   background-repeat: repeat;
-   background-attachment:fixed;
-   /*TODO - play with these settings and consider animating the background img using method from STARTEST
-   need to experiment with this more later (scrolling, animation with startest methods, full page coverage-FIX FOUND- min-height:100%; on body instead of height:100%;)*/
-}
+  *{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+  }
+
+  html,body {margin: 0; width: 100%; background-color:#12171d;/*oldcolorwas12161c*/}
+  html {height: 100%; }
+
+  body {
+    min-height: 100%; /*FIX FOUND - this fixed the repeat img only showing for part of the page, as the body was only reaching the viewport's pixel height when body was set to height: 100%; solution was to keep html as that setting, but set body to min-height 100% instead of definitive height to 100%*/
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /*prevent horizontal scroll bar*/
+    /*star background*/
+    background-image: url(/images/starV1frame1.png);
+    background-repeat: repeat;
+    background-attachment:fixed;
+    /*TODO - play with these settings and consider animating the background img using method from STARTEST
+    need to experiment with this more later (scrolling, animation with startest methods, full page coverage-FIX FOUND- min-height:100%; on body instead of height:100%;)*/
+  }
   
+/*TOP*/
+
 /*nav*/
+  /*nav-desktop*/
+    @media screen and (min-width: 968px){
+    #navsecondary {
+      z-index: 10;
+      align-self: end;
+      margin-right: 5%;
+      position: fixed;
+    }
 
-#navsecondary {
-  z-index: 10;
-  align-self: end;
-  margin-right: 5%;
-  position: fixed;
-  
-}
+          #navsecondary a{
+            z-index: 11; 
+            font-weight: 500;
+            text-decoration: none;
+          }
 
-#navsecondary button{
-  z-index: 11; 
-  font-weight: 500;
-  
-}
-/*
-#navprimary {
-  z-index: 8;
-  margin-left:5%;
-  margin-right:5%;
-  margin-top: -12%;
-  margin-bottom: 5%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
+            #navsecondary a:link, #navsecondary a:active{
+              color: #e3f5ff9d;
+            }
+            #navsecondary a:visited{
+              color: #e3f5ff9d;
+            }
+            #navsecondary a:hover{/*TODO-style hover - possible animation*/
+              color: #e3f5ff3f;
+            }
+    }
 
-#navprimary button {
-  z-index:9; 
-  font-weight: 500;
-  background-color: #92b39c;
-  border-width: 2px;
-  border-color: #687971;
-  border-style: groove;
-  border-radius: 50%;
-  height: 5vw;
-  min-width: fit-content;
-  width: 10vw;
-}
-*/
+  /*nav-mobile*/
+    /*CONSIDER CHANGING THIS MEDIA QUERY METHOD - see https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile*/
+    @media screen and (max-width: 968px){
+      #navsecondary {
+        visibility: hidden; 
+      }
+      #navsecondary a{
+        visibility: hidden;
+      }
+    }
 
-
-/*FIX FOUND - z-index 10 also applied to the nav container (not just the buttons) - fix buttons so that the tree transform scale doesn't block them from being used, as z-index doesn't seem to actually put them over the tree img in terms of being clickable*/
 
 /*main*/
-main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
 
 /*header*/
 
-header {
-  width: 95%; 
-  display: grid;
-  grid-template: 100%/100%;
-}
-header>.logo {width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
-header>div {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
-#roots {z-index: 1;}
-#tree {
-  flex:none; height: 70%; z-index: 2;
-  transition: transform .5s ease-in-out;
-  /*TODO: input a growth transition CSS animation here*/ 
-}
-#tree:hover {
-  transform: scale(1.2) translateY(-5%); /*translate added to offset the growth of the tree to make sure the roots still look connected*/
-} 
+  header {
+    width: 95%; 
+    display: grid;
+    grid-template: 100%/100%;
+  }
+        header>.logo {width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
+        header>div {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
+        #roots {z-index: 1;}
+        #tree {
+          flex:none; height: 70%; z-index: 2;
+          transition: transform .5s ease-in-out;
+          /*TODO: input a growth transition CSS animation here*/ 
+        }
+        #tree:hover {
+          transform: scale(1.2) translateY(-5%); /*translate added to offset the growth of the tree to make sure the roots still look connected*/
+        } 
 
+                h1{position: relative; height: 1lh; top: 35%; left:3%; font-size: 9vw; color:#e3f5ff; z-index: 3;}
 
-
-h1{position: relative; height: 1lh; top: 35%; left:3%; font-size: 9vw; color:#e3f5ff; z-index: 3;}
-
-/*TODO: fix styling of header so its elements can be zoomed*/
-/*TODO: fix header tree and h1 so that the tree is below the text but can be hovered easily without the text getting in the way at all
--possible fix could be to just have the image on top but alter it so that the tree forms a "t" to blend it in with the text*/
+        /*TODO: fix styling of header so its elements can be zoomed*/
+        /*TODO: fix header tree and h1 so that the tree is below the text but can be hovered easily without the text getting in the way at all
+        -possible fix could be to just have the image on top but alter it so that the tree forms a "t" to blend it in with the text*/
 
 
 /*sections*/
-section {width: 100%; height:fit-content;}
+  section {width: 100%; height:fit-content;}
 
-/*section - mission statement*/
-#highlight {
-  width: 100%;
-  aspect-ratio: 1350/1410; /*aspect ratio matches background image*/
-  margin-top: -8%;
-  margin-bottom: -13%;
-  z-index: 3;
-}
-#highlight>#roots-missionstatement{
-  aspect-ratio: 1350/390;
-  width: 100%;
- /* z-index: 3; */
-}
-#highlight>#roots-highlight{
-  aspect-ratio:1350/690;
-  width: 100%;
-  z-index: 3;
-  
+  /*section - mission statement*/
+  /*section - highlight reel*/
+          #highlight {
+            width: 100%;
+            aspect-ratio: 1350/1410; /*aspect ratio matches background image*/
+            margin-top: -8%;
+            margin-bottom: -13%;
+            z-index: 3;
+          }
+          #highlight>#roots-missionstatement{
+            aspect-ratio: 1350/390;
+            width: 100%;
+          /* z-index: 3; */
+          }
+          #highlight>#roots-highlight{
+            aspect-ratio:1350/690;
+            width: 100%;
+            z-index: 3;
+          }
 
-}
-.highlightitem {margin: 0; z-index: 4;}
+              .highlightitem {margin: 0; z-index: 4;}
 
-/*section - highlight reel*/
+  /*section - swirl animated buttons*/
 
-/*section - swirl animated buttons*/
-
-#swirl-container{display:flex; width: 100%; z-index: 1;}
-#swirl-container>img{flex:1; max-width: 33%; z-index: 1;}
+          #swirl-container{display:flex; width: 100%; z-index: 1;}
+          #swirl-container>img{flex:1; max-width: 33%; z-index: 1;}
 
 
-/*section - reviews*/
-#reviews{
-  width: 80%;
-  color: #e3f5ff;
-  display: flex;
-  flex-direction: column;
-  height: 120vw;
-  justify-content: space-evenly;
-}
+  /*section - reviews*/
+          #reviews{
+            width: 80%;
+            color: #e3f5ff;
+            display: flex;
+            flex-direction: column;
+            height: 120vw;
+            justify-content: space-evenly;
+          }
 
-#reviews>h2{
-  text-shadow: 1px 1px 1px black;
-  padding-top: 8px;
-  border-top: 1px inset #e3f5ff;
-}
+          #reviews>h2{
+            text-shadow: 1px 1px 1px black;
+            padding-top: 8px;
+            border-top: 1px inset #e3f5ff;
+          }
 
-article {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 30vw;
-}
+                  article {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    height: 30vw;
+                  }
 
-#article2{
-  flex-direction: row-reverse;
-}
+                  #article2{
+                    flex-direction: row-reverse;
+                  }
 
-article>img {
-  aspect-ratio: 1/1;
-  height: 90%;
-  box-shadow: 0px 0px 4px black;
-  
-}
+                  article>img {
+                    aspect-ratio: 1/1;
+                    height: 90%;
+                    box-shadow: 0px 0px 4px black;
+                    
+                  }
 
-article>.text-container{
-  height: 90%;
-  width: 63%;
- 
-}
+                  article>.text-container{
+                    height: 90%;
+                    width: 63%;
+                  
+                  }
 
-article p{
-  height: 70%; /*set to 69 instead of original 70 to keep last line cutoff happening consistently across vw's (not a special value this one just happened to work for that*/
-  overflow: hidden;
-  white-space: wrap;
-  text-shadow: 1px 1px 1px black; /*possibly remove but it seems it may increase readability although the background is already close to black*/
-  
-}
+                  article p{
+                    height: 70%; /*set to 69 instead of original 70 to keep last line cutoff happening consistently across vw's (not a special value this one just happened to work for that*/
+                    overflow: hidden;
+                    white-space: wrap;
+                    text-shadow: 1px 1px 1px black; /*possibly remove but it seems it may increase readability although the background is already close to black*/
+                    
+                  }
 
-article a{
-  border-bottom: 1px solid #e3f5ff;
-  width: 100%;
-  margin-top: -10%;
-  padding-top: 13%;
-  padding-bottom: 3%;
-  display: block;
-  text-align: center;
-}
+                              article a{
+                                border-bottom: 1px solid #e3f5ff;
+                                width: 100%;
+                                margin-top: -42%;
+                                padding-top: 45%;
+                                padding-bottom: 3%;
+                                display: block;
+                                text-align: center;
+                                text-decoration: none;
+                              }
 
-article a:link, article a:active{
-  color: #e3f5ff9d;
-}
+                              article a:link, article a:active{
+                                color: #e3f5ff9d;
+                              }
 
-article a:visited{
-  color: #e3f5ff9d;
-}
+                              article a:visited{
+                                color: #e3f5ff9d;
+                              }
 
-article a:hover{/*TODO-style hover - possible animation*/
-  color: #e3f5ff3f;
-}
+                              article a:hover{/*TODO-style hover - possible animation*/
+                                color: #e3f5ff3f;
+                              }
+
+/*footer*/
+
+                              
+/*-----------------------BOTTOM------------------------------------------*/
+
+
 
 /*TODO - REVIEWS - add a continue arrow or animation or both under and to right of text, fix text overflow to actually show ellipsis or something*/
 /*TODO - REVIEWS - add fadeout at bottom of review text, continue styling the anchor/continue reading area*/

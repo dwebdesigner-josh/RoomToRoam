@@ -19,16 +19,19 @@
 
 <body>
 
- 
-<!--TODO: add nav-containing menu button for mobile/responsive design-->
+<!--make sure to use landmark elements rather than divs for sections of the page (nav, main, header, section,...)-->
+<!--(ACCESSIBILITY)NOTE: BUTTONS VS ANCHORS USAGE- buttons should only be used for interactive elements/forms/modules, while anchors should be used for in-site links -->
+
 
 <nav id="navsecondary">
-  <button>Artists</button>
-  <button>Reviews</button>
-  <button>Connect</button>
-  <button>About Us</button>
+  <a href="/artists/" target="_self">Artists</a>
+  <a href="/reviews/" target="_self">Reviews</a>
+  <a href="/connect/" target="_self">Connect</a>
+  <a href="/about-us/" target="_self">About Us</a>
   
 </nav>
+
+
 
 <main>
 
@@ -45,16 +48,6 @@
         <!--TODO: add img src for each of the above-->
         <!--keep alt as null (blank) value for tree img-->
   </header>
-<!--
-  <nav id="navprimary">
-    <button>Artists</button>
-    <button>Music</button>
-    <button>Visuals</button>
-    <button>Reviews</button>
-    <button>Connect</button>
-  </nav>
-REMOVED POSSIBLY PERMANENTLY FOR DESIGN UDPATE MEETING 5/31/24-->
-<!--make sure to use landmark elements rather than divs for sections of the page (nav, main, header, section,...)-->
 
 <div id="highlight">
   <img src="/images/roots-missionstatement.png" id="roots-missionstatement">
@@ -71,15 +64,7 @@ REMOVED POSSIBLY PERMANENTLY FOR DESIGN UDPATE MEETING 5/31/24-->
     <img class="swirl1" src="/scripts/swirl1/images/seq_0_1.jpg" alt="stardust swirl animation"/>
     <img class="swirl1" src="/scripts/swirl1/images/seq_0_1.jpg" alt="stardust swirl animation"/>
   </section>
-<!--
-<div id="STARTEST">
-  <img src="/images/starV1frame2.png">
-</div>
 
-<div id="STARTEST2">
-  <img src="/images/starV1frame2.png">
-</div>
--->
 
   <section id="reviews">
     <h2>Featured Reviews</h2>
@@ -131,7 +116,20 @@ REMOVED POSSIBLY PERMANENTLY FOR DESIGN UDPATE MEETING 5/31/24-->
       </article>
   </section>
 
+<!--
+<div id="STARTEST">
+  <img src="/images/starV1frame2.png">
+</div>
+
+<div id="STARTEST2">
+  <img src="/images/starV1frame2.png">
+</div>
+-->
+
+
 </main>
+
+
 
 <footer>
 
