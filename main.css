@@ -85,7 +85,7 @@
     @media screen and (max-width: 850px){
       
     
-    #hamburger-icon {width: 0; height: 0;}
+    #hamburger-icon {width: 100%; height: 100%;}
     nav button{
       display: block;
       visibility: visible;
@@ -103,7 +103,7 @@
     #topnav-menu{
       width: 40vw; margin: 0; position: fixed; top: 0; right: 5vw; /*fix: added measurements here instead of on nav element - this way the nav doesn't stay while only its content is translated*/
       translate: 100vw 0;
-      transition: translate(0.5s ease-in-out);
+      transition: translate 0.5s ease-in-out; 
     }
     
       #topnav {
