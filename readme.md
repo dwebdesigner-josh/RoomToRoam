@@ -4,6 +4,9 @@ Client Site: Room to Roam Records
 TODO NOTES:
 
 1. TODO - general: 
+    - prefers-reduced-motion media query on nav menu -  fix so opacity transition actually works and translate 
+    transition actually stops happening
+    - set up prefers-reduced-motion accessibility feature for tree logo transformation transition and swirl animation disabling as well
     -pixelation issue on highlight background when scaled down viewport width - see screenshot in room to roam notes folder
         possible issue/fix:
         https://css-tricks.com/forums/topic/scaling-down-images-with-css-makes-them-blurry/

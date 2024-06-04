@@ -87,7 +87,7 @@
         opacity: 0;
         transition: opacity 500ms ease-in-out; 
         transition: translate 0s;
-    /*TODO - get this to work fully, and apply it to the jquery animations as well once working- currently only removes the close translation transition, but the open one still animates the same, and the opacity transition is nonexistent*/
+    /*TODO - get this to work fully (test with Windows-start-easeofaccessdisplaysettings-showanimationsinwindows-off), and apply it to the jquery animations as well once working- currently only removes the close translation transition, but the open one still animates the same, and the opacity transition is nonexistent*/
       }
     }
     @media screen and (max-width: 850px){
