@@ -80,7 +80,7 @@
   /*nav-mobile*/
     /*CONSIDER CHANGING THIS MEDIA QUERY METHOD - see https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile*/
     @media screen and (max-width: 850px){
-      nav {width: 40vw; height: 50vw; margin: 0; position: fixed; top: 0; right: 5vw;}
+      nav {width: 40vw; margin: 0; position: fixed; top: 0; right: 5vw;}
     
     #hamburger-icon {width: 100%; height: 100%;}
     nav button{
