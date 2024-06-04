@@ -81,6 +81,15 @@
 
   /*nav-mobile*/
     /*CONSIDER CHANGING THIS MEDIA QUERY METHOD - see https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile*/
+    @media screen and (max-width: 850px) and (prefers-reduced-motion){
+      #topnav-menu{
+        translate: 0 0;
+        opacity: 0;
+        transition: opacity 500ms ease-in-out; 
+        transition: translate 0s;
+    /*TODO - get this to work fully, and apply it to the jquery animations as well once working- currently only removes the close translation transition, but the open one still animates the same, and the opacity transition is nonexistent*/
+      }
+    }
     @media screen and (max-width: 850px){
       
     
@@ -121,6 +130,10 @@
 
     #topnav-open[aria-expanded="true"] {
       + #topnav-menu{translate: 0;} /*the + here is necessary for this to be properly selected!!*/
+    
+      @media (prefers-reduced-motion){
+        + #topnav-menu{opacity: 1;}
+      }
     }
     
    
