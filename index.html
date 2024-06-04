@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/main.css">
 <!--jquery plugin-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="/scripts/hamburger.js"></script>
+
 </head>
 
 
@@ -24,8 +24,9 @@
 <!--(ACCESSIBILITY)NOTE: For nav, use <nav><ul><li><a> One reason to use the <nav>, <ul>, <li> tags when building a navigation menu is that semantic markup will improve accessibility for users that require screen-readers.-->
 
 <nav>
+  
   <span id="topnav-label" hidden>Navigation</span>
-  <button id="topnav-open" aria-expanded="true" aria-labelledby="topnav-label">
+  <button id="topnav-open" aria-expanded="false" aria-labelledby="topnav-label">
     <img id="hamburger-icon" src="/images/hamburger-icon.svg" alt="" height="25px" width="25px" >
   </button>
   
@@ -150,7 +151,8 @@
 <!--jquery animation files : KEEP AT BOTTOM OF BODY-->
 <!--with these at bottom, content loads before these scripts-->
 <script src="/scripts/swirljqueryanimation.js"></script>
-    
+<script src="/scripts/hamburger.js"></script> <!--PREVIOUS ISSUE FIXED: event listener from this script wasn't showing up in chrome dev tools when this script was listed in the head or body BEFORE the button it was meant to find in its query - so the issue with the Event Listener not triggering/showing up in chrome dev tools was 
+  caused by:  the targeted element is either not found or not loaded when the event listener is attached FIX: attach the script to the html doc at the END so that it runs and the eventlistener looks for the button AFTER the button has loaded, this way it is actually found -->
 </body>
 
 </html>

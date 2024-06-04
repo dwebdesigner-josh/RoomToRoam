@@ -44,7 +44,10 @@
       margin: 0;
       padding: 0;
       border: 0;
+      z-index: 30;
     }
+
+
       #topnav {
         z-index: 10;
         display: flex;
@@ -80,9 +83,9 @@
   /*nav-mobile*/
     /*CONSIDER CHANGING THIS MEDIA QUERY METHOD - see https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile*/
     @media screen and (max-width: 850px){
-      nav {width: 40vw; margin: 0; position: fixed; top: 0; right: 5vw;}
+      
     
-    #hamburger-icon {width: 100%; height: 100%;}
+    #hamburger-icon {width: 0; height: 0;}
     nav button{
       display: block;
       visibility: visible;
@@ -98,6 +101,7 @@
     }
 
     #topnav-menu{
+      width: 40vw; margin: 0; position: fixed; top: 0; right: 5vw; /*fix: added measurements here instead of on nav element - this way the nav doesn't stay while only its content is translated*/
       translate: 100vw 0;
       transition: translate(0.5s ease-in-out);
     }
