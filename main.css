@@ -27,39 +27,86 @@
 
 /*nav*/
   /*nav-desktop*/
-    @media screen and (min-width: 968px){
-    #navsecondary {
-      z-index: 10;
-      align-self: end;
-      margin-right: 5%;
-      position: fixed;
+  nav {
+    z-index: 10;
+    align-self: end;
+    margin-right: 5%;
+    position: fixed;
+    
+  }
+   
+    nav button{
+      display: none;
+      visibility: hidden;
+      position: absolute;
+      height: 0px;
+      width: 0px;
+      margin: 0;
+      padding: 0;
+      border: 0;
     }
+      #topnav {
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        gap: 1rem;              /*gap can be used for flex!!*/
+        
+        list-style-type: none;
+        background-color: #12171d9d;
+        padding: 1rem;
+        border-radius: 1rem;
+      }  
 
-          #navsecondary a{
-            z-index: 11; 
+        .topnav-item{list-style-type: none;}
+          
+          .topnav-link{
+            z-index: 12; 
             font-weight: 500;
             text-decoration: none;
           }
 
-            #navsecondary a:link, #navsecondary a:active{
+            .topnav-link:link, .topnav-link:active{
               color: #e3f5ff9d;
             }
-            #navsecondary a:visited{
+            .topnav-link:visited{
               color: #e3f5ff9d;
             }
-            #navsecondary a:hover{/*TODO-style hover - possible animation*/
+            .topnav-link:hover{/*TODO-style hover - possible animation*/
               color: #e3f5ff3f;
             }
-    }
+    
 
   /*nav-mobile*/
     /*CONSIDER CHANGING THIS MEDIA QUERY METHOD - see https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile*/
-    @media screen and (max-width: 968px){
-      #navsecondary {
-        visibility: hidden; 
-      }
-      #navsecondary a{
-        visibility: hidden;
+    @media screen and (max-width: 850px){
+      nav {width: 40vw; height: 50vw; margin: 0; position: fixed; top: 0; right: 5vw;}
+    
+    #hamburger-icon {width: 100%; height: 100%;}
+    nav button{
+      display: block;
+      visibility: visible;
+      position: absolute;
+      background: none;
+      height: 40px;
+      width: 40px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      top: 1vw;
+      right: -3vw;
+    }
+
+    
+    
+      #topnav {
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: large;
+       
       }
     }
 
@@ -128,6 +175,7 @@
           #swirl-container{display:flex; width: 100%; z-index: 1;}
           #swirl-container>img{flex:1; max-width: 33%; z-index: 1;}
 
+/*spaceship*/
 
   /*section - reviews*/
           #reviews{
