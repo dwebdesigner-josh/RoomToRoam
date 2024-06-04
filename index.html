@@ -25,10 +25,14 @@
 
 <nav>
   <span id="topnav-label" hidden>Navigation</span>
-  <button id="topnav-open"><img id="hamburger-icon" src="/images/hamburger-icon.svg" alt="" height="25px" width="25px" aria-expanded="false" aria-labelledby="topnav-label"></button>
+  <button id="topnav-open" aria-expanded="false" aria-labelledby="topnav-label">
+    <img id="hamburger-icon" src="/images/hamburger-icon.svg" alt="" height="25px" width="25px" >
+  </button>
   
-  <div id="topnav-menu">
-    <button id="topnav-close"><img id="hamburger-icon" src="/images/hamburger-icon.svg" alt="" height="25px" width="25px" aria-labelledby="topnav-label"></button>
+  <div id="topnav-menu" role="dialog" aria-labelledby="topnav-label">
+    <button id="topnav-close" aria-label="Close">
+      <img id="hamburger-icon" src="/images/hamburger-icon.svg" alt="" height="25px" width="25px">
+    </button>
     <ul id="topnav">
       <li class="topnav-item">  <a class="topnav-link" href="/artists/" target="_self">Artists</a>  </li>
       <li class="topnav-item">  <a class="topnav-link" href="/reviews/" target="_self">Reviews</a>  </li>

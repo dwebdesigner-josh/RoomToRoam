@@ -97,7 +97,10 @@
       right: -3vw;
     }
 
-    
+    #topnav-menu{
+      translate: 100vw 0;
+      transition: translate(0.5s ease-in-out);
+    }
     
       #topnav {
         width: 100%;
@@ -106,8 +109,13 @@
         flex-direction: column;
         justify-content: space-evenly;
         font-size: large;
-       
+        
+        /*MAKE VISIBILITY HIDDEN WHEN NOT OPEN*/
       }
+    }
+
+    #topnav-open[aria-expanded="true"] {
+      + #topnav-menu{translate: 0;} /*the + here is necessary for this to be properly selected!!*/
     }
 
 
