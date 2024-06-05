@@ -11,6 +11,7 @@ function openMobileMenu(){
     buttonopen.setAttribute("aria-expanded", "true");
     topNavMenu.removeAttribute('inert');
     topNavMenu.removeAttribute('style');
+    buttonopen.setAttribute('inert','');
     main.setAttribute('inert', '');
     buttonclose.focus();
 }
@@ -19,6 +20,7 @@ function closeMobileMenu(){
     buttonopen.setAttribute("aria-expanded", "false");
     topNavMenu.setAttribute('inert', '');
     main.removeAttribute('inert');
+    buttonopen.removeAttribute('inert');
     buttonopen.focus();
     
   setTimeout(() => {
