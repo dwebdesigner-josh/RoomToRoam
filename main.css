@@ -115,8 +115,8 @@
     #topnav-menu{
       width: 10rem; height: 14rem; margin: 0; position: fixed; top: 3px; right: 3px; /*fix: added measurements here instead of on nav element - this way the nav doesn't stay while only its content is translated*/
       z-index: 31;
-      /*translate: 300vw 0;
-      transition: translate 0.3s ease-in-out; TAKEN OUT TEMPORARILY FOR SAFARI TESTS*/
+      translate: 300vw 0;
+      transition: translate 0.3s ease-in-out; TAKEN OUT TEMPORARILY FOR SAFARI TESTS
     }
       #topnav {
         width: 100%;
@@ -128,13 +128,17 @@
         align-items:flex-start; 
       }
     }
-    #topnav-open[aria-expanded="true"] {
-      + #topnav-menu{translate: 0;} /*the + here is necessary for this to be properly selected!!*/
-    
+ /*   #topnav-open[aria-expanded="true"] {
+      + #topnav-menu{translate: 0;} the + here is necessary for this to be properly selected!!*/
+    /*
       @media (prefers-reduced-motion){
         + #topnav-menu{opacity: 1;}
       }
-    }   
+    }  */
+    
+    #topnav-open[aria-expanded="true"] + #topnav-menu {
+      transform: translate(0, 0);
+    }
 
 /*header*/
                                 
