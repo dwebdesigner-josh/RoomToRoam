@@ -73,6 +73,9 @@ function setupTopNav(e) {
 buttonOpen.addEventListener('click', openMobileMenu);
 buttonClose.addEventListener('click', closeMobileMenu);
 
+buttonOpen.addEventListener('fingerdown', openMobileMenu);
+
+
 
 main.addEventListener('click', closeonclick);
 main.addEventListener('fingerdown', closeonclick);
