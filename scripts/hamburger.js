@@ -43,7 +43,7 @@ function closeMobileMenu(){
   }, 500);
 }
 
-function closeonclick(){
+function closeOnClick(){
   if (buttonOpen.getAttribute('aria-expanded') === 'true'){
     closeMobileMenu();
   }
@@ -70,15 +70,15 @@ function setupTopNav(e) {
   setupTopNav(media);
 
 
-buttonOpen.addEventListener('touchstart', openMobileMenu);
-buttonClose.addEventListener('touchstart', closeMobileMenu);
+buttonOpen.addEventListener('pointerdown', openMobileMenu);
+buttonClose.addEventListener('pointerdown', closeMobileMenu);
 
 //buttonOpen.addEventListener('fingerdown', openMobileMenu);
 
 
 
-main.addEventListener('touchstart', closeonclick);
-//main.addEventListener('fingerdown', closeonclick);
+main.addEventListener('pointerdown', closeOnClick);
+//main.addEventListener('fingerdown', closeOnClick);
 
 
 media.addEventListener('change', function (e) {

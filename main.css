@@ -15,7 +15,7 @@
     min-height: 100%; /*FIX FOUND - this fixed the repeat img only showing for part of the page, as the body was only reaching the viewport's pixel height when body was set to height: 100%; solution was to keep html as that setting, but set body to min-height 100% instead of definitive height to 100%*/
     display: flex;
     flex-direction: column;
-    /*overflow-x: hidden;*/ /*prevent horizontal scroll bar*/ /*TEMP REMOVED FOR SAFARI TESTS*/
+    overflow-x: hidden; /*prevent horizontal scroll bar*/
     /*star background*/
     background-image: url(/RoomToRoam/images/starV1frame1.png);
     background-repeat: repeat;
