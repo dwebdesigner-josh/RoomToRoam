@@ -1,7 +1,7 @@
 (() => {
 
-const buttonopen = document.querySelector('#topnav-open');
-const buttonclose = document.querySelector('#topnav-close');
+const buttonOpen = document.querySelector('#topnav-open');
+const buttonClose = document.querySelector('#topnav-close');
 const media = window.matchMedia('(width < 850px)');
 const topNavMenu = document.querySelector('#topnav-menu');
 const main = document.querySelector('main');
@@ -9,12 +9,13 @@ const body = document.querySelector('body');
 const review = document.querySelectorAll('.review-link'); //fixed: The querySelector() method only returns the first element that matches the specified selectors (first element in the class). To return all the matches, use the querySelectorAll() method instead.
 
 function openMobileMenu(){
-    buttonopen.setAttribute("aria-expanded", "true");
+  console.log('Open menu triggered');
+    buttonOpen.setAttribute("aria-expanded", "true");
     topNavMenu.removeAttribute('inert');
     topNavMenu.removeAttribute('style');
-    buttonopen.setAttribute('inert','');
+    buttonOpen.setAttribute('inert','');
    // main.setAttribute('inert', '');       - TODO consider reimplementing or keeping removed
-   buttonclose.focus();
+   buttonClose.focus();
   // review.setAttribute('tabindex','-1');
    
    review.forEach(nodelistitem => {
@@ -24,11 +25,11 @@ function openMobileMenu(){
 }
 
 function closeMobileMenu(){
-    buttonopen.setAttribute("aria-expanded", "false");
+    buttonOpen.setAttribute("aria-expanded", "false");
     topNavMenu.setAttribute('inert', '');
   //  main.removeAttribute('inert');        - TODO consider reimplementing or keeping removed
-    buttonopen.removeAttribute('inert');
-    buttonopen.focus();
+    buttonOpen.removeAttribute('inert');
+    buttonOpen.focus();
     //review.removeAttribute('tabindex');
     
  
@@ -43,7 +44,7 @@ function closeMobileMenu(){
 }
 
 function closeonclick(){
-  if (buttonopen.getAttribute('aria-expanded') === 'true'){
+  if (buttonOpen.getAttribute('aria-expanded') === 'true'){
     closeMobileMenu();
   }
   else {}
@@ -70,11 +71,11 @@ function setupTopNav(e) {
 
 
 
-buttonopen.addEventListener('click', openMobileMenu);
-buttonclose.addEventListener('click', closeMobileMenu);
+buttonOpen.addEventListener('click', openMobileMenu);
+buttonClose.addEventListener('click', closeMobileMenu);
 
-buttonopen.addEventListener('pointerdown', openMobileMenu);
-buttonclose.addEventListener('pointerdown', closeMobileMenu);
+buttonOpen.addEventListener('pointerdown', openMobileMenu);
+buttonClose.addEventListener('pointerdown', closeMobileMenu);
 
 
 main.addEventListener('click', closeonclick);
