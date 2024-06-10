@@ -69,7 +69,9 @@ function setupTopNav(e) {
   
   setupTopNav(media);
 
-
+  $(window).on('load', () => {
+    closeMobileMenu;
+  });
 
 buttonOpen.addEventListener('click', openMobileMenu);
 buttonClose.addEventListener('click', closeMobileMenu);
