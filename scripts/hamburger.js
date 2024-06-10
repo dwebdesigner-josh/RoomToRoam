@@ -70,14 +70,14 @@ function setupTopNav(e) {
   setupTopNav(media);
 
 
-buttonOpen.addEventListener('click', openMobileMenu);
-buttonClose.addEventListener('click', closeMobileMenu);
+buttonOpen.addEventListener('touchstart', openMobileMenu);
+buttonClose.addEventListener('touchstart', closeMobileMenu);
 
 //buttonOpen.addEventListener('fingerdown', openMobileMenu);
 
 
 
-main.addEventListener('click', closeonclick);
+main.addEventListener('touchstart', closeonclick);
 //main.addEventListener('fingerdown', closeonclick);
 
 
