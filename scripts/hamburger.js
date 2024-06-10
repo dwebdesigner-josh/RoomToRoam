@@ -73,12 +73,12 @@ function setupTopNav(e) {
 buttonopen.addEventListener('click', openMobileMenu);
 buttonclose.addEventListener('click', closeMobileMenu);
 
-buttonopen.addEventListener('touchend', openMobileMenu);
-buttonclose.addEventListener('touchend', closeMobileMenu);
+buttonopen.addEventListener('pointerdown', openMobileMenu);
+buttonclose.addEventListener('pointerdown', closeMobileMenu);
 
 
 main.addEventListener('click', closeonclick);
-main.addEventListener('touchend', closeonclick);
+main.addEventListener('pointerdown', closeonclick);
 
 
 media.addEventListener('change', function (e) {
