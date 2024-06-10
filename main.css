@@ -115,8 +115,8 @@
     #topnav-menu{
       width: 10rem; height: 14rem; margin: 0; position: fixed; top: 3px; right: 3px; /*fix: added measurements here instead of on nav element - this way the nav doesn't stay while only its content is translated*/
       z-index: 31;
-      translate: 300vw 0;
-      transition: translate 0.3s ease-in-out; 
+      /*translate: 300vw 0;
+      transition: translate 0.3s ease-in-out; TAKEN OUT TEMPORARILY FOR SAFARI TESTS*/
     }
       #topnav {
         width: 100%;
