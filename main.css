@@ -115,10 +115,8 @@
     #topnav-menu{
       width: 10rem; height: 14rem; margin: 0; position: fixed; top: 3px; right: 3px; /*fix: added measurements here instead of on nav element - this way the nav doesn't stay while only its content is translated*/
       z-index: 31;
-      visibility: visible;
-      display: block;
-      /*translate: 300vw 0;*/
-      /*transition: translate 0.3s ease-in-out; */
+      translate: 300vw 0;
+      transition: translate 0.3s ease-in-out; 
     }
       #topnav {
         width: 100%;
@@ -131,7 +129,7 @@
       }
     }
    #topnav-open[aria-expanded="true"] {
-      + #topnav-menu{/*translate: 0;*/visibility: hidden; display: none;} /*the + here is necessary for this to be properly selected!!*/
+      + #topnav-menu{translate: 0 0;} /*the + here is necessary for this to be properly selected!!*/
     
       @media (prefers-reduced-motion){
         + #topnav-menu{opacity: 1;}
