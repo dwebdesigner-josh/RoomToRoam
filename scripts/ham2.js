@@ -22,9 +22,9 @@
       }
     }
   
-    buttonOpen.addEventListener('click', openMobileMenu);
-    buttonClose.addEventListener('click', closeMobileMenu);
-    document.addEventListener('click', function (event) {
+    buttonOpen.addEventListener('touchstart', openMobileMenu);
+    buttonClose.addEventListener('touchstart', closeMobileMenu);
+    document.addEventListener('touchstart', function (event) {
       if (!topNavMenu.contains(event.target) && !buttonOpen.contains(event.target)) {
         closeOnClick();
       }
