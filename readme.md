@@ -1,5 +1,32 @@
 Client Site: Room to Roam Records
 
+save for later:
+
+header {
+  width: 95%; 
+  height: 100dvh;
+  display: grid;
+  grid-template: 100%/100%;
+  margin-bottom: 0px;
+}
+      header>.logo { width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
+        /*@media screen and (max-width: 850px){
+          header>.logo {height: 20vw;}
+        }*/
+      
+      header>div {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
+      #roots {z-index: 1; height: 70dvh; max-width: 100%;}
+      #tree {
+        flex:none; aspect-ratio: 370/317; height: 70dvh; max-width: 100%; z-index: 2;
+        transition: transform .5s ease-in-out;
+        /*TODO: input a growth transition CSS animation here*/ 
+      }
+      #tree:hover {
+        transform: scale(1.2) translateY(-5%); /*translate added to offset the growth of the tree to make sure the roots still look connected*/
+      } 
+
+              h1{position: relative; height: 25dvh; top: 35dvh; left:3%; font-size: 9vw}
+
 
 TODO NOTES:
 
