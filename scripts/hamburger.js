@@ -37,10 +37,10 @@ function closeMobileMenu(){
     });
  
 
-  setTimeout(() => {
+//  setTimeout(() => {
     topNavMenu.style.transition = 'none';
-  }, 500);
-}
+  //}, 500);
+//}
 
 function closeOnClick(){
   if (buttonOpen.getAttribute('aria-expanded') === 'true'){
