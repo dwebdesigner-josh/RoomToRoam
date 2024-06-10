@@ -5,7 +5,7 @@
   const buttonClose = document.querySelector('#topnav-close');
   const topNavMenu = document.querySelector('#topnav-menu');
 
-  buttonOpen.addEventListener('touchstart', () => {
+  buttonOpen.addEventListener('click', () => {
     console.log('Open button clicked');
     topNavMenu.style.display = 'block';
   });
