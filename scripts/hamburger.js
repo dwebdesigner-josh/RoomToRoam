@@ -53,21 +53,21 @@ function closeonclick(){
 //if( $('.classname').getAttribute('aria-expanded') === 'true') {} https://stackoverflow.com/questions/37125674/how-to-check-for-attribute-value
 
 
-//function setupTopNav(e) {
-  //  if (e.matches) {
+function setupTopNav(e) {
+    if (e.matches) {
       // is mobile
-    //  console.log('is mobile');
-      //topNavMenu.setAttribute('inert', '');
-      //topNavMenu.style.transition = 'none';
-    //} else {
+      console.log('is mobile');
+      topNavMenu.setAttribute('inert', '');
+      topNavMenu.style.transition = 'none';
+    } else {
       // is tablet/desktop
-      //console.log('is desktop');
-      //closeMobileMenu();
-      //topNavMenu.removeAttribute('inert');
-    //}
-  //}
+      console.log('is desktop');
+      closeMobileMenu();
+      topNavMenu.removeAttribute('inert');
+    }
+  }
   
- // setupTopNav(media);
+  setupTopNav(media);
 
 
 buttonOpen.addEventListener('click', openMobileMenu);
