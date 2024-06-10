@@ -1,3 +1,5 @@
+//used for safari mobile debugging (issue was with click, touchend and pointerdown not working - touchstart does work)
+
 (() => {
   const buttonOpen = document.querySelector('#topnav-open');
   const buttonClose = document.querySelector('#topnav-close');
