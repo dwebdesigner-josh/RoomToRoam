@@ -16,11 +16,15 @@
     flex-direction: column;
     overflow-x: hidden; /*prevent horizontal scroll bar*/
     /*star background*/
-    background-image: url(/RoomToRoam/images/starV1frame1.png);
+    background-image: url(/images/starV1frame1.png);
     background-repeat: repeat;
     background-attachment:fixed;
     /*TODO - play with these settings and consider animating the background img using method from STARTEST
     need to experiment with this more later (scrolling, animation with startest methods, full page coverage-FIX FOUND- min-height:100%; on body instead of height:100%;)*/
+  }
+
+  @media screen and (max-width: 850px){
+    body {background-size: 50%;} /*fixes star density being too low on mobile*/
   }
   
 /*TOP*/
@@ -34,7 +38,6 @@
     position: fixed;
     
   }
-   
     nav button{
       display: none;
       visibility: hidden;
@@ -46,28 +49,24 @@
       border: 0;
       z-index: 30;
     }
-
       #topnav {
         z-index: 10;
         display: flex;
         align-items: center;
         margin: 0;
         gap: 1rem;              /*gap can be used for flex!!*/
-        
+
         list-style-type: none;
         background-color: #12171d9d;
         padding: 1rem;
         border-radius: 1rem;
       }  
-
         .topnav-item{list-style-type: none;}
-          
           .topnav-link{
             z-index: 12; 
             font-weight: 500;
             text-decoration: none;
           }
-
             .topnav-link:link, .topnav-link:active{
               color: #e3f5ff9d;
             }
@@ -77,9 +76,7 @@
             .topnav-link:hover{/*TODO-style hover - possible animation*/
               color: #e3f5ff3f;
             }
-    
-
-  /*nav-mobile*/
+     /*nav-mobile*/
     /*CONSIDER CHANGING THIS MEDIA QUERY METHOD - see https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile*/
     @media screen and (max-width: 850px) and (prefers-reduced-motion){
       #topnav-menu{
@@ -101,7 +98,6 @@
           background-color: white;
           border-radius: 1rem;
         }
-
     nav button{
       display: block;
       visibility: visible;
@@ -115,37 +111,30 @@
       top: 0;
       right: 0;
     }
-    
-
     #topnav-menu{
       width: 10rem; height: 14rem; margin: 0; position: fixed; top: 3px; right: 3px; /*fix: added measurements here instead of on nav element - this way the nav doesn't stay while only its content is translated*/
       z-index: 31;
       translate: 100vw 0;
       transition: translate 0.5s ease-in-out; 
     }
-    
       #topnav {
         width: 100%;
         height: 100%;
-        background-color: blue;
+        background-color: #12171df3;
         flex-direction: column;
         justify-content: space-evenly;
         font-size: large;
-        align-items:flex-start;
-        
-        /*MAKE VISIBILITY HIDDEN WHEN NOT OPEN*/
+        align-items:flex-start; 
       }
     }
-
     #topnav-open[aria-expanded="true"] {
       + #topnav-menu{translate: 0;} /*the + here is necessary for this to be properly selected!!*/
     
       @media (prefers-reduced-motion){
         + #topnav-menu{opacity: 1;}
       }
-    }
-    
-   
+    }   
+
 /*header*/
 
 header {
