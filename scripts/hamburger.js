@@ -9,6 +9,7 @@ const body = document.querySelector('body');
 const review = document.querySelectorAll('.review-link'); //fixed: The querySelector() method only returns the first element that matches the specified selectors (first element in the class). To return all the matches, use the querySelectorAll() method instead.
 
 function openMobileMenu(){
+  console.log('Open menu triggered');
     buttonOpen.setAttribute("aria-expanded", "true");
     topNavMenu.removeAttribute('inert');
     topNavMenu.removeAttribute('style');
@@ -37,12 +38,12 @@ function closeMobileMenu(){
     });
  
 
-//  setTimeout(() => {
+  setTimeout(() => {
     topNavMenu.style.transition = 'none';
-  //}, 500);
-//}
+  }, 500);
+}
 
-function closeOnClick(){
+function closeonclick(){
   if (buttonOpen.getAttribute('aria-expanded') === 'true'){
     closeMobileMenu();
   }
@@ -69,15 +70,16 @@ function setupTopNav(e) {
   setupTopNav(media);
 
 
+
+buttonOpen.addEventListener('click', openMobileMenu);
+buttonClose.addEventListener('click', closeMobileMenu);
+
 buttonOpen.addEventListener('pointerdown', openMobileMenu);
 buttonClose.addEventListener('pointerdown', closeMobileMenu);
 
-//buttonOpen.addEventListener('fingerdown', openMobileMenu);
 
-
-
-main.addEventListener('pointerdown', closeOnClick);
-//main.addEventListener('fingerdown', closeOnClick);
+main.addEventListener('click', closeonclick);
+main.addEventListener('pointerdown', closeonclick);
 
 
 media.addEventListener('change', function (e) {
