@@ -153,10 +153,11 @@ header {
       }
       
   /*media query below fixes issue with mobile upon growth transformation, may not be necessary once there is a link for the button though as the screen will change as its  */
-      /*@media screen and (min-width: 850px){*/
+      @media screen and (min-width: 850px){
       #tree:hover {
         transform: scale(1.2) translateY(-5%); /*translate added to offset the growth of the tree to make sure the roots still look connected*/
       } 
+    }
     
               h1{position: relative; height: 1lh; top: 35%; left:3%; font-size: 9vw; color:#e3f5ff; z-index: 3;}
 
