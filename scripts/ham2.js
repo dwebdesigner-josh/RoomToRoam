@@ -6,7 +6,7 @@ $(document).ready(function() {
     const reviewLinks = $('.review-link');
   
     function openMobileMenu() {
-      console.log('Open menu function called');
+      alert('Open menu function called');
       buttonOpen.attr("aria-expanded", "true");
       topNavMenu.removeAttr('inert').removeAttr('style');
       buttonOpen.attr('inert', '');
@@ -16,7 +16,7 @@ $(document).ready(function() {
     }
   
     function closeMobileMenu() {
-      console.log('Close menu function called');
+      alert('Close menu function called');
       buttonOpen.attr("aria-expanded", "false");
       topNavMenu.attr('inert', '');
       buttonOpen.removeAttr('inert').focus();
