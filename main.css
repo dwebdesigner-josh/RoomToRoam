@@ -15,7 +15,7 @@
     min-height: 100%; /*FIX FOUND - this fixed the repeat img only showing for part of the page, as the body was only reaching the viewport's pixel height when body was set to height: 100%; solution was to keep html as that setting, but set body to min-height 100% instead of definitive height to 100%*/
     display: flex;
     flex-direction: column;
-    overflow-x: hidden; /*prevent horizontal scroll bar*/
+    /*overflow-x: hidden;*/ /*prevent horizontal scroll bar*/ /*TEMP REMOVED FOR SAFARI TESTS*/
     /*star background*/
     background-image: url(/RoomToRoam/images/starV1frame1.png);
     background-repeat: repeat;
@@ -116,7 +116,7 @@
       width: 10rem; height: 14rem; margin: 0; position: fixed; top: 3px; right: 3px; /*fix: added measurements here instead of on nav element - this way the nav doesn't stay while only its content is translated*/
       z-index: 31;
       translate: 300vw 0;
-      transition: translate 0.3s ease-in-out; TAKEN OUT TEMPORARILY FOR SAFARI TESTS
+      transition: translate 0.3s ease-in-out; 
     }
       #topnav {
         width: 100%;
