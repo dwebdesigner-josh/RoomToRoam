@@ -79,7 +79,6 @@ buttonClose.addEventListener('touchstart', closeMobileMenu);
 
 
 main.addEventListener('click', closeonclick);
-main.addEventListener('touchstart', closeonclick);
 
 
 media.addEventListener('change', function (e) {
