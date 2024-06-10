@@ -3,25 +3,34 @@
     const buttonClose = document.querySelector('#topnav-close');
     const topNavMenu = document.querySelector('#topnav-menu');
   
+    function openMobileMenu() {
+      topNavMenu.classList.add('open');
+      buttonOpen.setAttribute('aria-expanded', 'true');
+      buttonClose.focus();
+    }
+  
+    function closeMobileMenu() {
+      topNavMenu.classList.remove('open');
+      buttonOpen.setAttribute('aria-expanded', 'false');
+      buttonOpen.focus();
+    }
+  
     function toggleMobileMenu() {
-      const isOpen = topNavMenu.classList.contains('open');
-      topNavMenu.classList.toggle('open', !isOpen);
-      buttonOpen.setAttribute('aria-expanded', !isOpen);
-      if (!isOpen) {
-        buttonClose.focus();
+      if (topNavMenu.classList.contains('open')) {
+        closeMobileMenu();
       } else {
-        buttonOpen.focus();
+        openMobileMenu();
       }
     }
   
     function closeOnClick(event) {
       if (!topNavMenu.contains(event.target) && event.target !== buttonOpen) {
-        toggleMobileMenu();
+        closeMobileMenu();
       }
     }
   
     buttonOpen.addEventListener('touchend', toggleMobileMenu);
-    buttonClose.addEventListener('touchend', toggleMobileMenu);
+    buttonClose.addEventListener('touchend', closeMobileMenu);
     document.addEventListener('touchend', closeOnClick);
   })();
   

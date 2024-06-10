@@ -9,6 +9,7 @@ const body = document.querySelector('body');
 const review = document.querySelectorAll('.review-link'); //fixed: The querySelector() method only returns the first element that matches the specified selectors (first element in the class). To return all the matches, use the querySelectorAll() method instead.
 
 function openMobileMenu(){
+  alert('Open menu function called');
   console.log('Open menu triggered');
     buttonOpen.setAttribute("aria-expanded", "true");
     topNavMenu.removeAttribute('inert');
@@ -25,6 +26,7 @@ function openMobileMenu(){
 }
 
 function closeMobileMenu(){
+  alert('Close menu function called');
     buttonOpen.setAttribute("aria-expanded", "false");
     topNavMenu.setAttribute('inert', '');
   //  main.removeAttribute('inert');        - TODO consider reimplementing or keeping removed
