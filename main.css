@@ -79,15 +79,15 @@
             }
      /*nav-mobile*/
     /*CONSIDER CHANGING THIS MEDIA QUERY METHOD - see https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile*/
-    @media screen and (max-width: 850px) and (prefers-reduced-motion){
+/*    @media screen and (max-width: 850px) and (prefers-reduced-motion){
       #topnav-menu{
         translate: 0 0;
         opacity: 0;
         transition: opacity 500ms ease-in-out; 
         transition: translate 0s;
-    /*TODO - get this to work fully (test with Windows-start-easeofaccessdisplaysettings-showanimationsinwindows-off), and apply it to the jquery animations as well once working- currently only removes the close translation transition, but the open one still animates the same, and the opacity transition is nonexistent*/
+    TODO - get this to work fully (test with Windows-start-easeofaccessdisplaysettings-showanimationsinwindows-off), and apply it to the jquery animations as well once working- currently only removes the close translation transition, but the open one still animates the same, and the opacity transition is nonexistent
       }
-    }
+    }*/
     @media screen and (max-width: 850px){
       
     nav{width: 40px; height: 40px; margin:0; padding: 0; top: 3px; right: 3px;}
@@ -128,18 +128,14 @@
         align-items:flex-start; 
       }
     }
- /*   #topnav-open[aria-expanded="true"] {
-      + #topnav-menu{translate: 0;} the + here is necessary for this to be properly selected!!*/
-    /*
-      @media (prefers-reduced-motion){
-        + #topnav-menu{opacity: 1;}
-      }
-    }  */
+   #topnav-open[aria-expanded="true"] {
+      + #topnav-menu{translate: 0;} /*the + here is necessary for this to be properly selected!!*/
     
-    #topnav-open[aria-expanded="true"] + #topnav-menu {
-      transform: translate(0, 0);
-    }
-
+      /*@media (prefers-reduced-motion){
+        + #topnav-menu{opacity: 1;}
+      }*/
+    }  
+    
 /*header*/
                                 
 header {
