@@ -1,8 +1,5 @@
 Client Site: Room to Roam Records
 
-current commit progress notes
-fix: changed highlight imgs to background imgs of highlight sections and changed ID on highlight sections to match the ID the imgs had
-
 TODO NOTES:
 
 1. TODO - general: 
@@ -44,6 +41,19 @@ TODO NOTES:
 RESEARCH NOTES:
 
 - SAFARI JS/HAMBURGER
+    FINAL FIX:
+        just a syntax issue, and a combinator issue:
+            replacing 
+                #topnav-open[aria-expanded="true"]{
+                    + #topnav-menu{translate: 0;} 
+                }
+            with 
+                #topnav-open[aria-expanded="true"] ~ #topnav-menu {
+                    translate: 0; 
+                }
+            fixes everything
+
+    INITIAL FIX:
     /*HAMBURGER MENU SOLUTION FOUND - REMOVAL OF BELOW + COMBINATOR BASED TRANSLATION, replaced with JS based translation using topNavMenu.setAttribute ("style","translate: 0;") with a click event listener on the open button to activate the function*/
         /*THIS + COMBINATOR DOES NOT WORK ON SAFARI*/
                 #topnav-open[aria-expanded="true"]{
