@@ -30,7 +30,7 @@
     
     function closeMobileMenu(){
       alert('Close menu function called');
-      topNavMenu.classlist.remove("mobile");
+      topNavMenu.setAttribute("id","mobile");
     }
       //   buttonOpen.setAttribute("aria-expanded", "false");
      //   topNavMenu.setAttribute('inert', '');

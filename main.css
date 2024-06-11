@@ -115,9 +115,9 @@
     .topnav-menu{
       width: 10rem; height: 14rem; margin: 0; position: fixed; top: 3px; right: 3px; /*fix: added measurements here instead of on nav element - this way the nav doesn't stay while only its content is translated*/
       z-index: 31;
-      transform: translateX(300px);
+      transform: translateX(-300px);
       /*translate: 300vw 0;*/
-      transition: transform 0.3s ease-in-out; 
+      /*transition: transform 0.3s ease-in-out; */
     }
       #topnav {
         width: 100%;
@@ -138,7 +138,7 @@
     }  
    */
    
-   .mobile {transform: translateX(0);}
+   #mobile {transform: translateX(0px);}
    
 
 /*header*/
