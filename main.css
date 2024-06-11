@@ -242,9 +242,9 @@ section {width: 100%; height:fit-content;}
 
 /*#slide-1 {animation: bannermove 10s linear infinite;}*/
 
-#slide-left[aria-pressed="true"] {
-  + #slide-1 {animation: bannermove 10s linear infinite;}
-}   
+/* #slide-left[aria-pressed="true"] {
+  + #slide-1 {animation: bannermove 10s linear 1;}
+}                                                  APPEARS THIS TYPE OF COMBINATOR/SELECTOR DOESN'T WORK ON SAFARI*/
 /*
 .slider {
   animation: bannermove 10s linear infinite;
