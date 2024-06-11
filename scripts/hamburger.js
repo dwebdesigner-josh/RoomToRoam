@@ -2,11 +2,11 @@
 
 const buttonOpen = document.querySelector('#topnav-open');
 const buttonClose = document.querySelector('#topnav-close');
-const media = window.matchMedia('(width < 850px)');
+//const media = window.matchMedia('(width < 850px)');
 const topNavMenu = document.querySelector('#topnav-menu');
 const main = document.querySelector('main');
-const body = document.querySelector('body');
-const review = document.querySelectorAll('.review-link'); //fixed: The querySelector() method only returns the first element that matches the specified selectors (first element in the class). To return all the matches, use the querySelectorAll() method instead.
+//const body = document.querySelector('body');
+//const review = document.querySelectorAll('.review-link'); //fixed: The querySelector() method only returns the first element that matches the specified selectors (first element in the class). To return all the matches, use the querySelectorAll() method instead.
 
 function openMobileMenu(){
   alert('Open menu function called');
@@ -56,21 +56,21 @@ function closeonclick(){
 //if( $('.classname').getAttribute('aria-expanded') === 'true') {} https://stackoverflow.com/questions/37125674/how-to-check-for-attribute-value
 
 
-function setupTopNav(e) {
-    if (e.matches) {
-      // is mobile
-      console.log('is mobile');
-      topNavMenu.setAttribute('inert', '');
-      topNavMenu.style.transition = 'none';
-    } else {
-      // is tablet/desktop
-      console.log('is desktop');
-      closeMobileMenu();
-      topNavMenu.removeAttribute('inert');
-    }
-  }
+//function setupTopNav(e) {
+  //  if (e.matches) {
+              // is mobile
+    //  console.log('is mobile');
+      //topNavMenu.setAttribute('inert', '');
+      //topNavMenu.style.transition = 'none';
+    //} else {
+            // is tablet/desktop
+      //console.log('is desktop');
+      //closeMobileMenu();
+    //  topNavMenu.removeAttribute('inert');
+    //}
+  //}
   
-  setupTopNav(media);
+  //setupTopNav(media);
 
 
 
@@ -80,9 +80,9 @@ buttonClose.addEventListener('click', closeMobileMenu);
 main.addEventListener('click', closeonclick);
 
 
-media.addEventListener('change', function (e) {
-    setupTopNav(e);
-  });
+//media.addEventListener('change', function (e) {
+  //  setupTopNav(e);
+  //});
  
 
 })();
