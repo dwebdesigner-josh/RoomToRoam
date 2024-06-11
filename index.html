@@ -46,10 +46,10 @@
         </div>
       </button>
       <ul id="topnav">
-        <li class="topnav-item">  <a class="topnav-link" href="/artists/" target="_self">Artists</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/reviews/" target="_self">Reviews</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/connect/" target="_self">Connect</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/about-us/" target="_self">About Us</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/artists/" target="_self">Artists</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/reviews/" target="_self">Reviews</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/connect/" target="_self">Connect</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/about-us/" target="_self">About Us</a>  </li>
       </ul>
     </div>
   
@@ -76,12 +76,27 @@
 </header>
 
 <div id="highlight">
-  <img src="/RoomToRoam/images/roots-missionstatement.png" id="roots-missionstatement">
-  <section id="mission-statement" class="highlightitem">
+  
+  <section id="roots-missionstatement" class="highlightitem">
   </section>
-  <img src="/RoomToRoam/images/roots-highlightV5.png" id="roots-highlight">
-  <section id="highlight-reel" class="highlightitem">
+
+  <section id="roots-highlight" class="highlightitem" class="highlight-reel">
+     <!-- <div class="slider-wrapper">-->
+        <div class="slider">
+          <button id="slide-left" aria-pressed="false">LEFT</button>
+          <img id="slide-1" src="https://images.unsplash.com/photo-1656464868371-602be27fd4c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="3D rendering of an imaginary orange planet in space" />
+          <img id="slide-2" src="https://images.unsplash.com/photo-1657586640569-4a3d4577328c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="3D rendering of an imaginary green planet in space" />
+          <img id="slide-3" src="https://images.unsplash.com/photo-1656077217715-bdaeb06bd01f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="3D rendering of an imaginary blue planet in space" />
+          <button id="slide-right">RIGHT</button>
+        </div>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+        </div>
+      
   </section>
+
 </div>
 
   <section id="swirl-container">
@@ -164,6 +179,7 @@
 <!--jquery animation files : KEEP AT BOTTOM OF BODY-->
 <!--with these at bottom, content loads before these scripts-->
 <script src="/RoomToRoam/scripts/swirljqueryanimation.js"></script>
+<script src="/RoomToRoam/scripts/slide.js"></script>
 <script src="/RoomToRoam/scripts/hamburger.js"></script> <!--PREVIOUS ISSUE FIXED: event listener from this script wasn't showing up in chrome dev tools when this script was listed in the head or body BEFORE the button it was meant to find in its query - so the issue with the Event Listener not triggering/showing up in chrome dev tools was 
   caused by:  the targeted element is either not found or not loaded when the event listener is attached FIX: attach the script to the html doc at the END so that it runs and the eventlistener looks for the button AFTER the button has loaded, this way it is actually found -->
 </body>

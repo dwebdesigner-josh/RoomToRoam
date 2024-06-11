@@ -1,36 +1,7 @@
 Client Site: Room to Roam Records
 
-
-
-
-
-save for later:
-
-header {
-  width: 95%; 
-  height: 100dvh;
-  display: grid;
-  grid-template: 100%/100%;
-  margin-bottom: 0px;
-}
-      header>.logo { width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
-        /*@media screen and (max-width: 850px){
-          header>.logo {height: 20vw;}
-        }*/
-      
-      header>div {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
-      #roots {z-index: 1; height: 70dvh; max-width: 100%;}
-      #tree {
-        flex:none; aspect-ratio: 370/317; height: 70dvh; max-width: 100%; z-index: 2;
-        transition: transform .5s ease-in-out;
-        /*TODO: input a growth transition CSS animation here*/ 
-      }
-      #tree:hover {
-        transform: scale(1.2) translateY(-5%); /*translate added to offset the growth of the tree to make sure the roots still look connected*/
-      } 
-
-              h1{position: relative; height: 25dvh; top: 35dvh; left:3%; font-size: 9vw}
-
+current commit progress notes
+fix: changed highlight imgs to background imgs of highlight sections and changed ID on highlight sections to match the ID the imgs had
 
 TODO NOTES:
 
@@ -113,3 +84,104 @@ RESEARCH NOTES:
 
 
         
+save for later:
+
+header {
+  width: 95%; 
+  height: 100dvh;
+  display: grid;
+  grid-template: 100%/100%;
+  margin-bottom: 0px;
+}
+      header>.logo { width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
+        /*@media screen and (max-width: 850px){
+          header>.logo {height: 20vw;}
+        }*/
+      
+      header>div {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
+      #roots {z-index: 1; height: 70dvh; max-width: 100%;}
+      #tree {
+        flex:none; aspect-ratio: 370/317; height: 70dvh; max-width: 100%; z-index: 2;
+        transition: transform .5s ease-in-out;
+        /*TODO: input a growth transition CSS animation here*/ 
+      }
+      #tree:hover {
+        transform: scale(1.2) translateY(-5%); /*translate added to offset the growth of the tree to make sure the roots still look connected*/
+      } 
+
+              h1{position: relative; height: 25dvh; top: 35dvh; left:3%; font-size: 9vw}
+
+
+
+
+
+
+SAVE
+
+ .container {
+    padding: 2rem;
+  }
+
+  .slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  .slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x:visible;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+  }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slider img {
+    /*flex: 1 0 100%;*/
+    scroll-snap-align: center;
+    width: 500px;
+    height: 300px;
+  }
+    #slide-1{
+      z-index:10
+    }
+    #slide-2{
+      z-index: 8;
+      transform: translateX(-600px);
+    }
+    #slide-3{
+      z-index: 8;
+      transform: translateX(-400px);
+    }
+
+  .slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+  }
+
+  .slider-nav a:hover {
+    opacity: 1;
+  }
