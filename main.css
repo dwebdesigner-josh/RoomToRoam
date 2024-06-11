@@ -128,6 +128,8 @@ nav {
       align-items:flex-start; 
     }
   }
+
+/*TODO - CHANGE THIS FUNCTION/JS USAGE WITH THIS - THIS DOES NOT WORK ON SAFARI*/
   #topnav-open[aria-expanded="true"] {
     + #topnav-menu{translate: 0;} /*the + here is necessary for this to be properly selected!!*/
   
@@ -242,9 +244,10 @@ section {width: 100%; height:fit-content;}
 
 /*#slide-1 {animation: bannermove 10s linear infinite;}*/
 
+/*THIS DOES NOT WORK ON SAFARI*/
 /* #slide-left[aria-pressed="true"] {
   + #slide-1 {animation: bannermove 10s linear 1;}
-}                                                  APPEARS THIS TYPE OF COMBINATOR/SELECTOR DOESN'T WORK ON SAFARI*/
+}        */
 /*
 .slider {
   animation: bannermove 10s linear infinite;
