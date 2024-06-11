@@ -1,5 +1,5 @@
 (() => {
-
+//WORKING FIX FOUND FOR SAFARI
     const buttonOpen = document.querySelector('#topnav-open');
     const buttonClose = document.querySelector('#topnav-close');
     //const media = window.matchMedia('(width < 850px)');
