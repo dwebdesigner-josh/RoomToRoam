@@ -12,11 +12,12 @@ function openMobileMenu(){
   alert('Open menu function called');
   console.log('Open menu triggered');
     buttonOpen.setAttribute("aria-expanded", "true");
-    topNavMenu.removeAttribute('inert');
-    topNavMenu.removeAttribute('style');
-    buttonOpen.setAttribute('inert','');
-   // main.setAttribute('inert', '');       - TODO consider reimplementing or keeping removed
-   buttonClose.focus();
+ //   topNavMenu.removeAttribute('inert');
+   topNavMenu.removeAttribute('style');
+ //   buttonOpen.setAttribute('inert','');
+                            // main.setAttribute('inert', '');       - TODO consider reimplementing or keeping removed
+
+//   buttonClose.focus();
   // review.setAttribute('tabindex','-1');
    
  //  review.forEach(nodelistitem => {
@@ -28,16 +29,16 @@ function openMobileMenu(){
 function closeMobileMenu(){
   alert('Close menu function called');
     buttonOpen.setAttribute("aria-expanded", "false");
-    topNavMenu.setAttribute('inert', '');
-  //  main.removeAttribute('inert');        - TODO consider reimplementing or keeping removed
-    buttonOpen.removeAttribute('inert');
-    buttonOpen.focus();
+ //   topNavMenu.setAttribute('inert', '');
+                        //  main.removeAttribute('inert');        - TODO consider reimplementing or keeping removed
+ //   buttonOpen.removeAttribute('inert');
+//    buttonOpen.focus();
     //review.removeAttribute('tabindex');
     
  
-    review.forEach(nodelistitem => {
-      nodelistitem.removeAttribute('tabindex');
-    });
+ //   review.forEach(nodelistitem => {
+   //   nodelistitem.removeAttribute('tabindex');
+ //   });
  
 
   setTimeout(() => {
