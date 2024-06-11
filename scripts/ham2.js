@@ -10,7 +10,8 @@
     
     function openMobileMenu(){
       alert('Open menu function called');
-      topNavMenu.classlist.add("mobile");
+      topNavMenu.setAttribute ("style","translate: 0;");
+    //  topNavMenu.classlist.add("mobile");
       //   topNavMenu.setAttribute (class, );
   //    console.log('Open menu triggered');
      //   buttonOpen.setAttribute("aria-expanded", "true");
@@ -81,7 +82,7 @@
     buttonOpen.addEventListener('click', openMobileMenu);
     buttonClose.addEventListener('click', closeMobileMenu);
     
-    main.addEventListener('click', closeonclick);
+   // main.addEventListener('click', closeonclick);
     
     
     //media.addEventListener('change', function (e) {

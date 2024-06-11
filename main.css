@@ -130,14 +130,14 @@ nav {
   }
 
 /*TODO - CHANGE THIS FUNCTION/JS USAGE WITH THIS - THIS DOES NOT WORK ON SAFARI*/
-  #topnav-open[aria-expanded="true"] {
-    + #topnav-menu{translate: 0;} /*the + here is necessary for this to be properly selected!!*/
+ /* #topnav-open[aria-expanded="true"] {
+    + #topnav-menu{translate: 0;} the + here is necessary for this to be properly selected!!
   
     @media (prefers-reduced-motion){
       + #topnav-menu{opacity: 1;}
     }
   }   
-
+*/
 /*header*/
                               
 header {
