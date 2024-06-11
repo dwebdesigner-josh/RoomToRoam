@@ -43,6 +43,19 @@ TODO NOTES:
 
 RESEARCH NOTES:
 
+- SAFARI JS/HAMBURGER
+    /*HAMBURGER MENU SOLUTION FOUND - REMOVAL OF BELOW + COMBINATOR BASED TRANSLATION, replaced with JS based translation using topNavMenu.setAttribute ("style","translate: 0;") with a click event listener on the open button to activate the function*/
+        /*THIS + COMBINATOR DOES NOT WORK ON SAFARI*/
+                #topnav-open[aria-expanded="true"]{
+                    + #topnav-menu{translate: 0;} 
+                }
+
+            rough replacement JS
+                    function openMobileMenu(){
+                     alert('Open menu function called');
+                     topNavMenu.setAttribute ("style","translate: 0;");
+                    }
+        further notes on research/fix:https://stackoverflow.com/questions/78605252/solved-hamburger-menu-using-aria-expanded-js-jquery-and-css-translation-not 
 
 - STARTEST - CSS opacity and visibility transition animation using star background img and star img overlayed 
     - https://stackoverflow.com/questions/8449933/how-to-transition-css-display-opacity-properties

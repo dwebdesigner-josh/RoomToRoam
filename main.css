@@ -128,7 +128,7 @@ nav {
       align-items:flex-start; 
     }
   }
-
+/*HAMBURGER MENU SOLUTION FOUND - REMOVAL OF BELOW + COMBINATOR BASED TRANSLATION, replaced with JS based translation using topNavMenu.setAttribute ("style","translate: 0;") with a click event listener on the open button to activate the function*/
 /*TODO - CHANGE THIS FUNCTION/JS USAGE WITH THIS - THIS DOES NOT WORK ON SAFARI*/
  /* #topnav-open[aria-expanded="true"] {
     + #topnav-menu{translate: 0;} the + here is necessary for this to be properly selected!!
