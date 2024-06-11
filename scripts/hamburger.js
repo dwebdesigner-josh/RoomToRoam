@@ -19,9 +19,9 @@ function openMobileMenu(){
    buttonClose.focus();
   // review.setAttribute('tabindex','-1');
    
-   review.forEach(nodelistitem => {
-    nodelistitem.setAttribute('tabindex', '-1');
-   });
+ //  review.forEach(nodelistitem => {
+   // nodelistitem.setAttribute('tabindex', '-1');
+  // });
 
 }
 
