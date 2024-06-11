@@ -36,7 +36,7 @@
           </div>
     </button>
     
-    <div class="topnav-menu" role="dialog" aria-labelledby="topnav-label">
+    <div id="topnav-menu" role="dialog" aria-labelledby="topnav-label">
       <button id="topnav-close" aria-label="Close">
         <!--<img class="hamburger-icon" src="/images/hamburger-icon.svg" alt="" height="25px" width="25px">-->
         <div class="hamburger-icon">
@@ -64,7 +64,7 @@
 
   <img src="/RoomToRoam/images/logorootsV4.png" alt="Room to Roam Logo" id="roots" class="logo"> 
   <div class="logo">
-    <h1 class="logo">Room to Roam TEST7</h1>
+    <h1 class="logo">Room to Roam</h1>
     </div>
   <div class="logo">
     <img src="/RoomToRoam/images/logotreeroughV4.png" alt="" id="tree">
@@ -163,8 +163,8 @@
 
 <!--jquery animation files : KEEP AT BOTTOM OF BODY-->
 <!--with these at bottom, content loads before these scripts-->
-<!--<script src="/RoomToRoam/scripts/swirljqueryanimation.js"></script>-->
-<script src="/RoomToRoam/scripts/ham2.js"></script> <!--PREVIOUS ISSUE FIXED: event listener from this script wasn't showing up in chrome dev tools when this script was listed in the head or body BEFORE the button it was meant to find in its query - so the issue with the Event Listener not triggering/showing up in chrome dev tools was 
+<script src="/RoomToRoam/scripts/swirljqueryanimation.js"></script>
+<script src="/RoomToRoam/scripts/hamburger.js"></script> <!--PREVIOUS ISSUE FIXED: event listener from this script wasn't showing up in chrome dev tools when this script was listed in the head or body BEFORE the button it was meant to find in its query - so the issue with the Event Listener not triggering/showing up in chrome dev tools was 
   caused by:  the targeted element is either not found or not loaded when the event listener is attached FIX: attach the script to the html doc at the END so that it runs and the eventlistener looks for the button AFTER the button has loaded, this way it is actually found -->
 </body>
 
