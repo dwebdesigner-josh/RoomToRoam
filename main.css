@@ -251,21 +251,12 @@ section {width: 100%; height:fit-content;}
   margin: 0px 25px;
   box-shadow: 2px 2px 8px #8a8a8a;
   position: relative;
+  
+  transition: left 1s ease-in, transform 1s ease-in;
 }
 
 
 
-@keyframes bannermove {
-   0% {
-    left: 0;
-  }
-  50% {
-    left: 500px;
-  }
-  100% {
-    left: 0;
-  }
-}
 
 
 /*section - swirl animated buttons*/

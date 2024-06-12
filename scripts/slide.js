@@ -41,9 +41,9 @@
     var slideImage2 = document.querySelector(slideNumber+slideCount2);
     var slideImage3 = document.querySelector(slideNumber+slideCount3);
 
-        slideImage1.removeAttribute("style");
-        slideImage2.removeAttribute("style");
-        slideImage3.removeAttribute("style");
+  //      slideImage1.removeAttribute("style");
+    //    slideImage2.removeAttribute("style");
+      //  slideImage3.removeAttribute("style");
                 slideImage1.setAttribute("style", "order: 3; transform: translateX(-350px);");  //middle to left
                 slideImage2.setAttribute("style", "order: 4; transform: translateX(-350px) scale(1.2);"); // right to middle
                 slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); //left to right
@@ -77,12 +77,15 @@ function slideLeft(){
     var slideImage2 = document.querySelector(slideNumber+slideCount2);
     var slideImage3 = document.querySelector(slideNumber+slideCount3);
 
-        slideImage1.removeAttribute("style");
-        slideImage2.removeAttribute("style");
-        slideImage3.removeAttribute("style");
-                slideImage1.setAttribute("style", "order: 3; transform: translateX(-350px);"); 
-                slideImage2.setAttribute("style", "order: 4; transform: translateX(-350px) scale(1.2);"); 
-                slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); 
+//        slideImage1.removeAttribute("style");
+  //      slideImage2.removeAttribute("style");
+    //    slideImage3.removeAttribute("style");
+     //           slideImage1.setAttribute("style", "order: 3; transform: translateX(-350px);"); 
+       //         slideImage2.setAttribute("style", "order: 4; transform: translateX(-350px) scale(1.2);"); 
+         //       slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); 
+            slideImage1.setAttribute("style", "order: 3; left: 0; "); 
+            slideImage2.setAttribute("style", "order: 4; left: 350px; "); 
+            slideImage3.setAttribute("style", "order: 2; left: 700px; transform: scale(1.2);"); 
 }
 
 
