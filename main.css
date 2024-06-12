@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/RoomToRoam/images/starV1frame1.png");
+  background-image: url("/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -133,6 +133,12 @@ nav {
 #topnav-open[aria-expanded="true"] ~ #topnav-menu {
   translate: 0; 
 }
+
+@media (prefers-reduced-motion){
+  #topnav-open[aria-expanded="true"] ~ #topnav-menu {
+    opacity: 1;
+  }
+}
 /* #topnav-open[aria-expanded="true"] {
     + #topnav-menu{translate: 0;} the + here is necessary for this to be properly selected!!
   
@@ -141,6 +147,8 @@ nav {
     }
   }   
 */
+
+
 /*header*/
                               
 header {
@@ -203,7 +211,7 @@ section {width: 100%; height:fit-content;}
         #highlight>#roots-missionstatement{
           aspect-ratio: 1350/390;
           width: 100%;
-          background-image: url("/RoomToRoam/images/roots-missionstatement.png");
+          background-image: url("/images/roots-missionstatement.png");
           background-repeat:no-repeat;
           background-size:cover;
         /* z-index: 3; */
@@ -212,7 +220,7 @@ section {width: 100%; height:fit-content;}
 
            height: 100dvh;
            width: 100%;
-           background-image: url("/RoomToRoam/images/roots-highlightV5.png");
+           background-image: url("/images/roots-highlightV5.png");
            background-repeat:no-repeat;
            background-size: 100% 100dvh;
           
@@ -245,17 +253,8 @@ section {width: 100%; height:fit-content;}
   position: relative;
 }
 
-/*#slide-1 {animation: bannermove 10s linear infinite;}*/
 
-/*THIS DOES NOT WORK ON SAFARI*/
-/* #slide-left[aria-pressed="true"] {
-  + #slide-1 {animation: bannermove 10s linear 1;}
-}        */
-/*
-.slider {
-  animation: bannermove 10s linear infinite;
-}
-*/
+
 @keyframes bannermove {
    0% {
     left: 0;
