@@ -239,44 +239,43 @@ section {width: 100%; height:fit-content;}
   display: flex;
 }
 
-.slider {
- display: flex;
- flex-direction: row;
- justify-content: space-between;
-  height: 233px;
+  .slider {
   display: flex;
-  width: 100%;
-}
+  flex-direction: row;
+  justify-content: space-between;
+    height: 233px;
+    display: flex;
+    width: 100%;
+  }
 
-.slider>button{
-  z-index: 31;
-  flex: 1;
-}
+    .slider>button{
+      height: 100%;
+      z-index: 31;
+     /* border: none;*/
+      flex: 1;
+      color: white;
+      background-color: transparent;
+    }
+        #slide-left {padding-right: 20%;}
+        #slide-right {padding-left: 25%;}
 
-#slides-container{
-  z-index: 0;
-  height: 233px;
-  width: 100%;
-  left: 0px;
-  flex: 8;
+    #slides-container{
+      z-index: 0;
+      height: 233px;
+      width: 100%;
+      left: 0px;
+      flex: 8;
 
-}
+    }
+        .slider img {
+          box-shadow: 2px 2px 8px #8a8a8a;
+          position: absolute;
+          
+          width: 33%;
+          
+          transition: left 500ms ease-in-out, transform 500ms ease-in-out;
+        }
 
-.slider img {
-  box-shadow: 2px 2px 8px #8a8a8a;
-  position: absolute;
-  
-  width: 33%;
-  
-  transition: left 500ms ease-in-out, transform 500ms ease-in-out;
-}
-/*
-#slide-1 {order: 2;}
-
-#slide-2 {order: 3;}
-
-#slide-3 {order: 4;}
-*/
 
 /*section - swirl animated buttons*/
 
