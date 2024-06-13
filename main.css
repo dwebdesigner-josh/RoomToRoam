@@ -240,23 +240,33 @@ section {width: 100%; height:fit-content;}
 }
 
 .slider {
-  position: relative;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
   height: 233px;
-  margin-bottom: 30px;
   display: flex;
   width: 100%;
 }
 
+.slider>button{
+  z-index: 31;
+  flex: 1;
+}
+
 #slides-container{
+  z-index: 0;
   height: 233px;
   width: 100%;
+  left: 0px;
+  flex: 8;
+
 }
 
 .slider img {
-  margin: 0px 25px;
   box-shadow: 2px 2px 8px #8a8a8a;
   position: absolute;
-  height: 233px;
+  
+  width: 33%;
   
   transition: left 1s ease-in, transform 1s ease-in;
 }

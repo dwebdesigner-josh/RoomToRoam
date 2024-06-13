@@ -83,9 +83,10 @@ function slideLeft(){
      //           slideImage1.setAttribute("style", "order: 3; transform: translateX(-350px);"); 
        //         slideImage2.setAttribute("style", "order: 4; transform: translateX(-350px) scale(1.2);"); 
          //       slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); 
-            slideImage1.setAttribute("style", " z-index: 28; left: 0; "); 
-            slideImage2.setAttribute("style", " z-index: 29; transform: scale(1.2); left: 350px; "); 
-            slideImage3.setAttribute("style", " z-index: 30; left: 700px; "); 
+            slideImage1.setAttribute("style", " z-index: 28; left: 12.5%; "); 
+            slideImage2.setAttribute("style", " z-index: 30; left: 30%; transform: scale(1.2);"); 
+            slideImage3.setAttribute("style", " z-index: 29; left: 54.5%; "); 
+ 
 }
 
 
