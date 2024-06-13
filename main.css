@@ -252,7 +252,7 @@ section {width: 100%; height:fit-content;}
     .slider>button{
       height: 100%;
       z-index: 31;
-     /* border: none;*/
+     border: none;
       flex: 1;
       color: white;
       background-color: transparent;
