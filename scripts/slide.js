@@ -44,10 +44,14 @@
   //      slideImage1.removeAttribute("style");
     //    slideImage2.removeAttribute("style");
       //  slideImage3.removeAttribute("style");
-                slideImage1.setAttribute("style", "order: 3; transform: translateX(-350px);");  //middle to left
-                slideImage2.setAttribute("style", "order: 4; transform: translateX(-350px) scale(1.2);"); // right to middle
-                slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); //left to right
-}
+           //     slideImage1.setAttribute("style", "order: 3; transform: translateX(-350px);");  //middle to left
+             //   slideImage2.setAttribute("style", "order: 4; transform: translateX(-350px) scale(1.2);"); // right to middle
+               // slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); //left to right
+                slideImage1.setAttribute("style", " z-index: 29; left: 12.5%; "); 
+                slideImage2.setAttribute("style", " z-index: 30; left: 30%; transform: scale(1.2);"); 
+                slideImage3.setAttribute("style", " z-index: 28; left: 54.5%; "); 
+     
+            }
 
 function slideLeft(){
                 if (slideCount1 <= 1) {
