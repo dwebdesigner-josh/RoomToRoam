@@ -9,7 +9,9 @@
     const slideRightButton = document.querySelector('#slide-right');
     const slideNumber = '#slide-';
     const mediaQuery = window.matchMedia('(max-width: 850px)');
-    
+    //for transition delay on single click sliding:
+    const transitionTime = 500; // Transition time
+    let isTransitioning = false; //prevent next transition until current is complete
     
 
     function slideRight(){
@@ -95,18 +97,42 @@ function slideLeft(){
     //setTimeout(slideLeft, 500) - infinite sliding
 }
 
-//non-infinite sliding:
-function startSlideRight() {
-    slideInterval = setInterval(slideRight, 500); 
-}
+//single click sliding:
 
-function startSlideLeft() {
-    slideInterval = setInterval(slideLeft, 500); 
-}
+    function slideRightSingle(){
+        if (isTransitioning) return; // Check if transition is in progress
+            isTransitioning = true; // Set the flag to indicate a transition is in progress
 
-function stopSlide() {
-    clearInterval(slideInterval);
-}
+        slideRight();
+
+        setTimeout(() => {
+            isTransitioning = false; // Reset the flag after transition time
+        }, transitionTime);
+    }
+
+    function slideLeftSingle(){
+        if (isTransitioning) return; // Check if transition is in progress
+            isTransitioning = true; // Set the flag to indicate a transition is in progress
+
+        slideLeft();
+
+        setTimeout(() => {
+            isTransitioning = false; // Reset the flag after transition time
+        }, transitionTime);
+    }
+
+//hover sliding:
+    function startSlideRight() {
+        slideInterval = setInterval(slideRight, 500); 
+    }
+
+    function startSlideLeft() {
+        slideInterval = setInterval(slideLeft, 500); 
+    }
+
+    function stopSlide() {
+        clearInterval(slideInterval);
+    }
 
 
 //desktop vs mobile event listeners
@@ -116,8 +142,9 @@ function mediaChange(e) {
                 slideLeftButton.removeEventListener('mouseout', stopSlide);
                 slideRightButton.removeEventListener('mouseover', startSlideRight);
                 slideRightButton.removeEventListener('mouseout', stopSlide); 
-        slideLeftButton.addEventListener('click', slideLeft);
-        slideRightButton.addEventListener('click', slideRight);
+        slideLeftButton.addEventListener('click', slideLeftSingle);
+        slideRightButton.addEventListener('click', slideRightSingle);
+        
     } else { // Desktop
                 slideLeftButton.removeEventListener('click', slideLeft);
                 slideRightButton.removeEventListener('click', slideRight);
