@@ -218,15 +218,14 @@ section {width: 100%; height:fit-content;}
         }
         #highlight>#roots-highlight{
 
-           height: 100dvh;
-           width: 100%;
-           background-image: url("/images/roots-highlightV5.png");
-           background-repeat:no-repeat;
-           background-size: 100% 100dvh;
-          
-          /*aspect-ratio:1350/690;
+           /*height: 100dvh;*/
           width: 100%;
-          background-size:cover;*/
+           aspect-ratio: 1350/690;
+           /*background-image: url("/images/roots-highlightV7.png");
+           background-repeat:no-repeat;
+           background-size: cover;*/
+          
+          
         }
 
             .highlightitem {margin: 0; z-index: 4;}
@@ -243,7 +242,9 @@ section {width: 100%; height:fit-content;}
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-    height: 233px;
+  align-items: center;  
+    /*height: 233px;*/
+    aspect-ratio:1350/690;
     display: flex;
     width: 100%;
   }
@@ -261,18 +262,19 @@ section {width: 100%; height:fit-content;}
 
     #slides-container{
       z-index: 0;
-      height: 233px;
+      aspect-ratio: 1350/690;
       width: 100%;
       left: 0px;
       flex: 8;
 
     }
         .slider img {
+          /*opacity: .95;*/
           box-shadow: 2px 2px 8px #8a8a8a;
           position: absolute;
-          
-          width: 33%;
-          
+          aspect-ratio: 16/9; /*SLIDE IMAGE THUMBNAIL SIZE HERE*/
+          /*width: 33%;*/
+          width: 50%;
           transition: left 500ms ease-in-out, transform 500ms ease-in-out;
         }
 
