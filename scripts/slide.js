@@ -8,6 +8,8 @@
     const slideLeftButton = document.querySelector('#slide-left');
     const slideRightButton = document.querySelector('#slide-right');
     const slideNumber = '#slide-';
+    const mediaQuery = window.matchMedia('(max-width: 850px)');
+    
     
 
     function slideRight(){
@@ -106,8 +108,31 @@ function stopSlide() {
     clearInterval(slideInterval);
 }
 
-slideLeftButton.addEventListener('mouseover', startSlideLeft);
-slideLeftButton.addEventListener('mouseout', stopSlide);
-slideRightButton.addEventListener('mouseover', startSlideRight);
-slideRightButton.addEventListener('mouseout', stopSlide);
+
+//desktop vs mobile event listeners
+function mediaChange(e) {
+    if (e.matches) { // Mobile
+                slideLeftButton.removeEventListener('mouseover', startSlideLeft);
+                slideLeftButton.removeEventListener('mouseout', stopSlide);
+                slideRightButton.removeEventListener('mouseover', startSlideRight);
+                slideRightButton.removeEventListener('mouseout', stopSlide); 
+        slideLeftButton.addEventListener('click', slideLeft);
+        slideRightButton.addEventListener('click', slideRight);
+    } else { // Desktop
+                slideLeftButton.removeEventListener('click', slideLeft);
+                slideRightButton.removeEventListener('click', slideRight);
+        slideLeftButton.addEventListener('mouseover', startSlideLeft);
+        slideLeftButton.addEventListener('mouseout', stopSlide);
+        slideRightButton.addEventListener('mouseover', startSlideRight);
+        slideRightButton.addEventListener('mouseout', stopSlide); 
+         
+    }
+}
+
+mediaQuery.addEventListener('change', mediaChange);
+
+    // Initial check
+    mediaChange(mediaQuery);
+
+
 })();
