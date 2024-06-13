@@ -268,7 +268,7 @@ section {width: 100%; height:fit-content;}
   
   width: 33%;
   
-  transition: left 1s ease-in, transform 1s ease-in;
+  transition: left 500ms ease-in-out, transform 500ms ease-in-out;
 }
 /*
 #slide-1 {order: 2;}

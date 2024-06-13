@@ -90,10 +90,24 @@ function slideLeft(){
             slideImage1.setAttribute("style", " z-index: 28; left: 12.5%; "); 
             slideImage2.setAttribute("style", " z-index: 30; left: 30%; transform: scale(1.2);"); 
             slideImage3.setAttribute("style", " z-index: 29; left: 54.5%; "); 
- 
+    //setTimeout(slideLeft, 500) - infinite sliding
 }
 
+//non-infinite sliding:
+function startSlideRight() {
+    slideInterval = setInterval(slideRight, 500); 
+}
 
-    slideLeftButton.addEventListener('click', slideLeft);
-    slideRightButton.addEventListener('click', slideRight);
+function startSlideLeft() {
+    slideInterval = setInterval(slideLeft, 500); 
+}
+
+function stopSlide() {
+    clearInterval(slideInterval);
+}
+
+slideLeftButton.addEventListener('mouseover', startSlideLeft);
+slideLeftButton.addEventListener('mouseout', stopSlide);
+slideRightButton.addEventListener('mouseover', startSlideRight);
+slideRightButton.addEventListener('mouseout', stopSlide);
 })();
