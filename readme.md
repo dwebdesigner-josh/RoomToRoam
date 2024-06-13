@@ -3,6 +3,8 @@ Client Site: Room to Roam Records
 TODO NOTES:
 
 1. TODO - general: 
+   - slide.js:
+         TODO: responsive styling of slide images heights/aspect ratios | TODO: delay between eventlisteners activation on slide.js to prevent animation from being canceled/run multiple times before finishing
     - prefers-reduced-motion media query on nav menu -  fix so opacity transition actually works and translate 
     transition actually stops happening
     - set up prefers-reduced-motion accessibility feature for tree logo transformation transition and swirl animation disabling as well
