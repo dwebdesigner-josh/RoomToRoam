@@ -10,7 +10,7 @@
     const slideNumber = '#slide-';
     const mediaQuery = window.matchMedia('(max-width: 850px)');
     //for transition delay on single click sliding:
-    const transitionTime = 500; // Transition time
+    const transitionTime = 300; // Transition time
     let isTransitioning = false; //prevent next transition until current is complete
     
 
