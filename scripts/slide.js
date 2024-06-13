@@ -146,8 +146,8 @@ function mediaChange(e) {
         slideRightButton.addEventListener('click', slideRightSingle);
         
     } else { // Desktop
-                slideLeftButton.removeEventListener('click', slideLeft);
-                slideRightButton.removeEventListener('click', slideRight);
+                slideLeftButton.removeEventListener('click', slideLeftSingle);
+                slideRightButton.removeEventListener('click', slideRightSingle);
         slideLeftButton.addEventListener('mouseover', startSlideLeft);
         slideLeftButton.addEventListener('mouseout', stopSlide);
         slideRightButton.addEventListener('mouseover', startSlideRight);

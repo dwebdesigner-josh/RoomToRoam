@@ -4,8 +4,8 @@ TODO NOTES:
 
 1. TODO - general: 
    - slide.js:
-      
-         TODO: responsive styling of slide images heights/aspect ratios
+        TODO - fix issue with changing media from mobile to desktop - click to slide event remains 
+       
          TODO: clarify media query further to differentiate between what's just a narrow desktop window and what's actually a mobile browser
          TODO: add scroll (swipe) function (optional) on mobile instead of the single click, possibly use it to replace the transition delay functions
          TODO: OPTIMIZE slide.js (SEE slideoptimized.js to get started)
