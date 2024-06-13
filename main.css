@@ -247,17 +247,26 @@ section {width: 100%; height:fit-content;}
   width: 100%;
 }
 
+#slides-container{
+  height: 233px;
+  width: 100%;
+}
+
 .slider img {
   margin: 0px 25px;
   box-shadow: 2px 2px 8px #8a8a8a;
-  position: relative;
+  position: absolute;
+  height: 233px;
   
   transition: left 1s ease-in, transform 1s ease-in;
 }
+/*
+#slide-1 {order: 2;}
 
+#slide-2 {order: 3;}
 
-
-
+#slide-3 {order: 4;}
+*/
 
 /*section - swirl animated buttons*/
 
