@@ -1,7 +1,7 @@
 // inspiration: https://www.sitepoint.com/frame-by-frame-animation-css-javascript/#1framebyframeanimationbychangingtheimagessource
 (() => {
 //CHANGE class of $element below to match the HTML class of the img we're targeting
-const $element = $('.swirl');
+const $element = $('.swirl-image');
 //CHANGE the path below to match the folder containing the src imgs
 const imagePath = '/scripts/swirl1/images';
 //TEST PATH TO MATCH GITHUB PAGES: '/scripts/swirl1/images'

@@ -287,9 +287,29 @@ section {width: 100%; height:fit-content;}
 /*section - swirl animated buttons*/
 
         #swirl-container{display:flex; width: 100%; z-index: 1;}
-        .swirl{flex:1; max-width: 33%; z-index: 1; opacity: .8;} /*possibly remove opacity style*/
+        .swirl{ flex:1; max-width: 33%; z-index: 1; opacity: .8; position: relative;} /*possibly remove opacity style*/
+       .swirl-image{width: 100%; position: relative; z-index: 1;}
+        .swirl-link{
+          display: block; width: 100%; height: 100%; 
+          justify-content: center; align-items: center; display: flex; 
+          position: relative; top: -100%; 
+          text-decoration: none;
+          z-index: 5;
+          }
 
-        @media screen and (max-width: 850px){
+          .swirl-link>p{position: relative; left: -20px; top: 5px;}
+          
+            .swirl-link:link, .swirl-link:active{
+              color: #e3f5ff;
+            }
+            .swirl-link:visited{
+              color: #e3f5ff;
+            }
+            .swirl-link:hover{
+              color: #e3f5ff3f;
+            }
+
+      @media screen and (max-width: 850px){
           #swirl-container{
             width: 100%;
             display: grid;
@@ -298,14 +318,17 @@ section {width: 100%; height:fit-content;}
         grid-template-areas: 
             ". swirl2 swirl2 ."
             "swirl1 swirl1 swirl3 swirl3";
-        
           }
           .swirl {max-width: 50vw; width: 50vw;}
             #swirl1{ grid-area: swirl1;}
             #swirl2{ grid-area: swirl2;}
             #swirl3{ grid-area: swirl3;}
-        }
+          #swirl-link1{grid-area: swirl1;}
+          #swirl-link1{grid-area: swirl2;}
+          #swirl-link1{grid-area: swirl3;}
 
+      }
+        
 /*spaceship*/
 
 /*section - reviews*/
