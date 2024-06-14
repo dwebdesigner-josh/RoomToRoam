@@ -51,9 +51,16 @@
            //     slideImage1.setAttribute("style", "order: 3; transform: translateX(-350px);");  //middle to left
              //   slideImage2.setAttribute("style", "order: 4; transform: translateX(-350px) scale(1.2);"); // right to middle
                // slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); //left to right
+                
                 slideImage1.setAttribute("style", " z-index: 29; left: 5%; opacity: .95;"); 
                 slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.2) translateY(-5%);"); 
                 slideImage3.setAttribute("style", " z-index: 28; left: 45%; opacity: .95;"); 
+                    //accessibility changes:
+                     //accessibility changes:
+                    slideImage1.setAttribute("aria-expanded", "false");
+                    slideImage2.setAttribute("aria-expanded", "true");
+                    slideImage3.setAttribute("aria-expanded", "false");
+      
      
             }
 
@@ -94,7 +101,11 @@ function slideLeft(){
             slideImage1.setAttribute("style", " z-index: 28; left: 5%; opacity: .95;"); 
             slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.2) translateY(-5%);"); 
             slideImage3.setAttribute("style", " z-index: 29; left: 45%; opacity: .95;"); 
-    //setTimeout(slideLeft, 500) - infinite sliding
+                //accessibility changes:
+                    slideImage1.setAttribute("aria-expanded", "false");
+                    slideImage2.setAttribute("aria-expanded", "true");
+                    slideImage3.setAttribute("aria-expanded", "false");
+//setTimeout(slideLeft, 500) - infinite sliding
 }
 
 //single click sliding:
@@ -133,7 +144,9 @@ function slideLeft(){
     function stopSlide() {
         clearInterval(slideInterval);
     }
-
+//single slide for accessibility (tab+enter)
+    slideLeftButton.addEventListener('keydown', slideLeftSingle);
+    slideRightButton.addEventListener('keydown', slideRightSingle);
 
 //desktop vs mobile event listeners
 function mediaChange(e) {

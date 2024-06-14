@@ -262,8 +262,8 @@ section {width: 100%; height:fit-content;}
       color: white;
       background-color: transparent;
     }
-        #slide-left {padding-right: 20%;}
-        #slide-right {padding-left: 25%;}
+        #slide-left {padding-right: 15%;}
+        #slide-right {padding-left: 15%;}
 
     #slides-container{
       z-index: 0;
@@ -273,7 +273,7 @@ section {width: 100%; height:fit-content;}
       flex: 8;
 
     }
-        .slider img {
+        .slider a {
           /*opacity: .95;*/
           box-shadow: 2px 2px 8px #8a8a8a;
           position: absolute;
@@ -281,6 +281,11 @@ section {width: 100%; height:fit-content;}
           /*width: 33%;*/
           width: 50%;
           transition: left 500ms ease-in-out, transform 500ms ease-in-out;
+        }
+
+        .slider img{
+          width: 100%;
+          height: 100%;
         }
 
 
