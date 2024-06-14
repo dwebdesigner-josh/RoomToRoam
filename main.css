@@ -273,7 +273,7 @@ section {width: 100%; height:fit-content;}
       flex: 8;
 
     }
-        .slider a {
+      .slide-anchor {
           
           border: none;
           position: absolute;
@@ -283,13 +283,27 @@ section {width: 100%; height:fit-content;}
           transition: left 500ms ease-in-out, transform 500ms ease-in-out;
         }
 
-        .slider img{
+        .slider img, .slider iframe{
           /*opacity: .95;*/
           width: 100%;
           height: 100%;
           border: none;
           box-shadow: 0px 0px 2px 2px black;
         }
+
+/* TODO: decide whether to add this feature
+        .slide-artistlink {
+          width: 100%;
+          height: 10px;
+          z-index: 100;
+          position: inherit;
+          left: inherit;
+          top: inherit;
+          bottom: inherit;
+          right: inherit;
+
+        }
+*/
 
 
 /*section - swirl animated buttons*/
