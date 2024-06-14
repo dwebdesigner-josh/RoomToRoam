@@ -3,6 +3,8 @@ Client Site: Room to Roam Records
 TODO NOTES:
 
 1. TODO - general: 
+   - TODO: fix tree hamburger bug - on mobile width screens when expanding tree and scrolling the hamburger disappears until the tree is shrunk back down
+
    - slide.js:
         TODO - fix issue with changing media from mobile to desktop - click to slide event remains 
        

@@ -1,9 +1,9 @@
 // inspiration: https://www.sitepoint.com/frame-by-frame-animation-css-javascript/#1framebyframeanimationbychangingtheimagessource
 (() => {
 //CHANGE class of $element below to match the HTML class of the img we're targeting
-const $element = $('.swirl1');
+const $element = $('.swirl');
 //CHANGE the path below to match the folder containing the src imgs
-const imagePath = '/RoomToRoam/scripts/swirl1/images';
+const imagePath = '/scripts/swirl1/images';
 //TEST PATH TO MATCH GITHUB PAGES: '/scripts/swirl1/images'
 const totalFrames = 99;
 const animationDuration = 7150;

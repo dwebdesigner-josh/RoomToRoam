@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/RoomToRoam/images/starV1frame1.png");
+  background-image: url("/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -203,20 +203,15 @@ section {width: 100%; height:fit-content;}
 /*section - mission statement and highlight reel backgrounds*/
         #highlight {
           width: 100%;
-          aspect-ratio: 1350/1410; /*aspect ratio matches background image*/
-          margin-top: -8%;
-          margin-bottom: -13%;
+          aspect-ratio: 1350/690;
+          /*aspect-ratio: 1350/1410;*/ /*aspect ratio matches background images*/
+        /*  margin-top: -8%;
+          margin-bottom: -13%;*/
           z-index: 3;
         }
-        #highlight>#roots-missionstatement{
-          aspect-ratio: 1350/390;
-          width: 100%;
-          background-image: url("/RoomToRoam/images/roots-missionstatement.png");
-          background-repeat:no-repeat;
-          background-size:cover;
-        /* z-index: 3; */
-        }
-        #highlight>#roots-highlight{
+          .highlightitem {margin: 0; z-index: 4;}
+        
+        #roots-highlight{
 
            /*height: 100dvh;*/
           width: 100%;
@@ -228,7 +223,17 @@ section {width: 100%; height:fit-content;}
           
         }
 
-            .highlightitem {margin: 0; z-index: 4;}
+          
+
+
+            #roots-missionstatement{
+              aspect-ratio: 1350/390;
+              width: 100%;
+              background-image: url("/images/roots-missionstatement.png");
+              background-repeat:no-repeat;
+              background-size:cover;
+            /* z-index: 3; */
+            }
 
 /*section - mission statement content*/
 
@@ -282,7 +287,24 @@ section {width: 100%; height:fit-content;}
 /*section - swirl animated buttons*/
 
         #swirl-container{display:flex; width: 100%; z-index: 1;}
-        #swirl-container>img{flex:1; max-width: 33%; z-index: 1;}
+        .swirl{flex:1; max-width: 33%; z-index: 1; opacity: .8;} /*possibly remove opacity style*/
+
+        @media screen and (max-width: 850px){
+          #swirl-container{
+            width: 100%;
+            display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Define four equal-width columns */
+        grid-template-rows: auto auto; 
+        grid-template-areas: 
+            ". swirl2 swirl2 ."
+            "swirl1 swirl1 swirl3 swirl3";
+        
+          }
+          .swirl {max-width: 50vw; width: 50vw;}
+            #swirl1{ grid-area: swirl1;}
+            #swirl2{ grid-area: swirl2;}
+            #swirl3{ grid-area: swirl3;}
+        }
 
 /*spaceship*/
 
