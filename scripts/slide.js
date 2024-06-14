@@ -56,10 +56,12 @@
                 slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.2) translateY(-5%);"); 
                 slideImage3.setAttribute("style", " z-index: 28; left: 45%; opacity: .95;"); 
                     //accessibility changes:
-                     //accessibility changes:
                     slideImage1.setAttribute("aria-expanded", "false");
+                    slideImage1.setAttribute("tabindex", "-1");
                     slideImage2.setAttribute("aria-expanded", "true");
+                    slideImage2.setAttribute("tabindex", "0");
                     slideImage3.setAttribute("aria-expanded", "false");
+                    slideImage3.setAttribute("tabindex", "-1");
       
      
             }
@@ -102,9 +104,12 @@ function slideLeft(){
             slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.2) translateY(-5%);"); 
             slideImage3.setAttribute("style", " z-index: 29; left: 45%; opacity: .95;"); 
                 //accessibility changes:
-                    slideImage1.setAttribute("aria-expanded", "false");
-                    slideImage2.setAttribute("aria-expanded", "true");
-                    slideImage3.setAttribute("aria-expanded", "false");
+                slideImage1.setAttribute("aria-expanded", "false");
+                slideImage1.setAttribute("tabindex", "-1");
+                slideImage2.setAttribute("aria-expanded", "true");
+                slideImage2.setAttribute("tabindex", "0");
+                slideImage3.setAttribute("aria-expanded", "false");
+                slideImage3.setAttribute("tabindex", "-1");                
 //setTimeout(slideLeft, 500) - infinite sliding
 }
 
@@ -145,8 +150,19 @@ function slideLeft(){
         clearInterval(slideInterval);
     }
 //single slide for accessibility (tab+enter)
-    slideLeftButton.addEventListener('keydown', slideLeftSingle);
-    slideRightButton.addEventListener('keydown', slideRightSingle);
+    slideLeftButton.addEventListener('keydown', function(event) {
+        // Check if the key pressed is Enter (key code 13)
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            slideLeftSingle();
+        }
+    });
+
+    slideRightButton.addEventListener('keydown', function(event) {
+        // Check if the key pressed is Enter (key code 13)
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            slideRightSingle();
+        }
+    });
 
 //desktop vs mobile event listeners
 function mediaChange(e) {
