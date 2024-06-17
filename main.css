@@ -262,8 +262,14 @@ section {width: 100%; height:fit-content;}
       color: white;
       background-color: transparent;
     }
-        #slide-left {padding-right: 15%;}
-        #slide-right {padding-left: 15%;}
+        #slide-left {padding-right: 15%;
+          background-image: url(/images/slidebuttonarrowleft.png);
+          background-size: cover;
+        }
+        #slide-right {padding-left: 15%;
+          background-image: url(/images/slidebuttonarrowright.png);
+          background-size: cover;
+        }
 
     #slides-container{
       z-index: 0;
