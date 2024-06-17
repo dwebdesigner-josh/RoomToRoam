@@ -53,15 +53,15 @@
                // slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); //left to right
                 
                 slideImage1.setAttribute("style", " z-index: 29; left: 5%; opacity: .95;"); 
-                slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.2) translateY(-5%);"); 
+                slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%);"); 
                 slideImage3.setAttribute("style", " z-index: 28; left: 45%; opacity: .95;"); 
                     //accessibility changes:
                     slideImage1.setAttribute("aria-expanded", "false");
-                    slideImage1.setAttribute("tabindex", "-1");
+                    slideImage1.setAttribute("inert", "");
                     slideImage2.setAttribute("aria-expanded", "true");
-                    slideImage2.setAttribute("tabindex", "0");
+                    slideImage2.removeAttribute("inert", "");
                     slideImage3.setAttribute("aria-expanded", "false");
-                    slideImage3.setAttribute("tabindex", "-1");
+                    slideImage3.setAttribute("inert", "");
       
      
             }
@@ -101,15 +101,15 @@ function slideLeft(){
        //         slideImage2.setAttribute("style", "order: 4; transform: translateX(-350px) scale(1.2);"); 
          //       slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); 
             slideImage1.setAttribute("style", " z-index: 28; left: 5%; opacity: .95;"); 
-            slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.2) translateY(-5%);"); 
+            slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%);"); 
             slideImage3.setAttribute("style", " z-index: 29; left: 45%; opacity: .95;"); 
                 //accessibility changes:
                 slideImage1.setAttribute("aria-expanded", "false");
-                slideImage1.setAttribute("tabindex", "-1");
+                slideImage1.setAttribute("inert","");
                 slideImage2.setAttribute("aria-expanded", "true");
-                slideImage2.setAttribute("tabindex", "0");
+                slideImage2.removeAttribute("inert","");
                 slideImage3.setAttribute("aria-expanded", "false");
-                slideImage3.setAttribute("tabindex", "-1");                
+                slideImage3.setAttribute("inert","");                
 //setTimeout(slideLeft, 500) - infinite sliding
 }
 

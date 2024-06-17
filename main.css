@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/RoomToRoam/images/starV1frame1.png");
+  background-image: url("/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -229,7 +229,7 @@ section {width: 100%; height:fit-content;}
             #roots-missionstatement{
               aspect-ratio: 1350/390;
               width: 100%;
-              background-image: url("/RoomToRoam/images/roots-missionstatement.png");
+              background-image: url("/images/roots-missionstatement.png");
               background-repeat:no-repeat;
               background-size:cover;
             /* z-index: 3; */
@@ -310,28 +310,29 @@ section {width: 100%; height:fit-content;}
 
         #swirl-container{display:flex; width: 100%; z-index: 1;}
         .swirl{ flex:1; max-width: 33%; z-index: 1; opacity: .8; position: relative;} /*possibly remove opacity style*/
-       .swirl-image{width: 100%; position: relative; z-index: 1;}
+       .swirl-image{width: 100%; position: relative; top: 6%; z-index: 1;}
         .swirl-link{
           display: block; width: 100%; height: 100%; 
           justify-content: center; align-items: center; display: flex; 
-          position: relative; top: -100%; 
+          position: relative; top: -94%; 
           text-decoration: none;
           z-index: 5;
           }
 
-          .swirl-link>p{position: relative; left: -20px; top: 5px;}
+          .swirl-text{font-weight: 500; font-size: large; box-sizing: border-box; z-index: 10;position: absolute; width: 55%; text-align: center; border-radius: 50%; background-color: #fffafd;}
           
             .swirl-link:link, .swirl-link:active{
-              color: #e3f5ff;
+              color: #202222C9;
             }
             .swirl-link:visited{
-              color: #e3f5ff;
+              color: #202222C9;
             }
             .swirl-link:hover{
-              color: #e3f5ff3f;
+              color: #a54a59;
             }
 
       @media screen and (max-width: 850px){
+        
           #swirl-container{
             width: 100%;
             display: grid;
@@ -345,9 +346,9 @@ section {width: 100%; height:fit-content;}
             #swirl1{ grid-area: swirl1;}
             #swirl2{ grid-area: swirl2;}
             #swirl3{ grid-area: swirl3;}
-          #swirl-link1{grid-area: swirl1;}
-          #swirl-link1{grid-area: swirl2;}
-          #swirl-link1{grid-area: swirl3;}
+          #swirl-link1{grid-area: swirl1; }
+          #swirl-link2{grid-area: swirl2; }
+          #swirl-link3{grid-area: swirl3; }
 
       }
         
