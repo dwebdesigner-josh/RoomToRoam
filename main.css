@@ -263,11 +263,11 @@ section {width: 100%; height:fit-content;}
       background-color: transparent;
     }
         #slide-left {padding-right: 15%;
-          background-image: url(/images/slidebuttonarrowleft.png);
+          background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
           background-size: cover;
         }
         #slide-right {padding-left: 15%;
-          background-image: url(/images/slidebuttonarrowright.png);
+          background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
           background-size: cover;
         }
 
@@ -324,7 +324,7 @@ section {width: 100%; height:fit-content;}
           text-decoration: none;
           z-index: 5;
           
-          background-image: url(/images/swirltext.png);
+          background-image: url("/RoomToRoam/images/swirltext.png");
           background-size: cover;
           background-color: transparent;
           
