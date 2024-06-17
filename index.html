@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 <!--CSS-->
-<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="/RoomToRoam/main.css">
 <!--jquery plugin-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
@@ -28,7 +28,7 @@
   
     <span id="topnav-label" hidden>Navigation</span>
     <button id="topnav-open" aria-expanded="false" aria-labelledby="topnav-label">
-      <!--<img class="hamburger-icon" src="/images/hamburger-icon.svg" alt="" height="25px" width="25px" >-->
+      <!--<img class="hamburger-icon" src="/RoomToRoam/images/hamburger-icon.svg" alt="" height="25px" width="25px" >-->
           <div class="hamburger-icon">
             <span class="hamburger-icon-piece"></span>
             <span class="hamburger-icon-piece"></span>
@@ -38,7 +38,7 @@
     
     <div id="topnav-menu" role="dialog" aria-labelledby="topnav-label">
       <button id="topnav-close" aria-label="Close">
-        <!--<img class="hamburger-icon" src="/images/hamburger-icon.svg" alt="" height="25px" width="25px">-->
+        <!--<img class="hamburger-icon" src="/RoomToRoam/images/hamburger-icon.svg" alt="" height="25px" width="25px">-->
         <div class="hamburger-icon">
           <span class="hamburger-icon-piece"></span>
           <span class="hamburger-icon-piece"></span>
@@ -62,12 +62,12 @@
   
 <header>
 
-  <img src="/images/logorootsV4.png" alt="Room to Roam Logo" id="roots" class="logo"> 
+  <img src="/RoomToRoam/images/logorootsV4.png" alt="Room to Roam Logo" id="roots" class="logo"> 
   <div class="logo">
     <h1 class="logo">Room to Roam</h1>
     </div>
   <div class="logo" tabindex="0">
-    <img src="/images/logotreeroughV4.png" alt="" id="tree" >
+    <img src="/RoomToRoam/images/logotreeroughV4.png" alt="" id="tree" >
   </div>
   
     <!--TODO: fix the terrible classes and divs above-->
@@ -120,17 +120,17 @@
   <section id="swirl-container">
     <!-- swirl animation containers -->   
     <div class="swirl" id="swirl1">
-        <img  class="swirl-image" src="/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
+        <img  class="swirl-image" src="/RoomToRoam/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
         <a class="swirl-link" id="swirl-link1" href="/connect/"  target="_self"><p class="swirl-text">Connect</p></a>
       </div>
 
     <div class="swirl"  id="swirl2" >
-        <img class="swirl-image" src="/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
+        <img class="swirl-image" src="/RoomToRoam/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
         <a class="swirl-link" id="swirl-link2" href="/artists/"  target="_self"><p class="swirl-text">Artists</p></a>
       </div>
     
     <div class="swirl" id="swirl3">
-        <img class="swirl-image" src="/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
+        <img class="swirl-image" src="/RoomToRoam/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
         <a class="swirl-link" id="swirl-link3" href="/about-us/" target="_self"><p class="swirl-text">About</p></a> 
       </div>  
         
@@ -144,7 +144,7 @@
   <section id="reviews">
     <h2>Featured Reviews</h2>
     <article id="article1">
-      <img src="/images/albumtest1.jpg">
+      <img src="/RoomToRoam/images/albumtest1.jpg">
       <div class="text-container">
         <p>To give an idea of how different the world was when Paramore released their last album, Alex Smith was the Chiefs starting quarterback. During nearly six years of downtime, band members released multiple solo albums, leaving fans to question if they’d ever hear new material from the pop/rock trio.
 
@@ -159,7 +159,7 @@
       </div>
       </article>
     <article id="article2">
-      <img src="/images/albumtest2.jpg">
+      <img src="/RoomToRoam/images/albumtest2.jpg">
       <div class="text-container">
         <p>Loaded is the fourth and what many hardcore fans consider to be the final studio album by legendary art-rock band Velvet Underground.
         It would be the last album to feature founding member Lou Reed, who quit shortly before “Loaded’s” release in 1970. Other original members Sterling Morrison and Maureen Tucker would leave VU in 1971.
@@ -173,7 +173,7 @@
       </div>
       </article>    
     <article id="article3">
-      <img src="/images/albumtest3.jpg">
+      <img src="/RoomToRoam/images/albumtest3.jpg">
       <div class="text-container">
         <p>Gill Scott-Heron was only 20 years old when his debut album, Small Talk at 125th and Lenox, was recorded in 1970. Still very much a newcomer, Scott-Heron already had a book of poetry and novel to his name.
 
@@ -193,11 +193,11 @@
 
 <!--
 <div id="STARTEST">
-  <img src="/images/starV1frame2.png">
+  <img src="/RoomToRoam/images/starV1frame2.png">
 </div>
 
 <div id="STARTEST2">
-  <img src="/images/starV1frame2.png">
+  <img src="/RoomToRoam/images/starV1frame2.png">
 </div>
 -->
 
@@ -213,9 +213,9 @@
 <!--jquery animation files : KEEP AT BOTTOM OF BODY-->
 <!--with these at bottom, content loads before these scripts-->
 <script src="/node_modules/wicg-inert/dist/inert.min.js"></script>
-<script src="/scripts/swirljqueryanimation.js"></script>
-<script src="/scripts/slide.js"></script>
-<script src="/scripts/hamburger.js"></script> <!--PREVIOUS ISSUE FIXED: event listener from this script wasn't showing up in chrome dev tools when this script was listed in the head or body BEFORE the button it was meant to find in its query - so the issue with the Event Listener not triggering/showing up in chrome dev tools was 
+<script src="/RoomToRoam/scripts/swirljqueryanimation.js"></script>
+<script src="/RoomToRoam/scripts/slide.js"></script>
+<script src="/RoomToRoam/scripts/hamburger.js"></script> <!--PREVIOUS ISSUE FIXED: event listener from this script wasn't showing up in chrome dev tools when this script was listed in the head or body BEFORE the button it was meant to find in its query - so the issue with the Event Listener not triggering/showing up in chrome dev tools was 
   caused by:  the targeted element is either not found or not loaded when the event listener is attached FIX: attach the script to the html doc at the END so that it runs and the eventlistener looks for the button AFTER the button has loaded, this way it is actually found -->
 </body>
 
