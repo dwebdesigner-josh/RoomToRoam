@@ -317,18 +317,21 @@ section {width: 100%; height:fit-content;}
           position: relative; top: -94%; 
           text-decoration: none;
           z-index: 5;
+          background-image: url(/images/swirltext.png);
+          background-size: cover;
+          background-color: transparent;
           }
 
-          .swirl-text{font-weight: 500; font-size: large; box-sizing: border-box; z-index: 10;position: absolute; width: 55%; text-align: center; border-radius: 50%; background-color: #fffafd;}
+          .swirl-text{font-weight: 700; font-size: 2rem; box-sizing: border-box; z-index: 10;position: absolute; text-align: center; border-radius: 50%;background-color: #13181e;/* background-color: #fffafd; border: 3px solid #a54a59*/}
           
             .swirl-link:link, .swirl-link:active{
               color: #202222C9;
             }
             .swirl-link:visited{
-              color: #202222C9;
-            }
-            .swirl-link:hover{
               color: #a54a59;
+            }
+            .swirl-link:hover, .swirl-link:focus{
+              color: #fef4e7; 
             }
 
       @media screen and (max-width: 850px){
@@ -342,6 +345,7 @@ section {width: 100%; height:fit-content;}
             ". swirl2 swirl2 ."
             "swirl1 swirl1 swirl3 swirl3";
           }
+          .swirl-text {font-weight: 600; font-size: 1.3rem;}
           .swirl {max-width: 50vw; width: 50vw;}
             #swirl1{ grid-area: swirl1;}
             #swirl2{ grid-area: swirl2;}
