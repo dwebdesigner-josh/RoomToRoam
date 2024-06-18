@@ -10,7 +10,7 @@
 }
 
 html,body {margin: 0; width: 100%; background-color:#12171d;/*oldcolorwas12161c*/}
-html {height: 100%; scroll-behavior: smooth;}
+html {height: 100%;}
 
 body {
   min-height: 100%; /*FIX FOUND - this fixed the repeat img only showing for part of the page, as the body was only reaching the viewport's pixel height when body was set to height: 100%; solution was to keep html as that setting, but set body to min-height 100% instead of definitive height to 100%*/
@@ -172,7 +172,7 @@ min-height: 500px; /*fix for overlap on small windows with above*/
     }
    
     #tree:hover {
-      transform: scale(1.2) translateY(-5%); 
+      transform: scale(1.1) translateY(-5%); 
     } /*translate added to offset the growth of the tree to make sure the roots still look connected*/
 
 
