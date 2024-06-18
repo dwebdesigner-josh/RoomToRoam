@@ -163,7 +163,7 @@ height: 100svh;   /*fix for full screen logo at start*/
 min-height: 500px; /*fix for overlap on small windows with above*/
 }
     header>.logo {width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
-    header>div {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
+    header>div,header>a {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
     #roots {z-index: 1;}
     #tree {
       flex:none; height: 70%; z-index: 2;
@@ -172,7 +172,7 @@ min-height: 500px; /*fix for overlap on small windows with above*/
     }
    
     #tree:hover {
-      transform: scale(1.1) translateY(-5%); 
+      transform: scale(1.2) translateY(-5%); 
     } /*translate added to offset the growth of the tree to make sure the roots still look connected*/
 
 
