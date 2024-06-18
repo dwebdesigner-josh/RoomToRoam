@@ -174,7 +174,7 @@ min-height: 500px; /*fix for overlap on small windows with above*/
             h1{position: relative; height: 1lh; top: 35%; left:3%; font-size: 9vw; color:#e3f5ff; z-index: 3;}
 
             @media screen and (max-width: 850px){
-              header>.logo {height: 500px; margin-top: 50px;}
+              header>.logo {height: 500px; margin-top: 25svh;}/*margin-top: 50px;*/
               #roots { display: none; visibility: hidden;}
               h1{top: 200px; font-size:53px;}
             }
