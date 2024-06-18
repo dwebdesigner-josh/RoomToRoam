@@ -170,8 +170,9 @@ min-height: 500px; /*fix for overlap on small windows with above*/
       transition: transform .5s ease-in-out;
       /*TODO: input a growth transition CSS animation here*/ 
     }
+    #tree-img {height: 100%; width:100%;}
    
-    #tree:hover {
+    #tree-img:hover {
       transform: scale(1.2) translateY(-5%); 
     } /*translate added to offset the growth of the tree to make sure the roots still look connected*/
 
