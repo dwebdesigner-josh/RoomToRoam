@@ -156,7 +156,7 @@ header {
 width: 95%; 
 display: grid;
 grid-template: 100%/100%;
-height: 100dvh;   /*fix for full screen logo at start*/
+height: 100svh;   /*fix for full screen logo at start*/
 min-height: 500px; /*fix for overlap on small windows with above*/
 }
     header>.logo {width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
