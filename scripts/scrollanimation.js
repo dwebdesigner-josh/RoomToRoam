@@ -1,6 +1,4 @@
 (() => {
-
-
   const scrolltest = document.querySelector('#scrolltest');
 
 window.addEventListener('scroll', () => {
