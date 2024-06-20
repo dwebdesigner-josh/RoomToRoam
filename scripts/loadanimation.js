@@ -12,7 +12,8 @@ if(firstTime) {
 }
 
 else{
-    loadScreen.setAttribute("style","animation: scrolldown 5s linear 1;")
+    loadScreen.style.animation = "scrolldown 5s linear 1"; 
+   // setAttribute("style","animation: scrolldown 5s linear 1;") - issue with this is you'd have to readd all styles plus the changed animations style or else all others would be overwritten
 }
 }
 
