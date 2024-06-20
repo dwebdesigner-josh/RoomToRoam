@@ -229,7 +229,7 @@ background-repeat: repeat;
 @media () {
     .loadscreen {
       animation: scrolldown 10s linear 1;
-      /*animation-play-state: paused;*/
+      animation-play-state: running;
       animation-iteration-count: 1;
       animation-fill-mode: both;
 
