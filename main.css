@@ -226,15 +226,13 @@ background-repeat: repeat;
   height: 255px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  @supports (animation-timeline: scroll()) {
+@media () {
     .loadscreen {
       animation: scrolldown 10s linear 1;
       animation-play-state: paused;
-    
       animation-iteration-count: 1;
       animation-fill-mode: both;
-    } 
+
   }
 }
 @media screen and (max-width: 850px){
