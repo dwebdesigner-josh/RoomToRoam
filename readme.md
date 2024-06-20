@@ -112,10 +112,28 @@ RESEARCH NOTES:
                                 so need to figure out if this needs a fix and if so what fix would work for it and work well with POSSIBLE FIX 2 above (ideally one thing to fix both, but a separate fix for each issue is fine if necessary)
                                         
 
+- how i found body height function based on viewport width:
+gathered data (w and h) of various webpage sizes, making sure to make the viewport height small when gather the data as the 100svh on the header is nullified when the vh is small and that is just set to the min height of 500px
+  plug in height and width data into desmos graphing calculator (y=h, x=w)
+    run formula: y~a(x^2)+b(x)+c
+    find the a b and c constant values from desmos magic
+  did this with 2 separate formulas/data sets (1 with all gathered width/height measurements done with <850px viewport width, and the other with >850px vw - for media query changes to be accounted for)
+      formula found for <850px: 
+        h~0.0020557(w^2)+1.24901(w)+858.6
+          +100svh (for the header when not at min value)
+      formula found for >850px: 
+        h~.000032355(w^2)+2.21241(w)+574.215
+          +100svh (for the header when not at min value)
+    OR - linear (since the hyperbolic forumlae above have a values near 0 anyway):
+        linear formula for <850px:
+            h~3.31618(w)+417.909 >>> 
+                            MOBILE :         h=3.32w+418 CLOSE ENOUGH TO THE DATA
+        linear formula for >850px:
+            h~2.37198(w)+426.538 >>> 
+                            DESKTOP :         h=2.37w+427 EXTREMELY CLOSE TO THE DATA
 
+                                              with svh change added for header: +100svh-500px (add to end of each formula)
 
-
-        
 save for later:
 
 header {
