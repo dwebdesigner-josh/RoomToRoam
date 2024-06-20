@@ -270,18 +270,6 @@ background-repeat: repeat;
 }
 
 
-/*
-:root * {
-   Pause the animation 
-  animation-play-state: paused;
-   Bind the animation to scroll 
-  animation-delay: calc(var(--scroll) * -1s);
-   These last 2 properites clean up overshoot weirdness 
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-}*/
-
-
 /*sections*/
 section {width: 100%; height:fit-content;}
 
