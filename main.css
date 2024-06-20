@@ -218,7 +218,7 @@ background-repeat: repeat;
   transform: translateY(0);
   z-index: 20;
   display: flex;
-  justify-content: center;
+  justify-content: c`enter;
 }
 
 .loadscreen>img{
@@ -412,7 +412,8 @@ section {width: 100%; height:fit-content;}
         grid-template-rows: auto auto; 
         grid-template-areas: 
             ". swirl2 swirl2 ."
-            "swirl1 swirl1 swirl3 swirl3";
+            ". swirl1 swirl1 ."
+            ". swirl3 swirl3 .";
           }
           .swirl-text {font-weight: 600; font-size: 1.3rem;}
           .swirl {max-width: 50vw; width: 50vw;}
