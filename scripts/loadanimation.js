@@ -1,9 +1,9 @@
 (() => {
 // Check if it's the first time the user is visiting
 var firstTime = localStorage.getItem("first_time") === null;
-const loadScreen = document.querySelector('.loadscreen'); 
+const loadScreen = document.querySelector('#loadscreen'); 
 
-function loadSpeedChanger {
+function loadSpeedChanger (){
 if(firstTime) {
     // Perform actions for the first time load
    alert("Welcome! This is your first visit.");    
@@ -15,5 +15,7 @@ else{
     loadScreen.setAttribute("style","animation: scrolldown 5s linear 1;")
 }
 }
+
+loadSpeedChanger();
 
 })();
