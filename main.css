@@ -205,7 +205,7 @@ main {
 
 /*load screen spaceship scroll animation*/
 
-.loadcontainer{
+#loadcontainer{
   width: 100%;
   overflow-y: hidden;
   position: absolute;
@@ -213,14 +213,14 @@ main {
 }
   /*MOBILE*/
   @media screen and (max-width: 850px){
-    .loadcontainer {height: calc(350vw + 418px);}
+    #loadcontainer {height: calc(350vw + 418px);}
   }
   /*DESKTOP*/
   @media screen and (min-width: 850px){
-    .loadcontainer {height: calc(237vw + 427px);}
+    #loadcontainer {height: calc(237vw + 427px);}
   }
 
-.loadscreen {
+#loadscreen {
   width: 100%;
   height: 100%;
 /*  background-color: red;*/
@@ -241,7 +241,7 @@ background-repeat: repeat;
 
 }
 
-.loadscreen>img{
+#loadscreen>img{
   width: 184px;
   height: 255px;
 }

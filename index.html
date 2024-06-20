@@ -77,8 +77,8 @@
     <!--keep alt as null (blank) value for tree img-->
 </header>
 
-<div class="loadcontainer">
-  <div class="loadscreen" id="scrolltest" tabindex="-1">
+<div id="loadcontainer">
+  <div id="loadscreen" tabindex="-1">
     <img tabindex="-1" alt="Graphic image of space ship" src="/images/ship.png" aria-label="Loading screen ship animation">
   </div>
 </div>
@@ -219,6 +219,7 @@
 <!--with these at bottom, content loads before these scripts-->
 <!--<script src="/node_modules/wicg-inert/dist/inert.min.js"></script>-->
 <!--<script src="/scripts/scrollanimation.js"></script>-->
+<script src="/scripts/loadanimation.js"></script>
 <script src="/scripts/swirljqueryanimation.js"></script>
 <script src="/scripts/slide.js"></script>
 <script src="/scripts/hamburger.js"></script> <!--PREVIOUS ISSUE FIXED: event listener from this script wasn't showing up in chrome dev tools when this script was listed in the head or body BEFORE the button it was meant to find in its query - so the issue with the Event Listener not triggering/showing up in chrome dev tools was 
