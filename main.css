@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/images/starV1frame1.png");
+  background-image: url("/RoomToRoam/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -275,15 +275,8 @@ section {width: 100%; height:fit-content;}
           .highlightitem {margin: 0; z-index: 4;}
         
         #roots-highlight{
-
-           /*height: 100dvh;*/
           width: 100%;
            aspect-ratio: 1350/690;
-           /*background-image: url("/images/roots-highlightV7.png");
-           background-repeat:no-repeat;
-           background-size: cover;*/
-          
-          
         }
 
           
@@ -292,7 +285,7 @@ section {width: 100%; height:fit-content;}
             #roots-missionstatement{
               aspect-ratio: 1350/390;
               width: 100%;
-              background-image: url("/images/roots-missionstatement.png");
+              background-image: url("/RoomToRoam/images/roots-missionstatement.png");
               background-repeat:no-repeat;
               background-size:cover;
             /* z-index: 3; */
@@ -326,11 +319,11 @@ section {width: 100%; height:fit-content;}
       background-color: transparent;
     }
         #slide-left {padding-right: 15%;
-          background-image: url("/images/slidebuttonarrowleft.png");
+          background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
           background-size: cover;
         }
         #slide-right {padding-left: 15%;
-          background-image: url("/images/slidebuttonarrowright.png");
+          background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
           background-size: cover;
         }
 
@@ -387,7 +380,7 @@ section {width: 100%; height:fit-content;}
           text-decoration: none;
           z-index: 5;
           
-          background-image: url("/images/swirltext.png");
+          background-image: url("/RoomToRoam/images/swirltext.png");
           background-size: cover;
           background-color: transparent;
           
