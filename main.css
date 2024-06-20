@@ -220,7 +220,7 @@ main {
     #loadcontainer {height: calc(237vw + 427px);}
   }
 
-#loadscreen {
+.loadscreen {
   width: 100%;
   height: 100%;
 /*  background-color: red;*/
@@ -241,12 +241,14 @@ background-repeat: repeat;
 
 }
 
-#loadscreen>img{
+.loadscreen>img{
   width: 184px;
   height: 255px;
 }
 
-
+#loadscreen-notfirst{
+  animation: scrolldown 5s linear 1;
+}
  
 
 @media screen and (max-width: 850px){
