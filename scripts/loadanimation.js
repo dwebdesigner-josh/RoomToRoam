@@ -5,8 +5,7 @@ const loadScreen = document.querySelector('#loadscreen');
 
 function loadSpeedChanger (){
 if(firstTime) {
-    // Perform actions for the first time load
-   alert("Welcome! This is your first visit.");    
+    // Perform actions for the first time load 
     // Set the flag in localStorage to indicate the user has visited
     localStorage.setItem("first_time", "1");
 }
