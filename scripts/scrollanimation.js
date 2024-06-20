@@ -6,4 +6,10 @@ window.addEventListener('scroll', () => {
     scrolltest.setAttribute('style','animation-play-state: running;');
   });
 
+
+  window.addEventListener('keydown', () => {
+     scrolltest.setAttribute('style','animation-play-state: running;');
+   });
+   //for accessibility (tab key instead of scroll (or any key))
+
 })();
