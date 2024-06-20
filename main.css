@@ -218,7 +218,7 @@ background-repeat: repeat;
   transform: translateY(0);
   z-index: 20;
   display: flex;
-  justify-content: c`enter;
+  justify-content: center;
 }
 
 .loadscreen>img{

@@ -3,10 +3,10 @@ Client Site: Room to Roam Records
 TODO NOTES:
 
 1. TODO - general: 
-   - TODO: fix tree hamburger bug - on mobile width screens when expanding tree and scrolling the hamburger disappears until the tree is shrunk back down
+   - TODO: FIX FONT SIZES (DON'T USE VW UNITS FOR FONTS - see why with responsive test on chrome dev with 1920x1080 window size, and 4k, etc) 
 
    - slide.js:
-        TODO - fix issue with changing media from mobile to desktop - click to slide event remains 
+     
        
          TODO: clarify media query further to differentiate between what's just a narrow desktop window and what's actually a mobile browser
          TODO: add scroll (swipe) function (optional) on mobile instead of the single click, possibly use it to replace the transition delay functions
