@@ -226,7 +226,7 @@ background-repeat: repeat;
   height: 255px;
 }
 
-@media () {
+
     .loadscreen {
       animation: scrolldown 10s linear 1;
       animation-play-state: running;
@@ -234,7 +234,7 @@ background-repeat: repeat;
       animation-fill-mode: both;
 
   }
-}
+
 @media screen and (max-width: 850px){
   @keyframes scrolldown {
     0%{transform: translateY(0);}
