@@ -214,7 +214,7 @@ background-image: url(/RoomToRoam/images/starV1frame1.png);
 background-repeat: repeat;
 
   position: absolute;
-  top: 0;
+  top: 75svh;
   transform: translateY(0);
   z-index: 20;
   display: flex;
