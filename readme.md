@@ -134,6 +134,17 @@ gathered data (w and h) of various webpage sizes, making sure to make the viewpo
 
                                               with svh change added for header: +100svh-500px (add to end of each formula)
 
+                      FINAL FORMULAE USED:   
+                        /*MOBILE*/
+                        @media screen and (max-width: 850px){
+                          .loadcontainer {height: calc(350vw + 418px);}
+                        }
+                        /*DESKTOP*/
+                        @media screen and (min-width: 850px){
+                          .loadcontainer {height: calc(237vw + 427px);}
+                        }
+
+
 save for later:
 
 header {
