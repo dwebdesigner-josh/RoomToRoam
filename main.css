@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/RoomToRoam/images/starV1frame1.png");
+  background-image: url("/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -159,8 +159,8 @@ header {
 width: 95%; 
 display: grid;
 grid-template: 100%/100%;
-height: 500px;   /*fix for full screen logo at start*/
-/*min-height: 500px;*/ /*fix for overlap on small windows with above*/
+height: 100svh;   /*fix for full screen logo at start*/
+min-height: 500px; /*fix for overlap on small windows with above*/
 }
     header>.logo {width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
     header>div {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
@@ -213,18 +213,18 @@ main {
 }
   /*MOBILE*/
   @media screen and (max-width: 850px){
-   #loadcontainer {height: calc(332vw + 418px );}
-  }
+   #loadcontainer {height: calc(362vw - 82px + 100svh);}
+  }                                   /*originally 332vw, but mission statement seems to have been disregarded in calculations/data gathering, so added its height of ~30vw to this.. although it doesn't seem necessary on the desktop calc for some reason*/
   /*DESKTOP*/
   @media screen and (min-width: 850px){
-    #loadcontainer {height: calc(237vw + 427px );}
+    #loadcontainer {height: calc(237vw - 73px + 100svh);}
   }
 
 .loadscreen {
   width: 100%;
   height: 100%;
 /*  background-color: red;*/
-background-image: url("/RoomToRoam/images/starV1frame1.png");
+background-image: url("/images/starV1frame1.png");
 background-repeat: repeat;
 
   position: absolute;
@@ -258,14 +258,14 @@ background-repeat: repeat;
   @keyframes scrolldown {
     0%{transform: translateY(0);}
     20%{transform: translateY(400px);}
-    100%{transform: translateY(3500px); display: none; visibility: hidden;}
+    100%{transform: translateY(calc(362vw - 82px + 100svh)); display: none; visibility: hidden;}
   }
 }
 @media screen and (min-width: 850px){
   @keyframes scrolldown {
     0%{transform: translateY(0);}
     20%{transform: translateY(500px);}
-    100%{transform: translateY(4500px); display: none; visibility: hidden;}
+    100%{transform: translateY(calc(237vw - 73px + 100svh)); display: none; visibility: hidden;}
   }
 }
 
@@ -295,11 +295,11 @@ section {width: 100%; height:fit-content;}
             #roots-missionstatement{
               aspect-ratio: 1350/390;
               width: 100%;
-              background-image: url("/RoomToRoam/images/roots-missionstatement.png");
+              background-image: url("/images/roots-missionstatement.png");
               background-repeat:no-repeat;
               background-size:cover;
             /* z-index: 3; */
-            /*height is about 3vw*/
+            /*height is about 3vw - correction: 30vw*/
             }
 
 /*section - mission statement content*/
@@ -330,11 +330,11 @@ section {width: 100%; height:fit-content;}
       background-color: transparent;
     }
         #slide-left {padding-right: 15%;
-          background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
+          background-image: url("/images/slidebuttonarrowleft.png");
           background-size: cover;
         }
         #slide-right {padding-left: 15%;
-          background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
+          background-image: url("/images/slidebuttonarrowright.png");
           background-size: cover;
         }
 
@@ -391,7 +391,7 @@ section {width: 100%; height:fit-content;}
           text-decoration: none;
           z-index: 5;
           
-          background-image: url("/RoomToRoam/images/swirltext.png");
+          background-image: url("/images/swirltext.png");
           background-size: cover;
           background-color: transparent;
           
