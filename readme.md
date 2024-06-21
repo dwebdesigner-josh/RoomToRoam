@@ -139,18 +139,28 @@ gathered data (w and h) of various webpage sizes, making sure to make the viewpo
                         @media screen and (max-width: 850px){
                           .loadcontainer {height: calc(350vw + 418px);}
                         }
+                            perfected to  #loadcontainer {height: calc(362vw - 82px + 100svh);}
                         /*DESKTOP*/
                         @media screen and (min-width: 850px){
                           .loadcontainer {height: calc(237vw + 427px);}
                         }
+                            perfected to   #loadcontainer {height: calc(237vw - 73px + 100svh);}
 
 
                         CHANGES TO HEIGHT: 
-                          header minheight mobile still 500px, header minheight desktop now 50vw
+                          header minheight mobile still 500px, 
+                          header minheight desktop now 50vw
                           missionstatement height now 360 px instead of 30vw
                           highlight div aka slider: margin-top: 100px; and margin-bottom: 60px;
+                            
+                            formulas changed to:
 
-
+                                      MOBILE
+                                        height: calc(332vw + 438px + 100svh);
+                                      DESKTOP
+                                        height: calc(222vw + 438px + 100svh);
+                                          a bit of an overshot on some windows but it looks good
+                                          why did I choose it? idk man it just worked
 
 save for later:
 

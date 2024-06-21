@@ -267,11 +267,11 @@ main {
 }
   /*MOBILE*/
   @media screen and (max-width: 850px){
-   #loadcontainer {height: calc(362vw - 82px + 100svh);}
+   #loadcontainer {height: calc(332vw + 438px + 100svh);}
   }                                   /*originally 332vw, but mission statement seems to have been disregarded in calculations/data gathering, so added its height of ~30vw to this.. although it doesn't seem necessary on the desktop calc for some reason*/
   /*DESKTOP*/
   @media screen and (min-width: 850px){
-    #loadcontainer {height: calc(237vw - 73px + 100svh);}
+    #loadcontainer {height: calc(222vw + 438px + 100svh);}
   }
 
 .loadscreen {
@@ -312,14 +312,14 @@ background-repeat: repeat;
   @keyframes scrolldown {
     0%{transform: translateY(0);}
     20%{transform: translateY(400px);}
-    100%{transform: translateY(calc(362vw - 82px + 100svh)); display: none; visibility: hidden;}
+    100%{transform: translateY(calc(332vw + 438px + 100svh)); display: none; visibility: hidden;}
   }
 }
 @media screen and (min-width: 850px){
   @keyframes scrolldown {
     0%{transform: translateY(0);}
     20%{transform: translateY(500px);}
-    100%{transform: translateY(calc(237vw - 73px + 100svh)); display: none; visibility: hidden;}
+    100%{transform: translateY(calc(222vw + 438px + 100svh)); display: none; visibility: hidden;}
   }
 }
 
