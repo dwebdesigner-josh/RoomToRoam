@@ -26,8 +26,55 @@ body {
 }
 
 @media screen and (max-width: 850px){
-  body {background-size: 50%;} /*fixes star density being too low on mobile*/
+  body {
+    /*font-size: 12pt;*/
+    /*font-size: calc(3vw+1em);*/
+    background-size: 50%; /*fixes star density being too low on mobile*/
+  }
 }
+@media screen and (min-width: 320px){
+  :root {font-size: 12pt;  }
+}
+@media screen and (min-width: 365px){
+  :root {font-size: 13pt;  }
+}
+@media screen and (min-width: 422px){
+  :root {font-size: 14pt;  }
+}
+@media screen and (min-width: 506px){
+  :root {font-size: 15pt;  }
+}
+@media screen and (min-width: 600px){
+  :root {font-size: 16pt;  }
+}
+@media screen and (min-width: 700px){
+  :root {font-size: 18pt;  }
+}
+@media screen and (min-width: 850px){
+  :root {font-size: 20pt;  }
+}
+@media screen and (min-width: 1058px){
+  :root {font-size: 22pt;  }
+}
+@media screen and (min-width: 1391px){
+  :root {font-size: 24pt;  }
+}
+@media screen and (min-width: 1520px){
+  :root {font-size: 26pt;  }
+}
+@media screen and (min-width: 3000px){
+  :root {font-size: 36pt;  }
+}
+@media screen and (min-width: 3800px){
+  :root {font-size: 40pt;  }
+}
+ /* 
+@media screen and (min-width: 850px){
+  body {font-size: 20pt;}
+}
+*/
+/* calc(2vw+1em)*/
+
 
 /*TOP*/
 
@@ -160,8 +207,15 @@ width: 95%;
 display: grid;
 grid-template: 100%/100%;
 height: 100svh;   /*fix for full screen logo at start*/
-min-height: 500px; /*fix for overlap on small windows with above*/
+/*fix for overlap on small windows with above*/ /*was 500px*/
 }
+@media screen and (max-width: 850px){
+  header{min-height: 500px;}
+}
+@media screen and (min-width: 850px){
+  header{min-height: 50vw;}
+}
+/*@media screen and (min-width: 1300px){header{min-height: 50vw;}}*/
     header>.logo {width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
     header>div {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
     #roots {z-index: 1;}
@@ -273,8 +327,69 @@ background-repeat: repeat;
 /*sections*/
 section {width: 100%; height:fit-content;}
 
-/*section - mission statement and highlight reel backgrounds*/
+
+/*section - mission statement*/
+#roots-missionstatement{
+  z-index: 4;
+  height: 360px; /*equiv to 14lh*/
+  line-height: 1.6;
+  width: 95%;
+  border: 1px dotted white;
+  overflow-y: hidden;
+/*  background-image: url("/images/roots-missionstatement.png");
+  background-repeat:no-repeat;
+  background-size:cover; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/* z-index: 3; */
+ /*aspect-ratio: 1350/390;*/
+/*height with the above measurement was about 30vw*/
+}
+
+#roots-missionstatement p{
+  color: #e3f5ff;
+  width: 90%;
+  height: 90%;
+  line-height: inherit;
+}
+/* MOVED TO FULL BODY UNIVERSAL FONT SIZE - GOOD JOB HERE!
+@media screen and (min-width: 320px){
+  #roots-missionstatement p {font-size: 12pt;  }
+}
+@media screen and (min-width: 365px){
+  #roots-missionstatement p {font-size: 13pt;  }
+}
+@media screen and (min-width: 422px){
+  #roots-missionstatement p {font-size: 14pt;  }
+}
+@media screen and (min-width: 506px){
+  #roots-missionstatement p {font-size: 15pt;  }
+}
+@media screen and (min-width: 600px){
+  #roots-missionstatement p {font-size: 16pt;  }
+}
+@media screen and (min-width: 700px){
+  #roots-missionstatement p {font-size: 18pt;  }
+}
+@media screen and (min-width: 850px){
+  #roots-missionstatement p {font-size: 20pt;  }
+}
+@media screen and (min-width: 1058px){
+  #roots-missionstatement p {font-size: 22pt;  }
+}
+@media screen and (min-width: 1391px){
+  #roots-missionstatement p {font-size: 24pt;  }
+}
+@media screen and (min-width: 1520px){
+  #roots-missionstatement p {font-size: 26pt;  }
+}
+*/
+
+/*section - highlight reel*/
         #highlight {
+          margin-top: 100px;
+          margin-bottom: 60px;
           width: 100%;
           aspect-ratio: 1350/690;
           /*aspect-ratio: 1350/1410;*/ /*aspect ratio matches background images*/
@@ -282,28 +397,14 @@ section {width: 100%; height:fit-content;}
           margin-bottom: -13%;*/
           z-index: 3;
         }
-          .highlightitem {margin: 0; z-index: 4;}
         
         #roots-highlight{
+          margin: 0; z-index: 4;
           width: 100%;
            aspect-ratio: 1350/690;
         }
 
           
-
-
-            #roots-missionstatement{
-              aspect-ratio: 1350/390;
-              width: 100%;
-              background-image: url("/images/roots-missionstatement.png");
-              background-repeat:no-repeat;
-              background-size:cover;
-            /* z-index: 3; */
-            /*height is about 3vw - correction: 30vw*/
-            }
-
-/*section - mission statement content*/
-
 /*section - highlight reel content*/
  
 #highlight>#roots-highlight{
@@ -398,7 +499,9 @@ section {width: 100%; height:fit-content;}
           }
 
           .swirl-text{font-weight: 700; font-size: 2rem; box-sizing: border-box; z-index: 10;position: absolute; text-align: center; border-radius: 50%;background-color: #13181e;/* background-color: #fffafd; border: 3px solid #a54a59*/}
-          
+            @media screen and (min-width:850px){.swirl-text{font-size: 1rem;}}
+            @media screen and (min-width:1600px){.swirl-text{font-size: 1.5rem;}}
+            
             .swirl-link:link, .swirl-link:active{
               color: #fffdef;
               /*color: #fffdef; more yellow like the belt of the black hole

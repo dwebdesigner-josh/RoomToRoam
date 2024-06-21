@@ -145,6 +145,13 @@ gathered data (w and h) of various webpage sizes, making sure to make the viewpo
                         }
 
 
+                        CHANGES TO HEIGHT: 
+                          header minheight mobile still 500px, header minheight desktop now 50vw
+                          missionstatement height now 360 px instead of 30vw
+                          highlight div aka slider: margin-top: 100px; and margin-bottom: 60px;
+
+
+
 save for later:
 
 header {
