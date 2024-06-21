@@ -213,11 +213,11 @@ main {
 }
   /*MOBILE*/
   @media screen and (max-width: 850px){
-   #loadcontainer {height: calc(350vw + 460px);}
+   #loadcontainer {height: calc(332vw + 418px + 100svh);}
   }
   /*DESKTOP*/
   @media screen and (min-width: 850px){
-    #loadcontainer {height: calc(237vw + 427px);}
+    #loadcontainer {height: calc(237vw + 427px + 100svh);}
   }
 
 .loadscreen {
