@@ -113,11 +113,12 @@ nav {
       padding: 1rem;
       border-radius: 1rem;
     }  
-      .topnav-item{list-style-type: none;}
+      .topnav-item{list-style-type: none; width: 100%;}
         .topnav-link{
           z-index: 12; 
           font-weight: 500;
           text-decoration: none;
+          width: 100%;
         }
           .topnav-link:link, .topnav-link:active{
             color: #e3f5ff9d;
