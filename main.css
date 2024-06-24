@@ -653,8 +653,31 @@ footer{z-index: 1; display: flex; justify-content: center; align-items: center; 
         "socials";
         
       }
-      #footer-internals{grid-area: internals;}
-      #footer-socials{grid-area: socials;}
+      #footer-internals{grid-area: internals;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin: 0;
+        gap: 1rem;              /*gap can be used for flex!!*/
+      
+        list-style-type: none;
+        background-color: #12171d9d;
+        padding: 1rem;
+        border-radius: 1rem;}
+      #footer-socials{grid-area: socials;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin: 0;
+        gap: 1rem;              /*gap can be used for flex!!*/
+      
+        list-style-type: none;
+        background-color: #12171d9d;
+        padding: 1rem;
+        border-radius: 1rem;
+      }
   }
 
 /*
