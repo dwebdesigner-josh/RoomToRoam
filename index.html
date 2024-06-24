@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 <!--CSS-->
-<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="/RoomToRoam/main.css">
 <!--jquery plugin-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
@@ -28,7 +28,7 @@
   
     <span id="topnav-label" hidden>Navigation</span>
     <button id="topnav-open" aria-expanded="false" aria-labelledby="topnav-label">
-      <!--<img class="hamburger-icon" src="/images/hamburger-icon.svg" alt="" height="25px" width="25px" >-->
+      <!--<img class="hamburger-icon" src="/RoomToRoam/images/hamburger-icon.svg" alt="" height="25px" width="25px" >-->
           <div class="hamburger-icon">
             <span class="hamburger-icon-piece"></span>
             <span class="hamburger-icon-piece"></span>
@@ -38,7 +38,7 @@
     
     <div id="topnav-menu" role="dialog" aria-labelledby="topnav-label">
       <button id="topnav-close" aria-label="Close">
-        <!--<img class="hamburger-icon" src="/images/hamburger-icon.svg" alt="" height="25px" width="25px">-->
+        <!--<img class="hamburger-icon" src="/RoomToRoam/images/hamburger-icon.svg" alt="" height="25px" width="25px">-->
         <div class="hamburger-icon">
         <!--  <span class="hamburger-icon-piece"></span>
           <span class="hamburger-icon-piece"></span>
@@ -46,10 +46,10 @@
         </div>
       </button>
       <ul id="topnav">
-        <li class="topnav-item">  <a class="topnav-link" href="/artists/" target="_self">Artists</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/reviews/" target="_self">Reviews</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/connect/" target="_self">Connect</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/about-us/" target="_self">About Us</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/artists/" target="_self">Artists</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/reviews/" target="_self">Reviews</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/connect/" target="_self">Connect</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/about-us/" target="_self">About Us</a>  </li>
       </ul>
     </div>
   
@@ -62,13 +62,13 @@
   
 <header>
 
-  <img src="/images/logorootsV4.png" alt="Room to Roam Logo" id="roots" class="logo"> 
+  <img src="/RoomToRoam/images/logorootsV4.png" alt="Room to Roam Logo" id="roots" class="logo"> 
   <div class="logo">
     <h1 class="logo">Room to Roam</h1>
     </div>
   <div class="logo" >
-    <a href="/" aria-label="Home Button" id="tree">
-      <img src="/images/logotreeroughV4.png" alt="" id="tree-img">
+    <a href="/RoomToRoam/" aria-label="Home Button" id="tree">
+      <img src="/RoomToRoam/images/logotreeroughV4.png" alt="" id="tree-img">
     </a>
   </div>
   
@@ -81,7 +81,7 @@
 
 <div id="loadcontainer">
   <div class="loadscreen" tabindex="-1">
-    <img tabindex="-1" alt="Graphic image of space ship" src="/images/ship.png" aria-label="Loading screen ship animation">
+    <img tabindex="-1" alt="Graphic image of space ship" src="/RoomToRoam/images/ship.png" aria-label="Loading screen ship animation">
   </div>
 </div>
 
@@ -91,19 +91,19 @@
       <div class="slider">
           <button id="slide-left" tabindex="0"></button> <!-- aria-pressed="false"  perhaps reintigrate this later with the slide.js-->
         <div id="slides-container" >
-          <a class="slide-anchor" href="/artists/JW/" inert target="_self" id="slide-1" aria-expanded="false" style="z-index: 29; left: 5%;  opacity: .95;" >
-            <img src="/artists/JW/images/featureartist.jpg" 
+          <a class="slide-anchor" href="/RoomToRoam/artists/JW/" inert target="_self" id="slide-1" aria-expanded="false" style="z-index: 29; left: 5%;  opacity: .95;" >
+            <img src="/RoomToRoam/artists/JW/images/featureartist.jpg" 
             alt="Example work of featured visual artist JW" aria-label="Featured content link" />
             
           </a>
 
-          <a class="slide-anchor" href="/artists/NovaLizPhoto/" target="_self" id="slide-2" aria-expanded="true"  style="z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%); " >
-              <img src="/artists/NovaLizPhoto/images/featurephotographer.jpg" 
+          <a class="slide-anchor" href="/RoomToRoam/artists/NovaLizPhoto/" target="_self" id="slide-2" aria-expanded="true"  style="z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%); " >
+              <img src="/RoomToRoam/artists/NovaLizPhoto/images/featurephotographer.jpg" 
               alt="Example work of featured photographer Nova Liz" aria-label="Featured content link"/></a>
               
           </a>
          
-          <a class="slide-anchor" href="/artists/ImaginaryBand/" inert target="_self" id="slide-3" aria-expanded="false" style="z-index: 28; left: 45%; opacity: .95;" >
+          <a class="slide-anchor" href="/RoomToRoam/artists/ImaginaryBand/" inert target="_self" id="slide-3" aria-expanded="false" style="z-index: 28; left: 45%; opacity: .95;" >
             <iframe id="slide-3-vid" width="100%" height="100%" src="https://www.youtube.com/embed/i1WxBAdknpw" title="The Technicolors - Space Cadet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               <!--^ copied from youtube video (right click > copy embed code)-->    
             <!--TODO: decide whether to add this feature
@@ -130,18 +130,18 @@
   <section id="swirl-container">
     <!-- swirl animation containers -->   
     <div class="swirl" id="swirl1">
-        <img  class="swirl-image" src="/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
-        <a class="swirl-link" id="swirl-link1" href="/connect/"  target="_self"><p class="swirl-text">Connect</p></a>
+        <img  class="swirl-image" src="/RoomToRoam/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
+        <a class="swirl-link" id="swirl-link1" href="/RoomToRoam/connect/"  target="_self"><p class="swirl-text">Connect</p></a>
       </div>
 
     <div class="swirl"  id="swirl2" >
-        <img class="swirl-image" src="/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
-        <a class="swirl-link" id="swirl-link2" href="/artists/"  target="_self"><p class="swirl-text">Artists</p></a>
+        <img class="swirl-image" src="/RoomToRoam/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
+        <a class="swirl-link" id="swirl-link2" href="/RoomToRoam/artists/"  target="_self"><p class="swirl-text">Artists</p></a>
       </div>
     
     <div class="swirl" id="swirl3">
-        <img class="swirl-image" src="/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
-        <a class="swirl-link" id="swirl-link3" href="/about-us/" target="_self"><p class="swirl-text">About</p></a> 
+        <img class="swirl-image" src="/RoomToRoam/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
+        <a class="swirl-link" id="swirl-link3" href="/RoomToRoam/about-us/" target="_self"><p class="swirl-text">About</p></a> 
       </div>  
         
       
@@ -152,7 +152,7 @@
   <section id="reviews">
     <h2>Featured Reviews</h2>
     <article id="article1">
-      <img src="/images/albumtest1.jpg">
+      <img src="/RoomToRoam/images/albumtest1.jpg">
       <div class="text-container">
         <p>To give an idea of how different the world was when Paramore released their last album, Alex Smith was the Chiefs starting quarterback. During nearly six years of downtime, band members released multiple solo albums, leaving fans to question if they’d ever hear new material from the pop/rock trio.
 
@@ -163,11 +163,11 @@
         This is why.” The feeling of being overwhelmed and uncertain carries into the rocking second track, “The News.” Williams and her bandmates touch on these themes several more times across the album’s 10 songs and 37 minutes. “Big Man, Little Dignity” targets men wealthy enough to live without consequences for their greed and selfishness. “C’est comme ça,” the second single, details the time when a chiropractic appointment was a big social occasion. Translated to “it is what it is,” the resignation of the lyrics are countered by a hyperactive guitars and a bouncy chorus.
         
         In the run-up to This Is Why, Paramore said they were inspired by the guitar-driven indie rock they grew up on in the early ‘00s. There are echoes of Bloc Party, Futureheads, OK Go and Foals across the album, but also early ‘80s New Wave. By tweaking their sound, Paramore not only make This Is Why sonically rewarding, but keeps the often grim lyrics at bay. -Joel Francis</p>
-          <a class="review-link" href="/reviews/" target="_self">Continue reading</a> <!--TODO-PUT ACTUAL REVIEW LINK HERE-->
+          <a class="review-link" href="/RoomToRoam/reviews/" target="_self">Continue reading</a> <!--TODO-PUT ACTUAL REVIEW LINK HERE-->
       </div>
       </article>
     <article id="article2">
-      <img src="/images/albumtest2.jpg">
+      <img src="/RoomToRoam/images/albumtest2.jpg">
       <div class="text-container">
         <p>Loaded is the fourth and what many hardcore fans consider to be the final studio album by legendary art-rock band Velvet Underground.
         It would be the last album to feature founding member Lou Reed, who quit shortly before “Loaded’s” release in 1970. Other original members Sterling Morrison and Maureen Tucker would leave VU in 1971.
@@ -177,11 +177,11 @@
         Even though Reed is credited with being the main songwriter, Yule took on a larger role in the band as far as arrangements and singing. He handles lead vocals on three of the albums ten tracks.
         Even though “Loaded” never achieved the commercial success it aspired to, it did produce some of VU’s most popular songs including “Who Love’s the Sun” and “Sweet Jane.”
         This limited edition Crystal-Clear vinyl sounds amazing. If you missed out on the 2015 45th anniversary reissue this a great chance to pick up a copy of this iconic album. – Major Matt</p>
-          <a class="review-link" href="/reviews/" target="_self">Continue reading</a> <!--TODO-PUT ACTUAL REVIEW LINK HERE-->
+          <a class="review-link" href="/RoomToRoam/reviews/" target="_self">Continue reading</a> <!--TODO-PUT ACTUAL REVIEW LINK HERE-->
       </div>
       </article>    
     <article id="article3">
-      <img src="/images/albumtest3.jpg">
+      <img src="/RoomToRoam/images/albumtest3.jpg">
       <div class="text-container">
         <p>Gill Scott-Heron was only 20 years old when his debut album, Small Talk at 125th and Lenox, was recorded in 1970. Still very much a newcomer, Scott-Heron already had a book of poetry and novel to his name.
 
@@ -194,7 +194,7 @@
         On “Evolution (and Flashback)” Scott-Heron looks at the passing of Malcolm X and Martin Luther King, Jr. and the future of the civil rights movement. Scott-Heron sits down at the piano and sings “Who Will Pay Reparations on my Soul” foreshadowing the decade of provocative music he would make with pianist Brian Jackson throughout the 1970s.
         
         Many of the pieces on Small Talk are still potent and relevant, but the homophobia of “The Subject Was F—ts” mars its author and is the album’s only blemish. – Joel Francis</p>
-        <a class="review-link" href="/reviews/" target="_self">Continue reading</a> <!--TODO-PUT ACTUAL REVIEW LINK HERE-->
+        <a class="review-link" href="/RoomToRoam/reviews/" target="_self">Continue reading</a> <!--TODO-PUT ACTUAL REVIEW LINK HERE-->
       </div>
       </article>
   </section>
@@ -202,11 +202,11 @@
  
 <!--
 <div id="STARTEST">
-  <img src="/images/starV1frame2.png">
+  <img src="/RoomToRoam/images/starV1frame2.png">
 </div>
 
 <div id="STARTEST2">
-  <img src="/images/starV1frame2.png">
+  <img src="/RoomToRoam/images/starV1frame2.png">
 </div>
 -->
 
@@ -217,27 +217,27 @@
 
 <footer>
   <ul class="footer" id="footer-internals">
-    <li class="footer-item">  <a class="footer-link" href="/artists/" target="_self">Artists</a>  </li>
-    <li class="footer-item">  <a class="footer-link" href="/reviews/" target="_self">Reviews</a>  </li>
-    <li class="footer-item">  <a class="footer-link" href="/connect/" target="_self">Connect</a>  </li>
-    <li class="footer-item">  <a class="footer-link" href="/about-us/" target="_self">About Us</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/RoomToRoam/artists/" target="_self">Artists</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/RoomToRoam/reviews/" target="_self">Reviews</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/RoomToRoam/connect/" target="_self">Connect</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/RoomToRoam/about-us/" target="_self">About Us</a>  </li>
   </ul>
   <ul class="footer" id="footer-socials">
-    <li class="footer-item" id="insta"> <a aria-label="Room To Roam Instagram account external link" class="footer-externallink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/images/insta.png" alt=""></a></li>
-    <li class="footer-item" id="fb"> <a aria-label="Room To Roam Facebook account external link" class="footer-externallink" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/images/facebook.png" alt=""></a></li>
-    <li class="footer-item" id="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="footer-externallink" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/images/tiktok.png" alt=""></a></li>
-    <li class="footer-item" id="yt"> <a aria-label="Room To Roam YouTube account external link" class="footer-externallink" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/images/youtube.png" alt=""></a></li>
+    <li class="footer-item" id="insta"> <a aria-label="Room To Roam Instagram account external link" class="footer-externallink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/insta.png" alt=""></a></li>
+    <li class="footer-item" id="fb"> <a aria-label="Room To Roam Facebook account external link" class="footer-externallink" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/facebook.png" alt=""></a></li>
+    <li class="footer-item" id="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="footer-externallink" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/tiktok.png" alt=""></a></li>
+    <li class="footer-item" id="yt"> <a aria-label="Room To Roam YouTube account external link" class="footer-externallink" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/youtube.png" alt=""></a></li>
   </ul>
 </footer>
 
 <!--jquery animation files : KEEP AT BOTTOM OF BODY-->
 <!--with these at bottom, content loads before these scripts-->
-<!--<script src="/node_modules/wicg-inert/dist/inert.min.js"></script>-->
-<!--<script src="/scripts/scrollanimation.js"></script>-->
-<script src="/scripts/loadanimation.js"></script>
-<script src="/scripts/swirljqueryanimation.js"></script>
-<script src="/scripts/slide.js"></script>
-<script src="/scripts/hamburger.js"></script> <!--PREVIOUS ISSUE FIXED: event listener from this script wasn't showing up in chrome dev tools when this script was listed in the head or body BEFORE the button it was meant to find in its query - so the issue with the Event Listener not triggering/showing up in chrome dev tools was 
+<!--<script src="/RoomToRoam/node_modules/wicg-inert/dist/inert.min.js"></script>-->
+<!--<script src="/RoomToRoam/scripts/scrollanimation.js"></script>-->
+<script src="/RoomToRoam/scripts/loadanimation.js"></script>
+<script src="/RoomToRoam/scripts/swirljqueryanimation.js"></script>
+<script src="/RoomToRoam/scripts/slide.js"></script>
+<script src="/RoomToRoam/scripts/hamburger.js"></script> <!--PREVIOUS ISSUE FIXED: event listener from this script wasn't showing up in chrome dev tools when this script was listed in the head or body BEFORE the button it was meant to find in its query - so the issue with the Event Listener not triggering/showing up in chrome dev tools was 
   caused by:  the targeted element is either not found or not loaded when the event listener is attached FIX: attach the script to the html doc at the END so that it runs and the eventlistener looks for the button AFTER the button has loaded, this way it is actually found -->
 </body>
 
