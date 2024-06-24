@@ -118,8 +118,6 @@ nav {
           z-index: 12; 
           font-weight: 500;
           text-decoration: none;
-          width: 100%;
-          display: block;
         }
           .topnav-link:link, .topnav-link:active{
             color: #e3f5ff9d;
@@ -182,6 +180,10 @@ nav {
       justify-content: space-evenly;
       font-size: large;
       align-items:flex-start; 
+    }
+    .topnav-link{
+    width: 100%;
+    display: block;
     }
   }
 /*HAMBURGER MENU SOLUTION FOUND - SYNTAX ERROR ON BELOW (+ adjacent sibling combinator used instead of general sibling ~, and placed in wrong place*/
