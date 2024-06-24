@@ -148,6 +148,7 @@ nav {
         z-index: 32;
         width: 25px;
         height: 5%;
+        border: 1px solid white;
         background-color: white;
         border-radius: 1rem;
       }
@@ -296,7 +297,7 @@ background-repeat: repeat;
   z-index: 20;
   display: flex;
   justify-content: center;
-  animation: scrolldown 13s linear 1;
+  animation: scrolldown 10s linear 1;
   animation-play-state: running;
   animation-iteration-count: 1;
   animation-fill-mode: both;
