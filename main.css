@@ -539,8 +539,8 @@ section {width: 100%; height:fit-content; z-index: 1;}
         grid-template-columns: repeat(4, 1fr); /* Define four equal-width columns */
         grid-template-rows: auto auto; 
         grid-template-areas: 
-            ". swirl2 swirl2 ."
             ". swirl1 swirl1 ."
+            ". swirl2 swirl2 ."
             ". swirl3 swirl3 .";
           }
           .swirl-text {font-weight: 600; font-size: 1.3rem;}
