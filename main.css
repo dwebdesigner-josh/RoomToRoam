@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/RoomToRoam/images/starV1frame1.png");
+  background-image: url("/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -32,7 +32,7 @@ body {
     background-size: 50%; /*fixes star density being too low on mobile*/
   }
 }
-@media screen and (min-width: 320px){
+@media screen and (min-width: 0px){
   :root {font-size: 12pt;  }
 }
 @media screen and (min-width: 365px){
@@ -61,6 +61,9 @@ body {
 }
 @media screen and (min-width: 1520px){
   :root {font-size: 26pt;  }
+}
+@media screen and (min-width: 2000px){
+  :root {font-size: 30pt;  }
 }
 @media screen and (min-width: 3000px){
   :root {font-size: 36pt;  }
@@ -264,7 +267,9 @@ main {
   overflow-y: hidden;
   position: absolute;
   top: 0;
+  /*z-index issues with this may arise, with it overlaying elements after animation ends, but for now it should be fine.. if issues arise, either make sure z-index is only defined on loadscreen not container, or add a second animation for the load container that just removes it from the page after x seconds (same time as load screen animation)*/
 }
+
   /*MOBILE*/
   @media screen and (max-width: 850px){
    #loadcontainer {height: calc(332vw + 438px + 100svh);}
@@ -278,7 +283,7 @@ main {
   width: 100%;
   height: 100%;
 /*  background-color: red;*/
-background-image: url("/RoomToRoam/images/starV1frame1.png");
+background-image: url("/images/starV1frame1.png");
 background-repeat: repeat;
 
   position: absolute;
@@ -325,20 +330,19 @@ background-repeat: repeat;
 
 
 /*sections*/
-section {width: 100%; height:fit-content;}
+section {width: 100%; height:fit-content; z-index: 1;}
 
 
 /*section - mission statement*/
 #roots-missionstatement{
   z-index: 4;
-  height: 360px; /*equiv to 14lh*/
+  height: 380px; 
   line-height: 1.6;
   width: 95%;
-  border: 1px dotted white;
   overflow-y: hidden;
-/*  background-image: url("/images/roots-missionstatement.png");
+
   background-repeat:no-repeat;
-  background-size:cover; */
+  background-size: 100% 100%; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -346,14 +350,24 @@ section {width: 100%; height:fit-content;}
  /*aspect-ratio: 1350/390;*/
 /*height with the above measurement was about 30vw*/
 }
+  @media screen and (min-width: 1px){#roots-missionstatement{background-image: url("/images/missionbackV2small.png");}}
+  @media screen and (min-width: 850px){#roots-missionstatement{background-image: url("/images/missionbackV2medium.png");}}   
+  @media screen and (min-width: 1650px){#roots-missionstatement{background-image: url("/images/missionbackV2large.png");}}
+   
+ 
 
 #roots-missionstatement p{
   color: #e3f5ff;
+  padding-top: 2lh;
   width: 90%;
-  height: 90%;
+  height: 85%;
   line-height: inherit;
+  text-align: center; /*maybe change to justify*/
 }
-/* MOVED TO FULL BODY UNIVERSAL FONT SIZE - GOOD JOB HERE!
+  @media screen and (min-width: 700px){#roots-missionstatement p{padding-top: 1.5lh;}}
+  @media screen and (min-width: 3000px){#roots-missionstatement p{padding-top: .5lh;}}
+  
+  /* MOVED TO FULL BODY UNIVERSAL FONT SIZE - GOOD JOB HERE!
 @media screen and (min-width: 320px){
   #roots-missionstatement p {font-size: 12pt;  }
 }
@@ -431,11 +445,11 @@ section {width: 100%; height:fit-content;}
       background-color: transparent;
     }
         #slide-left {padding-right: 15%;
-          background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
+          background-image: url("/images/slidebuttonarrowleft.png");
           background-size: cover;
         }
         #slide-right {padding-left: 15%;
-          background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
+          background-image: url("/images/slidebuttonarrowright.png");
           background-size: cover;
         }
 
@@ -492,7 +506,7 @@ section {width: 100%; height:fit-content;}
           text-decoration: none;
           z-index: 5;
           
-          background-image: url("/RoomToRoam/images/swirltext.png");
+          background-image: url("/images/swirltext.png");
           background-size: cover;
           background-color: transparent;
           
@@ -547,6 +561,7 @@ section {width: 100%; height:fit-content;}
           flex-direction: column;
           height: 120vw;
           justify-content: space-evenly;
+          z-index: 1;
         }
 
         #reviews>h2{
@@ -583,10 +598,10 @@ section {width: 100%; height:fit-content;}
                   height: 70%; /*set to 69 instead of original 70 to keep last line cutoff happening consistently across vw's (not a special value this one just happened to work for that*/
                   overflow: hidden;
                   white-space: wrap;
+                  text-align: left;
                   text-shadow: 1px 1px 1px black; /*possibly remove but it seems it may increase readability although the background is already close to black*/
                   
                 }
-
                             article a{
                               border-bottom: 1px solid #e3f5ff;
                               width: 100%;
@@ -596,6 +611,7 @@ section {width: 100%; height:fit-content;}
                               display: block;
                               text-align: center;
                               text-decoration: none;
+                              z-index: 21;
                             }
 
                             article a:link, article a:active{
@@ -606,7 +622,7 @@ section {width: 100%; height:fit-content;}
                               color: #e3f5ff9d;
                             }
 
-                            article a:hover{/*TODO-style hover - possible animation*/
+                            article a:hover{
                               color: #e3f5ff3f;
                             }
 
