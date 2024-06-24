@@ -448,11 +448,11 @@ section {width: 100%; height:fit-content; z-index: 1;}
       color: white;
       background-color: transparent;
     }
-        #slide-left {padding-right: 15%;
+        #slide-left {/*padding-right: 5%;*/
           background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
           background-size: cover;
         }
-        #slide-right {padding-left: 15%;
+        #slide-right {/*padding-left: 5%;*/
           background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
           background-size: cover;
         }
@@ -659,7 +659,7 @@ footer{z-index: 1; display: flex; justify-content: center; align-items: center; 
         justify-content: center;
         flex-direction: row;
         margin: 0;
-        gap: 1rem;              /*gap can be used for flex!!*/
+        gap: 1rem;           
       
         list-style-type: none;
         background-color: #12171d9d;
@@ -671,7 +671,7 @@ footer{z-index: 1; display: flex; justify-content: center; align-items: center; 
         justify-content: center;
         flex-direction: row;
         margin: 0;
-        gap: 1rem;              /*gap can be used for flex!!*/
+        gap: 1rem;             
       
         list-style-type: none;
         background-color: #12171d9d;
