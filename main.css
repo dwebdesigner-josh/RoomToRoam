@@ -272,7 +272,7 @@ main {
 
   /*MOBILE*/
   @media screen and (max-width: 850px){
-   #loadcontainer {height: calc(332vw + 438px + 100svh);}
+   #loadcontainer {height: calc(332vw + 538px + 100svh);}
   }                                   /*originally 332vw, but mission statement seems to have been disregarded in calculations/data gathering, so added its height of ~30vw to this.. although it doesn't seem necessary on the desktop calc for some reason*/
   /*DESKTOP*/
   @media screen and (min-width: 850px){
@@ -317,7 +317,7 @@ background-repeat: repeat;
   @keyframes scrolldown {
     0%{transform: translateY(0);}
     20%{transform: translateY(400px);}
-    100%{transform: translateY(calc(332vw + 438px + 100svh)); display: none; visibility: hidden;}
+    100%{transform: translateY(calc(332vw + 538px + 100svh)); display: none; visibility: hidden;}
   }
 }
 @media screen and (min-width: 850px){
@@ -338,7 +338,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
   z-index: 4;
   height: 380px; 
   line-height: 1.6;
-  width: 95%;
+  width: 100%;
   overflow-y: hidden;
 
   background-repeat:no-repeat;
@@ -359,7 +359,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
 #roots-missionstatement p{
   color: #e3f5ff;
   padding-top: 2lh;
-  width: 90%;
+  width: 85%;
   height: 85%;
   line-height: inherit;
   text-align: center; /*maybe change to justify*/
@@ -627,8 +627,8 @@ section {width: 100%; height:fit-content; z-index: 1;}
                             }
 
 /*footer*/
-footer{z-index: 1;}
-#footer {
+footer{z-index: 1; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100vw;}
+.footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -641,6 +641,35 @@ footer{z-index: 1;}
   padding: 1rem;
   border-radius: 1rem;
 }
+@media screen and (max-width: 850px){
+  footer{display: grid; 
+    grid-template-columns: repeat(1, 100%);     grid-template-rows: auto auto; 
+    grid-template-areas: 
+        "internals"
+        "socials";
+        
+      }
+      #footer-internals{grid-area: internals;}
+      #footer-socials{grid-area: socials;}
+  }
+
+/*
+  @media screen and (max-width: 850px){
+    .footer{width: 100%;}
+    #footer-socials{display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto auto; 
+    grid-template-areas: 
+        "insta fb"
+        "tiktok yt";
+      }
+        #insta{ grid-area: insta;}
+        #fb{ grid-area: fb;}
+        #tiktok{ grid-area: tiktok;}
+        #yt{ grid-area: yt;}
+
+  }
+*/
 
 .footer-item{list-style-type: none;}
 .footer-link{
