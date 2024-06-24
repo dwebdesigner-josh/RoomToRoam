@@ -118,6 +118,7 @@ nav {
           z-index: 12; 
           font-weight: 500;
           text-decoration: none;
+          display: inline;
         }
           .topnav-link:link, .topnav-link:active{
             color: #e3f5ff9d;
