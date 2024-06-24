@@ -119,6 +119,7 @@ nav {
           font-weight: 500;
           text-decoration: none;
           width: 100%;
+          padding-right: 100%;
         }
           .topnav-link:link, .topnav-link:active{
             color: #e3f5ff9d;
