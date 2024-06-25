@@ -53,7 +53,7 @@
                // slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); //left to right
                 
                 slideImage1.setAttribute("style", " z-index: 29; left: 5%; opacity: .95;"); 
-                slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(2) translateY(-25%);"); 
+                slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%);"); 
                 slideImage3.setAttribute("style", " z-index: 28; left: 45%; opacity: .95;"); 
                     //accessibility changes:
                     slideImage1.setAttribute("aria-expanded", "false");
@@ -101,7 +101,7 @@ function slideLeft(){
        //         slideImage2.setAttribute("style", "order: 4; transform: translateX(-350px) scale(1.2);"); 
          //       slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); 
             slideImage1.setAttribute("style", " z-index: 28; left: 5%; opacity: .95;"); 
-            slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(2) translateY(-25%);"); 
+            slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%);"); 
             slideImage3.setAttribute("style", " z-index: 29; left: 45%; opacity: .95;"); 
                 //accessibility changes:
                 slideImage1.setAttribute("aria-expanded", "false");
@@ -190,5 +190,32 @@ mediaQuery.addEventListener('change', mediaChange);
     // Initial check
     mediaChange(mediaQuery);
 
+})();
 
+(() => {
+document.addEventListener('DOMContentLoaded', function () {
+    var iframe = document.getElementById('slide-3-vid');
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Detect if the user is on a mobile device
+    var isMobile = /android|iPad|iPhone|iPod/.test(userAgent.toLowerCase());
+
+    if (isMobile) {
+        // Add parameters to force the desktop version
+        var src = iframe.src;
+        if (!src.includes('playsinline')) {
+            src += '&playsinline=1';
+        }
+        if (!src.includes('controls')) {
+            src += '&controls=1';
+        }
+        if (!src.includes('fs')) {
+            src += '&fs=1';
+        }
+        if (!src.includes('rel')) {
+            src += '&rel=0';
+        }
+        iframe.src = src;
+    }
+});
 })();
