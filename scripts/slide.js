@@ -113,29 +113,6 @@ function slideLeft(){
 //setTimeout(slideLeft, 500) - infinite sliding
 }
 
-//single click sliding:
-
-    function slideRightSingle(){
-        if (isTransitioning) return; // Check if transition is in progress
-            isTransitioning = true; // Set the flag to indicate a transition is in progress
-
-        slideRight();
-
-        setTimeout(() => {
-            isTransitioning = false; // Reset the flag after transition time
-        }, transitionTime);
-    }
-
-    function slideLeftSingle(){
-        if (isTransitioning) return; // Check if transition is in progress
-            isTransitioning = true; // Set the flag to indicate a transition is in progress
-
-        slideLeft();
-
-        setTimeout(() => {
-            isTransitioning = false; // Reset the flag after transition time
-        }, transitionTime);
-    }
 
 //hover sliding:
     function startSlideRight() {
@@ -149,6 +126,36 @@ function slideLeft(){
     function stopSlide() {
         clearInterval(slideInterval);
     }
+
+
+//single click sliding:
+
+function slideRightSingle(){
+    stopSlide(); //included here for tablets touchscreen computers and wide phones (850px+) as mouseover is part of a touch (hover activates on tablets/touchscreens)
+    if (isTransitioning) return; // Check if transition is in progress
+        isTransitioning = true; // Set the flag to indicate a transition is in progress
+
+    slideRight();
+
+    setTimeout(() => {
+        isTransitioning = false; // Reset the flag after transition time
+    }, transitionTime);
+    
+}
+
+function slideLeftSingle(){
+    stopSlide(); //included here for tablets and wide phones (850px+)
+    if (isTransitioning) return; // Check if transition is in progress
+        isTransitioning = true; // Set the flag to indicate a transition is in progress
+
+    slideLeft();
+
+    setTimeout(() => {
+        isTransitioning = false; // Reset the flag after transition time
+    }, transitionTime);
+   
+}
+
 //single slide for accessibility (tab+enter)
     slideLeftButton.addEventListener('keydown', function(event) {
         // Check if the key pressed is Enter (key code 13)
@@ -174,13 +181,16 @@ function mediaChange(e) {
         slideLeftButton.addEventListener('click', slideLeftSingle);
         slideRightButton.addEventListener('click', slideRightSingle);
         
-    } else { // Desktop
+    } else { // Desktop and Tablet 
                 slideLeftButton.removeEventListener('click', slideLeftSingle);
                 slideRightButton.removeEventListener('click', slideRightSingle);
+                slideLeftButton.addEventListener('click', slideLeftSingle);
+                slideRightButton.addEventListener('click', slideRightSingle);
         slideLeftButton.addEventListener('mouseover', startSlideLeft);
         slideLeftButton.addEventListener('mouseout', stopSlide);
         slideRightButton.addEventListener('mouseover', startSlideRight);
         slideRightButton.addEventListener('mouseout', stopSlide); 
+
          
     }
 }
