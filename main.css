@@ -483,6 +483,8 @@ section {width: 100%; height:fit-content; z-index: 1;}
           box-shadow: 0px 0px 2px 2px black;
         }
 
+        iframe{zoom: .5;}
+
         
 /* TODO: decide whether to add this feature
         .slide-artistlink {
