@@ -131,7 +131,7 @@ function slideLeft(){
 //single click sliding:
 
 function slideRightSingle(){
-    stopSlide(); //included here for tablets touchscreen computers and wide phones (850px+) as mouseover is part of a touch (hover activates on tablets/touchscreens)
+   
     if (isTransitioning) return; // Check if transition is in progress
         isTransitioning = true; // Set the flag to indicate a transition is in progress
 
@@ -140,11 +140,11 @@ function slideRightSingle(){
     setTimeout(() => {
         isTransitioning = false; // Reset the flag after transition time
     }, transitionTime);
-    
+    stopSlide();
 }
 
 function slideLeftSingle(){
-    stopSlide(); //included here for tablets and wide phones (850px+)
+    
     if (isTransitioning) return; // Check if transition is in progress
         isTransitioning = true; // Set the flag to indicate a transition is in progress
 
@@ -153,7 +153,7 @@ function slideLeftSingle(){
     setTimeout(() => {
         isTransitioning = false; // Reset the flag after transition time
     }, transitionTime);
-   
+    stopSlide();
 }
 
 //single slide for accessibility (tab+enter)
