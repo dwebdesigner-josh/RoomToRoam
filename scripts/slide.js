@@ -190,23 +190,5 @@ mediaQuery.addEventListener('change', mediaChange);
     // Initial check
     mediaChange(mediaQuery);
 
-})();
 
-(() => {
-document.addEventListener('DOMContentLoaded', function () {
-    var iframe = document.getElementById('slide-3-vid');
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-    // Detect if the user is on a mobile device
-    var isMobile = /android|iPad|iPhone|iPod/.test(userAgent.toLowerCase());
-
-    if (isMobile) {
-        var src = new URL(iframe.src);
-        src.searchParams.set('playsinline', '1');
-        src.searchParams.set('controls', '1');
-        src.searchParams.set('fs', '1');
-        src.searchParams.set('rel', '0');
-        iframe.src = src.toString();
-    }
-});
 })();
