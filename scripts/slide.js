@@ -201,21 +201,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var isMobile = /android|iPad|iPhone|iPod/.test(userAgent.toLowerCase());
 
     if (isMobile) {
-        // Add parameters to force the desktop version
-        var src = iframe.src;
-        if (!src.includes('playsinline')) {
-            src += '&playsinline=1';
-        }
-        if (!src.includes('controls')) {
-            src += '&controls=1';
-        }
-        if (!src.includes('fs')) {
-            src += '&fs=1';
-        }
-        if (!src.includes('rel')) {
-            src += '&rel=0';
-        }
-        iframe.src = src;
+        var src = new URL(iframe.src);
+        src.searchParams.set('playsinline', '1');
+        src.searchParams.set('controls', '1');
+        src.searchParams.set('fs', '1');
+        src.searchParams.set('rel', '0');
+        iframe.src = src.toString();
     }
 });
 })();
