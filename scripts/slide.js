@@ -53,7 +53,7 @@
                // slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); //left to right
                 
                 slideImage1.setAttribute("style", " z-index: 29; left: 5%; opacity: .95;"); 
-                slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%);"); 
+                slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(2) translateY(-25%);"); 
                 slideImage3.setAttribute("style", " z-index: 28; left: 45%; opacity: .95;"); 
                     //accessibility changes:
                     slideImage1.setAttribute("aria-expanded", "false");
@@ -101,7 +101,7 @@ function slideLeft(){
        //         slideImage2.setAttribute("style", "order: 4; transform: translateX(-350px) scale(1.2);"); 
          //       slideImage3.setAttribute("style", "order: 2; transform: translateX(700px);"); 
             slideImage1.setAttribute("style", " z-index: 28; left: 5%; opacity: .95;"); 
-            slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%);"); 
+            slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(2) translateY(-25%);"); 
             slideImage3.setAttribute("style", " z-index: 29; left: 45%; opacity: .95;"); 
                 //accessibility changes:
                 slideImage1.setAttribute("aria-expanded", "false");
