@@ -214,15 +214,15 @@ width: 95%;
 display: grid;
 grid-template: 100%/100%;
 height: 100svh;   /*fix for full screen logo at start*/
-/*fix for overlap on small windows with above*/ /*was 500px*/
 }
 @media screen and (max-width: 850px){
   header{min-height: 500px;}
 }
+
 @media screen and (min-width: 850px){
-  header{min-height: 50vw;}
-}
-/*@media screen and (min-width: 1300px){header{min-height: 50vw;}}*/
+  header{height: 50vw;}
+}/*fix for overlap happening with only 500px min height on small desktop windows, also fix extra space on tablets with height 50vw instead of minheight 50vw*/
+
     header>.logo {width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
     header>div {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
     #roots {z-index: 1;}
@@ -280,7 +280,7 @@ main {
   }                                   /*originally 332vw, but mission statement seems to have been disregarded in calculations/data gathering, so added its height of ~30vw to this.. although it doesn't seem necessary on the desktop calc for some reason*/
   /*DESKTOP*/
   @media screen and (min-width: 850px){
-    #loadcontainer {height: calc(222vw + 438px + 100svh);}
+    #loadcontainer {height: calc(272vw + 438px);}
   }
 
 .loadscreen {
@@ -328,7 +328,7 @@ background-repeat: repeat;
   @keyframes scrolldown {
     0%{transform: translateY(0);}
     20%{transform: translateY(500px);}
-    100%{transform: translateY(calc(222vw + 438px + 100svh)); display: none; visibility: hidden;}
+    100%{transform: translateY(calc(272vw + 438px)); display: none; visibility: hidden;}
   }
 }
 
