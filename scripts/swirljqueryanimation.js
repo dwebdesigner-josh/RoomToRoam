@@ -3,7 +3,7 @@
 //CHANGE class of $element below to match the HTML class of the img we're targeting
 const $element = $('.swirl-image');
 //CHANGE the path below to match the folder containing the src imgs
-const imagePath = '/RoomToRoam/scripts/swirl1/centeredimages';
+const imagePath = '/scripts/swirl1/centeredimages';
 //TEST PATH TO MATCH GITHUB PAGES: '/scripts....' instead of '/scripts....'
 const totalFrames = 99;
 const animationDuration = 7150;
