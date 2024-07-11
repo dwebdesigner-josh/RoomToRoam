@@ -6,7 +6,6 @@
   font-optical-sizing: auto;
   font-weight:300;
   max-width: 100vw;
-  
 }
 
 html,body {margin: 0; width: 100%; background-color:#12171d;/*oldcolorwas12161c*/}
@@ -229,11 +228,11 @@ header {
       }
           /*MOBILE*/
           @media screen and (max-width: 850px){
-          #loadcontainer {height: calc(2.5rem + 1000px + 4rem);} /*header plus main plus footer - 2rem high internals + 2rem high socials*/
+          #loadcontainer {height: calc(2.5rem + 2000px + 4rem);} /*header plus main plus footer - 2rem high internals + 2rem high socials*/
           }                                
           /*DESKTOP*/
           @media screen and (min-width: 850px){
-          #loadcontainer {height: calc(2.5rem + 1000px + 2rem);} /*header plus main plus footer - 2rem high internals/socials */
+          #loadcontainer {height: calc(2.5rem + 2000px + 2rem);} /*header plus main plus footer - 2rem high internals/socials */
           }
       .loadscreen {
           width: 100%;
@@ -288,6 +287,14 @@ main {
 section {width: 100%; height:fit-content; z-index: 1;}
 
 #filler{height: 1000px}
+
+#artists{
+  width: 80%;
+}
+#artists table, #artists label, #artists select{color: white;}
+ #artists label{font-size: 0;}
+ #dt-search-0{width: 50vw; color: white; height: 50px; font-size: 35px;}
+  #artists select option{color: black; font-weight: 300;}
 
 /*footer*/
 footer{z-index: 1; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100vw;}
