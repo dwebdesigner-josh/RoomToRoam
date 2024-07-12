@@ -7,7 +7,7 @@
 
 var table = $('#mytable').DataTable({fuzzySearch: { toggleSmart: false }});
 
-  // Get unique values for the column you want to filter
+  // Get unique values for the column you want to filter (left to right column numbers: 0 , 1, 2, ...)
   var uniqueValues = [];
   table.column(1).data().unique().sort().each(function(d) {
       uniqueValues.push(d);

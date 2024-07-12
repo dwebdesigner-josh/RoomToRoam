@@ -66,17 +66,61 @@
 
 <main>
 
-<section id="filler">
+  <span id="top-filler"></span>
 
-</section>
+  <h1>Featured Artist Name</h1>
+    <div id="highlight">
+    <section id="roots-highlight" class="highlight-reel">
+         
+          <div class="slider">
+              <button id="slide-left" tabindex="0"></button> <!-- aria-pressed="false"  perhaps reintigrate this later with the slide.js-->
+            <div id="slides-container" >
+              <a class="slide-anchor" href="/artists/JW/" inert target="_self" id="slide-1" aria-expanded="false" style="z-index: 29; left: 5%;  opacity: .95;" >
+                <img src="/artists/JW/images/featureartist.jpg" 
+                alt="Example work of featured visual artist JW" aria-label="Featured content link" />
+                
+              </a>
+    
+              <a class="slide-anchor" href="/artists/NovaLizPhoto/" target="_self" id="slide-2" aria-expanded="true"  style="z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%); " >
+                  <img src="/artists/NovaLizPhoto/images/featurephotographer.jpg" 
+                  alt="Example work of featured photographer Nova Liz" aria-label="Featured content link"/></a>
+                  
+              </a>
+             
+              <a class="slide-anchor" href="/artists/ImaginaryBand/" inert target="_self" id="slide-3" aria-expanded="false" style="z-index: 28; left: 45%; opacity: .95;" >
+            
+                <iframe src="https://player.vimeo.com/video/967662374?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="embedtest"></iframe>
+                  <!--^ copied from youtube video (right click > copy embed code)-->    
+                <!--TODO: decide whether to add this feature
+                  <a class="slide-artistlink"><p class="slide-artistdescription">Description of artist with link to artist page</p></a>
+                -->
+              </a>
+    
+              
+    
+            </div>
+              <button id="slide-right" tabindex="0"></button>
+          </div>
+          
+              <!--slide img positions based on size/aspect-ratio value-->
+            <!-- 33% width - left: 12.5% , 30 , 54.5-->
+            <!--33% width, 16/9 - left: 5%, 30, 60-->
+            <!--50% width, 16/9 - left: 5%, 25, 45-->
+            
+      </section></div>
+  <section id="featured-artist-details">
+    <h2>featured artist info here</h2>
+  </section>
 
 
 <section id="artists">
 
-  <label for="columnFilter">Filter by Medium:</label>
+  <h1>Artists</h1>
+  <label for="columnFilter">Filter Artists by Medium:</label>
   <select id="columnFilter">
-      <option value="">Filter by Medium</option>
+      <option value="">Filter Artists by Medium</option>
   </select>
+
 
     <table id="mytable" class="display" style="width:100%">
       <thead>
@@ -173,6 +217,7 @@
 
 <script src="/scripts/loadanimation.js"></script>
 <script src="/scripts/hamburger.js"></script> 
+<script src="/scripts/slide.js"></script>
 <script src="/scripts/artists.js"></script>
 </body>
 

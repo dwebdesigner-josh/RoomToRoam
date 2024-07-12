@@ -82,6 +82,9 @@ a:hover{
 }
 
 
+h1{color: #e3f5ff; align-self: center;}
+
+
 /*nav*/
 /*nav-desktop*/
 nav {
@@ -284,27 +287,120 @@ main {
 } 
 
 /*sections*/
+
+#top-filler{height: 3rem; width: 100%;}
+
 section {width: 100%; height:fit-content; z-index: 1;}
 
 #filler{height: 1000px}
 
+        
+/*section - highlight reel +content*/
+
+#highlight {
+  margin-top: 12vw;
+  width: 100%;
+  /*aspect-ratio: 1350/1410;*/ /*aspect ratio matches background images*/
+  /*  margin-top: -8%;
+  margin-bottom: -13%;*/
+  z-index: 3;
+  }
+  
+    #roots-highlight{
+      margin: 0; z-index: 4;
+      width: 100%;
+    }
+    
+    #highlight>#roots-highlight{
+      display: flex;
+    }
+
+      .slider {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;  
+        /*height: 233px;*/
+        display: flex;
+        width: 100%;
+      }
+
+        .slider>button{
+          height: 100%;
+          z-index: 31;
+        border: none;
+          flex: 1;
+          color: white;
+          background-color: transparent;
+        }
+            #slide-left {/*padding-right: 5%;*/
+              background-image: url("/images/slidebuttonarrowleft.png");
+              background-size: cover;
+            }
+            #slide-right {/*padding-left: 5%;*/
+              background-image: url("/images/slidebuttonarrowright.png");
+              background-size: cover;
+            }
+
+        #slides-container{
+          z-index: 0;
+          aspect-ratio: 1350/690;
+          width: 100%;
+          left: 0px;
+          flex: 8;
+
+        }
+          .slide-anchor {
+              
+              border: none;
+              position: absolute;
+              aspect-ratio: 16/9; /*SLIDE IMAGE THUMBNAIL SIZE HERE*/
+              /*width: 33%;*/
+              width: 50%;
+              transition: left 500ms ease-in-out, transform 500ms ease-in-out;
+            }
+
+            .slider img, .slider iframe{
+              /*opacity: .95;*/
+              width: 100%;
+              height: 100%;
+              border: none;
+              box-shadow: 0px 0px 2px 2px black;
+            }
+
+/*SECTION - featured artist details*/
+
+#featured-artist-details {display: flex; flex-direction: column;}
+
+#featured-artist-details *{color: #e3f5ff; align-self: center;}
+
+
+/*SECTION - artists table*/
 #artists{
   width: 80%;
-}
-#artists table, #artists label, #artists select{color: white;}
- #artists label{font-size: 0;}
- #dt-search-0{width: 50vw; color: white; height: 50px; font-size: 35px;}
-  #artists select option{color: black; font-weight: 300;}
-  
-  thead {border-bottom: 2px inset white;}
-  tfoot {border-top: 2px inset white;}
-  .dt-layout-table{border-bottom: 1px inset white;}
-  .dt-start, .dt-end{color: #e3f5ff;}
+  display: flex;
+  flex-direction: column;
+    }
 
-  tr {height: 200px;}
-    #featured-date{font-size: 0; visibility: hidden; display: none;}
+    #artists select{background-color: transparent; height: 1.5lh; margin-bottom: 20px; align-self: start;}
+      @media screen and (max-width: 768px){#artists select{align-self: center;}}
 
-    #artists select{background-color: transparent;}
+    #artists table, #artists label, #artists select{color: white;}
+    #artists label{font-size: 0;}
+    #dt-search-0{width: 50vw; color: white; height: 50px; font-size: 1.25rem;}
+        @media screen and (max-width: 500px){#dt-search-0{font-size: 1rem;}}
+      #artists select option{color: black; font-weight: 300; font-size: 1rem;}
+        #artists select {font-size: 1rem;}
+      
+      thead {border-bottom: 2px inset white;}
+      tfoot {border-top: 2px inset white;}
+      .dt-layout-table{border-bottom: 1px inset white;}
+      .dt-start, .dt-end{color: #e3f5ff;}
+
+      tr {height: 200px;}
+        #featured-date{font-size: 0; visibility: hidden; display: none;}
+
+   
 
 /*footer*/
 footer{z-index: 1; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100vw;}
