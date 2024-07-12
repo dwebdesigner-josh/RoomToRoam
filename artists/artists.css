@@ -374,7 +374,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
         #featured-artist-details p{width: 100%; align-self: center; color: #e3f5ff;}
 
-  .artist-text{display: flex; flex-direction: row;}
+  .artist-text{width: 95%; display: flex; flex-direction: row;}
  
                 .artist-name-link{flex: 1; display: flex; flex-direction: column; text-decoration: none; justify-content: start; align-items: center;}
                   .artist-name-link h2{padding-left: 10px; padding-right: 10px; text-align: center; transition: opacity 1s ease-in-out;} 
