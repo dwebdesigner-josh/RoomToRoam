@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room To Roam</title>
-    <link rel="icon" href="/images/favicon.ico">
+    <link rel="icon" href="/RoomToRoam/images/favicon.ico">
 <!--"inter" font-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 <!--CSS-->
-<link rel="stylesheet" href="/artists/artists.css">
+<link rel="stylesheet" href="/RoomToRoam/artists/artists.css">
 <!--jquery plugin-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!--DataTables plugin-->
-<link rel="stylesheet" href="/scripts/DataTables/datatables.css" />
-<script src="/scripts/DataTables/datatables.js"></script>
-<script src="/scripts/DataTables/fuzzysearch.js"></script>
+<link rel="stylesheet" href="/RoomToRoam/scripts/DataTables/datatables.css" />
+<script src="/RoomToRoam/scripts/DataTables/datatables.js"></script>
+<script src="/RoomToRoam/scripts/DataTables/fuzzysearch.js"></script>
 </head>
 
 
@@ -27,9 +27,9 @@
 <!--(ACCESSIBILITY)NOTE: For nav, use <nav><ul><li><a> One reason to use the <nav>, <ul>, <li> tags when building a navigation menu is that semantic markup will improve accessibility for users that require screen-readers.-->
 
   <header>
-    <a href="/" aria-label="Home Button" id="header-link">
+    <a href="/RoomToRoam/" aria-label="Home Button" id="header-link">
       <h1 id="header-h1">Room to Roam</h1>
-      <img src="/images/logotreeV5.png" alt="" id="tree-img">
+      <img src="/RoomToRoam/images/logotreeV5.png" alt="" id="tree-img">
     
     </a>
 </header>
@@ -49,11 +49,11 @@
     <div id="topnav-menu" role="dialog" aria-labelledby="topnav-label">
       <button id="topnav-close" aria-label="Close"><div class="hamburger-icon"></div></button>
       <ul id="topnav">
-        <li class="topnav-item">  <a class="topnav-link" id="topnav-link-home" href="/" target="_self">Home</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/artists/" target="_self">Artists</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/reviews/" target="_self">Reviews</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/connect/" target="_self">Connect</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/about-us/" target="_self">About Us</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" id="topnav-link-home" href="/RoomToRoam/" target="_self">Home</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/artists/" target="_self">Artists</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/reviews/" target="_self">Reviews</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/connect/" target="_self">Connect</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/about-us/" target="_self">About Us</a>  </li>
       </ul>
     </div>  
 </nav>
@@ -61,7 +61,7 @@
 
 <div id="loadcontainer">
     <div class="loadscreen" tabindex="-1">
-    <img tabindex="-1" alt="Graphic image of space ship" src="/images/ship.png" aria-label="Loading screen ship animation">
+    <img tabindex="-1" alt="Graphic image of space ship" src="/RoomToRoam/images/ship.png" aria-label="Loading screen ship animation">
     </div>
 </div>
 
@@ -76,20 +76,20 @@
           <div class="slider">
               <button id="slide-left" tabindex="0"></button> <!-- aria-pressed="false"  perhaps reintigrate this later with the slide.js-->
             <div id="slides-container" >
-              <a class="slide-anchor" href="/artists/JW/" inert target="_self" id="slide-1" aria-expanded="false" style="z-index: 29; left: 5%;  opacity: .95;" >
-                <img src="/images/technicolors.jpg" 
+              <a class="slide-anchor" href="/RoomToRoam/artists/JW/" inert target="_self" id="slide-1" aria-expanded="false" style="z-index: 29; left: 5%;  opacity: .95;" >
+                <img src="/RoomToRoam/images/technicolors.jpg" 
                 alt="Photo of featured visual artist, JW" />
               </a>
                 
     
-              <a class="slide-anchor" href="/artists/ImaginaryBand/" target="_self" id="slide-2" aria-expanded="true"  style="z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%); " >
-                  <img src="/images/technicolors.jpg" 
+              <a class="slide-anchor" href="/RoomToRoam/artists/ImaginaryBand/" target="_self" id="slide-2" aria-expanded="true"  style="z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%); " >
+                  <img src="/RoomToRoam/images/technicolors.jpg" 
                   alt="Photo of the featured music group, The Technicolors" />
                   
               </a>
              
-              <a class="slide-anchor" href="/artists/NovaLizPhoto/" inert target="_self" id="slide-3" aria-expanded="false" style="z-index: 28; left: 45%; opacity: .95;" >
-                <img src="/images/technicolors.jpg" 
+              <a class="slide-anchor" href="/RoomToRoam/artists/NovaLizPhoto/" inert target="_self" id="slide-3" aria-expanded="false" style="z-index: 28; left: 45%; opacity: .95;" >
+                <img src="/RoomToRoam/images/technicolors.jpg" 
                 alt="Photo of featured photographer, Nova Liz" />
               </a>
                 
@@ -109,19 +109,19 @@
 
   <section id="featured-artist-details">
     <div class="artist-text">
-      <a class="artist-name-link"href="/artists/JW/" target="_self" id="slideH-1" style="visibility: hidden; display: none; opacity: 0;">
+      <a class="artist-name-link"href="/RoomToRoam/artists/JW/" target="_self" id="slideH-1" style="visibility: hidden; display: none; opacity: 0;">
           <h2>JW</h2>
       </a>
-      <a class="artist-name-link"href="/artists/ImaginaryBand/" target="_self" id="slideH-2" style="visibility: visible; display: block; opacity: 1;">
+      <a class="artist-name-link"href="/RoomToRoam/artists/ImaginaryBand/" target="_self" id="slideH-2" style="visibility: visible; display: block; opacity: 1;">
           <h2>The Technicolors</h2>
       </a>
-      <a class="artist-name-link"href="/artists/NovaLizPhoto/" target="_self" id="slideH-3" style="visibility: hidden; display: none; opacity: 0;">
+      <a class="artist-name-link"href="/RoomToRoam/artists/NovaLizPhoto/" target="_self" id="slideH-3" style="visibility: hidden; display: none; opacity: 0;">
           <h2>Nova Liz</h2>
           <!--  <ul class="artist-socials" class="socials">
-          <li class="artist-socials-item" class="insta"> <a aria-label="Room To Roam Instagram account external link" class="artist-socials-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/images/insta.png" alt=""></a></li>
-          <li class="artist-socials-item" class="fb"> <a aria-label="Room To Roam Facebook account external link" class="artist-socials-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/images/facebook.png" alt=""></a></li>
-          <li class="artist-socials-item" class="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="artist-socials-link" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/images/tiktok.png" alt=""></a></li>
-          <li class="artist-socials-item" class="yt"> <a aria-label="Room To Roam YouTube account external link" class="artist-socials-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/images/youtube.png" alt=""></a></li>
+          <li class="artist-socials-item" class="insta"> <a aria-label="Room To Roam Instagram account external link" class="artist-socials-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/insta.png" alt=""></a></li>
+          <li class="artist-socials-item" class="fb"> <a aria-label="Room To Roam Facebook account external link" class="artist-socials-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/facebook.png" alt=""></a></li>
+          <li class="artist-socials-item" class="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="artist-socials-link" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/tiktok.png" alt=""></a></li>
+          <li class="artist-socials-item" class="yt"> <a aria-label="Room To Roam YouTube account external link" class="artist-socials-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/youtube.png" alt=""></a></li>
         </ul> REMOVED FOR SEO/CLICKS-->
       </a>
       
@@ -145,7 +145,7 @@
       
     </div>
 
-    <div id="artist-continue-link" tabindex="0"><img class="img-expand-arrow" src="/images/expandarrowdown.png"></div>
+    <div id="artist-continue-link" tabindex="0"><img class="img-expand-arrow" src="/RoomToRoam/images/expandarrowdown.png"></div>
    
   </section>
 
@@ -241,24 +241,24 @@
 
 <footer>
   <ul class="footer" id="footer-internals">
-    <li class="footer-item">  <a class="footer-link" href="/artists/" target="_self">Artists</a>  </li>
-    <li class="footer-item">  <a class="footer-link" href="/reviews/" target="_self">Reviews</a>  </li>
-    <li class="footer-item">  <a class="footer-link" href="/connect/" target="_self">Connect</a>  </li>
-    <li class="footer-item">  <a class="footer-link" href="/about-us/" target="_self">About Us</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/RoomToRoam/artists/" target="_self">Artists</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/RoomToRoam/reviews/" target="_self">Reviews</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/RoomToRoam/connect/" target="_self">Connect</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/RoomToRoam/about-us/" target="_self">About Us</a>  </li>
   </ul>
   <ul class="footer" class="socials">
-    <li class="footer-item" class="insta"> <a aria-label="Room To Roam Instagram account external link" class="footer-externallink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/images/insta.png" alt=""></a></li>
-    <li class="footer-item" class="fb"> <a aria-label="Room To Roam Facebook account external link" class="footer-externallink" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/images/facebook.png" alt=""></a></li>
-    <li class="footer-item" class="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="footer-externallink" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/images/tiktok.png" alt=""></a></li>
-    <li class="footer-item" class="yt"> <a aria-label="Room To Roam YouTube account external link" class="footer-externallink" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/images/youtube.png" alt=""></a></li>
+    <li class="footer-item" class="insta"> <a aria-label="Room To Roam Instagram account external link" class="footer-externallink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/insta.png" alt=""></a></li>
+    <li class="footer-item" class="fb"> <a aria-label="Room To Roam Facebook account external link" class="footer-externallink" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/facebook.png" alt=""></a></li>
+    <li class="footer-item" class="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="footer-externallink" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/tiktok.png" alt=""></a></li>
+    <li class="footer-item" class="yt"> <a aria-label="Room To Roam YouTube account external link" class="footer-externallink" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/youtube.png" alt=""></a></li>
   </ul>
 </footer>
 
 
-<script src="/scripts/loadanimation.js"></script>
-<script src="/scripts/hamburger.js"></script> 
-<script src="/scripts/slideartists.js"></script>
-<script src="/scripts/artists.js"></script>
+<script src="/RoomToRoam/scripts/loadanimation.js"></script>
+<script src="/RoomToRoam/scripts/hamburger.js"></script> 
+<script src="/RoomToRoam/scripts/slideartists.js"></script>
+<script src="/RoomToRoam/scripts/artists.js"></script>
 </body>
 
 </html>
