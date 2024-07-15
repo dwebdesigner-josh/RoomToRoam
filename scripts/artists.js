@@ -28,3 +28,31 @@ var table = $('#mytable').DataTable({fuzzySearch: { toggleSmart: false }});
       }
   });
 
+//artist details button
+  (() => {
+    const button = document.querySelector('#artist-continue-link');
+    const artistDetails = document.querySelector('#featured-artist-details');
+    const expandArrow = document.querySelector('.img-expand-arrow');
+    let expanded = false;
+
+    function expand() {
+        if (!expanded) {
+            expanded = true;
+            artistDetails.setAttribute("aria-expanded", "true");
+            expandArrow.setAttribute("src", "/images/expandarrowup.png");
+        } else {
+            expanded = false;
+            artistDetails.setAttribute("aria-expanded", "false");
+            expandArrow.setAttribute("src", "/images/expandarrowdown.png");
+        }
+    }
+
+
+    button.addEventListener('click', expand);
+    button.addEventListener('keydown', function(event) {
+        // Check if the key pressed is Enter (key code 13)
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            expand();
+        }
+    });
+  })();

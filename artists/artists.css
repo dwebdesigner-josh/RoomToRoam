@@ -82,7 +82,7 @@ a:hover{
 }
 
 
-main h1{color: #12171d; align-self: center; background-color: #e3f5ff9f; border-radius: 5px; padding-right: 5%; padding-left: 5%; }
+main h1{color: #e3f5ff; text-shadow: 1px 1px 1px black; align-self: center; /*background-color: #e3f5ff2d; border-radius: 5px;*/ padding-right: 5%; padding-left: 5%; }
 
 
 /*nav*/
@@ -288,6 +288,8 @@ main {
   align-items: center;
 } 
 
+.breaker{border-top: 1px inset white; height: 1rem; width: 90vw; display: block; margin: 0; padding: 0; align-self: center;}
+
 /*sections*/
 
 .span-filler{height: 3rem; width: 100%;}
@@ -330,7 +332,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
         .slider>button{
           height: 100%;
           z-index: 31;
-        border: none;
+          border: none;
           flex: 1;
           color: white;
           background-color: transparent;
@@ -372,36 +374,78 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 /*SECTION - featured artist details*/
 
-#featured-artist-details {display: flex; flex-direction: column; }
+#featured-artist-details {display: flex; flex-direction: column; align-items: center;}
+
+/*expand*/
+#featured-artist-details[aria-expanded="true"] .artist-text {
+  flex-direction: column;
+align-items: center;
+padding: 30px;
+}
+
+#featured-artist-details[aria-expanded="true"] .artist-details-article {
+  margin: 0;
+  width: 95%;
+}
+
+#featured-artist-details[aria-expanded="true"] p { text-align: center;}
+
+#featured-artist-details[aria-expanded="true"] .slideP-expanded {
+  display: block; visibility: visible; margin-top: 2rem; text-align: center;
+}
+
+#featured-artist-details[aria-expanded="true"] #artist-continue-link {
+  width: 100%; align-self: center; padding-top: 85svh; margin-top: -85svh;
+}
+
+
+
+
+
+.slideP-expanded {display: none; visibility: hidden;}
+
+/*END - expand*/
 
         #featured-artist-details p{width: 100%; align-self: center; color: #e3f5ff;}
 
-  .artist-text{width: 95%; display: flex; flex-direction: row;}
+  .artist-text{width: 90%; display: flex; flex-direction: row;
+  background-color: #e3f5ff2d; border-radius: 50px; align-items: center;
+  padding: 1rem;
+  }
  
-                .artist-name-link{flex: 1; display: flex; flex-direction: column; text-decoration: none; justify-content: start; align-items: center;}
-                  .artist-name-link h2{padding-left: 10px; padding-right: 10px; text-align: center; transition: opacity 1s ease-in-out;} 
-
-                .artist-socials{display: flex; flex-direction: row; justify-content: space-evenly; width: 100%; padding: 0; margin:0;}
-                  .artist-socials-item{list-style-type: none;}
-                    .artist-socials-item img {height: 1rem;}
-
-      .artist-text article {display: flex; flex-direction: column; flex: 2;} 
-              .artist-text article p {
+      .artist-details-article {display: flex; flex-direction: column; flex: 2; margin-right: 10px;} 
+              .artist-details-article p {
                 font-size: 1rem;
-                max-height: 30vw; 
                 overflow: hidden;
                 white-space: wrap;
                 text-align: left;
                 text-shadow: 1px 1px 1px black;
                 transition: opacity 1s ease-in-out;
               }
-          .artist-continue-link{border-bottom: 1px solid #e3f5ff;
+          #artist-continue-link{
             width: 100%;
-            padding-bottom: 3%;
             display: block;
             text-align: center;
             text-decoration: none;
-          }         
+            background-color: transparent;
+            color: #e3f5ff;
+            padding-top: 4rem;
+            margin-top: -4rem;
+            
+          }   
+          #artist-continue-link img{height: 1rem; width: 1.5rem;}
+            #artist-continue-link:hover{
+              color: #e3f5ff3f;
+            }     
+           
+
+              .artist-name-link{flex: 1; display: flex; flex-direction: column; text-decoration: none; justify-content: start; align-items: center;}
+              .artist-name-link h2{padding-left: 10px; padding-right: 10px; text-align: center; transition: opacity 1s ease-in-out;} 
+
+            .artist-socials{display: flex; flex-direction: row; justify-content: space-evenly; width: 100%; padding: 0; margin:0;}
+              .artist-socials-item{list-style-type: none;}
+                .artist-socials-item img {height: 1rem;}
+
 
 
 /*SECTION - artists table*/
@@ -411,7 +455,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
   flex-direction: column;
     }
 
-    #artists h1 {font-size: 2rem; margin-bottom: 5vw;}
+    #artists h1 {font-size: 2rem; margin-bottom: 1rem;}
 
     #artists select{background-color: transparent; height: 1.5lh; margin-bottom: 20px; align-self: start;}
       @media screen and (max-width: 768px){#artists select{align-self: center;}}
