@@ -472,6 +472,9 @@ padding: 1rem;
           #id-override-dt-column-order {width: 3rem;}
             #id-override-dt-column-order::before{content: "A-Z" / "";}
             #id-override-dt-column-order::after{content: "Z-A" / "";}
+            @media screen and (min-width: 0px) {#id-override-dt-column-order::before{position: relative; top: 80px;}}  
+            @media screen and (min-width: 500px) {#id-override-dt-column-order::before{position: relative; top: 70px;}}  
+            @media screen and (min-width: 1900px) {#id-override-dt-column-order::before{position: relative; top: 55px;}}
 
     #artists h1 {font-size: 2rem; margin-bottom: 1rem;}
 
@@ -479,7 +482,7 @@ padding: 1rem;
     #artists table, #artists label, #artists select{color: white;}
     #artists label{font-size: 0;}
     .dt-search{display: flex; align-items: start;}
-    #dt-search-0{width: 100%; color: white; height: 50px; font-size: 1.25rem;}
+    #dt-search-0{width: 100%; color: white; height: 2rem; font-size: 1.25rem;}
         @media screen and (max-width: 500px){#dt-search-0{font-size: 1rem;}}
       #artists select option{color: black; font-weight: 300; font-size: 1rem;}
         #artists select {font-size: 1rem;}
