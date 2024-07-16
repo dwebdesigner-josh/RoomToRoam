@@ -374,27 +374,27 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 /*SECTION - featured artist details*/
 
-#featured-artist-details {display: flex; flex-direction: column; align-items: center;}
+.artist-details {display: flex; flex-direction: column; align-items: center;}
 
 /*expand*/
-#featured-artist-details[aria-expanded="true"] .artist-text {
+.artist-details[aria-expanded="true"] .artist-text {
   flex-direction: column;
 align-items: center;
 padding: 1rem;
 }
 
-#featured-artist-details[aria-expanded="true"] .artist-details-article {
+.artist-details[aria-expanded="true"] .artist-details-article {
   margin: 0;
   width: 95%;
 }
 
-#featured-artist-details[aria-expanded="true"] p { text-align: center;}
+.artist-details[aria-expanded="true"] p { text-align: center;}
 
-#featured-artist-details[aria-expanded="true"] .slideP-expanded {
+.artist-details[aria-expanded="true"] .slideP-expanded {
   display: block; visibility: visible; margin-top: 2rem; text-align: center;
 }
 
-#featured-artist-details[aria-expanded="true"] #artist-continue-link {
+.artist-details[aria-expanded="true"] .artist-continue-link {
   width: 100%; align-self: center; padding-top: 85svh; margin-top: -85svh;
 }
 
@@ -406,7 +406,7 @@ padding: 1rem;
 
 /*END - expand*/
 
-        #featured-artist-details p{width: 100%; align-self: center; color: #e3f5ff;}
+        .artist-details p{width: 100%; align-self: center; color: #e3f5ff;}
 
   .artist-text{width: 90%; display: flex; flex-direction: row;
   background-color: #e3f5ff2d; border-radius: 50px; align-items: center;
@@ -422,7 +422,7 @@ padding: 1rem;
                 text-shadow: 1px 1px 1px black;
                 transition: opacity 1s ease-in-out;
               }
-          #artist-continue-link{
+          .artist-continue-link{
             width: 100%;
             display: block;
             text-align: center;
@@ -433,8 +433,8 @@ padding: 1rem;
             margin-top: -4rem;
             
           }   
-          #artist-continue-link img{height: 1rem; width: 1.5rem;}
-            #artist-continue-link:hover{
+          .artist-continue-link img{height: 1rem; width: 1.5rem;}
+            .artist-continue-link:hover{
               color: #e3f5ff3f;
             }     
            
@@ -454,15 +454,28 @@ padding: 1rem;
   display: flex;
   flex-direction: column;
     }
+        /*controls for sorting*/
+      
+        #custom-controls-container {display: flex; flex-direction: row; width: 100%; justify-content: space-between;}
 
+        .toggle-controls {display: flex; flex-direction: row; border: 1px inset white; border-radius: 5px; padding-top: .26rem; padding-bottom: .26rem; padding-left: .2rem; padding-right: .2rem; width: fit-content; }
+            .toggle-controls h3 {font-size: 1rem; color: white;}
+            .breaker2{width: .5rem; height: 0; display: block; }
+            .toggle-container{border: 1px inset white; border-radius: 5px; width: .75rem; height: .75rem; align-self: center;}
+            #alpha-toggle{width: .75rem; height: .75rem; accent-color: transparent; position: absolute;}
+        
+          #columnFilter {border: 1px inset white; border-radius: 5px;}
+          
+          #artists select{background-color: transparent; height: 1.5lh; align-self: start;}
+          @media screen and (max-width: 768px){#artists select, #artists .toggle-controls{align-self: center;}}
+    
     #artists h1 {font-size: 2rem; margin-bottom: 1rem;}
 
-    #artists select{background-color: transparent; height: 1.5lh; margin-bottom: 20px; align-self: start;}
-      @media screen and (max-width: 768px){#artists select{align-self: center;}}
 
     #artists table, #artists label, #artists select{color: white;}
     #artists label{font-size: 0;}
-    #dt-search-0{width: 50vw; color: white; height: 50px; font-size: 1.25rem;}
+    .dt-search{display: flex; align-items: start;}
+    #dt-search-0{width: 100%; color: white; height: 50px; font-size: 1.25rem;}
         @media screen and (max-width: 500px){#dt-search-0{font-size: 1rem;}}
       #artists select option{color: black; font-weight: 300; font-size: 1rem;}
         #artists select {font-size: 1rem;}
@@ -473,7 +486,9 @@ padding: 1rem;
       .dt-start, .dt-end{color: #e3f5ff;}
 
       tr {height: 200px;}
-        #featured-date{font-size: 0; visibility: hidden; display: none;}
+        .th-hidden, .td-featured-date, .td-medium, .td-artist{font-size: 0; visibility: hidden; display: none;}
+        .td-details{position: relative; width: 77vw;}
+        
 
    
 

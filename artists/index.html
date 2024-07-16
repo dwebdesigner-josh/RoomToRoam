@@ -107,7 +107,7 @@
             
       </section></div>
 
-  <section id="featured-artist-details">
+  <section class="artist-details">
     <div class="artist-text">
       <a class="artist-name-link"href="/artists/JW/" target="_self" id="slideH-1" style="visibility: hidden; display: none; opacity: 0;">
           <h2>JW</h2>
@@ -132,7 +132,7 @@
             <p class="slideP-expanded">JW is an American rock band from Phoenix, Arizona, known for their dynamic blend of alternative and indie rock. Originally a solo project by lead vocalist and guitarist Brennan Smiley, the band expanded to enhance their sound and live performances. Their debut album "Listener" and subsequent releases like "Ultraviolet Disguise" and "Metaphysical" established them in the alternative rock scene. Known for their engaging live shows and catchy melodies, The Technicolors have toured extensively, building a dedicated fanbase while continuously evolving their sound.</p>
             </div>
           <div class="slideP" id="slideP-2" style="visibility: visible; display: block; opacity: 1;">
-            <p>Music - Indie - Latest Album: Imaginary Album</p>
+            <p>Music - Indie - Latest Album: Cinema Sublimina</p>
             <p class="slideP-expanded">The Technicolors is an American rock band from Phoenix, Arizona, known for their dynamic blend of alternative and indie rock. Originally a solo project by lead vocalist and guitarist Brennan Smiley, the band expanded to enhance their sound and live performances. Their debut album "Listener" and subsequent releases like "Ultraviolet Disguise" and "Metaphysical" established them in the alternative rock scene. Known for their engaging live shows and catchy melodies, The Technicolors have toured extensively, building a dedicated fanbase while continuously evolving their sound.</p>
           </div>
           <div class="slideP" id="slideP-3" style="visibility: hidden; display: none; opacity: 0;">
@@ -145,7 +145,7 @@
       
     </div>
 
-    <div id="artist-continue-link" tabindex="0"><img class="img-expand-arrow" src="/images/expandarrowdown.png"></div>
+    <div class="artist-continue-link" tabindex="0"><img class="img-expand-arrow" src="/images/expandarrowdown.png"></div>
    
   </section>
 
@@ -156,65 +156,152 @@
 
   <h1>Artists</h1>
   <span class="breaker"></span>
-  <label for="columnFilter">Filter Artists by Medium:</label>
-  <select id="columnFilter">
-      <option value="">Filter Artists by Medium</option>
-  </select>
-
+      <label for="columnFilter">Filter Artists by Medium:</label>
+    <div id="custom-controls-container">  
+      <select id="columnFilter">
+          <option value="">Filter Artists by Medium</option>
+      </select>
+      <div class="toggle-controls">
+        <h3>Recently Featured</h3>
+        <div class="breaker2"></div>
+        <div class="toggle-container">
+          <label for="alpha-toggle">Show recently featured artists</label>
+          <input type="checkbox" id="alpha-toggle">
+        </div>
+      </div>
+    </div>  
 
     <table id="mytable" class="display" style="width:100%">
       <thead>
           <tr>
-              <th>Artist</th>
-              <th>Medium</th>
-              <th>Recently Featured</th>
+              <th>Artists</th>
+              <th class="th-hidden">Medium</th>
+              <th class="th-hidden">Recently Featured</th>
+              <th class="th-hidden"></th>
           </tr>
       </thead>
       <tbody>
         <tr>
-          <td>0Alpha</td>
-          <td>Photography</td>
-          <td id="featured-date">Date Featured: 2024-04</td>
+          <td class="td-artist">The Technicolors</td> <!--TODO - CONSIDER USING TECHNICOLORS, THE formatting for naming system-->
+          <td class="td-medium">Music</td>
+          <td class="td-featured-date">Date Featured: 2024-06</td>
+          <td>
+            <div class="td-details">
+              <section class="artist-details">
+                <div class="artist-text">
+                  <a class="artist-name-link"href="/artists/JW/" target="_self" id="slideH-1" style="visibility: hidden; display: none; opacity: 0;">
+                      <h2>JW</h2>
+                  </a>
+                  <a class="artist-name-link"href="/artists/ImaginaryBand/" target="_self" id="slideH-2" style="visibility: visible; display: block; opacity: 1;">
+                      <h2>The Technicolors</h2>
+                  </a>
+                  <a class="artist-name-link"href="/artists/NovaLizPhoto/" target="_self" id="slideH-3" style="visibility: hidden; display: none; opacity: 0;">
+                      <h2>Nova Liz</h2>
+                      <!--  <ul class="artist-socials" class="socials">
+                      <li class="artist-socials-item" class="insta"> <a aria-label="Room To Roam Instagram account external link" class="artist-socials-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/images/insta.png" alt=""></a></li>
+                      <li class="artist-socials-item" class="fb"> <a aria-label="Room To Roam Facebook account external link" class="artist-socials-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/images/facebook.png" alt=""></a></li>
+                      <li class="artist-socials-item" class="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="artist-socials-link" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/images/tiktok.png" alt=""></a></li>
+                      <li class="artist-socials-item" class="yt"> <a aria-label="Room To Roam YouTube account external link" class="artist-socials-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/images/youtube.png" alt=""></a></li>
+                    </ul> REMOVED FOR SEO/CLICKS-->
+                  </a>
+                  
+                
+                  <article class="artist-details-article">
+                      <div class="slideP" id="slideP-1" style="visibility: hidden; display: none; opacity: 0;">
+                        <p>Visual Arts - Paint/Illustration - Latest Work: Confusion</p>
+                        <p class="slideP-expanded">JW is an American rock band from Phoenix, Arizona, known for their dynamic blend of alternative and indie rock. Originally a solo project by lead vocalist and guitarist Brennan Smiley, the band expanded to enhance their sound and live performances. Their debut album "Listener" and subsequent releases like "Ultraviolet Disguise" and "Metaphysical" established them in the alternative rock scene. Known for their engaging live shows and catchy melodies, The Technicolors have toured extensively, building a dedicated fanbase while continuously evolving their sound.</p>
+                        </div>
+                      <div class="slideP" id="slideP-2" style="visibility: visible; display: block; opacity: 1;">
+                        <p>Music - Indie - Latest Album: Cinema Sublimina</p>
+                        <p class="slideP-expanded">The Technicolors is an American rock band from Phoenix, Arizona, known for their dynamic blend of alternative and indie rock. Originally a solo project by lead vocalist and guitarist Brennan Smiley, the band expanded to enhance their sound and live performances. Their debut album "Listener" and subsequent releases like "Ultraviolet Disguise" and "Metaphysical" established them in the alternative rock scene. Known for their engaging live shows and catchy melodies, The Technicolors have toured extensively, building a dedicated fanbase while continuously evolving their sound.</p>
+                      </div>
+                      <div class="slideP" id="slideP-3" style="visibility: hidden; display: none; opacity: 0;">
+                        <p>Photography - Concert/Portrait - Latest Work: Awareness</p>
+                        <p class="slideP-expanded">Nova Liz is an American rock band from Phoenix, Arizona, known for their dynamic blend of alternative and indie rock. Originally a solo project by lead vocalist and guitarist Brennan Smiley, the band expanded to enhance their sound and live performances. Their debut album "Listener" and subsequent releases like "Ultraviolet Disguise" and "Metaphysical" established them in the alternative rock scene. Known for their engaging live shows and catchy melodies, The Technicolors have toured extensively, building a dedicated fanbase while continuously evolving their sound.</p>
+                      </div>
+                      
+                        
+                  </article>
+                  
+                </div>
+
+                <div class="artist-continue-link" tabindex="0"><img class="img-expand-arrow" src="/images/expandarrowdown.png"></div>
+              
+              </section>
+            </div>
+          </td>
         </tr>
         <tr>
-          <td>Andy Semalum</td>
-          <td>Design</td>
-          <td id="featured-date">Date Featured: 2023-01</td>
+          
+          <td class="td-artist">Andy Semalum</td>
+          <td class="td-medium">Design</td>
+          <td class="td-featured-date">>Date Featured: 2023-01</td>
+          <td><div class="td-details">
+
+          </div></td>
         </tr>
         <tr>
-          <td>Balla Dambdan</td>
-          <td>Writing</td>
-          <td id="featured-date">Date Featured: 2024-03</td>
+               
+          <td class="td-artist">Balla Dambdan</td>
+          <td class="td-medium">Writing</td>
+          <td class="td-featured-date">>Date Featured: 2024-03</td>
+          <td><div class="td-details">
+
+          </div></td>     
         </tr>
         <tr>
-          <td>Aige Oreilly</td>
-          <td>Music</td>
-          <td id="featured-date">Date Featured: 2021-12</td>
+          
+          <td class="td-artist">Taige Oreilly</td>
+          <td class="td-medium">Music</td>
+          <td class="td-featured-date">>Date Featured: 2021-12</td>
+          <td><div class="td-details">
+
+          </div></td>
         </tr>
         <tr>
-          <td>Mambo Jambo</td>
-          <td>Music</td>
-          <td id="featured-date">Date Featured: 2022-09</td>
+          
+          <td class="td-artist">Mambo Jambo</td>
+          <td class="td-medium">Music</td>
+          <td class="td-featured-date">>Date Featured: 2022-09</td>
+          <td><div class="td-details">
+
+          </div></td>
         </tr>
         <tr>
-          <td>0A</td>
-          <td>Design</td>
-          <td id="featured-date">Date Featured: 2024-07</td>
+          
+          <td class="td-artist">0A</td>
+          <td class="td-medium">Design</td>
+          <td class="td-featured-date">>Date Featured: 2024-07</td>
+          <td><div class="td-details">
+
+          </div></td>
         </tr>
         <tr>
-          <td>Josh Wilson</td>
-          <td>Visual Arts</td>
-          <td id="featured-date">Date Featured: 2024-06</td>
+          
+          <td class="td-artist">JW</td>
+          <td class="td-medium">Visual Arts</td>
+          <td class="td-featured-date">>Date Featured: 2024-06</td>
+          <td><div class="td-details">
+
+          </div></td>
         </tr>
         <tr>
-          <td>Imaginary Band</td>
-          <td>Music</td>
-          <td id="featured-date">Date Featured: 2024-06</td>
+          
+          <td class="td-artist">Imaginary Band</td>
+          <td class="td-medium">Music</td>
+          <td class="td-featured-date">>Date Featured: 2024-06</td>
+          <td><div class="td-details">
+
+          </div></td>
         </tr>
         <tr>
-          <td>Nova Liz</td>
-          <td>Photography</td>
-          <td id="featured-date">Date Featured: 2024-06</td>
+          
+          <td class="td-artist">Nova Liz</td>
+          <td class="td-medium">Photography</td>
+          <td class="td-featured-date">>Date Featured: 2024-06</td>
+          <td><div class="td-details">
+
+          </div></td>
         </tr>
          
       </tbody>

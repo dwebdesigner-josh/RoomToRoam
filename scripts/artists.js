@@ -26,12 +26,32 @@ var table = $('#mytable').DataTable({fuzzySearch: { toggleSmart: false }});
       } else {
           table.column(1).search('').draw();
       }
-  });
+    });
+
+//TOGGLE RECENTLY FEATURED
+    //TODO add function to below to remove any tr's that don't have a date listed in their recently featured td 
+    
+      // Toggle the custom sorting on and off
+      $('#alpha-toggle').on('change', function() {
+        if (this.checked) {
+          table.order([3, 'natural']).draw();
+        } else {
+          table.order([3, 'asc']).draw();
+        }
+      });
+    
+      // Initially sort the table without this sorting
+      table.order([3, 'asc']).draw();
+  
+  
+
+
+
 
 //artist details button
   (() => {
-    const button = document.querySelector('#artist-continue-link');
-    const artistDetails = document.querySelector('#featured-artist-details');
+    const button = document.querySelector('.artist-continue-link');
+    const artistDetails = document.querySelector('.artist-details');
     const expandArrow = document.querySelector('.img-expand-arrow');
     let expanded = false;
 
