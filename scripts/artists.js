@@ -44,8 +44,19 @@ var table = $('#mytable').DataTable({fuzzySearch: { toggleSmart: false }});
       table.order([3, 'asc']).draw();
   
   
+  (() => {
+      const AtoZ = document.querySelector('.dt-column-order');
 
+      function assignID(){
+      AtoZ.setAttribute("id","id-override-dt-column-order");
 
+    }
+
+    $(window).on('load', () => {
+        assignID();
+      });
+
+    })();
 
 
 //artist details button

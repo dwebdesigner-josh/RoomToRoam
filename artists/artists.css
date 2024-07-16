@@ -468,7 +468,11 @@ padding: 1rem;
           
           #artists select{background-color: transparent; height: 1.5lh; align-self: start;}
           @media screen and (max-width: 768px){#artists select, #artists .toggle-controls{align-self: center;}}
-    
+          
+          #id-override-dt-column-order {width: 3rem;}
+            #id-override-dt-column-order::before{content: "A-Z" / "";}
+            #id-override-dt-column-order::after{content: "Z-A" / "";}
+
     #artists h1 {font-size: 2rem; margin-bottom: 1rem;}
 
 
