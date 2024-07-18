@@ -376,7 +376,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 .artist-details {display: flex; flex-direction: column; align-items: center;}
 
-/*expand*/
+/*expand - featured*/
 .artist-details[aria-expanded="true"] .artist-text {
   flex-direction: column;
 align-items: center;
@@ -398,23 +398,46 @@ padding: 1rem;
   width: 100%; align-self: center; padding-top: 85svh; margin-top: -85svh;
 }
 
-
-
-
-
 .slideP-expanded {display: none; visibility: hidden;}
+
+
+/*expand - artist list*/
+.list-artist-details[aria-expanded="true"] .list-artist-text {
+  flex-direction: column;
+align-items: center;
+padding: 1rem;
+}
+
+.list-artist-details[aria-expanded="true"] .list-artist-details-article {
+  margin: 0;
+  width: 95%;
+}
+
+.list-artist-details[aria-expanded="true"] p { text-align: center;}
+
+.list-artist-details[aria-expanded="true"] .list-slideP-expanded {
+  display: block; visibility: visible; margin-top: 2rem; text-align: center;
+}
+
+.list-artist-details[aria-expanded="true"] .list-artist-continue-link {
+  width: 100%; align-self: center; padding-top: 85svh; margin-top: -85svh;
+}
+
+.list-slideP-expanded {display: none; visibility: hidden;}
+
+.list-artist-details{z-index: 99;}
 
 /*END - expand*/
 
-        .artist-details p{width: 100%; align-self: center; color: #e3f5ff;}
+        .artist-details p, .list-artist-details p{width: 100%; align-self: center; color: #e3f5ff;}
 
-  .artist-text{width: 90%; display: flex; flex-direction: row;
+  .artist-text, .list-artist-text{width: 90%; display: flex; flex-direction: row;
   background-color: #e3f5ff2d; border-radius: 50px; align-items: center;
   padding: 1rem;
   }
  
-      .artist-details-article {display: flex; flex-direction: column; flex: 2; margin-right: 10px;} 
-              .artist-details-article p {
+      .artist-details-article, .list-artist-details-article {display: flex; flex-direction: column; flex: 2; margin-right: 10px;} 
+              .artist-details-article p, .list-artist-details-article p {
                 font-size: 1rem;
                 overflow: hidden;
                 white-space: wrap;
@@ -422,7 +445,7 @@ padding: 1rem;
                 text-shadow: 1px 1px 1px black;
                 transition: opacity 1s ease-in-out;
               }
-          .artist-continue-link{
+          .artist-continue-link, .list-artist-continue-link{
             width: 100%;
             display: block;
             text-align: center;
@@ -433,18 +456,18 @@ padding: 1rem;
             margin-top: -4rem;
             
           }   
-          .artist-continue-link img{height: 1rem; width: 1.5rem;}
-            .artist-continue-link:hover{
+          .artist-continue-link img, .list-artist-continue-link img{height: 1rem; width: 1.5rem;}
+            .artist-continue-link:hover, .list-artist-continue-link:hover{
               color: #e3f5ff3f;
             }     
            
 
-              .artist-name-link{flex: 1; display: flex; flex-direction: column; text-decoration: none; justify-content: start; align-items: center;}
-              .artist-name-link h2{padding-left: 10px; padding-right: 10px; text-align: center; transition: opacity 1s ease-in-out;} 
+              .artist-name-link, .list-artist-name-link{z-index: 100; flex: 1; display: flex; flex-direction: column; text-decoration: none; justify-content: start; align-items: center;}
+              .artist-name-link h2, .list-artist-name-link h2{padding-left: 10px; padding-right: 10px; text-align: center; transition: opacity 1s ease-in-out;} 
 
-            .artist-socials{display: flex; flex-direction: row; justify-content: space-evenly; width: 100%; padding: 0; margin:0;}
-              .artist-socials-item{list-style-type: none;}
-                .artist-socials-item img {height: 1rem;}
+            .artist-socials, .list-artist-socials{display: flex; flex-direction: row; justify-content: space-evenly; width: 100%; padding: 0; margin:0;}
+              .artist-socials-item, .list-artist-socials-item{list-style-type: none;}
+                .artist-socials-item img, .list-artist-socials-item img {height: 1rem;}
 
 
 
@@ -457,6 +480,10 @@ padding: 1rem;
         /*controls for sorting*/
       
         #custom-controls-container {display: flex; flex-direction: row; width: 100%; justify-content: space-between;}
+          @media screen and (max-width: 768px){
+            #custom-controls-container{flex-direction: column;}
+            #columnFilter{margin-bottom: .3rem;}
+          }
 
         .toggle-controls {display: flex; flex-direction: row; border: 1px inset white; border-radius: 5px; padding-top: .26rem; padding-bottom: .26rem; padding-left: .2rem; padding-right: .2rem; width: fit-content; }
             .toggle-controls h3 {font-size: 1rem; color: white;}
