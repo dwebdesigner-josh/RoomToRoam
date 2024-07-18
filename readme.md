@@ -168,3 +168,36 @@ gathered data (w and h) of various webpage sizes, making sure to make the viewpo
                                         height: calc(222vw + 438px + 100svh);
                                           a bit of an overshot on some windows but it looks good
                                           why did I choose it? idk man it just worked
+
+
+
+
+SAVE: (artists.js)
+
+  (() => {
+    // Loop through elements with ids starting with 'td-expand-' 
+    const tdExpand = document.querySelectorAll('[id^="td-expand-"]');
+    
+    //nodelist function - https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach  
+    tdExpand.forEach(function(tdExpand) {
+            //for later - if id="td-expand-idNumber" , then:
+            // const idNumber = parseInt(tdExpand.id.split('-')[2], 10);
+
+            function listExpand(){
+                if (tdExpand.getAttribute('aria-expanded') === 'true') {
+                    tdExpand.setAttribute('aria-expanded', 'false');
+                } else {
+                    tdExpand.setAttribute('aria-expanded', 'true');
+                }
+            }
+
+        tdExpand.addEventListener('click', listExpand);
+              
+        tdExpand.addEventListener('keydown', function(event) {
+            // Check if the key pressed is Enter (key code 13)
+            if (event.key === 'Enter' || event.keyCode === 13) {
+                listExpand();
+            }
+        });
+    });
+  })();

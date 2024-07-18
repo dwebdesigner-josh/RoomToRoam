@@ -7,6 +7,77 @@
 
 var table = $('#mytable').DataTable({fuzzySearch: { toggleSmart: false }});
 
+//artist list expansion on multiple pages
+
+// Set the drawCallback dynamically - DATATABLES SPECIFIC FUNCTION which is needed to make the event listeners work on more than just the first page  - see https://datatables.net/examples/advanced_init/events_live.html 
+$('#mytable tbody').on('click', '[id^="td-expand-"]', function() {
+    // Loop through elements with ids starting with 'td-expand-' 
+    const tdExpandElements = document.querySelectorAll('[id^="td-expand-"]');
+     
+    // NodeList function - https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach  
+    tdExpandElements.forEach(function(tdExpand) {
+        // Function to toggle aria-expanded attribute
+        function listExpand() {
+            if (tdExpand.getAttribute('aria-expanded') === 'true') {
+                tdExpand.setAttribute('aria-expanded', 'false');
+            } else {
+                tdExpand.setAttribute('aria-expanded', 'true');
+            }
+        }
+ 
+        // Remove previous event handlers to prevent multiple bindings
+        tdExpand.removeEventListener('click', listExpand);
+        tdExpand.removeEventListener('keydown', handleKeyDown);
+ 
+        // Add click event listener
+        tdExpand.addEventListener('click', listExpand);
+              
+        // Add keydown event listener for Enter key
+        function handleKeyDown(event) {
+            if (event.key === 'Enter' || event.keyCode === 13) {
+                listExpand();
+            }
+        }
+ 
+        tdExpand.addEventListener('keydown', handleKeyDown);
+    });
+ });
+
+
+ table.on('keydown', function() {
+    // Loop through elements with ids starting with 'td-expand-' 
+    const tdExpandElements = document.querySelectorAll('[id^="td-expand-"]');
+     
+    // NodeList function - https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach  
+    tdExpandElements.forEach(function(tdExpand) {
+        // Function to toggle aria-expanded attribute
+        function listExpand() {
+            if (tdExpand.getAttribute('aria-expanded') === 'true') {
+                tdExpand.setAttribute('aria-expanded', 'false');
+            } else {
+                tdExpand.setAttribute('aria-expanded', 'true');
+            }
+        }
+ 
+        // Remove previous event handlers to prevent multiple bindings
+        tdExpand.removeEventListener('click', listExpand);
+        tdExpand.removeEventListener('keydown', handleKeyDown);
+ 
+        // Add click event listener
+        tdExpand.addEventListener('click', listExpand);
+              
+        // Add keydown event listener for Enter key
+        function handleKeyDown(event) {
+            if (event.key === 'Enter' || event.keyCode === 13) {
+                listExpand();
+            }
+        }
+ 
+        tdExpand.addEventListener('keydown', handleKeyDown);
+    });
+ });
+ 
+
   // Get unique values for the column you want to filter (left to right column numbers: 0 , 1, 2, ...)
   var uniqueValues = [];
   table.column(1).data().unique().sort().each(function(d) {
@@ -89,30 +160,3 @@ var table = $('#mytable').DataTable({fuzzySearch: { toggleSmart: false }});
   })();
 
 
-  (() => {
-    // Loop through elements with ids starting with 'td-expand-' 
-    const tdExpand = document.querySelectorAll('[id^="td-expand-"]');
-    
-    //nodelist function - https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach  
-    tdExpand.forEach(function(tdExpand) {
-            //for later - if id="td-expand-idNumber" , then:
-            // const idNumber = parseInt(tdExpand.id.split('-')[2], 10);
-
-            function listExpand(){
-                if (tdExpand.getAttribute('aria-expanded') === 'true') {
-                    tdExpand.setAttribute('aria-expanded', 'false');
-                } else {
-                    tdExpand.setAttribute('aria-expanded', 'true');
-                }
-            }
-
-        tdExpand.addEventListener('click', listExpand);
-              
-        tdExpand.addEventListener('keydown', function(event) {
-            // Check if the key pressed is Enter (key code 13)
-            if (event.key === 'Enter' || event.keyCode === 13) {
-                listExpand();
-            }
-        });
-    });
-  })();
