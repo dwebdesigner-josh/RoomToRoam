@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/images/starV1frame1.png");
+  background-image: url("/RoomToRoam/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -288,7 +288,7 @@ main {
   width: 100%;
   height: 100%;
 /*  background-color: red;*/
-background-image: url("/images/starV1frame1.png");
+background-image: url("/RoomToRoam/images/starV1frame1.png");
 background-repeat: repeat;
 
   position: absolute;
@@ -355,9 +355,9 @@ section {width: 100%; height:fit-content; z-index: 1;}
  /*aspect-ratio: 1350/390;*/
 /*height with the above measurement was about 30vw*/
 }
-  @media screen and (min-width: 1px){#roots-missionstatement{background-image: url("/images/missionbackV2small.png");}}
-  @media screen and (min-width: 850px){#roots-missionstatement{background-image: url("/images/missionbackV2medium.png");}}   
-  @media screen and (min-width: 1650px){#roots-missionstatement{background-image: url("/images/missionbackV2large.png");}}
+  @media screen and (min-width: 1px){#roots-missionstatement{background-image: url("/RoomToRoam/images/missionbackV2small.png");}}
+  @media screen and (min-width: 850px){#roots-missionstatement{background-image: url("/RoomToRoam/images/missionbackV2medium.png");}}   
+  @media screen and (min-width: 1650px){#roots-missionstatement{background-image: url("/RoomToRoam/images/missionbackV2large.png");}}
    
  
 
@@ -450,11 +450,11 @@ section {width: 100%; height:fit-content; z-index: 1;}
       background-color: transparent;
     }
         #slide-left {/*padding-right: 5%;*/
-          background-image: url("/images/slidebuttonarrowleft.png");
+          background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
           background-size: cover;
         }
         #slide-right {/*padding-left: 5%;*/
-          background-image: url("/images/slidebuttonarrowright.png");
+          background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
           background-size: cover;
         }
 
@@ -509,7 +509,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
           text-decoration: none;
           z-index: 5;
           
-          background-image: url("/images/swirltext.png");
+          background-image: url("/RoomToRoam/images/swirltext.png");
           background-size: cover;
           background-color: transparent;
           
@@ -710,7 +710,7 @@ footer{z-index: 1; display: flex; justify-content: center; align-items: center; 
 #STARTEST {
 width:100%;
 aspect-ratio:456/347;
-background-image: url("/images/starV1frame1.png");
+background-image: url("/RoomToRoam/images/starV1frame1.png");
 background-repeat: no-repeat;
 }
 
@@ -731,7 +731,7 @@ transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 #STARTEST2 {
 width:100%;
 aspect-ratio:456/347;
-background-image: url("/images/starV1frame1.png");
+background-image: url("/RoomToRoam/images/starV1frame1.png");
 background-repeat: no-repeat;
 }
 

@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room To Roam</title>
-    <link rel="icon" href="/images/favicon.ico">
+    <link rel="icon" href="/RoomToRoam/images/favicon.ico">
 <!--"inter" font-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 <!--CSS-->
-<link rel="stylesheet" href="/artists/artists.css">
+<link rel="stylesheet" href="/RoomToRoam/artists/artists.css">
 <!--jquery plugin-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!--DataTables plugin-->
-<link rel="stylesheet" href="/scripts/DataTables/datatables.css" />
-<script src="/scripts/DataTables/datatables.js"></script>
-<script src="/scripts/DataTables/fuzzysearch.js"></script>
+<link rel="stylesheet" href="/RoomToRoam/scripts/DataTables/datatables.css" />
+<script src="/RoomToRoam/scripts/DataTables/datatables.js"></script>
+<script src="/RoomToRoam/scripts/DataTables/fuzzysearch.js"></script>
 </head>
 
 
@@ -27,9 +27,9 @@
 <!--(ACCESSIBILITY)NOTE: For nav, use <nav><ul><li><a> One reason to use the <nav>, <ul>, <li> tags when building a navigation menu is that semantic markup will improve accessibility for users that require screen-readers.-->
 
   <header>
-    <a href="/" aria-label="Home Button" id="header-link" target="_self">
+    <a href="/RoomToRoam/" aria-label="Home Button" id="header-link" target="_self">
       <h1 id="header-h1">Room to Roam</h1>
-      <img src="/images/logotreeV5.png" alt="" id="tree-img">
+      <img src="/RoomToRoam/images/logotreeV5.png" alt="" id="tree-img">
     
     </a>
 </header>
@@ -49,11 +49,11 @@
     <div id="topnav-menu" role="dialog" aria-labelledby="topnav-label">
       <button id="topnav-close" aria-label="Close"><div class="hamburger-icon"></div></button>
       <ul id="topnav">
-        <li class="topnav-item">  <a class="topnav-link" id="topnav-link-home" href="/" target="_self">Home</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/artists/" target="_self">Artists</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/reviews/" target="_self">Reviews</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/connect/" target="_self">Connect</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/about-us/" target="_self">About Us</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" id="topnav-link-home" href="/RoomToRoam/" target="_self">Home</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/artists/" target="_self">Artists</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/reviews/" target="_self">Reviews</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/connect/" target="_self">Connect</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/RoomToRoam/about-us/" target="_self">About Us</a>  </li>
       </ul>
     </div>  
 </nav>
@@ -61,7 +61,7 @@
 
 <div id="loadcontainer">
     <div class="loadscreen" tabindex="-1">
-    <img tabindex="-1" alt="Graphic image of space ship" src="/images/ship.png" aria-label="Loading screen ship animation">
+    <img tabindex="-1" alt="Graphic image of space ship" src="/RoomToRoam/images/ship.png" aria-label="Loading screen ship animation">
     </div>
 </div>
 
@@ -76,20 +76,20 @@
           <div class="slider">
               <button id="slide-left" tabindex="0"></button> <!-- aria-pressed="false"  perhaps reintigrate this later with the slide.js-->
             <div id="slides-container" >
-              <a class="slide-anchor" href="/artists/JW/" inert target="_self" id="slide-1" aria-expanded="false" style="z-index: 29; left: 5%;  opacity: .95;" >
-                <img src="/images/technicolors.jpg" 
+              <a class="slide-anchor" href="/RoomToRoam/artists/JW/" inert target="_self" id="slide-1" aria-expanded="false" style="z-index: 29; left: 5%;  opacity: .95;" >
+                <img src="/RoomToRoam/images/technicolors.jpg" 
                 alt="Photo of featured visual artist, JW" />
               </a>
                 
     
-              <a class="slide-anchor" href="/artists/ImaginaryBand/" target="_self" id="slide-2" aria-expanded="true"  style="z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%); " >
-                  <img src="/images/technicolors.jpg" 
+              <a class="slide-anchor" href="/RoomToRoam/artists/ImaginaryBand/" target="_self" id="slide-2" aria-expanded="true"  style="z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%); " >
+                  <img src="/RoomToRoam/images/technicolors.jpg" 
                   alt="Photo of the featured music group, The Technicolors" />
                   
               </a>
              
-              <a class="slide-anchor" href="/artists/NovaLizPhoto/" inert target="_self" id="slide-3" aria-expanded="false" style="z-index: 28; left: 45%; opacity: .95;" >
-                <img src="/images/novalizphoto.jpg" 
+              <a class="slide-anchor" href="/RoomToRoam/artists/NovaLizPhoto/" inert target="_self" id="slide-3" aria-expanded="false" style="z-index: 28; left: 45%; opacity: .95;" >
+                <img src="/RoomToRoam/images/novalizphoto.jpg" 
                 alt="Photo of featured photographer, Nova Liz" />
               </a>
                 
@@ -109,19 +109,19 @@
 
   <section class="artist-details">
     <div class="artist-text">
-      <a class="artist-name-link"href="/artists/JW/" target="_self" id="slideH-1" style="visibility: hidden; display: none; opacity: 0;">
+      <a class="artist-name-link"href="/RoomToRoam/artists/JW/" target="_self" id="slideH-1" style="visibility: hidden; display: none; opacity: 0;">
           <h2>JW</h2>
       </a>
-      <a class="artist-name-link"href="/artists/ImaginaryBand/" target="_self" id="slideH-2" style="visibility: visible; display: block; opacity: 1;">
+      <a class="artist-name-link"href="/RoomToRoam/artists/ImaginaryBand/" target="_self" id="slideH-2" style="visibility: visible; display: block; opacity: 1;">
           <h2>The Technicolors</h2>
       </a>
-      <a class="artist-name-link"href="/artists/NovaLizPhoto/" target="_self" id="slideH-3" style="visibility: hidden; display: none; opacity: 0;">
+      <a class="artist-name-link"href="/RoomToRoam/artists/NovaLizPhoto/" target="_self" id="slideH-3" style="visibility: hidden; display: none; opacity: 0;">
           <h2>Nova Liz</h2>
           <!--  <ul class="artist-socials" class="socials">
-          <li class="artist-socials-item" class="insta"> <a aria-label="Room To Roam Instagram account external link" class="artist-socials-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/images/insta.png" alt=""></a></li>
-          <li class="artist-socials-item" class="fb"> <a aria-label="Room To Roam Facebook account external link" class="artist-socials-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/images/facebook.png" alt=""></a></li>
-          <li class="artist-socials-item" class="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="artist-socials-link" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/images/tiktok.png" alt=""></a></li>
-          <li class="artist-socials-item" class="yt"> <a aria-label="Room To Roam YouTube account external link" class="artist-socials-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/images/youtube.png" alt=""></a></li>
+          <li class="artist-socials-item" class="insta"> <a aria-label="Room To Roam Instagram account external link" class="artist-socials-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/insta.png" alt=""></a></li>
+          <li class="artist-socials-item" class="fb"> <a aria-label="Room To Roam Facebook account external link" class="artist-socials-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/facebook.png" alt=""></a></li>
+          <li class="artist-socials-item" class="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="artist-socials-link" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/tiktok.png" alt=""></a></li>
+          <li class="artist-socials-item" class="yt"> <a aria-label="Room To Roam YouTube account external link" class="artist-socials-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/youtube.png" alt=""></a></li>
         </ul> REMOVED FOR SEO/CLICKS-->
       </a>
       
@@ -132,12 +132,12 @@
             <p class="slideP-expanded">JW is a visual artist celebrated for his ability to transform the real into the abstract, creating artworks that challenge perceptions and invite viewers into a world of surreal beauty. Born and raised in Brooklyn, New York, JW's artistic journey began in the vibrant urban landscape, where he found inspiration in the contrasts and complexities of city life.
               <br><br>
               His early fascination with art led him to study at the Pratt Institute, where he developed her distinctive style that blurs the lines between reality and imagination. JW's work is characterized by a unique blend of vibrant colors, intricate patterns, and fluid forms that reinterpret everyday scenes and objects into abstract compositions. His keen eye for detail and masterful use of mixed media allow him to craft pieces that are both visually stunning and thought-provoking.</p>
-            <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="slideP-expanded"  href="/artists/ImaginaryBand/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+            <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="slideP-expanded"  href="/RoomToRoam/artists/ImaginaryBand/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
             </div>
           <div class="slideP" id="slideP-2" style="visibility: visible; display: block; opacity: 1;">
             <p>Music<br>Indie<br>Latest Album: Cinema Sublimina</p>
             <p class="slideP-expanded">The Technicolors is an American rock band from Phoenix, Arizona, known for their dynamic blend of alternative and indie rock. Originally a solo project by lead vocalist and guitarist Brennan Smiley, the band expanded to enhance their sound and live performances. Their debut album "Listener" and subsequent releases like "Ultraviolet Disguise" and "Metaphysical" established them in the alternative rock scene. Known for their engaging live shows and catchy melodies, The Technicolors have toured extensively, building a dedicated fanbase while continuously evolving their sound.</p>
-            <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="slideP-expanded"  href="/artists/ImaginaryBand/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+            <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="slideP-expanded"  href="/RoomToRoam/artists/ImaginaryBand/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
           </div>
           <div class="slideP" id="slideP-3" style="visibility: hidden; display: none; opacity: 0;">
             <p>Photography<br>Concert/Portrait<br>Latest Work: Awareness</p>
@@ -148,7 +148,7 @@
               Since then, Nova Liz has flourished. They have photographed over 50 concerts and continue to add to that number. Their artistic journey has also led them to learn music production, and they dedicate themselves to playing and writing music daily.
               <br><br>
               Constantly inspired by the creatives around them, Nova strives to improve and grow as an artist. They firmly believe in the power of artists supporting one another, whether through photography, writing reviews, or collaborating on music. Their commitment to the arts is unwavering, as they devote every day to working on some form of creative expression. Nova Liz is a passionate and dedicated artist, deeply involved in the creative community and always eager to contribute and collaborate.</p>
-            <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="slideP-expanded"  href="/artists/ImaginaryBand/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+            <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="slideP-expanded"  href="/RoomToRoam/artists/ImaginaryBand/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
           </div>
           
             
@@ -156,7 +156,7 @@
       
     </div>
 
-    <div class="artist-continue-link" tabindex="0" aria-label="Expand button to show more details"><img class="img-expand-arrow" src="/images/expandarrowdown.png" alt=""></div>
+    <div class="artist-continue-link" tabindex="0" aria-label="Expand button to show more details"><img class="img-expand-arrow" src="/RoomToRoam/images/expandarrowdown.png" alt=""></div>
    
   </section>
 
@@ -209,20 +209,20 @@
               <!--NEED TO MAKE SURE td-expand-# is a unique # for each tr - number itself doesn't really matter, just needs to be the only id with that number-->
 <!--VARIABLE--><section id="td-expand-1" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-<!--VARIABLE-->   <a class="list-artist-name-link"href="/artists/TheTechnicolors/" target="_self">
+<!--VARIABLE-->   <a class="list-artist-name-link"href="/RoomToRoam/artists/TheTechnicolors/" target="_self">
 <!--VARIABLE-->        <h2>The Technicolors</h2>
                     </a>
                   <article class="list-artist-details-article">
                       <div class="list-slideP">
 <!--VARIABLE-->         <p>Music<br>Indie<br>Latest Work: Cinema Sublimina</p>
 <!--VARIABLE-->         <p class="list-slideP-expanded">The Technicolors is an American rock band from Phoenix, Arizona, known for their dynamic blend of alternative and indie rock. Originally a solo project by lead vocalist and guitarist Brennan Smiley, the band expanded to enhance their sound and live performances. Their debut album "Listener" and subsequent releases like "Ultraviolet Disguise" and "Metaphysical" established them in the alternative rock scene. Known for their engaging live shows and catchy melodies, The Technicolors have toured extensively, building a dedicated fanbase while continuously evolving their sound.</p>
-<!--VARIABLE-->         <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/TheTechnicolors/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+<!--VARIABLE-->         <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/RoomToRoam/artists/TheTechnicolors/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                         </div>     
                     </article>
-                    <a href="/artists/TheTechnicolors/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                    <a href="/RoomToRoam/artists/TheTechnicolors/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
                 </div>
-                <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-                <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+                <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
                </section>
               </div>
             </td>
@@ -236,20 +236,20 @@
             <div class="td-details">
               <section id="td-expand-2" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link"href="/artists/AndySemalum/" target="_self">
+                  <a class="list-artist-name-link"href="/RoomToRoam/artists/AndySemalum/" target="_self">
                       <h2>Andy Semalum</h2>
                     </a>
                   <article class="list-artist-details-article">
                       <div class="list-slideP">
                         <p class="list-summary">Design<br>Clothing<br>Latest Work: The Ega Brag Line</p>
                         <p class="list-slideP-expanded">Andy Semalum is a visionary clothing designer renowned for his avant-garde approach to fashion. Born and raised in Paris, Andy's creative journey began in the bustling heart of the city's fashion district, where he developed a keen eye for detail and a passion for innovative design. He studied at the prestigious École de la Chambre Syndicale de la Couture Parisienne, where he honed his skills in tailoring and fabric manipulation. <br><br>After graduating, Andy launched his own fashion label, Semalum Couture, which quickly gained acclaim for its bold, artistic creations that challenge conventional fashion norms. His collections often feature a blend of intricate handcrafting and modern technology, resulting in unique, wearable art pieces that captivate audiences worldwide.</p>
-                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/AndySemalum/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/RoomToRoam/artists/AndySemalum/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                         </div>      
                       </article>
-                      <a href="/artists/AndySemalum/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                      <a href="/RoomToRoam/artists/AndySemalum/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
                   </div>
-                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
                  </section>
               </div>
             </td>
@@ -263,20 +263,20 @@
             <div class="td-details">
               <section id="td-expand-3" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link"href="/artists/BallaDambdan/" target="_self">
+                  <a class="list-artist-name-link"href="/RoomToRoam/artists/BallaDambdan/" target="_self">
                       <h2>Balla Dambdan</h2>
                     </a>
                   <article class="list-artist-details-article">
                       <div class="list-slideP">
                         <p>Author<br>Sci-fi<br>Latest Work: Galactic Echoes</p>
                         <p class="list-slideP-expanded">Balla Dambdan is a celebrated author in the realm of science fiction, known for her imaginative and thought-provoking narratives that captivate readers around the globe. Born in Accra, Ghana, Balla's early fascination with the stars and the future propelled her into the world of speculative fiction, where she has carved out a unique niche with her compelling storytelling. <br><br>Balla's journey into writing began in her teenage years, inspired by classic sci-fi literature and the technological advancements of her time. She pursued a degree in Astrophysics at the University of Cape Town, which provided her with a solid foundation in scientific principles that she skillfully integrates into her writing. Her academic background adds a layer of authenticity and depth to her futuristic worlds, making them both believable and awe-inspiring.</p>
-                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/BallaDambdan/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/RoomToRoam/artists/BallaDambdan/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                         </div>     
                       </article>
-                      <a href="/artists/BallaDambdan/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                      <a href="/RoomToRoam/artists/BallaDambdan/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
                   </div>
-                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
                  </section>
               </div>
             </td>  
@@ -290,20 +290,20 @@
             <div class="td-details">
               <section id="td-expand-4" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link"href="/artists/TaigeOreilly/" target="_self">
+                  <a class="list-artist-name-link"href="/RoomToRoam/artists/TaigeOreilly/" target="_self">
                       <h2>Taige O'Reilly</h2>
                     </a>
                   <article class="list-artist-details-article">
                       <div class="list-slideP">
                         <p>Music<br>Alternative<br>Latest Work: Confusion</p>
                         <p class="list-slideP-expanded">Taige O'Reilly is a self-named indie music artist known for her distinctive style and introspective lyrics that resonate with listeners worldwide. Hailing from Dublin, Ireland, Taige discovered her passion for music at a young age, drawing inspiration from the city's vibrant cultural scene and its rich musical heritage.<br><br>Her musical journey began with humble beginnings, playing acoustic sets in local pubs and cafes, where her raw talent and emotive performances quickly garnered attention. Influenced by a diverse range of genres, from folk to indie rock, Taige developed a sound that blends haunting melodies with poignant storytelling.<br><br>Taige's debut album, "Echoes of Silence," captured the essence of her introspective songwriting and garnered critical acclaim for its authenticity and emotional depth. Her lyrics delve into themes of love, loss, and personal growth, offering listeners a glimpse into her own journey and reflections on life's complexities.</p>
-                          <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/TaigeOreilly/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                          <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/RoomToRoam/artists/TaigeOreilly/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                         </div>       
                       </article>
-                      <a href="/artists/TaigeOreilly/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                      <a href="/RoomToRoam/artists/TaigeOreilly/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
                   </div>
-                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
                  </section>
               </div>
             </td>
@@ -317,7 +317,7 @@
             <div class="td-details">
               <section id="td-expand-5" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link"href="/artists/MamboJambo/" target="_self">
+                  <a class="list-artist-name-link"href="/RoomToRoam/artists/MamboJambo/" target="_self">
                       <h2>Mambo Jambo</h2>
                     </a>
                   <article class="list-artist-details-article">
@@ -328,13 +328,13 @@
                           The journey of Mambo Jambo began when its members, hailing from various indigenous tribes, came together with a shared vision of preserving and modernizing their ancestral sounds. Their music is a vibrant tapestry of rhythmic drumming, intricate melodies, and dynamic bass lines, all seamlessly blended with contemporary electronic elements to create a unique and captivating auditory experience.
                           <br><br>
                           Mambo Jambo's debut album, "Rhythms of the Rainforest," quickly catapulted them to international acclaim, praised for its authenticity and innovative sound. The album showcases their ability to transport listeners to the heart of the jungle, with tracks that feature the enchanting sounds of native instruments like the marimba, panpipes, and traditional drums, interwoven with pulsating electronic beats.</p>
-                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/MamboJambo/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/RoomToRoam/artists/MamboJambo/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                         </div>       
                       </article>
-                      <a href="/artists/MamboJambo/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                      <a href="/RoomToRoam/artists/MamboJambo/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
                   </div>
-                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
                  </section>
               </div>
             </td>
@@ -348,7 +348,7 @@
             <div class="td-details">
               <section id="td-expand-6" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link"href="/artists/Zer0/" target="_self">
+                  <a class="list-artist-name-link"href="/RoomToRoam/artists/Zer0/" target="_self">
                       <h2>Zer0</h2>
                     </a>
                   <article class="list-artist-details-article">
@@ -361,13 +361,13 @@
                           Her portfolio is a testament to her versatility and creativity, featuring a wide range of projects that include branding, digital art, and interactive media. Zer0's work often incorporates clean lines, geometric shapes, and a striking use of negative space, resulting in designs that are both visually arresting and conceptually profound. Her ability to distill complex ideas into simple, elegant visuals has garnered her widespread acclaim and a loyal client base.
                           <br><br>
                           Zer0's latest exhibition, "Digital Dreams," showcased her innovative approach to graphic design, blending traditional design principles with cutting-edge digital technologies. The exhibition was a critical success, highlighting her ability to create immersive visual experiences that resonate on both aesthetic and emotional levels.</p>
-                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/Zer0/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/RoomToRoam/artists/Zer0/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                         </div>       
                       </article>
-                      <a href="/artists/Zer0/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                      <a href="/RoomToRoam/artists/Zer0/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
                   </div>
-                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
                  </section>
               </div>
             </td>
@@ -381,7 +381,7 @@
             <div class="td-details">
               <section id="td-expand-7" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link"href="/artists/JW/" target="_self">
+                  <a class="list-artist-name-link"href="/RoomToRoam/artists/JW/" target="_self">
                       <h2>JW</h2>
                     </a>
                   <article class="list-artist-details-article">
@@ -392,13 +392,13 @@
                           <br><br>
                           His early fascination with art led him to study at the Pratt Institute, where he developed her distinctive style that blurs the lines between reality and imagination. JW's work is characterized by a unique blend of vibrant colors, intricate patterns, and fluid forms that reinterpret everyday scenes and objects into abstract compositions. His keen eye for detail and masterful use of mixed media allow him to craft pieces that are both visually stunning and thought-provoking.
                           </p>
-                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/JW/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/RoomToRoam/artists/JW/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                         </div>    
                       </article>
-                      <a href="/artists/JW/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                      <a href="/RoomToRoam/artists/JW/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
                   </div>
-                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
                  </section>
               </div>
             </td>
@@ -412,7 +412,7 @@
             <div class="td-details">
               <section id="td-expand-8" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link"href="/artists/ArcticMonkeys/" target="_self">
+                  <a class="list-artist-name-link"href="/RoomToRoam/artists/ArcticMonkeys/" target="_self">
                       <h2>Arctic Monkeys</h2>
                     </a>
                   <article class="list-artist-details-article">
@@ -424,13 +424,13 @@
                           <br><br>
                           Beyond their musical achievements, the Arctic Monkeys have influenced countless bands and artists, leaving an indelible mark on modern rock music. Their ability to adapt and reinvent themselves has kept them relevant and beloved by fans across generations.
                         </p>
-                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/ArcticMonkeys/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/RoomToRoam/artists/ArcticMonkeys/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                         </div>     
                       </article>
-                      <a href="/artists/ArcticMonkeys/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                      <a href="/RoomToRoam/artists/ArcticMonkeys/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
                   </div>
-                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
                  </section>
               </div>
             </td>
@@ -444,7 +444,7 @@
             <div class="td-details">
               <section id="td-expand-9" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link"href="/artists/NovaLizPhoto/" target="_self">
+                  <a class="list-artist-name-link"href="/RoomToRoam/artists/NovaLizPhoto/" target="_self">
                       <h2>Nova Liz</h2>
                     </a>
                   <article class="list-artist-details-article">
@@ -457,13 +457,13 @@
                           Since then, Nova Liz has flourished. They have photographed over 50 concerts and continue to add to that number. Their artistic journey has also led them to learn music production, and they dedicate themselves to playing and writing music daily.
                           <br><br>
                           Constantly inspired by the creatives around them, Nova strives to improve and grow as an artist. They firmly believe in the power of artists supporting one another, whether through photography, writing reviews, or collaborating on music. Their commitment to the arts is unwavering, as they devote every day to working on some form of creative expression. Nova Liz is a passionate and dedicated artist, deeply involved in the creative community and always eager to contribute and collaborate.</p>
-                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/NovaLizPhoto/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/RoomToRoam/artists/NovaLizPhoto/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                         </div>     
                       </article>
-                      <a href="/artists/NovaLizPhoto/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                      <a href="/RoomToRoam/artists/NovaLizPhoto/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
                   </div>
-                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
                  </section>
               </div>
             </td>
@@ -478,7 +478,7 @@
             <div class="td-details">
               <section id="td-expand-10" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link"href="/artists/MiddleKids/" target="_self">
+                  <a class="list-artist-name-link"href="/RoomToRoam/artists/MiddleKids/" target="_self">
                       <h2>Middle Kids</h2>
                     </a>
                   <article class="list-artist-details-article">
@@ -489,13 +489,13 @@
                           The band's journey began when Hannah Joy and Tim Fitz, both accomplished musicians in their own right, started collaborating on songwriting. Their chemistry was undeniable, leading them to form Middle Kids. Soon after, Harry Day joined the lineup, solidifying the band's dynamic. They quickly gained attention with their debut single "Edge of Town," which showcased their knack for heartfelt storytelling and catchy hooks.
                           <br><br>
                           Middle Kids released their self-titled debut EP in 2017, which included hits like "Never Start" and "Your Love." The EP received widespread praise and introduced the band to international audiences. Their music resonates with fans through its introspective lyrics and anthemic choruses, capturing the highs and lows of human experience.</p>
-                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/MiddleKids/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/RoomToRoam/artists/MiddleKids/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                         </div>     
                     </article>
-              <a href="/artists/MiddleKids/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/MiddleKids/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
 
               </div>
@@ -509,7 +509,7 @@
             <div class="td-details">
               <section id="td-expand-11" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/Cavetown/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/Cavetown/" target="_self">
                     <h2>Cavetown</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -520,13 +520,13 @@
                         Cavetown's musical journey began at a young age, learning to play various instruments and writing songs in their bedroom. They started sharing their music on YouTube, where their genuine and unfiltered style quickly attracted a loyal audience. Their ability to convey complex emotions through simple yet powerful melodies has been a hallmark of their work, making them a beloved figure in the indie music scene.
                         <br><br>
                         Over the years, Cavetown has released several albums and EPs, with "Worm Food" being their latest work, released in 2022. This album continues to showcase their growth as an artist, featuring introspective lyrics and a refined sound. Cavetown's music often explores themes of mental health, self-acceptance, and personal growth, providing comfort and inspiration to many. Their dedication to creating authentic and meaningful art has solidified their place as a significant voice in contemporary music.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/Cavetown/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/Cavetown/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/Cavetown/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/Cavetown/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -539,7 +539,7 @@
             <div class="td-details">
               <section id="td-expand-12" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/SpaceyJane/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/SpaceyJane/" target="_self">
                     <h2>Spacey Jane</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -550,13 +550,13 @@
                         Formed in 2016, Spacey Jane gained a strong following through their engaging live shows and the release of several successful singles. Their debut album, "Sunlight," released in 2020, showcased their knack for crafting catchy tunes with emotional depth, earning them critical acclaim and a growing fanbase both in Australia and internationally.
                         <br><br>
                         Their latest work, "Here Comes Everybody," released in June 2022, continues to build on their signature sound, blending introspective lyrics with vibrant instrumentals. The album explores themes of youth, love, and self-discovery, resonating deeply with listeners. Spacey Jane's dedication to authenticity and their powerful musical chemistry have solidified their place as one of the leading acts in the contemporary indie rock scene.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/SpaceyJane/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/SpaceyJane/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/SpaceyJane/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/SpaceyJane/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -569,7 +569,7 @@
             <div class="td-details">
               <section id="td-expand-13" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/StickyFingers/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/StickyFingers/" target="_self">
                     <h2>Sticky Fingers</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -580,13 +580,13 @@
                         Since their formation in 2009, Sticky Fingers has captivated audiences with their genre-blending style and introspective lyrics. Their debut album, "Caress Your Soul," released in 2013, received widespread acclaim for its innovative sound and raw emotional depth. The band's subsequent releases, including "Land of Pleasure" and "Yours to Keep," further solidified their reputation as pioneers in the alternative rock genre.
                         <br><br>
                         Their latest work, "The Bootleg Tapes (Caress Your Soul)," released in March 2024, revisits and reinterprets some of their classic tracks with fresh, experimental touches. This album offers fans a new perspective on their earlier material, showcasing the band's continued evolution and commitment to pushing creative boundaries. Sticky Fingers remains a significant presence in the music world, constantly evolving while staying true to their unique sound.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/StickyFingers/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/StickyFingers/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/StickyFingers/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/StickyFingers/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -599,7 +599,7 @@
             <div class="td-details">
               <section id="td-expand-14" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/Jinsang/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/Jinsang/" target="_self">
                     <h2>Jinsang</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -610,13 +610,13 @@
                         Jinsang's journey began in the early 2010s, gaining recognition through the online lo-fi scene. Their debut project, "Life," released in 2016, was well-received for its atmospheric beats and emotional depth. Since then, Jinsang has continued to build a strong following with subsequent releases that highlight their evolving sound and production skills.
                         <br><br>
                         Their latest work, "Drafts // Concepts Vol.1," released in January 2024, showcases a collection of experimental and refined tracks that offer a fresh take on their signature style. This album represents Jinsang's ongoing exploration of new sounds and techniques while maintaining the tranquil and immersive quality that fans have come to love. Jinsang remains a key figure in the lo-fi genre, continuously pushing the boundaries of their craft while providing a soothing auditory experience for their listeners.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/Jinsang/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/Jinsang/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/Jinsang/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/Jinsang/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -629,7 +629,7 @@
             <div class="td-details">
               <section id="td-expand-15" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/Covet/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/Covet/" target="_self">
                     <h2>Covet</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -640,13 +640,13 @@
                         The band's breakthrough came with their debut album, "Effloresce," released in 2016. The album showcased Covet's ability to combine complex guitar arrangements with rich, dynamic soundscapes, earning them a dedicated following in the progressive rock community. Their subsequent releases, including "Currents" and various EPs, continued to highlight their innovative approach and commitment to pushing the boundaries of instrumental rock.
                         <br><br>
                         Their latest work, "catharsis," released in April 2023, marks a new chapter in their musical journey. The album features a refined sound with deeply personal and introspective tracks, showcasing Yvette Young's distinctive guitar style and the band's cohesive chemistry. "catharsis" reflects Covet's ongoing evolution as artists, delivering a powerful and immersive listening experience that resonates with both new and long-time fans.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/Covet/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/Covet/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/Covet/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/Covet/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -659,7 +659,7 @@
             <div class="td-details">
               <section id="td-expand-16" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/Chon/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/Chon/" target="_self">
                     <h2>Chon</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -670,13 +670,13 @@
                         Chon gained widespread acclaim with their self-titled debut album released in 2015, which showcased their technical prowess and melodic sensibilities. Their subsequent releases, including "Homey" and "Monkey Business," continued to highlight their ability to blend complex musical structures with accessible melodies. Their innovative approach has earned them a dedicated following and respect within the progressive rock and instrumental music communities.
                         <br><br>
                         Their latest work, "Grises," released in September 2022, represents a significant evolution in their sound. The album features a blend of ambient textures and intricate guitar work, showcasing Chon's continued growth as artists. "Grises" offers a fresh perspective on their signature style, with tracks that explore new sonic territories while maintaining the band's core essence. This release reinforces Chon's position as a leading force in progressive rock and instrumental music.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/Chon/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/Chon/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/Chon/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/Chon/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -689,7 +689,7 @@
             <div class="td-details">
               <section id="td-expand-18" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/AnnieLeibovitz/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/AnnieLeibovitz/" target="_self">
                     <h2>Annie Leibovitz</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -700,13 +700,13 @@
                         Leibovitz began her career as a staff photographer for Rolling Stone magazine, where she gained recognition for her candid and evocative portraits of musicians and celebrities. Over the years, she has continued to make an impact with her work in Vanity Fair and other prominent publications, creating images that are both intimate and powerful.
                         <br><br>
                         Her latest work, "Wonderland," released in June 2024, showcases a collection of imaginative and surreal portraits that explore themes of fantasy and reality. This project further demonstrates Leibovitz's ability to blend artistry with storytelling, reinforcing her status as one of the most influential photographers of our time.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/AnnieLeibovitz/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/AnnieLeibovitz/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/AnnieLeibovitz/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/AnnieLeibovitz/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -719,7 +719,7 @@
             <div class="td-details">
               <section id="td-expand-19" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/SteveMcCurry/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/SteveMcCurry/" target="_self">
                     <h2>Steve McCurry</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -730,13 +730,13 @@
                         McCurry first gained fame with his iconic photograph "Afghan Girl," which appeared on the cover of National Geographic in 1985. His work is celebrated for its vivid color, emotional depth, and the ability to tell compelling stories through images. He has received numerous awards for his contributions to photojournalism, including the Robert Capa Gold Medal.
                         <br><br>
                         His latest work, "The Journey Continues," released in May 2024, features a series of striking images from his recent travels, exploring themes of migration, resilience, and hope. This collection continues to showcase McCurry's unmatched skill in capturing the profound and poignant moments of human life.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/SteveMcCurry/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/SteveMcCurry/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/SteveMcCurry/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/SteveMcCurry/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -749,7 +749,7 @@
             <div class="td-details">
               <section id="td-expand-20" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/VivianMaier/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/VivianMaier/" target="_self">
                     <h2>Vivian Maier</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -760,13 +760,13 @@
                         Maier's photographs are known for their spontaneous and intimate quality, offering a window into the everyday lives of people during the mid-20th century. Her unique perspective and technical skill have earned her a place among the greats of street photography, despite her work being largely unknown during her lifetime.
                         <br><br>
                         Her latest work, "Self-Portraits," released in July 2024, provides a fascinating glimpse into Maier's personal world through a series of self-portraits. This collection highlights her innovative approach and keen eye for detail, further solidifying her legacy as a pioneering figure in street photography.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/VivianMaier/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/VivianMaier/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/VivianMaier/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/VivianMaier/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -779,7 +779,7 @@
             <div class="td-details">
               <section id="td-expand-21" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/CindySherman/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/CindySherman/" target="_self">
                     <h2>Cindy Sherman</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -790,13 +790,13 @@
                         Sherman's most famous series, "Untitled Film Stills," consists of black-and-white photographs that mimic the aesthetic of 1950s and 1960s cinema. This series has been widely recognized for its innovative approach to self-representation and the media's influence on identity.
                         <br><br>
                         Her latest work, "Untitled #2000," released in March 2024, continues her exploration of identity and performance through a series of provocative and visually striking images. This project further exemplifies Sherman's ability to blend art and commentary, maintaining her position as a leading voice in contemporary photography.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/CindySherman/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/CindySherman/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/CindySherman/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/CindySherman/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -809,7 +809,7 @@
             <div class="td-details">
               <section id="td-expand-22" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/DianeArbus/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/DianeArbus/" target="_self">
                     <h2>Diane Arbus</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -820,13 +820,13 @@
                         Arbus's career gained prominence with her work in the 1960s, including a series of portraits that capture the essence of her subjects with profound empathy and insight. Her images, often characterized by their stark realism and psychological depth, have left a lasting impact on the field of documentary photography.
                         <br><br>
                         Her latest work, "Revelations," released in February 2024, presents a collection of previously unseen photographs that continue her exploration of human vulnerability and identity. This collection reaffirms Arbus's legacy as a pioneering photographer who challenged conventional boundaries and captured the complexities of the human experience.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/DianeArbus/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/DianeArbus/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/DianeArbus/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/DianeArbus/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -839,7 +839,7 @@
             <div class="td-details">
               <section id="td-expand-23" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/MartinParr/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/MartinParr/" target="_self">
                     <h2>Martin Parr</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -850,13 +850,13 @@
                         Parr's most notable works include the "The Last Resort" series, which depicts British working-class seaside resorts with a blend of color and satire. His photography is characterized by its vivid imagery and its ability to reveal the often-overlooked details of ordinary life, making the familiar seem extraordinary.
                         <br><br>
                         His latest work, "The Last Resort," released in January 2024, revisits and expands upon his earlier series with new images and reflections. This updated collection offers fresh insights into Parr's distinctive style and continues to showcase his talent for capturing the essence of contemporary society with both humor and depth.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/MartinParr/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/MartinParr/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/MartinParr/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/MartinParr/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -869,7 +869,7 @@
             <div class="td-details">
               <section id="td-expand-24" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/ChimamandaNgoziAdichie/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/ChimamandaNgoziAdichie/" target="_self">
                     <h2>Chimamanda Ngozi Adichie</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -880,13 +880,13 @@
                         Adichie's notable works include "Half of a Yellow Sun," which won the Orange Prize for Fiction, and "Americanah," a bestseller that explores themes of race and immigration. Her writing is celebrated for its rich character development and its ability to address complex social issues with nuance and depth.
                         <br><br>
                         Her latest work, "The Women We Write," released in May 2024, continues her exploration of gender and societal roles through a series of interconnected short stories. This collection showcases Adichie's skill in weaving together compelling narratives that reflect the experiences and challenges faced by women in contemporary society.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/ChimamandaNgoziAdichie/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/ChimamandaNgoziAdichie/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/ChimamandaNgoziAdichie/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/ChimamandaNgoziAdichie/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -899,7 +899,7 @@
             <div class="td-details">
               <section id="td-expand-25" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/HarukiMurakami/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/HarukiMurakami/" target="_self">
                     <h2>Haruki Murakami</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -910,13 +910,13 @@
                         Murakami's best-known novels include "Norwegian Wood," "Kafka on the Shore," and "1Q84." His writing often features themes of loneliness, existentialism, and the intersection of reality and fantasy, creating stories that resonate with a global audience.
                         <br><br>
                         His latest work, "The Midnight Library," released in April 2024, continues his exploration of alternate realities and existential questions through a novel about a magical library that offers its visitors the chance to explore different versions of their lives. This book showcases Murakami's signature style while introducing fresh and thought-provoking ideas.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/HarukiMurakami/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/HarukiMurakami/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/HarukiMurakami/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/HarukiMurakami/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -929,7 +929,7 @@
             <div class="td-details">
               <section id="td-expand-26" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/MargaretAtwood/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/MargaretAtwood/" target="_self">
                     <h2>Margaret Atwood</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -940,13 +940,13 @@
                         Atwood's most famous works include "The Handmaid's Tale," which has been adapted into a successful television series, and "Oryx and Crake," a dystopian novel that delves into biotechnology and societal collapse. Her writing is distinguished by its sharp insights and vivid world-building.
                         <br><br>
                         Her latest work, "The Testaments," released in January 2024, continues the story of her acclaimed novel "The Handmaid's Tale." This sequel offers a deeper exploration of the dystopian world of Gilead and provides new perspectives on its characters and societal structures, further establishing Atwood's role as a leading voice in speculative fiction.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/MargaretAtwood/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/MargaretAtwood/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/MargaretAtwood/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/MargaretAtwood/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -959,7 +959,7 @@
             <div class="td-details">
               <section id="td-expand-27" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/ColsonWhitehead/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/ColsonWhitehead/" target="_self">
                     <h2>Colson Whitehead</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -970,13 +970,13 @@
                         Whitehead's notable works include "The Underground Railroad," which won the Pulitzer Prize for Fiction and the National Book Award, and "The Nickel Boys," another Pulitzer Prize-winning novel that delves into the dark history of juvenile detention in Florida. His writing is praised for its incisive narrative and profound impact.
                         <br><br>
                         His latest work, "Harlem Shuffle," released in February 2024, is a gripping novel set in 1960s Harlem. The book combines elements of crime fiction with social commentary, offering a fresh and engaging perspective on a pivotal era in American history. Whitehead's latest novel continues to showcase his talent for blending historical insight with compelling storytelling.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/ColsonWhitehead/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/ColsonWhitehead/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/ColsonWhitehead/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/ColsonWhitehead/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -989,7 +989,7 @@
             <div class="td-details">
               <section id="td-expand-28" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/PaulaScher/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/PaulaScher/" target="_self">
                     <h2>Paula Scher</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -1000,13 +1000,13 @@
                         Scher’s influential career includes notable projects such as the branding for Citibank and the redesign of the Public Theater's identity. Her work is celebrated for its bold aesthetics and effective communication, demonstrating her ability to merge art and functionality seamlessly.
                         <br><br>
                         Her latest work, "Typography as Art," released in June 2024, explores the artistic potential of typography through a series of experimental designs. This collection highlights Scher’s ongoing commitment to pushing the boundaries of graphic design and her passion for elevating type as a form of visual expression.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/PaulaScher/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/PaulaScher/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/PaulaScher/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/PaulaScher/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -1019,7 +1019,7 @@
             <div class="td-details">
               <section id="td-expand-29" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/MassimoVignelli/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/MassimoVignelli/" target="_self">
                     <h2>Massimo Vignelli</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -1030,13 +1030,13 @@
                         Vignelli's notable achievements include the iconic New York City Subway map and the branding for American Airlines. His designs are celebrated for their clarity and elegance, demonstrating his belief in the power of minimalism to convey complex information effectively.
                         <br><br>
                         His latest work, "Minimalist Classics," released in March 2024, revisits and expands upon Vignelli’s signature style with new interpretations of his classic designs. This collection reflects his enduring influence and showcases how minimalist principles can be applied to contemporary design challenges.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/MassimoVignelli/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/MassimoVignelli/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/MassimoVignelli/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/MassimoVignelli/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -1049,7 +1049,7 @@
             <div class="td-details">
               <section id="td-expand-30" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/JessicaWalsh/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/JessicaWalsh/" target="_self">
                     <h2>Jessica Walsh</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -1060,13 +1060,13 @@
                         Walsh's work spans a range of projects, from branding and editorial design to innovative visual storytelling. She gained widespread recognition for "40 Days of Dating," a personal project that combines design and narrative in a unique exploration of modern relationships.
                         <br><br>
                         Her latest work, "40 Days of Dating," released in January 2024, is a new iteration of the original project with additional content and insights. This updated edition continues to captivate audiences with its blend of personal storytelling and striking design, showcasing Walsh’s talent for creating engaging and visually compelling narratives.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/JessicaWalsh/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/JessicaWalsh/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/JessicaWalsh/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/JessicaWalsh/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -1079,7 +1079,7 @@
             <div class="td-details">
               <section id="td-expand-31" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/StefanSagmeister/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/StefanSagmeister/" target="_self">
                     <h2>Stefan Sagmeister</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -1090,13 +1090,13 @@
                         Sagmeister’s notable projects include album covers for artists like David Byrne and the creation of his celebrated exhibition "The Happy Show." His designs are known for their bold aesthetics and thoughtful messages, making a significant impact on the design community.
                         <br><br>
                         His latest work, "Things I Have Learned in My Life So Far," released in December 2023, is a reflection on the lessons learned throughout his career. This collection features a series of typographic experiments and visual insights, continuing Sagmeister’s tradition of combining design with personal and philosophical exploration.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/StefanSagmeister/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/StefanSagmeister/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/StefanSagmeister/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/StefanSagmeister/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -1109,7 +1109,7 @@
             <div class="td-details">
               <section id="td-expand-32" class="list-artist-details" tabindex="0" aria-expanded="false">
                 <div class="list-artist-text">
-                  <a class="list-artist-name-link" href="/artists/YvesBehar/" target="_self">
+                  <a class="list-artist-name-link" href="/RoomToRoam/artists/YvesBehar/" target="_self">
                     <h2>Yves Behar</h2>
                   </a>
                   <article class="list-artist-details-article">
@@ -1120,13 +1120,13 @@
                         Behar’s design firm, fuseproject, has produced a wide range of influential products, including the award-winning One Laptop Per Child initiative and the August Smart Lock. His work emphasizes the integration of technology and design to improve everyday life and address global challenges.
                         <br><br>
                         His latest work, "The Future of Wearable Tech," released in March 2024, explores new possibilities in wearable technology through a series of conceptual designs and prototypes. This project reflects Behar’s ongoing commitment to pushing the boundaries of design and enhancing human experience through innovation.</p>
-                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/YvesBehar/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/RoomToRoam/artists/YvesBehar/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
                     </div>
                   </article>
-              <a href="/artists/YvesBehar/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+              <a href="/RoomToRoam/artists/YvesBehar/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/RoomToRoam/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
           </div>
-          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
-          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+          <img class="list-img-expand-arrowdown" src="/RoomToRoam/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/RoomToRoam/images/expandarrowup.png" alt="" width="50px">
          </section>
               </div>
             </td>
@@ -1153,24 +1153,24 @@
 
 <footer>
   <ul class="footer" id="footer-internals">
-    <li class="footer-item">  <a class="footer-link" href="/artists/" target="_self">Artists</a>  </li>
-    <li class="footer-item">  <a class="footer-link" href="/reviews/" target="_self">Reviews</a>  </li>
-    <li class="footer-item">  <a class="footer-link" href="/connect/" target="_self">Connect</a>  </li>
-    <li class="footer-item">  <a class="footer-link" href="/about-us/" target="_self">About Us</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/RoomToRoam/artists/" target="_self">Artists</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/RoomToRoam/reviews/" target="_self">Reviews</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/RoomToRoam/connect/" target="_self">Connect</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/RoomToRoam/about-us/" target="_self">About Us</a>  </li>
   </ul>
   <ul class="footer" class="socials">
-    <li class="footer-item" class="insta"> <a aria-label="Room To Roam Instagram account external link" class="footer-externallink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/images/insta.png" alt=""></a></li>
-    <li class="footer-item" class="fb"> <a aria-label="Room To Roam Facebook account external link" class="footer-externallink" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/images/facebook.png" alt=""></a></li>
-    <li class="footer-item" class="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="footer-externallink" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/images/tiktok.png" alt=""></a></li>
-    <li class="footer-item" class="yt"> <a aria-label="Room To Roam YouTube account external link" class="footer-externallink" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/images/youtube.png" alt=""></a></li>
+    <li class="footer-item" class="insta"> <a aria-label="Room To Roam Instagram account external link" class="footer-externallink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/insta.png" alt=""></a></li>
+    <li class="footer-item" class="fb"> <a aria-label="Room To Roam Facebook account external link" class="footer-externallink" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/facebook.png" alt=""></a></li>
+    <li class="footer-item" class="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="footer-externallink" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/tiktok.png" alt=""></a></li>
+    <li class="footer-item" class="yt"> <a aria-label="Room To Roam YouTube account external link" class="footer-externallink" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/RoomToRoam/images/youtube.png" alt=""></a></li>
   </ul>
 </footer>
 
 
-<script src="/scripts/loadanimation.js"></script>
-<script src="/scripts/hamburger.js"></script> 
-<script src="/scripts/slideartists.js"></script>
-<script src="/scripts/artists2.js"></script>
+<script src="/RoomToRoam/scripts/loadanimation.js"></script>
+<script src="/RoomToRoam/scripts/hamburger.js"></script> 
+<script src="/RoomToRoam/scripts/slideartists.js"></script>
+<script src="/RoomToRoam/scripts/artists2.js"></script>
 <!--ARISTS2.JS is the WORKING ONE ..  1 was partially broken for what was needed from it, and 3 was part of the tests for making 2-->
 </body>
 
