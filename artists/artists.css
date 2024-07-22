@@ -450,7 +450,7 @@ height: fit-content;
 
 /*table item styling*/
 
-.dt-paging-button{height: 2rem; width: 1rem; font-size: .75rem;}
+.dt-paging-button{height: 1.5rem; width: 1rem; font-size: .75rem;}
 
 .list-artist-details{width: 90vw; position: relative; left: -1.8rem;}
 .list-artist-text{height: fit-content;}
