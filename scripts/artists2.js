@@ -69,11 +69,11 @@ function expand() {
     if (!expanded) {
         expanded = true;
         artistDetails.setAttribute("aria-expanded", "true");
-        expandArrow.setAttribute("src", "/RoomToRoam/images/expandarrowup.png");
+        expandArrow.setAttribute("src", "/images/expandarrowup.png");
     } else {
         expanded = false;
         artistDetails.setAttribute("aria-expanded", "false");
-        expandArrow.setAttribute("src", "/RoomToRoam/images/expandarrowdown.png");
+        expandArrow.setAttribute("src", "/images/expandarrowdown.png");
     }
 }
 
@@ -86,4 +86,23 @@ button.addEventListener('keydown', function(event) {
     }
 });
 
+
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var imageWrappers = document.querySelectorAll('.list-background-img');
+
+    imageWrappers.forEach(function(imageWrapper) {
+        // Calculate the amount of transform based on scroll position
+        var translateY = scrollPosition / 8; // Adjust this value for desired effect
+
+        // Apply the transform styles to each .list-background-img element
+        imageWrapper.style.top = '-' + translateY + 'px';
+    });
+});
+
+
+  
+
 })();
+

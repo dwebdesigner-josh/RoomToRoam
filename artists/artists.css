@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/RoomToRoam/images/starV1frame1.png");
+  background-image: url("/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -242,7 +242,7 @@ header {
       .loadscreen {
           width: 100%;
           height: 100%;
-          background-image: url("/RoomToRoam/images/starV1frame1.png");
+          background-image: url("/images/starV1frame1.png");
           background-repeat: repeat;
           position: absolute;
           top: 0;
@@ -338,11 +338,11 @@ section {width: 100%; height:fit-content; z-index: 1;}
           background-color: transparent;
         }
             #slide-left {/*padding-right: 5%;*/
-              background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
+              background-image: url("/images/slidebuttonarrowleft.png");
               background-size: cover;
             }
             #slide-right {/*padding-left: 5%;*/
-              background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
+              background-image: url("/images/slidebuttonarrowright.png");
               background-size: cover;
             }
 
@@ -460,6 +460,13 @@ height: fit-content;
     .continue-arrowright-container{height: 80%; width: 1.5rem; border-left: 1px inset white;}
 .list-img-expand-arrowdown, .list-img-expand-arrowup {align-self: center; justify-self: center;}
 .list-img-expand-arrowup {display: none; visibility: hidden;}
+/**/
+
+/*list background img*/
+.list-background-container {width: inherit; height: 3rem; z-index: -1; position: absolute; border: 1px solid white; border-radius: 50px; overflow: hidden;}
+  .list-background-img {position: relative; top: -90px; }
+      @media screen and (max-width: 532px){.list-background-container {height: 4rem;}}
+      @media screen and (max-width: 337px){.list-background-container {height: 5rem;}}
 /**/
 
 .artist-details a:link, .artist-details a:active, .td-details a:link, .td-details a:active{
