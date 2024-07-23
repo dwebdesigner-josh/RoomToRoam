@@ -88,16 +88,46 @@ button.addEventListener('keydown', function(event) {
 
 
 
-  window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
+//window.addEventListener('scroll', function() {
+    //var scrollPosition = window.scrollY;
+    
+    //var imageWrappers = document.querySelectorAll('.list-background-img');
+    //var scrollOffset = imageWrappers.getBoundingClientRect();
+
+    //imageWrappers.forEach(function(imageWrapper) {
+        // Calculate the amount of transform based on scroll position
+    //    var translateY = scrollPosition / 12 - scrollOffset; // Adjust this value for desired effect
+
+        // Apply different limits to translateY based on viewport width
+//        if (window.matchMedia("(max-width: 500px)").matches) {
+  //          translateY = Math.min(translateY, 190); // Limit translateY to 190 when viewport width is less than 500px
+    //    }
+      //  if (window.matchMedia("(min-width: 501px) and (max-width: 669px)").matches) {
+        //    translateY = Math.min(translateY, 220); // Limit translateY to 500 when viewport width is between 500px and 669px
+  //      }
+    //    if (window.matchMedia("(min-width: 670px)").matches) {
+      //      translateY = Math.min(translateY, 500); // Limit translateY to 1000 when viewport width is 670px or more
+        //}
+
+        // Apply the transform styles to each .list-background-img element
+    //    imageWrapper.style.top = '-' + translateY + 'px';
+  //  });
+//});
+
+window.addEventListener('scroll', function() {
+   // var scrollPosition = window.scrollY;
+    
     var imageWrappers = document.querySelectorAll('.list-background-img');
 
     imageWrappers.forEach(function(imageWrapper) {
-        // Calculate the amount of transform based on scroll position
-        var translateY = scrollPosition / 8; // Adjust this value for desired effect
+        // Get the bounding rectangle of the image wrapper relative to the viewport
+        var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +50;
 
+        // Calculate the amount of transform based on scroll position and element offset
+    //    var translateY = scrollPosition - scrollOffset; // Adjust this value for desired effect
+ 
         // Apply the transform styles to each .list-background-img element
-        imageWrapper.style.top = '-' + translateY + 'px';
+        imageWrapper.style.top = '-' + scrollOffset + 'px';
     });
 });
 
