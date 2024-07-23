@@ -237,7 +237,7 @@ header {
           }                                
           /*DESKTOP*/
           @media screen and (min-width: 850px){
-          #loadcontainer {height: calc(2.5rem + 150vw + 2rem);} /*header plus main plus footer - 2rem high internals/socials */
+          #loadcontainer {height: calc(2.5rem + 3000px + 2rem);} /*header plus main plus footer - 2rem high internals/socials */
           }
       .loadscreen {
           width: 100%;
