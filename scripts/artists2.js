@@ -121,7 +121,22 @@ window.addEventListener('scroll', function() {
 
     imageWrappers.forEach(function(imageWrapper) {
         // Get the bounding rectangle of the image wrapper relative to the viewport
-        var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +50;
+        if (window.matchMedia("(max-width: 670px)").matches) {
+                    var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +50;
+                  }
+                  if (window.matchMedia("(min-width: 671px) and (max-width: 1000px)").matches) {
+                    var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +100;
+                  }
+                  if (window.matchMedia("(min-width: 1001px) and (max-width: 1800px)").matches) {
+                    var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +180;
+                  }
+                  if (window.matchMedia("(min-width: 1801px) and (max-width: 2600px)").matches) {
+                    var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +300;
+                  }
+                  if (window.matchMedia("(min-width: 2601px)").matches) {
+                    var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +500;
+                  }
+        
 
         // Calculate the amount of transform based on scroll position and element offset
     //    var translateY = scrollPosition - scrollOffset; // Adjust this value for desired effect
