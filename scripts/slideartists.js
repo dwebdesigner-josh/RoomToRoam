@@ -18,7 +18,7 @@
     function updateSecondSlider() {
         const worksImages = {
             1: ['/images/featureartist.jpg', '/images/featureartist.jpg', '/images/featureartist.jpg'],
-            2: ['/images/technicolors.jpg', '/images/technicolors.jpg', '/images/technicolors.jpg'],
+            2: ['/images/technicolors/technicolors-metaphysical.jpg', '/images/technicolors/technicolors-cinemasublimina.jpg', '/images/technicolors/technicolors-ultravioletdisguise.jpg'],
             3: ['/images/novalizphoto.jpg', '/images/novalizphoto.jpg', '/images/novalizphoto.jpg']
         };
 
@@ -27,6 +27,10 @@
         document.querySelector('#slideworksimg-1').src = currentArtistWorks[0];
         document.querySelector('#slideworksimg-2').src = currentArtistWorks[1];
         document.querySelector('#slideworksimg-3').src = currentArtistWorks[2];
+
+     //   document.querySelector('#slideworksimg-1').setAttribute("style","");        
+       // document.querySelector('#slideworksimg-1').setAttribute();
+        //document.querySelector('#slideworksimg-1').setAttribute();
     }
 
     function slideRight(){
@@ -273,9 +277,9 @@ function slideLeftSingle(){
     var slideImage1 = document.querySelector(slideNumber+slideCount1);
     var slideImage2 = document.querySelector(slideNumber+slideCount2);
     var slideImage3 = document.querySelector(slideNumber+slideCount3);
-                slideImage1.setAttribute("style", " z-index: 29; left: 5%; opacity: .95;"); 
-                slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%);"); 
-                slideImage3.setAttribute("style", " z-index: 28; left: 45%; opacity: .95;"); 
+                slideImage1.setAttribute("style", " z-index: 29; left: 15%; opacity: .95;"); 
+                slideImage2.setAttribute("style", " z-index: 30; left: 35%; transform: scale(1.6) translateY(-5%);"); 
+                slideImage3.setAttribute("style", " z-index: 28; left: 55%; opacity: .95;"); 
                     slideImage1.setAttribute("aria-expanded", "false");
                     slideImage1.setAttribute("inert", "");
                     slideImage2.setAttribute("aria-expanded", "true");
@@ -311,9 +315,9 @@ function slideLeft(){
     var slideImage1 = document.querySelector(slideNumber+slideCount1);
     var slideImage2 = document.querySelector(slideNumber+slideCount2);
     var slideImage3 = document.querySelector(slideNumber+slideCount3);
-            slideImage1.setAttribute("style", " z-index: 28; left: 5%; opacity: .95;"); 
-            slideImage2.setAttribute("style", " z-index: 30; left: 25%; transform: scale(1.6) translateY(-5%);"); 
-            slideImage3.setAttribute("style", " z-index: 29; left: 45%; opacity: .95;"); 
+            slideImage1.setAttribute("style", " z-index: 28; left: 15%; opacity: .95;"); 
+            slideImage2.setAttribute("style", " z-index: 30; left: 35%; transform: scale(1.6) translateY(-5%);"); 
+            slideImage3.setAttribute("style", " z-index: 29; left: 55%; opacity: .95;"); 
                 slideImage1.setAttribute("aria-expanded", "false");
                 slideImage1.setAttribute("inert","");
                 slideImage2.setAttribute("aria-expanded", "true");
