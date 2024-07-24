@@ -377,13 +377,13 @@ section {width: 100%; height:fit-content; z-index: 1;}
 /*highlight reel 1 banner*/
 
 .banner-container{position: absolute; width: 100%; height: 97%;  overflow: hidden;}
-.banner-slide{transform: rotate(-20deg); position: absolute; top: 40%; left: -10%; width: 120%; height: 3rem; overflow: hidden; text-wrap: nowrap; background-color: #b1e2fd5b; }
+.banner-slide{transform: rotate(-20deg); position: absolute; top: 40%; left: -10%; width: 120%; height: 3rem; overflow: hidden; text-wrap: nowrap; background-color:#12171d9d;}
 
-.slide-anchor:hover .banner-text{color: rgba(0, 0, 0, 0.651); }
-.slide-anchor:hover .banner-slide{ background-color: #b1e2fd8e; height: 3.1rem; }
+.slide-anchor:hover .banner-text{color: #12171d9d;}
+.slide-anchor:hover .banner-slide{ background-color: #b1e2fd8e; height: 3.1rem;}
 
 .banner-text {
-  position: relative; left: -10px; font-size: 3rem; bottom: .2rem; color: rgba(255, 255, 255, 0.425); 
+  position: relative; left: -10px; font-size: 3rem; bottom: .2rem; color: #b1e2fd8e;
   /* animation properties */
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
@@ -397,13 +397,13 @@ section {width: 100%; height:fit-content; z-index: 1;}
 /* for Firefox */
 @-moz-keyframes my-animation {
   from { -moz-transform: translateX(100%); }
-  to { -moz-transform: translateX(-100%); }
+  to { -moz-transform: translateX(-180%); }
 }
 
 /* for Chrome */
 @-webkit-keyframes my-animation {
   from { -webkit-transform: translateX(100%); }
-  to { -webkit-transform: translateX(-100%); }
+  to { -webkit-transform: translateX(-180%); }
 }
 
 @keyframes my-animation {
@@ -413,9 +413,9 @@ section {width: 100%; height:fit-content; z-index: 1;}
     transform: translateX(100%);
   }
   to {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+    -moz-transform: translateX(-180%);
+    -webkit-transform: translateX(-180%);
+    transform: translateX(-180%);
   }
 }
 @media screen and (prefers-reduced-motion){.banner-text{-moz-transform: none;  -webkit-transform: none;  transform: none;  -moz-animation: none; -webkit-animation: none; animation: none;}}
@@ -587,11 +587,10 @@ height: fit-content;
         .artist-details p, .list-artist-details p{width: 100%; align-self: center; color: #e3f5ff;}
 
   .list-artist-text{width: 90%; display: flex; flex-direction: row;
-  background-color: #e3f5ff2d; border-radius: 50px; align-items: center;
+  background-color: #e3f5ff10; border-radius: 50px; align-items: center;
   padding: 1rem;
   }
 
- 
       .artist-details-article, .list-artist-details-article {display: flex; flex-direction: column; flex: 2; margin-right: 10px;  padding-left: 1rem; border-left: 1px inset white;} 
               .artist-details-article p, .list-artist-details-article p {
                 font-size: 1rem;
