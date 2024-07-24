@@ -300,53 +300,8 @@ section {width: 100%; height:fit-content; z-index: 1;}
 #filler{height: 100px}
 
    
-/*HIGHLIGHT REEL 2*/
 
-.works-wrap {height: fit-content; padding: .5rem; border: 1px inset white; border-radius: 1rem; display: flex; flex-direction: column; align-items: center;}
-
-
-#highlight2 {
-  margin-top: 12vw;
-  width: 100%;
-  /*aspect-ratio: 1350/1410;*/ /*aspect ratio matches background images*/
-  /*  margin-top: -8%;
-  margin-bottom: -13%;*/
-  z-index: 3;
-  }
-  
-    #roots-highlight2{
-      margin: 0; z-index: 4;
-      width: 100%;
-    }
-    
-    #highlight2>#roots-highlight2{
-      display: flex;
-    }
-
-    #slide-left2 {/*padding-right: 5%;*/
-      background-image: url("/images/slidebuttonarrowleft.png");
-      background-size: cover;
-      background-position: center;
-      
-    }
-    #slide-right2 {/*padding-left: 5%;*/
-      background-image: url("/images/slidebuttonarrowright.png");
-      background-size: cover;
-      background-position: center;
-      
-    }
-
-.slide-anchor2 {
-              
-  border: none;
-  position: absolute;
-  aspect-ratio: 1/1; /*SLIDE IMAGE THUMBNAIL SIZE HERE*/
-  /*width: 50%;*/
-  width: 33%;
-  transition: left 500ms ease-in-out, transform 500ms ease-in-out;
-}
-
-/*section - highlight reel +content*/
+/*HIGHLIGHT REEL 1*/
 
 #highlight {
   margin-top: 12vw;
@@ -418,6 +373,98 @@ section {width: 100%; height:fit-content; z-index: 1;}
               border: none;
               box-shadow: 0px 0px 2px 2px black;
             }
+
+/*highlight reel 1 banner*/
+
+.banner-container{position: absolute; width: 100%; height: 97%;  overflow: hidden;}
+.banner-slide{transform: rotate(-20deg); position: absolute; top: 40%; left: -10%; width: 120%; height: 3rem; overflow: hidden; text-wrap: nowrap; background-color: #b1e2fd5b; }
+
+.slide-anchor:hover .banner-text{color: rgba(0, 0, 0, 0.651); }
+.slide-anchor:hover .banner-slide{ background-color: #b1e2fd8e; height: 3.1rem; }
+
+.banner-text {
+  position: relative; left: -10px; font-size: 3rem; bottom: .2rem; color: rgba(255, 255, 255, 0.425); 
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 20s linear infinite;
+  -webkit-animation: my-animation 20s linear infinite;
+  animation: my-animation 20s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@media screen and (prefers-reduced-motion){.banner-text{-moz-transform: none;  -webkit-transform: none;  transform: none;  -moz-animation: none; -webkit-animation: none; animation: none;}}
+
+/*HIGHLIGHT REEL 2*/
+
+.works-wrap {height: fit-content; padding: .5rem; border: 1px inset white; border-radius: 1rem; display: flex; flex-direction: column; align-items: center;}
+
+
+#highlight2 {
+  margin-top: 12vw;
+  width: 100%;
+  /*aspect-ratio: 1350/1410;*/ /*aspect ratio matches background images*/
+  /*  margin-top: -8%;
+  margin-bottom: -13%;*/
+  z-index: 3;
+  }
+  
+    #roots-highlight2{
+      margin: 0; z-index: 4;
+      width: 100%;
+    }
+    
+    #highlight2>#roots-highlight2{
+      display: flex;
+    }
+
+    #slide-left2 {/*padding-right: 5%;*/
+      background-image: url("/images/slidebuttonarrowleft.png");
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #slide-right2 {/*padding-left: 5%;*/
+      background-image: url("/images/slidebuttonarrowright.png");
+      background-size: cover;
+      background-position: center;
+      
+    }
+
+.slide-anchor2 {
+              
+  border: none;
+  position: absolute;
+  aspect-ratio: 1/1; /*SLIDE IMAGE THUMBNAIL SIZE HERE*/
+  /*width: 50%;*/
+  width: 33%;
+  transition: left 500ms ease-in-out, transform 500ms ease-in-out;
+}
 
 /*SECTION - featured artist details*/
 
