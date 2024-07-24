@@ -613,7 +613,7 @@ height: fit-content;
             @media screen and (min-width: 500px) {#id-override-dt-column-order::before{position: relative; top: 70px;}}  
             @media screen and (min-width: 1900px) {#id-override-dt-column-order::before{position: relative; top: 55px;}}
 
-    #artists h1 {font-size: 2rem; margin-bottom: 1rem;}
+    #artists h1 {font-size: 4rem; margin-bottom: 1rem;}
 
 
     #artists table, #artists label, #artists select{color: white;}
