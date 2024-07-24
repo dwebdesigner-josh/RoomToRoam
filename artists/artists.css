@@ -298,7 +298,46 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 #filler{height: 100px}
 
-        
+   
+/*HIGHLIGHT REEL 2*/
+
+#highlight2 {
+  margin-top: 12vw;
+  width: 100%;
+  /*aspect-ratio: 1350/1410;*/ /*aspect ratio matches background images*/
+  /*  margin-top: -8%;
+  margin-bottom: -13%;*/
+  z-index: 3;
+  }
+  
+    #roots-highlight2{
+      margin: 0; z-index: 4;
+      width: 100%;
+    }
+    
+    #highlight2>#roots-highlight2{
+      display: flex;
+    }
+
+    #slide-left2 {/*padding-right: 5%;*/
+      background-image: url("/images/slidebuttonarrowleft.png");
+      background-size: cover;
+    }
+    #slide-right2 {/*padding-left: 5%;*/
+      background-image: url("/images/slidebuttonarrowright.png");
+      background-size: cover;
+    }
+
+#slides-container2{
+  z-index: 0;
+  aspect-ratio: 1350/690;
+  width: 100%;
+  left: 0px;
+  flex: 8;
+
+}
+
+
 /*section - highlight reel +content*/
 
 #highlight {
@@ -463,7 +502,7 @@ height: fit-content;
 .list-img-expand-arrowdown, .list-img-expand-arrowup {align-self: center; justify-self: center;}
 .list-img-expand-arrowup {display: none; visibility: hidden;}
 
-.list-span-filler{height: 4.5rem; width: 100%; display: none; visibility: hidden;}
+.list-span-filler{height: 5rem; width: 100%; display: none; visibility: hidden;}
 /**/
 
 /*list background img*/
