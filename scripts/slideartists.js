@@ -17,9 +17,9 @@
 
     function updateSecondSlider() {
         const worksImages = {
-            1: ['/images/featureartist.jpg', '/images/featureartist.jpg', '/images/featureartist.jpg'],
-            2: ['/images/technicolors/technicolors-metaphysical.jpg', '/images/technicolors/technicolors-cinemasublimina.jpg', '/images/technicolors/technicolors-ultravioletdisguise.jpg'],
-            3: ['/images/novalizphoto.jpg', '/images/novalizphoto.jpg', '/images/novalizphoto.jpg']
+            1: ['/RoomToRoam/images/featureartist.jpg', '/RoomToRoam/images/featureartist.jpg', '/RoomToRoam/images/featureartist.jpg'],
+            2: ['/RoomToRoam/images/technicolors/technicolors-metaphysical.jpg', '/RoomToRoam/images/technicolors/technicolors-cinemasublimina.jpg', '/RoomToRoam/images/technicolors/technicolors-ultravioletdisguise.jpg'],
+            3: ['/RoomToRoam/images/novalizphoto.jpg', '/RoomToRoam/images/novalizphoto.jpg', '/RoomToRoam/images/novalizphoto.jpg']
         };
 
         const currentArtistWorks = worksImages[slideCount2];
