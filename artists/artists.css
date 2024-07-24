@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/RoomToRoam/images/starV1frame1.png");
+  background-image: url("/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -242,7 +242,7 @@ header {
       .loadscreen {
           width: 100%;
           height: 100%;
-          background-image: url("/RoomToRoam/images/starV1frame1.png");
+          background-image: url("/images/starV1frame1.png");
           background-repeat: repeat;
           position: absolute;
           top: 0;
@@ -338,11 +338,11 @@ section {width: 100%; height:fit-content; z-index: 1;}
           background-color: transparent;
         }
             #slide-left {/*padding-right: 5%;*/
-              background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
+              background-image: url("/images/slidebuttonarrowleft.png");
               background-size: cover;
             }
             #slide-right {/*padding-left: 5%;*/
-              background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
+              background-image: url("/images/slidebuttonarrowright.png");
               background-size: cover;
             }
 
@@ -440,6 +440,8 @@ height: fit-content;
   display: block; visibility: visible;
 }
 
+.list-artist-details[aria-expanded="true"] .list-span-filler{display: inline; visibility: visible;}
+
 .list-slideP-expanded {display: none; visibility: hidden;}
 
 .list-artist-details{z-index: 99; display: flex; flex-direction: column; align-items: center; justify-content: center;}
@@ -453,17 +455,19 @@ height: fit-content;
 .dt-paging-button{height: 1.5rem; width: 1rem; font-size: .75rem;}
 
 .list-artist-details{width: 90vw; position: relative; left: -1.8rem;}
-.list-artist-text{height: fit-content;}
+.list-artist-text{height: 4rem;}
   .list-artist-text h2{font-size: 1rem;}
   .list-artist-text .list-slideP p{font-size: .8rem;}
     .list-summary{text-align: center; align-self: center; justify-self: center;}
     .continue-arrowright-container{height: 80%; width: 1.5rem; border-left: 1px inset white;}
 .list-img-expand-arrowdown, .list-img-expand-arrowup {align-self: center; justify-self: center;}
 .list-img-expand-arrowup {display: none; visibility: hidden;}
+
+.list-span-filler{height: 4.5rem; width: 100%; display: none; visibility: hidden;}
 /**/
 
 /*list background img*/
-.list-background-container {width: inherit; height: 3rem; z-index: -1; position: absolute; border: 1px solid white; border-radius: 50px; overflow: hidden;}
+.list-background-container {width: inherit; height: 4rem; z-index: -1; position: absolute; border: 1px solid white; border-radius: 50px; overflow: hidden;}
   .list-background-img {position: relative; top: -90px; }
       @media screen and (max-width: 532px){.list-background-container {height: 4rem;}}
       @media screen and (max-width: 337px){.list-background-container {height: 5rem;}}

@@ -69,11 +69,11 @@ function expand() {
     if (!expanded) {
         expanded = true;
         artistDetails.setAttribute("aria-expanded", "true");
-        expandArrow.setAttribute("src", "/RoomToRoam/images/expandarrowup.png");
+        expandArrow.setAttribute("src", "/images/expandarrowup.png");
     } else {
         expanded = false;
         artistDetails.setAttribute("aria-expanded", "false");
-        expandArrow.setAttribute("src", "/RoomToRoam/images/expandarrowdown.png");
+        expandArrow.setAttribute("src", "/images/expandarrowdown.png");
     }
 }
 
