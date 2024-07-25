@@ -233,11 +233,11 @@ header {
       }
           /*MOBILE*/
           @media screen and (max-width: 850px){
-          #loadcontainer {height: calc(2.5rem + 2800px + 4rem);} /*header plus main plus footer - 2rem high internals + 2rem high socials*/
+          #loadcontainer {height: calc(2.5rem + 200svh + 4rem);} /*header plus main plus footer - 2rem high internals + 2rem high socials*/
           }                                
           /*DESKTOP*/
           @media screen and (min-width: 850px){
-          #loadcontainer {height: calc(2.5rem + 2800px + 2rem);} /*header plus main plus footer - 2rem high internals/socials */
+          #loadcontainer {height: calc(2.5rem + 200svh + 2rem);} /*header plus main plus footer - 2rem high internals/socials */
           }
       .loadscreen {
           width: 100%;
