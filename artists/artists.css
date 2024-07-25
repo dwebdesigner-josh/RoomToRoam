@@ -233,11 +233,11 @@ header {
       }
           /*MOBILE*/
           @media screen and (max-width: 850px){
-          #loadcontainer {height: calc(2.5rem + 3000px + 4rem);} /*header plus main plus footer - 2rem high internals + 2rem high socials*/
+          #loadcontainer {height: calc(2.5rem + 2800px + 4rem);} /*header plus main plus footer - 2rem high internals + 2rem high socials*/
           }                                
           /*DESKTOP*/
           @media screen and (min-width: 850px){
-          #loadcontainer {height: calc(2.5rem + 3000px + 2rem);} /*header plus main plus footer - 2rem high internals/socials */
+          #loadcontainer {height: calc(2.5rem + 2800px + 2rem);} /*header plus main plus footer - 2rem high internals/socials */
           }
       .loadscreen {
           width: 100%;
@@ -381,7 +381,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 .slide-anchor:hover .banner-text{color: #12171d9d;}
 .slide-anchor:hover .banner-slide{ background-color: #b1e2fd8e; height: 3.1rem;}
-
+@media screen and (min-width: 851px){
 .banner-text {
   position: relative; left: -10px; font-size: 3rem; bottom: .2rem; color: #b1e2fd8e;
   /* animation properties */
@@ -389,10 +389,24 @@ section {width: 100%; height:fit-content; z-index: 1;}
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
   
-  -moz-animation: my-animation 20s linear infinite;
-  -webkit-animation: my-animation 20s linear infinite;
-  animation: my-animation 20s linear infinite;
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
 }
+}
+@media screen and (max-width: 850px){
+  .banner-text {
+    position: relative; left: -10px; font-size: 3rem; bottom: .2rem; color: #b1e2fd8e;
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: my-animation 10s linear infinite;
+    -webkit-animation: my-animation 10s linear infinite;
+    animation: my-animation 10s linear infinite;
+  }
+  }
 
 /* for Firefox */
 @-moz-keyframes my-animation {
@@ -523,6 +537,7 @@ select option {font-size: 1rem;}
 align-items: center;
 padding: 1rem;
 height: fit-content;
+background-color: #e3f5ff10;
 }
 
 .list-artist-details[aria-expanded="true"] .list-artist-details-article {
@@ -564,6 +579,9 @@ height: fit-content;
   border-radius: 0;
 }
 
+.list-artist-details[aria-expanded="true"] .list-backgroundedge-container {
+  display: none; visibility: hidden;
+}
 
 .list-artist-details[aria-expanded="true"] .list-span-filler, .list-artist-details[aria-expanded="true"] .latestwork {display: block; visibility: visible;}
 
@@ -595,10 +613,12 @@ height: fit-content;
 /**/
 
 /*list background img*/
-.list-background-container {width: inherit; height: 4rem; z-index: -1; position: absolute; border: 1px solid white; border-radius: 50px; overflow: hidden;}
+.list-background-container {width: inherit; height: 4rem; z-index: -1; position: absolute; border: 1px solid white; border-radius: 5rem; overflow: hidden;}
   .list-background-img {position: relative; top: -90px; }
       @media screen and (max-width: 532px){.list-background-container {height: 4rem;}}
       @media screen and (max-width: 337px){.list-background-container {height: 5rem;}}
+  
+.list-backgroundedge-container {width: 88vw; margin-left: -3.5vw;  height: 6rem; z-index: -2; position: absolute; border-radius: 5rem; overflow: hidden;}
 /**/
 
 .artist-details a:link, .artist-details a:active, .td-details a:link, .td-details a:active{
@@ -614,10 +634,10 @@ height: fit-content;
         .artist-details p, .list-artist-details p{width: 100%; align-self: center; color: #e3f5ff;}
 
   .list-artist-text{width: 90%; display: flex; flex-direction: row;
-  background-color: #e3f5ff10; border-radius: 50px; align-items: center;
+  border-radius: 50px; align-items: center;
   padding: 1rem;
   }
-
+/*background-color: #e3f5ff10;*/
 
   .artist-name-link, .list-artist-name-link{margin-right: 10px; z-index: 100; flex: 1; display: flex; flex-direction: column; text-decoration: none; justify-content: center; align-items: center;}
     .artist-name-link h2, .list-artist-name-link h2{width: fit-content; padding-left: 10px; padding-right: 10px; text-align: center; transition: opacity 1s ease-in-out;} 

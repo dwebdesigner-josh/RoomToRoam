@@ -201,3 +201,171 @@ SAVE: (artists.js)
         });
     });
   })();
+
+
+
+
+
+
+
+  SAVE
+         <tr>
+               
+          <td class="td-artist">Balla Dambdan</td>
+          <td class="td-medium">Writing</td>
+          <td class="td-featured-date">>Date Featured: 2024-03</td>
+          <td>
+            <div class="td-details">
+              <section id="td-expand-3" class="list-artist-details" tabindex="0" aria-expanded="false">
+                <div class="list-artist-text">
+                  <div class="list-background-container"><img class="list-background-img" src="/images/technicolors.jpg" alt="" width="100%"></div>
+                  <div class="list-backgroundedge-container"><img class="list-backgroundedge" src="/images/back2.jpg" alt="" width="100%" height="100%"></div>
+                  <span class="list-span-filler"></span>
+                  <a class="list-artist-name-link" href="/artists/BallaDambdan/" target="_self">
+                      <h2>Balla Dambdan</h2>
+                    </a>
+                  <article class="list-artist-details-article">
+                      <div class="list-slideP">
+                        <p>Author<br>Sci-fi<br><p class="latestwork">Latest Work: Galactic Echoes</p></p>
+                        <p class="list-slideP-expanded">Balla Dambdan is a celebrated author in the realm of science fiction, known for her imaginative and thought-provoking narratives that captivate readers around the globe. Born in Accra, Ghana, Balla's early fascination with the stars and the future propelled her into the world of speculative fiction, where she has carved out a unique niche with her compelling storytelling. <br><br>Balla's journey into writing began in her teenage years, inspired by classic sci-fi literature and the technological advancements of her time. She pursued a degree in Astrophysics at the University of Cape Town, which provided her with a solid foundation in scientific principles that she skillfully integrates into her writing. Her academic background adds a layer of authenticity and depth to her futuristic worlds, making them both believable and awe-inspiring.</p>
+                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/BallaDambdan/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        </div>     
+                      </article>
+                      <a href="/artists/BallaDambdan/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                  </div>
+                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                 </section>
+              </div>
+            </td>  
+        </tr>
+        <tr>
+          
+          <td class="td-artist">Taige OReilly</td>      <!--MAKE SURE TO LEAVE OUT APOSTROPHES IN THE TD (for search functionality)-->
+          <td class="td-medium">Music</td>
+          <td class="td-featured-date">>Date Featured: 2021-12</td>
+          <td>
+            <div class="td-details">
+              <section id="td-expand-4" class="list-artist-details" tabindex="0" aria-expanded="false">
+                <div class="list-artist-text">
+                  <div class="list-background-container"><img class="list-background-img" src="/images/technicolors.jpg" alt="" width="100%"></div>
+                  <div class="list-backgroundedge-container"><img class="list-backgroundedge" src="/images/back2.jpg" alt="" width="100%" height="100%"></div>
+                  <span class="list-span-filler"></span>
+                  <a class="list-artist-name-link" href="/artists/TaigeOreilly/" target="_self">
+                      <h2>Taige O'Reilly</h2>
+                    </a>
+                  <article class="list-artist-details-article">
+                      <div class="list-slideP">
+                        <p>Music<br>Alternative<br><p class="latestwork">Latest Work: Confusion</p></p>
+                        <p class="list-slideP-expanded">Taige O'Reilly is a self-named indie music artist known for her distinctive style and introspective lyrics that resonate with listeners worldwide. Hailing from Dublin, Ireland, Taige discovered her passion for music at a young age, drawing inspiration from the city's vibrant cultural scene and its rich musical heritage.<br><br>Her musical journey began with humble beginnings, playing acoustic sets in local pubs and cafes, where her raw talent and emotive performances quickly garnered attention. Influenced by a diverse range of genres, from folk to indie rock, Taige developed a sound that blends haunting melodies with poignant storytelling.<br><br>Taige's debut album, "Echoes of Silence," captured the essence of her introspective songwriting and garnered critical acclaim for its authenticity and emotional depth. Her lyrics delve into themes of love, loss, and personal growth, offering listeners a glimpse into her own journey and reflections on life's complexities.</p>
+                          <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/TaigeOreilly/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        </div>       
+                      </article>
+                      <a href="/artists/TaigeOreilly/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                  </div>
+                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                 </section>
+              </div>
+            </td>
+        </tr>
+        <tr>
+          
+          <td class="td-artist">Mambo Jambo</td>
+          <td class="td-medium">Music</td>
+          <td class="td-featured-date">>Date Featured: 2022-09</td>
+          <td>
+            <div class="td-details">
+              <section id="td-expand-5" class="list-artist-details" tabindex="0" aria-expanded="false">
+                <div class="list-artist-text">
+                  <div class="list-background-container"><img class="list-background-img" src="/images/technicolors.jpg" alt="" width="100%"></div>
+                  <div class="list-backgroundedge-container"><img class="list-backgroundedge" src="/images/back2.jpg" alt="" width="100%" height="100%"></div>
+                  <span class="list-span-filler"></span>
+                  <a class="list-artist-name-link" href="/artists/MamboJambo/" target="_self">
+                      <h2>Mambo Jambo</h2>
+                    </a>
+                  <article class="list-artist-details-article">
+                      <div class="list-slideP">
+                        <p>Music<br>Jungle<br><p class="latestwork">Latest Work: Rhythms of the Rainforest</p></p>
+                        <p class="list-slideP-expanded">Mambo Jambo is an electrifying jungle music group renowned for their high-energy performances and innovative fusion of traditional rhythms with modern electronic beats. Originating from the lush landscapes of the Amazon rainforest, the group was founded by a diverse ensemble of musicians who share a deep passion for the rich musical traditions of their homeland.
+                          <br><br>
+                          The journey of Mambo Jambo began when its members, hailing from various indigenous tribes, came together with a shared vision of preserving and modernizing their ancestral sounds. Their music is a vibrant tapestry of rhythmic drumming, intricate melodies, and dynamic bass lines, all seamlessly blended with contemporary electronic elements to create a unique and captivating auditory experience.
+                          <br><br>
+                          Mambo Jambo's debut album, "Rhythms of the Rainforest," quickly catapulted them to international acclaim, praised for its authenticity and innovative sound. The album showcases their ability to transport listeners to the heart of the jungle, with tracks that feature the enchanting sounds of native instruments like the marimba, panpipes, and traditional drums, interwoven with pulsating electronic beats.</p>
+                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/MamboJambo/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        </div>       
+                      </article>
+                      <a href="/artists/MamboJambo/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                  </div>
+                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                 </section>
+              </div>
+            </td>
+        </tr>
+        <tr>
+          
+          <td class="td-artist">Zer0</td>
+          <td class="td-medium">Design</td>
+          <td class="td-featured-date">>Date Featured: 2024-07</td>
+          <td>
+            <div class="td-details">
+              <section id="td-expand-6" class="list-artist-details" tabindex="0" aria-expanded="false">
+                <div class="list-artist-text">
+                  <div class="list-background-container"><img class="list-background-img" src="/images/technicolors.jpg" alt="" width="100%"></div>
+                  <div class="list-backgroundedge-container"><img class="list-backgroundedge" src="/images/back2.jpg" alt="" width="100%" height="100%"></div>
+                  <span class="list-span-filler"></span>
+                  <a class="list-artist-name-link" href="/artists/Zer0/" target="_self">
+                      <h2>Zer0</h2>
+                    </a>
+                  <article class="list-artist-details-article">
+                      <div class="list-slideP">
+                        <p>Design<br>Graphic Design<br><p class="latestwork">Latest Work: Digital Dreams</p></p>
+                        <p class="list-slideP-expanded">Zer0 is a trailblazing graphic designer renowned for her avant-garde approach and striking visual compositions that challenge conventional design paradigms. Based in Berlin, Germany, Zer0 has carved out a niche in the design world with her bold, minimalist aesthetics and innovative use of digital media.
+                          <br><br>
+                          Zer0's journey into graphic design began during her studies at the Berlin University of the Arts, where she developed a deep appreciation for the interplay between form, function, and technology. Her academic background, combined with a natural talent for visual storytelling, allowed her to experiment with various styles and techniques, ultimately forging a unique and recognizable design identity.
+                          <br><br>
+                          Her portfolio is a testament to her versatility and creativity, featuring a wide range of projects that include branding, digital art, and interactive media. Zer0's work often incorporates clean lines, geometric shapes, and a striking use of negative space, resulting in designs that are both visually arresting and conceptually profound. Her ability to distill complex ideas into simple, elegant visuals has garnered her widespread acclaim and a loyal client base.
+                          <br><br>
+                          Zer0's latest exhibition, "Digital Dreams," showcased her innovative approach to graphic design, blending traditional design principles with cutting-edge digital technologies. The exhibition was a critical success, highlighting her ability to create immersive visual experiences that resonate on both aesthetic and emotional levels.</p>
+                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/Zer0/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        </div>       
+                      </article>
+                      <a href="/artists/Zer0/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                  </div>
+                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                 </section>
+              </div>
+            </td>
+        </tr>
+        <tr>
+          
+          <td class="td-artist">Andy Semalum</td>
+          <td class="td-medium">Design</td>
+          <td class="td-featured-date">>Date Featured: 2023-01</td>
+          <td>
+            <div class="td-details">
+              <section id="td-expand-2" class="list-artist-details" tabindex="0" aria-expanded="false">
+                <div class="list-artist-text">
+                  <div class="list-background-container"><img class="list-background-img" src="/images/technicolors.jpg" alt="" width="100%"></div>
+                  <div class="list-backgroundedge-container"><img class="list-backgroundedge" src="/images/back2.jpg" alt="" width="100%" height="100%"></div>
+                  <span class="list-span-filler"></span>
+                  <a class="list-artist-name-link" href="/artists/AndySemalum/" target="_self">
+                      <h2>Andy Semalum</h2>
+                    </a>
+                  <article class="list-artist-details-article">
+                      <div class="list-slideP">
+                        <p class="list-summary">Design<br>Clothing<br><p class="latestwork">Latest Work: The Ega Brag Line</p></p>
+                        <p class="list-slideP-expanded">Andy Semalum is a visionary clothing designer renowned for his avant-garde approach to fashion. Born and raised in Paris, Andy's creative journey began in the bustling heart of the city's fashion district, where he developed a keen eye for detail and a passion for innovative design. He studied at the prestigious École de la Chambre Syndicale de la Couture Parisienne, where he honed his skills in tailoring and fabric manipulation. <br><br>After graduating, Andy launched his own fashion label, Semalum Couture, which quickly gained acclaim for its bold, artistic creations that challenge conventional fashion norms. His collections often feature a blend of intricate handcrafting and modern technology, resulting in unique, wearable art pieces that captivate audiences worldwide.</p>
+                        <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded"  href="/artists/AndySemalum/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                        </div>      
+                      </article>
+                      <a href="/artists/AndySemalum/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+                  </div>
+                  <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
+                  <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+                 </section>
+              </div>
+            </td>
+        </tr>
