@@ -2,8 +2,14 @@ $(document).ready(function() {
     // Initialize DataTable with fuzzy search options and other configurations
     var table = $('#mytable').DataTable({ 
         fuzzySearch: { toggleSmart: false },
-        // Add other configurations as needed
+        "columnDefs": [
+                    {
+                        "targets": [2, 3], // Third and Fourth columns are not searchable
+                        "searchable": false
+                    }
+                ],
     });
+
 
     const AtoZ = document.querySelector('.dt-column-order');
 
