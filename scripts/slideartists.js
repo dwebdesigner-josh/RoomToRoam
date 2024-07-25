@@ -17,21 +17,29 @@
 
     function updateSecondSlider() {
         const worksImages = {
-            1: ['/images/featureartist.jpg', '/images/featureartist.jpg', '/images/featureartist.jpg'],
+            1: ['/images/jw2.jpg', '/images/jwbackground.jpg', '/images/jw2.jpg'],
             2: ['/images/technicolors/technicolors-metaphysical.jpg', '/images/technicolors/technicolors-cinemasublimina.jpg', '/images/technicolors/technicolors-ultravioletdisguise.jpg'],
             3: ['/images/novalizphoto.jpg', '/images/novalizphoto.jpg', '/images/novalizphoto.jpg']
+        };
+        const worksLinks = {
+            1: ['/artists/JW', '/artists/JW', '/artists/JW'],
+            2: ['/artists/Technicolors', '/artists/Technicolors', '/artists/Technicolors'],
+            3: ['/artists/NovaLizPhoto', '/artists/NovaLizPhoto', '/artists/NovaLizPhoto']
         };
 
         const currentArtistWorks = worksImages[slideCount2];
 
+        const currentArtistLinks = worksLinks[slideCount2];
+
         document.querySelector('#slideworksimg-1').src = currentArtistWorks[0];
         document.querySelector('#slideworksimg-2').src = currentArtistWorks[1];
         document.querySelector('#slideworksimg-3').src = currentArtistWorks[2];
-
-     //   document.querySelector('#slideworksimg-1').setAttribute("style","");        
-       // document.querySelector('#slideworksimg-1').setAttribute();
-        //document.querySelector('#slideworksimg-1').setAttribute();
+        
+        document.querySelector('#slide-21').href = currentArtistLinks[0];
+        document.querySelector('#slide-22').href = currentArtistLinks[1];
+        document.querySelector('#slide-23').href = currentArtistLinks[2];
     }
+
 
     function slideRight(){
         
@@ -101,6 +109,7 @@
                     slideImage3.setAttribute("inert", "");
       
         updateSecondSlider();
+        
             }
 
 function slideLeft(){
@@ -169,6 +178,7 @@ function slideLeft(){
 //setTimeout(slideLeft, 500) - infinite sliding
 
     updateSecondSlider();
+    
 }
 
 
