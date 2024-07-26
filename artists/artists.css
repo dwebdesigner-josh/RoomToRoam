@@ -383,6 +383,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
 .slide-anchor:hover .banner-slide{ background-color: #b1e2fd8e; height: 3.1rem;}
 @media screen and (min-width: 851px){
 .banner-text {
+  font-weight: 500;
   position: relative; left: -10px; font-size: 3rem; bottom: .2rem; color: #b1e2fd8e;
   /* animation properties */
   -moz-transform: translateX(100%);
@@ -396,6 +397,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
 }
 @media screen and (max-width: 850px){
   .banner-text {
+    font-weight: 500;
     position: relative; left: -10px; font-size: 3rem; bottom: .2rem; color: #b1e2fd8e;
     /* animation properties */
     -moz-transform: translateX(100%);
@@ -537,10 +539,10 @@ select option {font-size: 1rem;}
 align-items: center;
 padding: 1rem;
 height: fit-content;
-background-color: #3109461c;
+background-color: #d795fa1c;
 z-index:-3;
 }
-/*background-color: #e3f5ff10;*/
+/*background-color: #e3f5ff10;    3109461c */
 
 .list-artist-details[aria-expanded="true"] .list-artist-details-article {
   margin: 0;
