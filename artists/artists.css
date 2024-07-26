@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/RoomToRoam/images/starV1frame1.png");
+  background-image: url("/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -242,7 +242,7 @@ header {
       .loadscreen {
           width: 100%;
           height: 100%;
-          background-image: url("/RoomToRoam/images/starV1frame1.png");
+          background-image: url("/images/starV1frame1.png");
           background-repeat: repeat;
           position: absolute;
           top: 0;
@@ -340,11 +340,11 @@ section {width: 100%; height:fit-content; z-index: 1;}
           background-color: transparent;
         }
             #slide-left {/*padding-right: 5%;*/
-              background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
+              background-image: url("/images/slidebuttonarrowleft.png");
               background-size: cover;
             }
             #slide-right {/*padding-left: 5%;*/
-              background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
+              background-image: url("/images/slidebuttonarrowright.png");
               background-size: cover;
             }
 
@@ -458,13 +458,13 @@ section {width: 100%; height:fit-content; z-index: 1;}
     }
 
     #slide-left2 {/*padding-right: 5%;*/
-      background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
+      background-image: url("/images/slidebuttonarrowleft.png");
       background-size: cover;
       background-position: center;
       
     }
     #slide-right2 {/*padding-left: 5%;*/
-      background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
+      background-image: url("/images/slidebuttonarrowright.png");
       background-size: cover;
       background-position: center;
       
@@ -537,8 +537,10 @@ select option {font-size: 1rem;}
 align-items: center;
 padding: 1rem;
 height: fit-content;
-background-color: #e3f5ff10;
+background-color: #3109461c;
+z-index:-3;
 }
+/*background-color: #e3f5ff10;*/
 
 .list-artist-details[aria-expanded="true"] .list-artist-details-article {
   margin: 0;
@@ -552,6 +554,7 @@ background-color: #e3f5ff10;
 
 .list-artist-details[aria-expanded="true"] .list-artist-name-link { 
   margin-right: 0;
+  margin-top: 1rem;
 }
 
 
@@ -580,7 +583,7 @@ background-color: #e3f5ff10;
 }
 
 .list-artist-details[aria-expanded="true"] .list-backgroundedge-container {
-  display: none; visibility: hidden;
+  width: 85vw; margin-left: 0; margin-top: -1rem; height: 6rem; z-index: -2; position: absolute; border-radius: 50px; overflow: hidden;
 }
 
 .list-artist-details[aria-expanded="true"] .list-span-filler, .list-artist-details[aria-expanded="true"] .latestwork {display: block; visibility: visible;}

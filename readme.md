@@ -369,3 +369,38 @@ SAVE: (artists.js)
               </div>
             </td>
         </tr>
+
+
+         <tr>
+          <td class="td-artist">Yves Behar</td>
+          <td class="td-medium">Design</td>
+          <td class="td-featured-date">Date Featured: 2024-03</td>
+          <td>
+            <div class="td-details">
+              <section id="td-expand-32" class="list-artist-details" tabindex="0" aria-expanded="false">
+                <div class="list-artist-text">
+                  <div class="list-background-container"><img class="list-background-img" src="/images/technicolors.jpg" alt="" width="100%"></div>
+                  <div class="list-backgroundedge-container"><img class="list-backgroundedge" src="/images/back2.jpg" alt="" width="100%" height="100%"></div>
+                  <span class="list-span-filler"></span>
+                  <a class="list-artist-name-link" href="/artists/YvesBehar/" target="_self">
+                    <h2>Yves Behar</h2>
+                  </a>
+                  <article class="list-artist-details-article">
+                    <div class="list-slideP">
+                      <p>Design<br>Industrial Design<br><p class="latestwork">Latest Work: The Future of Wearable Tech</p></p>
+                      <p class="list-slideP-expanded">Yves Behar is a celebrated Swiss-American industrial designer known for his innovative and forward-thinking approach to design. Based in San Francisco, Behar is recognized for his work in consumer electronics, sustainable design, and social impact projects.
+                        <br><br>
+                        Behar’s design firm, fuseproject, has produced a wide range of influential products, including the award-winning One Laptop Per Child initiative and the August Smart Lock. His work emphasizes the integration of technology and design to improve everyday life and address global challenges.
+                        <br><br>
+                        His latest work, "The Future of Wearable Tech," released in March 2024, explores new possibilities in wearable technology through a series of conceptual designs and prototypes. This project reflects Behar’s ongoing commitment to pushing the boundaries of design and enhancing human experience through innovation.</p>
+                      <a style="z-index: 300; position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;" class="list-slideP-expanded" href="/artists/YvesBehar/" aria-label="Continue to this artist's page." target="_self">View Artist's Page</a>
+                    </div>
+                  </article>
+              <a href="/artists/YvesBehar/" class="continue-arrowright-container" aria-label="Continue to this artist's page."><img class="continue-arrowright" src="/images/continuearrowrightVblue.png" height="100%" width="100%" alt=""></a>
+          </div>
+          <img class="list-img-expand-arrowdown" src="/images/expandarrowdown.png" alt="" width="50px">
+          <img class="list-img-expand-arrowup" src="/images/expandarrowup.png" alt="" width="50px">
+         </section>
+              </div>
+            </td>
+        </tr>
