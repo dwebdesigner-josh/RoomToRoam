@@ -698,7 +698,7 @@ z-index:-3;
         .toggle-controls {display: flex; flex-direction: row; border: 1px inset white; border-radius: 5px; padding-top: .26rem; padding-bottom: .26rem; padding-left: .2rem; padding-right: .2rem; width: fit-content; }
             .toggle-controls h3 {font-size: 1rem; color: white;}
             .breaker2{width: .5rem; height: 0; display: block; }
-            .toggle-container{border: 1px inset white; border-radius: 5px; width: .75rem; height: .75rem; align-self: center;}
+            .toggle-container{border: 1px inset white; border-radius: 5px; width: .85rem; height: .75rem; align-self: center;}
             #alpha-toggle{width: .75rem; height: .75rem; accent-color: transparent; position: absolute;}
         
           #columnFilter {border: 1px inset white; border-radius: 5px;}

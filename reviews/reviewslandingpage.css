@@ -72,6 +72,8 @@ body {
   :root {font-size: 40pt;  }
 }
 
+
+
 a {list-style-type: none; 
   text-decoration: none;
   z-index: 1; }
@@ -86,16 +88,6 @@ a:hover{
   color: #e3f5ff3f;
 }
 
-
-table a:link, table a:active, table a:link *, table a:active *{
-  color: #b1e3fd;
-}
-table a:visited, table a:visited *{
-  color: #b1e3fd;
-}
-table a:hover, table a:hover *{
-  color: #86caee3f;
-}
 
 
 /*nav*/
@@ -310,147 +302,6 @@ section {width: 100%; height:fit-content; z-index: 1;}
 main h1, main h2, main h3{color: #e3f5ff; text-shadow: 1px 1px 1px black; align-self: center; padding-right: 5%; padding-left: 5%; }
 #topH1 {font-size: 4rem; margin-bottom: 1rem;}
 main h2 {font-size: 2rem;}
-
-
-/*DATATABLE*/
-
-select option {font-size: 1rem;}
-
-.list-artist-details{z-index: 99; display: flex; flex-direction: column; align-items: center; justify-content: center;}
-
-
-
-
-/*table item styling*/
-
-.list-artist-name-link h2, .list-slideP p {font-weight: 800; text-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 10px black;}
-
-
-.dt-paging-button{height: 1.5em; width: 1rem; font-size: .75rem;}
-
-.list-artist-details{width: 90vw; position: relative; left: -1.8rem;}
-.list-artist-text{height: 4rem;}
-  .list-artist-text h2{font-size: 1rem;}
-  .list-artist-text .list-slideP p{font-size: .8rem;}
-    .list-summary{text-align: center; align-self: center; justify-self: center;}
-    .continue-arrowright-container{height: 80%; width: 1.5rem; border-left: 1px inset white;}
-.list-img-expand-arrowdown, .list-img-expand-arrowup {align-self: center; justify-self: center;}
-.list-img-expand-arrowup {display: none; visibility: hidden;}
-
-.list-span-filler{height: 5rem; width: 100%; display: none; visibility: hidden;}
-/**/
-
-/*list background img*/
-.list-background-container {width: inherit; height: 4rem; z-index: -1; position: absolute; border: 1px solid white; border-radius: 5rem; overflow: hidden;}
-  .list-background-img {position: relative; top: -90px; }
-      @media screen and (max-width: 532px){.list-background-container {height: 4rem;}}
-      @media screen and (max-width: 337px){.list-background-container {height: 5rem;}}
-  
-.list-backgroundedge-container {width: 88vw; margin-left: -3.5vw;  height: 6rem; z-index: -2; position: absolute; border-radius: 5rem; overflow: hidden;}
-/**/
-
-
-      .list-artist-details p{width: 100%; align-self: center; color: #e3f5ff;}
-
-  .list-artist-text{width: 90%; display: flex; flex-direction: row;
-  border-radius: 50px; align-items: center;
-  padding: 1rem;
-  }
-/*background-color: #e3f5ff10;*/
-
-  .list-artist-name-link{z-index: 12; margin-right: 10px; z-index: 100; flex: 1; display: flex; flex-direction: column; text-decoration: none; justify-content: center; align-items: center;}
-    .list-artist-name-link h2{width: fit-content; padding-left: 10px; padding-right: 10px; text-align: center; transition: opacity 1s ease-in-out;} 
-
-  .list-artist-details-article {display: flex; align-items: center; flex-direction: column; flex: 1; margin-right: 10px;  padding-left: 1rem; border-left: 1px inset white;} 
-      .list-artist-details-article p {
-                font-size: 1rem;
-                overflow: hidden;
-                white-space: wrap;
-                text-align: left;
-                transition: opacity 1s ease-in-out;
-                text-align: center;
-              }
-          .list-artist-continue-link{
-            width: 100%;
-            display: block;
-            text-align: center;
-            text-decoration: none;
-            background-color: transparent;
-            color: #e3f5ff;
-            padding-top: 4rem;
-            margin-top: -4rem;
-            z-index: 40;
-            
-          }   
-          .list-artist-continue-link img{height: 1rem; width: 1.5rem;}
-            .list-artist-continue-link:hover{
-              color: #e3f5ff3f;
-            }     
-           
-
-            
-            .list-artist-socials{display: flex; flex-direction: row; justify-content: space-evenly; width: 100%; padding: 0; margin:0;}
-              .list-artist-socials-item{list-style-type: none;}
-                .list-artist-socials-item img {height: 1rem;}
-
-
-
-/*SECTION - artists table*/
-#reviews{
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-    }
-        /*controls for sorting*/
-      
-        #custom-controls-container {display: flex; flex-direction: row; width: 100%; justify-content: end;}
-          @media screen and (max-width: 768px){
-            #custom-controls-container{flex-direction: column;}
-            #columnFilter{margin-bottom: .3rem;}
-          }
-
-        .toggle-controls {display: flex; flex-direction: row; border: 1px inset white; border-radius: 5px; padding-top: .26rem; padding-bottom: .26rem; padding-left: .2rem; padding-right: .2rem; width: fit-content; }
-            .toggle-controls h3 {font-size: 1rem; color: white;}
-            .breaker2{width: .5rem; height: 0; display: block; }
-            .toggle-container{border: 1px inset white; border-radius: 5px; width: .85rem; height: .75rem; align-self: center;}
-            #alpha-toggle{width: .75rem; height: .75rem; accent-color: transparent; position: absolute;}
-        
-          #columnFilter {border: 1px inset white; border-radius: 5px;}
-          
-          #reviews select{background-color: transparent; height: 1.5lh; align-self: start;}
-          @media screen and (max-width: 768px){#reviews select, #reviews .toggle-controls{align-self: center;}}
-          
-          #id-override-dt-column-order {width: 3rem;}
-            #id-override-dt-column-order::before{content: "A-Z" / "";}
-            #id-override-dt-column-order::after{content: "Z-A" / "";}
-            @media screen and (min-width: 0px) {#id-override-dt-column-order::before{position: relative; top: 80px;}}  
-            @media screen and (min-width: 500px) {#id-override-dt-column-order::before{position: relative; top: 70px;}}  
-            @media screen and (min-width: 1900px) {#id-override-dt-column-order::before{position: relative; top: 55px;}}
-
-    
-
-
-    #reviews table, #reviews label, #reviews select{color: white;}
-    #reviews label{font-size: 0;}
-    .dt-search{display: flex; align-items: start;}
-    #dt-search-0{width: 100%; color: white; height: 2rem; font-size: 1.25rem;}
-        @media screen and (max-width: 500px){#dt-search-0{font-size: 1rem;}}
-      #reviews select option{color: black; font-weight: 300; font-size: 1rem;}
-        #reviews select {font-size: 1rem;}
-      
-      thead {border-bottom: 2px inset white;}
-      tfoot {border-top: 2px inset white;}
-      .dt-layout-table{border-bottom: 1px inset white;}
-      .dt-start, .dt-end{color: #e3f5ff;}
-
-      tr {height: 200px;}
-        .th-hidden, .td-review-date, .td-work, .td-artist{font-size: 0; visibility: hidden; display: none;}
-        .td-details{position: relative; width: 77vw;}
-        
-
-   
-
-
 
 
 

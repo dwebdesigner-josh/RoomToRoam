@@ -16,20 +16,6 @@ $(document).ready(function() {
     AtoZ.setAttribute("id","id-override-dt-column-order");
 
 
-    // Event delegation for expandable rows
-    $('#mytable tbody').on('click', '[id^="td-expand-"]', function() {
-        var tdExpand = $(this);
-        var expanded = tdExpand.attr('aria-expanded') === 'true';
-        tdExpand.attr('aria-expanded', !expanded);
-    });
-
-    $('#mytable tbody').on('keydown', '[id^="td-expand-"]', function(event) {
-        if (event.key === 'Enter' || event.keyCode === 13) {
-            var tdExpand = $(this);
-            var expanded = tdExpand.attr('aria-expanded') === 'true';
-            tdExpand.attr('aria-expanded', !expanded);
-        }
-    });
 
     // Handle filtering by column using dropdown menu
     var uniqueValues = [];
@@ -64,62 +50,10 @@ $(document).ready(function() {
     table.order([3, 'asc']).draw();
 });
 
-// FEATURED ARTIST ARROW BUTTON IMAGE CHANGE
+
 (() => {
-const button = document.querySelector('.artist-continue-link');
-const artistDetails = document.querySelector('.artist-details');
-const expandArrow = document.querySelector('.img-expand-arrow');
-let expanded = false;
 
-function expand() {
-    if (!expanded) {
-        expanded = true;
-        artistDetails.setAttribute("aria-expanded", "true");
-        expandArrow.setAttribute("src", "/images/expandarrowup.png");
-    } else {
-        expanded = false;
-        artistDetails.setAttribute("aria-expanded", "false");
-        expandArrow.setAttribute("src", "/images/expandarrowdown.png");
-    }
-}
-
-
-button.addEventListener('click', expand);
-button.addEventListener('keydown', function(event) {
-    // Check if the key pressed is Enter (key code 13)
-    if (event.key === 'Enter' || event.keyCode === 13) {
-        expand();
-    }
-});
-
-
-
-//window.addEventListener('scroll', function() {
-    //var scrollPosition = window.scrollY;
-    
-    //var imageWrappers = document.querySelectorAll('.list-background-img');
-    //var scrollOffset = imageWrappers.getBoundingClientRect();
-
-    //imageWrappers.forEach(function(imageWrapper) {
-        // Calculate the amount of transform based on scroll position
-    //    var translateY = scrollPosition / 12 - scrollOffset; // Adjust this value for desired effect
-
-        // Apply different limits to translateY based on viewport width
-//        if (window.matchMedia("(max-width: 500px)").matches) {
-  //          translateY = Math.min(translateY, 190); // Limit translateY to 190 when viewport width is less than 500px
-    //    }
-      //  if (window.matchMedia("(min-width: 501px) and (max-width: 669px)").matches) {
-        //    translateY = Math.min(translateY, 220); // Limit translateY to 500 when viewport width is between 500px and 669px
-  //      }
-    //    if (window.matchMedia("(min-width: 670px)").matches) {
-      //      translateY = Math.min(translateY, 500); // Limit translateY to 1000 when viewport width is 670px or more
-        //}
-
-        // Apply the transform styles to each .list-background-img element
-    //    imageWrapper.style.top = '-' + translateY + 'px';
-  //  });
-//});
-
+//IMAGE SCROLL ANIMATION
 window.addEventListener('scroll', function() {
    // var scrollPosition = window.scrollY;
     
@@ -143,11 +77,6 @@ window.addEventListener('scroll', function() {
                     var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +500;
                   }
         
-
-        // Calculate the amount of transform based on scroll position and element offset
-    //    var translateY = scrollPosition - scrollOffset; // Adjust this value for desired effect
- 
-        // Apply the transform styles to each .list-background-img element
         imageWrapper.style.top = '-' + scrollOffset + 'px';
     });
 });
