@@ -45,8 +45,6 @@ $(document).ready(function() {
             table.order([0, 'asc']).draw();
         }
     });
-    // Initially sort the table without custom sorting
-    table.order([0, 'asc']).draw();
 });
 
 
