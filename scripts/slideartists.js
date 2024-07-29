@@ -17,14 +17,14 @@
 
     function updateSecondSlider() {
         const worksImages = {
-            1: ['/images/jw2.jpg', '/images/jw3.jpg', '/images/jw4.jpg'],
-            2: ['/images/technicolors/technicolors-metaphysical.jpg', '/images/technicolors/technicolors-cinemasublimina.jpg', '/images/technicolors/technicolors-ultravioletdisguise.jpg'],
-            3: ['/images/novaliz1.jpg', '/images/novaliz3.jpg', '/images/novaliz2.jpg']
+            1: ['/RoomToRoam/images/jw2.jpg', '/RoomToRoam/images/jw3.jpg', '/RoomToRoam/images/jw4.jpg'],
+            2: ['/RoomToRoam/images/technicolors/technicolors-metaphysical.jpg', '/RoomToRoam/images/technicolors/technicolors-cinemasublimina.jpg', '/RoomToRoam/images/technicolors/technicolors-ultravioletdisguise.jpg'],
+            3: ['/RoomToRoam/images/novaliz1.jpg', '/RoomToRoam/images/novaliz3.jpg', '/RoomToRoam/images/novaliz2.jpg']
         };
         const worksLinks = {
-            1: ['/images/JW', '/images/JW', '/images/JW'],
-            2: ['/images/Technicolors', '/images/Technicolors', '/images/Technicolors'],
-            3: ['/images/NovaLizPhoto', '/images/NovaLizPhoto', '/images/NovaLizPhoto']
+            1: ['/RoomToRoam/images/JW', '/RoomToRoam/images/JW', '/RoomToRoam/images/JW'],
+            2: ['/RoomToRoam/images/Technicolors', '/RoomToRoam/images/Technicolors', '/RoomToRoam/images/Technicolors'],
+            3: ['/RoomToRoam/images/NovaLizPhoto', '/RoomToRoam/images/NovaLizPhoto', '/RoomToRoam/images/NovaLizPhoto']
         };
 
         const currentArtistWorks = worksImages[slideCount2];
