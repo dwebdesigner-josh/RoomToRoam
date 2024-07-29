@@ -54,14 +54,14 @@ $(document).ready(function() {
     // Toggle custom sorting on and off - recently featured button
     $('#alpha-toggle').on('change', function() {
         if (this.checked) {
-            table.order([3, 'natural']).draw();
+            table.order([2, 'desc']).draw();
         } else {
-            table.order([3, 'asc']).draw();
+            table.order([0, 'asc']).draw();
         }
     });
 
     // Initially sort the table without custom sorting
-    table.order([3, 'asc']).draw();
+    
 });
 
 // FEATURED ARTIST ARROW BUTTON IMAGE CHANGE

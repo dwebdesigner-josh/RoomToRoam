@@ -334,8 +334,7 @@ select option {font-size: 1rem;}
   .list-artist-text .list-slideP p{font-size: .8rem;}
     .list-summary{text-align: center; align-self: center; justify-self: center;}
     .continue-arrowright-container{height: 80%; width: 1.5rem; border-left: 1px inset white;}
-.list-img-expand-arrowdown, .list-img-expand-arrowup {align-self: center; justify-self: center;}
-.list-img-expand-arrowup {display: none; visibility: hidden;}
+
 
 .list-span-filler{height: 5rem; width: 100%; display: none; visibility: hidden;}
 /**/
