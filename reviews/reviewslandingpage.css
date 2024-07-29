@@ -305,6 +305,66 @@ main h2 {font-size: 2rem;}
 
 
 
+/*LINKS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*section - swirl animated buttons*/
+
+#swirl-container{display:flex; width: 100%; z-index: 1;}
+.swirl{ flex:1; max-width: 33%; z-index: 1; opacity: .8; position: relative;} /*possibly remove opacity style*/
+.swirl-image{width: 100%; position: relative; top: 6%; z-index: 1;}
+.swirl-link{
+  display: block; width: 100%; height: 100%; 
+  justify-content: center; align-items: center; display: flex; 
+  position: relative; top: -94%; 
+  text-decoration: none;
+  z-index: 5;
+  }
+  /*
+  background-image: url("/images/swirltext.png");
+  background-size: cover;
+  background-color: transparent;*/
+
+  .swirl-text{font-weight: 700; font-size: 2rem; box-sizing: border-box; z-index: 10;position: absolute; text-align: center;}
+    @media screen and (min-width:850px){.swirl-text{font-size: 1rem;}}
+    @media screen and (min-width:1600px){.swirl-text{font-size: 1.5rem;}}
+    
+    .swirl-link:link, .swirl-link:active{
+      color: #fffdef;
+      /*color: #fffdef; more yellow like the belt of the black hole
+      or e3f5ff to match the rest of the site*/
+    }
+    .swirl-link:visited{
+      color: #fffdef;
+    }
+    .swirl-link:hover, .swirl-link:focus{
+      color: #a54a59; 
+    }
+
+@media screen and (max-width: 850px){
+
+  #swirl-container{
+    width: 100%;
+    display: grid;
+grid-template-columns: repeat(4, 1fr); /* Define four equal-width columns */
+grid-template-rows: auto auto; 
+grid-template-areas: 
+    ". swirl1 swirl1 ."
+    ". swirl2 swirl2 ."
+    ". swirl3 swirl3 .";
+  }
+  .swirl-text {font-weight: 600; font-size: 1.3rem;}
+  .swirl {max-width: 50vw; width: 50vw;}
+    #swirl1{ grid-area: swirl1;}
+    #swirl2{ grid-area: swirl2;}
+    #swirl3{ grid-area: swirl3;}
+  #swirl-link1{grid-area: swirl1; }
+  #swirl-link2{grid-area: swirl2; }
+  #swirl-link3{grid-area: swirl3; }
+
+}
+
+
+
 
 
 

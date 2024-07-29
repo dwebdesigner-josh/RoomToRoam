@@ -51,32 +51,32 @@ $(document).ready(function() {
 (() => {
 
 //IMAGE SCROLL ANIMATION
-window.addEventListener('scroll', function() {
+//window.addEventListener('scroll', function() {
    // var scrollPosition = window.scrollY;
     
-    var imageWrappers = document.querySelectorAll('.list-background-img');
+  //  var imageWrappers = document.querySelectorAll('.list-background-img');
 
-    imageWrappers.forEach(function(imageWrapper) {
+    //imageWrappers.forEach(function(imageWrapper) {
         // Get the bounding rectangle of the image wrapper relative to the viewport
-        if (window.matchMedia("(max-width: 670px)").matches) {
-                    var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +50;
-                  }
-                  if (window.matchMedia("(min-width: 671px) and (max-width: 1000px)").matches) {
-                    var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +100;
-                  }
-                  if (window.matchMedia("(min-width: 1001px) and (max-width: 1800px)").matches) {
-                    var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +180;
-                  }
-                  if (window.matchMedia("(min-width: 1801px) and (max-width: 2600px)").matches) {
-                    var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +300;
-                  }
-                  if (window.matchMedia("(min-width: 2601px)").matches) {
-                    var scrollOffset = imageWrapper.getBoundingClientRect().top /8 +500;
-                  }
+      //  if (window.matchMedia("(max-width: 670px)").matches) {
+        //            var scrollOffset = imageWrapper.getBoundingClientRect().bottom /8 +5;
+          //        }
+            //      if (window.matchMedia("(min-width: 671px) and (max-width: 1000px)").matches) {
+              //      var scrollOffset = imageWrapper.getBoundingClientRect().bottom /8 +10;
+                //  }
+//                  if (window.matchMedia("(min-width: 1001px) and (max-width: 1800px)").matches) {
+  //                  var scrollOffset = imageWrapper.getBoundingClientRect().bottom /8 +18;
+    //              }
+      //            if (window.matchMedia("(min-width: 1801px) and (max-width: 2600px)").matches) {
+        //            var scrollOffset = imageWrapper.getBoundingClientRect().bottom /8 +30;
+          //        }
+            //      if (window.matchMedia("(min-width: 2601px)").matches) {
+              //      var scrollOffset = imageWrapper.getBoundingClientRect().bottom /8 +50;
+                //  }
         
-        imageWrapper.style.top = '-' + scrollOffset + 'px';
-    });
-});
+//        imageWrapper.style.top = '-' + scrollOffset + 'px';
+  //  });
+//});
 
 
   

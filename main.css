@@ -71,6 +71,29 @@ body {
 @media screen and (min-width: 3800px){
   :root {font-size: 40pt;  }
 }
+
+/*
+a:link, a:active{
+  color: #e3f5ff9d;
+}
+
+a:visited{
+  color: #e3f5ff9d;
+}
+
+a:hover{
+  color: #e3f5ff3f;
+}*/
+
+a:link, a:active{
+  color: #e3f5ff;
+}
+a:visited{
+  color: #e3f5ff;
+}
+a:hover{
+  color: #e3f5ff3f;
+}
  /* 
 @media screen and (min-width: 850px){
   body {font-size: 20pt;}
@@ -118,15 +141,7 @@ nav {
           font-weight: 500;
           text-decoration: none;
         }
-          .topnav-link:link, .topnav-link:active{
-            color: #e3f5ff9d;
-          }
-          .topnav-link:visited{
-            color: #e3f5ff9d;
-          }
-          .topnav-link:hover{/*TODO-style hover - possible animation*/
-            color: #e3f5ff3f;
-          }
+         
    /*nav-mobile*/
   /*CONSIDER CHANGING THIS MEDIA QUERY METHOD - see https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile*/
   @media screen and (max-width: 850px) and (prefers-reduced-motion){
@@ -554,7 +569,6 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
       }
         
-/*spaceship*/
 
 /*section - reviews*/
         #reviews{
@@ -603,7 +617,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
                   white-space: wrap;
                   text-align: left;
                   text-shadow: 1px 1px 1px black; /*possibly remove but it seems it may increase readability although the background is already close to black*/
-                  
+                  font-size: .75rem;
                 }
                             article a{
                               border-bottom: 1px solid #e3f5ff;
@@ -620,14 +634,15 @@ section {width: 100%; height:fit-content; z-index: 1;}
                             article a:link, article a:active{
                               color: #e3f5ff9d;
                             }
-
+                            
                             article a:visited{
                               color: #e3f5ff9d;
                             }
-
+                            
                             article a:hover{
                               color: #e3f5ff3f;
                             }
+                            
 
 
 /*footer*/
@@ -685,15 +700,15 @@ footer{z-index: 1; display: flex; justify-content: center; align-items: center; 
             text-decoration: none;
             }
             footer img {height: 1rem;}
-            .footer-link:link, .footer:active{
+          /*  .footer-link:link, .footer:active{
               color: #e3f5ff9d;
             }
             .footer-link:visited{
               color: #e3f5ff9d;
             }
-            .footer-link:hover{/*TODO-style hover - possible animation*/
+            .footer-link:hover{
               color: #e3f5ff3f;
-            }
+            }*/
                             
 /*-----------------------BOTTOM------------------------------------------*/
 

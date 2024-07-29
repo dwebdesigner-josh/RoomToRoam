@@ -76,13 +76,13 @@ a {list-style-type: none;
   text-decoration: none;
   z-index: 1; }
 
-a:link, a:active{
+a:link, a:active, a:link *, a:active *{
   color: #e3f5ff;
 }
-a:visited{
+a:visited, a:visited *{
   color: #e3f5ff;
 }
-a:hover{
+a:hover, a:hover *{
   color: #e3f5ff3f;
 }
 
@@ -344,7 +344,7 @@ main h2 {font-size: 2rem;}
           #id-override-dt-column-order {width: 3rem;}
             #id-override-dt-column-order::before{content: "A-Z" / "";}
             #id-override-dt-column-order::after{content: "Z-A" / "";}
-            @media screen and (min-width: 0px) {#id-override-dt-column-order::before{position: relative; top: 80px;}}  
+            @media screen and (min-width: 0px) {#id-override-dt-column-order::before{position: relative; top: 50px;}}  
             @media screen and (min-width: 500px) {#id-override-dt-column-order::before{position: relative; top: 70px;}}  
             @media screen and (min-width: 1900px) {#id-override-dt-column-order::before{position: relative; top: 55px;}}
 
@@ -361,9 +361,19 @@ main h2 {font-size: 2rem;}
       .dt-layout-table{border-bottom: 1px inset white;}
       .dt-start, .dt-end{color: #e3f5ff;}
 
-      tr {height: 200px;}
+      tr {height: 10rem;}
+        .th-sortlabel {position: relative; bottom: 2rem;}
+        .th-sortlabel .dt-column-title{position: relative; bottom: 1rem;}
+            @media screen and (min-width: 1391px){
+              .th-sortlabel {position: relative; bottom: 1rem;}
+              .th-sortlabel .dt-column-title{position: relative; bottom: 2rem;}
+            }
+            @media screen and (min-width: 2000px){
+              .th-sortlabel {position: relative; bottom: .5rem;}
+              .th-sortlabel .dt-column-title{position: relative; bottom: 2rem;}
+            }
         .th-hidden, .td-review-date, .td-work, .td-artist{font-size: 0; visibility: hidden; display: none;}
-        .td-details{position: relative; width: 77vw;}
+        .td-details{position: relative; width: 77vw; height: 18rem;}
         
 
 
@@ -421,12 +431,11 @@ main h2 {font-size: 2rem;}
 
 
 /*list background img*/
-.list-background-container {width: inherit; height: 4rem; z-index: -1; position: absolute; border: 1px solid white; border-radius: 5rem; overflow: hidden;}
-  .list-background-img {position: relative; top: -90px; }
-      @media screen and (max-width: 532px){.list-background-container {height: 4rem;}}
-      @media screen and (max-width: 337px){.list-background-container {height: 5rem;}}
+.list-background-container {width: 14rem; height: 14rem; z-index: -1; position: absolute; border: 1px solid white; border-radius: 1rem; overflow: hidden;}
+    .list-background-img {position: relative; bottom: 0px; }
+      
   
-.list-backgroundedge-container {width: 88vw; margin-left: -3.5vw;  height: 6rem; z-index: -2; position: absolute; border-radius: 5rem; overflow: hidden;}
+.list-backgroundedge-container {width: 16rem; margin-left: -1rem;  height: 16rem; z-index: -2; position: absolute; border-radius: 1rem; overflow: hidden;}
 /**/
 
 
