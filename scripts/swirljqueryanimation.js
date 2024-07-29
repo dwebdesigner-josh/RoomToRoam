@@ -41,9 +41,7 @@ function step(startTime) {
   requestAnimationFrame(step);
 }
 
-// create a set of hidden divs
-// and set their background-image attribute to required images
-// that will force browser to download the images
+// create a set of hidden divs - and set their background-image attribute to required images - that will force browser to download the images
 //CHANGE path/image name to match, IF MULTIPLE JQUERY ANIMATIONS CHANGE DIV ID FORMAT TO BE UNIQUE TO EACH - unless using the same img base for each animation, in which case REMOVE this from all but one script
 $(document).ready(() => {
   for (var i = 1; i < totalFrames + 1; i++) {
