@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/RoomToRoam/images/starV1frame1.png");
+  background-image: url("/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -255,7 +255,7 @@ header {
       .loadscreen {
           width: 100%;
           height: 100%;
-          background-image: url("/RoomToRoam/images/starV1frame1.png");
+          background-image: url("/images/starV1frame1.png");
           background-repeat: repeat;
           position: absolute;
           top: 0;
@@ -308,8 +308,15 @@ section {width: 100%; height:fit-content; z-index: 1;}
 #filler{height: 1000px}
 
 main h1, main h2, main h3{color: #e3f5ff; text-shadow: 1px 1px 1px black; align-self: center; padding-right: 5%; padding-left: 5%; }
-#topH1 {font-size: 4rem; margin-bottom: 1rem;}
+
 main h2 {font-size: 2rem;}
+
+.anchor-h2container{width: 100vw; display: flex; justify-content: start; position: relative; left: -10vw; margin-top: 1rem; margin-bottom: -2.5rem;}
+.anchor-h2container:hover *{ color: #e3f5ff;}
+#reviews h2 {margin-top: 1rem; margin-bottom: 1.2rem;}
+@media screen and (max-width: 422px) {
+  #reviews h2 {margin-top: 1.2rem;}
+}
 
 
 /*DATATABLE OVERALL*/
@@ -321,14 +328,26 @@ main h2 {font-size: 2rem;}
   width: 80%;
   display: flex;
   flex-direction: column;
-    }
+    } 
         /*controls for sorting*/
       
-        #custom-controls-container {display: flex; flex-direction: row; width: 100%; justify-content: end;}
-          @media screen and (max-width: 768px){
-            #custom-controls-container{flex-direction: column;}
-            #columnFilter{margin-bottom: .3rem;}
-          }
+        .dt-layout-row .dt-length {display: flex; justify-content: start;}
+
+        #custom-controls-container {
+          display: flex; flex-direction: row; width: 100%; justify-content: end; 
+        }
+
+        @media screen and (max-width: 768px){
+          #custom-controls-container{position: relative; bottom: -2.2rem;}
+          .anchor-h2container{margin-bottom: -1.8rem;}
+          #reviews h2 {margin-bottom: -1rem;}
+          } 
+          /*#columnFilter{margin-bottom: .3rem;}*/
+          @media screen and (max-width: 640px){
+            #custom-controls-container{position: relative; bottom: -2.8rem;}
+            #reviews h2 {margin-bottom: -1.8rem;}
+            } 
+
 
         .toggle-controls {display: flex; flex-direction: row; border: 1px inset white; border-radius: 5px; padding-top: .26rem; padding-bottom: .26rem; padding-left: .2rem; padding-right: .2rem; width: fit-content; }
             .toggle-controls h3 {font-size: 1rem; color: white;}
@@ -350,7 +369,7 @@ main h2 {font-size: 2rem;}
 
     #reviews table, #reviews label, #reviews select{color: white;}
     #reviews label{font-size: 0;}
-    .dt-search{display: flex; align-items: start;}
+    .dt-search{display: flex; align-items: start; z-index: 10; position: relative;}
     #dt-search-0{width: 100%; color: white; height: 2rem; font-size: 1.25rem;}
         @media screen and (max-width: 500px){#dt-search-0{font-size: 1rem;}}
       #reviews select option{color: black; font-weight: 300; font-size: 1rem;}
@@ -361,8 +380,8 @@ main h2 {font-size: 2rem;}
       .dt-layout-table{border-bottom: 1px inset white;}
       .dt-start, .dt-end{color: #e3f5ff;}
 
-      tr {height: 10rem;}
-        .th-sortlabel {position: relative; bottom: 2rem;}
+      tr {height: 10rem; padding-top: -10rem;}
+        .th-sortlabel {position: relative; bottom: 2rem; z-index: 1;}
         .th-sortlabel .dt-column-title{position: relative; bottom: 1rem;}
             @media screen and (min-width: 1391px){
               .th-sortlabel {position: relative; bottom: 1rem;}
