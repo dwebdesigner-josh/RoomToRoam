@@ -512,6 +512,74 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
         }
 */
+
+
+
+/*highlight reel 1 banner*/
+.slide-anchor{z-index: 0;}
+.iframe-container{z-index: 1;}
+
+.banner-container{z-index: 2; position: absolute; width: 100%; height: 1.5rem;  overflow: hidden;}
+.banner-slide{width: 100%; height: 1.5rem; overflow: hidden; text-wrap: nowrap; background-color:#12171d9d;}
+
+.slide-anchor:hover .banner-text{color: #12171d9d;}
+.slide-anchor:hover .banner-slide{ background-color: #b1e2fd8e; height: 1.5rem;}
+@media screen and (min-width: 851px){
+.banner-text {
+  font-weight: 500;
+  position: relative; left: -10px; font-size: 1.3rem;  color: #b1e2fd8e;
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+}
+@media screen and (max-width: 850px){
+  .banner-text {
+    font-weight: 500;
+    position: relative; left: -10px; font-size: 1.3rem;  color: #b1e2fd8e;
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: my-animation 10s linear infinite;
+    -webkit-animation: my-animation 10s linear infinite;
+    animation: my-animation 10s linear infinite;
+  }
+  }
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-180%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-180%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-180%);
+    -webkit-transform: translateX(-180%);
+    transform: translateX(-180%);
+  }
+}
+@media screen and (prefers-reduced-motion){.banner-text{-moz-transform: none;  -webkit-transform: none;  transform: none;  -moz-animation: none; -webkit-animation: none; animation: none;}}
+
+
 /*section - swirl animated buttons*/
 
         #swirl-container{display:flex; width: 100%; z-index: 1;}
@@ -586,7 +654,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
           padding-top: 8px;
           border-top: 1px inset #e3f5ff;
           text-decoration: none;
-        }
+        } 
 
                 article {
                   display: flex;
