@@ -522,8 +522,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
 .banner-container{z-index: 2; position: absolute; width: 100%; height: 1.5rem;  overflow: hidden;}
 .banner-slide{width: 100%; height: 1.5rem; overflow: hidden; text-wrap: nowrap; background-color:#12171d9d;}
 
-.slide-anchor:hover .banner-text{color: #12171d9d;}
-.slide-anchor:hover .banner-slide{ background-color: #b1e2fd8e; height: 1.5rem;}
+
 @media screen and (min-width: 851px){
 .banner-text {
   font-weight: 500;
@@ -556,13 +555,13 @@ section {width: 100%; height:fit-content; z-index: 1;}
 /* for Firefox */
 @-moz-keyframes my-animation {
   from { -moz-transform: translateX(100%); }
-  to { -moz-transform: translateX(-180%); }
+  to { -moz-transform: translateX(-220%); }
 }
 
 /* for Chrome */
 @-webkit-keyframes my-animation {
   from { -webkit-transform: translateX(100%); }
-  to { -webkit-transform: translateX(-180%); }
+  to { -webkit-transform: translateX(-220%); }
 }
 
 @keyframes my-animation {
@@ -572,9 +571,9 @@ section {width: 100%; height:fit-content; z-index: 1;}
     transform: translateX(100%);
   }
   to {
-    -moz-transform: translateX(-180%);
-    -webkit-transform: translateX(-180%);
-    transform: translateX(-180%);
+    -moz-transform: translateX(-220%);
+    -webkit-transform: translateX(-220%);
+    transform: translateX(-220%);
   }
 }
 @media screen and (prefers-reduced-motion){.banner-text{-moz-transform: none;  -webkit-transform: none;  transform: none;  -moz-animation: none; -webkit-animation: none; animation: none;}}
