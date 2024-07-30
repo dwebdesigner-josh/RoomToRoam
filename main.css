@@ -597,14 +597,12 @@ section {width: 100%; height:fit-content; z-index: 1;}
           
           }
 
-          .swirl-text{font-weight: 700; font-size: 2rem; box-sizing: border-box; z-index: 10;position: absolute; text-align: center; border-radius: 50%;background-color: #13181e;/* background-color: #fffafd; border: 3px solid #a54a59*/}
+          .swirl-text{font-weight: 700; font-size: 2rem; box-sizing: border-box; z-index: 10; position: absolute; text-align: center; border-radius: 50%; background-color: #13181e;}
             @media screen and (min-width:850px){.swirl-text{font-size: 1rem;}}
             @media screen and (min-width:1600px){.swirl-text{font-size: 1.5rem;}}
             
             .swirl-link:link, .swirl-link:active{
               color: #fffdef;
-              /*color: #fffdef; more yellow like the belt of the black hole
-              or e3f5ff to match the rest of the site*/
             }
             .swirl-link:visited{
               color: #fffdef;
