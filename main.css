@@ -9,21 +9,20 @@
   
 }
 
-html,body {margin: 0; width: 100%; background-color:#12171d;/*oldcolorwas12161c*/}
+html,body {margin: 0; width: 100%; background-color:#12171d;} /*oldcolorwas12161c*/
 html {height: 100%;}
-
+/*FIX FOUND - this fixed the repeat img only showing for part of the page, as the body was only reaching the viewport's pixel height when body was set to height: 100%; solution was to keep html as that setting, but set body to min-height 100% instead of definitive height to 100%*/
 body {
-  min-height: 100%; /*FIX FOUND - this fixed the repeat img only showing for part of the page, as the body was only reaching the viewport's pixel height when body was set to height: 100%; solution was to keep html as that setting, but set body to min-height 100% instead of definitive height to 100%*/
+  min-height: 100%; 
   display: flex;
   flex-direction: column;
-  overflow-x: hidden; /*prevent horizontal scroll bar*/
-  /*star background*/
+  overflow-x: hidden; 
   background-image: url("/RoomToRoam/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
-  /*TODO - play with these settings and consider animating the background img using method from STARTEST
+ }
+ /*TODO - play with these settings and consider animating the star background img using method from STARTEST
   need to experiment with this more later (scrolling, animation with startest methods, full page coverage-FIX FOUND- min-height:100%; on body instead of height:100%;)*/
-}
 
 @media screen and (max-width: 850px){
   body {
@@ -129,12 +128,13 @@ nav {
       display: flex;
       align-items: center;
       margin: 0;
-      gap: 1rem;              /*gap can be used for flex!!*/
+      gap: 1rem;              
       list-style-type: none;
       background-color: #12171d9d;
       padding: .5rem;
       border-radius: .5rem;
     }  
+    
       .topnav-item{list-style-type: none;}
         .topnav-link{
           z-index: 12; 
@@ -150,9 +150,9 @@ nav {
       opacity: 0;
       transition: opacity 500ms ease-in-out; 
       transition: translate 0s;
-  /*TODO - get this to work fully (test with Windows-start-easeofaccessdisplaysettings-showanimationsinwindows-off), and apply it to the jquery animations as well once working- currently only removes the close translation transition, but the open one still animates the same, and the opacity transition is nonexistent*/
     }
   }
+   /*TODO - get this to work fully (test with Windows-start-easeofaccessdisplaysettings-showanimationsinwindows-off), and apply it to the jquery animations as well once working- currently only removes the close translation transition, but the open one still animates the same, and the opacity transition is nonexistent*/
 @media screen and (max-width: 850px){
     
   nav{z-index: 30; width: 40px; height: 40px; margin:0; padding: 0; top: 3px; right: 3px;}
@@ -181,7 +181,7 @@ nav {
     right: 0;
   }
   #topnav-menu{
-    width: 10rem; height: 14rem; margin: 0; position: fixed; top: 3px; right: 3px; /*fix: added measurements here instead of on nav element - this way the nav doesn't stay while only its content is translated*/
+    width: 10rem; height: 14rem; margin: 0; position: fixed; top: 3px; right: 3px; 
     z-index: 31;
     translate: 300vw 0;
     transition: translate 0.3s ease-in-out; 
@@ -198,7 +198,7 @@ nav {
       font-size: large;
       align-items:flex-start; 
     }
-          /*make topnav buttons clickable for full hamburger menu width*/
+          
           .topnav-link{width: 100%; display: inline-block;}
           .topnav-item{width: 100%; display: inline-block;}
   }
@@ -229,15 +229,15 @@ header {
 width: 95%; 
 display: grid;
 grid-template: 100%/100%;
-height: 100svh;   /*fix for full screen logo at start*/
-}
+height: 100svh;   
+} /*fix for full screen logo at start*/
 @media screen and (max-width: 850px){
   header{min-height: 500px;}
 }
 
 @media screen and (min-width: 850px){
   header{height: 50vw;}
-}/*fix for overlap happening with only 500px min height on small desktop windows, also fix extra space on tablets with height 50vw instead of minheight 50vw*/
+} /*fix for overlap happening with only 500px min height on small desktop windows, also fix extra space on tablets with height 50vw instead of minheight 50vw*/
 
     header>.logo {width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
     header>div {display: flex;justify-content: center; aspect-ratio: 1350/638;} /*aspect ratio set to match roots img so they stay the same size overlayed on eachother when the viewport changes*/
@@ -254,7 +254,7 @@ height: 100svh;   /*fix for full screen logo at start*/
             h1{position: relative; height: 1lh; top: 35%; left:3%; font-size: 9vw; color:#e3f5ff; z-index: 3;}
 
             @media screen and (max-width: 850px){
-              header>.logo {height: 500px; margin-top: 20svh;}/*margin-top: 50px;*/
+              header>.logo {height: 500px; margin-top: 20svh;} /*margin-top: 50px;*/
               #roots { display: none; visibility: hidden;}
               h1{top: 200px; font-size:53px;}
             }
@@ -287,8 +287,8 @@ main {
   overflow-y: hidden;
   position: absolute;
   top: 0;
-  /*z-index issues with this may arise, with it overlaying elements after animation ends, but for now it should be fine.. if issues arise, either make sure z-index is only defined on loadscreen not container, or add a second animation for the load container that just removes it from the page after x seconds (same time as load screen animation)*/
 }
+ /*z-index issues with this may arise, with it overlaying elements after animation ends, but for now it should be fine.. if issues arise, either make sure z-index is only defined on loadscreen not container, or add a second animation for the load container that just removes it from the page after x seconds (same time as load screen animation)*/
 
   /*MOBILE*/
   @media screen and (max-width: 850px){
@@ -302,13 +302,12 @@ main {
 .loadscreen {
   width: 100%;
   height: 100%;
-/*  background-color: red;*/
 background-image: url("/RoomToRoam/images/starV1frame1.png");
 background-repeat: repeat;
 
   position: absolute;
   top: 0;
-  /*top: 75svh;*/
+  
   transform: translateY(0);
   z-index: 20;
   display: flex;
@@ -366,10 +365,10 @@ section {width: 100%; height:fit-content; z-index: 1;}
   display: flex;
   align-items: center;
   justify-content: center;
+}
 /* z-index: 3; */
  /*aspect-ratio: 1350/390;*/
 /*height with the above measurement was about 30vw*/
-}
   @media screen and (min-width: 1px){#roots-missionstatement{background-image: url("/RoomToRoam/images/missionbackV2small.png");}}
   @media screen and (min-width: 850px){#roots-missionstatement{background-image: url("/RoomToRoam/images/missionbackV2medium.png");}}   
   @media screen and (min-width: 1650px){#roots-missionstatement{background-image: url("/RoomToRoam/images/missionbackV2large.png");}}
@@ -382,7 +381,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
   width: 85%;
   height: 85%;
   line-height: inherit;
-  text-align: center; /*maybe change to justify*/
+  text-align: center; 
 }
   @media screen and (min-width: 700px){#roots-missionstatement p{padding-top: 1.5lh;}}
   @media screen and (min-width: 3000px){#roots-missionstatement p{padding-top: .5lh;}}
@@ -426,12 +425,13 @@ section {width: 100%; height:fit-content; z-index: 1;}
           margin-bottom: 60px;
           width: 100%;
           aspect-ratio: 1350/690;
+          z-index: 3;
+        }
           /*aspect-ratio: 1350/1410;*/ /*aspect ratio matches background images*/
         /*  margin-top: -8%;
           margin-bottom: -13%;*/
-          z-index: 3;
-        }
-        
+
+
         #roots-highlight{
           margin: 0; z-index: 4;
           width: 100%;
@@ -450,11 +450,11 @@ section {width: 100%; height:fit-content; z-index: 1;}
   flex-direction: row;
   justify-content: space-between;
   align-items: center;  
-    /*height: 233px;*/
     aspect-ratio:1350/690;
     display: flex;
     width: 100%;
   }
+  /*height: 233px;*/
 
     .slider>button{
       height: 100%;
@@ -464,14 +464,17 @@ section {width: 100%; height:fit-content; z-index: 1;}
       color: white;
       background-color: transparent;
     }
-        #slide-left {/*padding-right: 5%;*/
+        #slide-left {
           background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
           background-size: cover;
         }
-        #slide-right {/*padding-left: 5%;*/
+        /*padding-right: 5%;*/
+
+        #slide-right {
           background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
           background-size: cover;
         }
+        /*padding-left: 5%;*/
 
     #slides-container{
       z-index: 0;
@@ -485,19 +488,20 @@ section {width: 100%; height:fit-content; z-index: 1;}
           
           border: none;
           position: absolute;
-          aspect-ratio: 16/9; /*SLIDE IMAGE THUMBNAIL SIZE HERE*/
-          /*width: 33%;*/
+          aspect-ratio: 16/9;
           width: 50%;
           transition: left 500ms ease-in-out, transform 500ms ease-in-out;
         }
+         /*SLIDE IMAGE THUMBNAIL SIZE ^*/
+          /*width: 33%;*/
 
         .slider img, .slider iframe{
-          /*opacity: .95;*/
           width: 100%;
           height: 100%;
           border: none;
           box-shadow: 0px 0px 2px 2px black;
         }
+        /*opacity: .95;*/
         
 /* TODO: decide whether to add this feature
         .slide-artistlink {
@@ -523,11 +527,12 @@ section {width: 100%; height:fit-content; z-index: 1;}
 .banner-slide{width: 100%; height: 1.5rem; overflow: hidden; text-wrap: nowrap; background-color:#12171d9d;}
 
 
+/* animation properties */
 @media screen and (min-width: 851px){
 .banner-text {
   font-weight: 500;
   position: relative; left: -10px; font-size: 1.3rem;  color: #b1e2fd8e;
-  /* animation properties */
+  
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
@@ -537,11 +542,12 @@ section {width: 100%; height:fit-content; z-index: 1;}
   animation: my-animation 15s linear infinite;
 }
 }
+   /* animation properties */
 @media screen and (max-width: 850px){
   .banner-text {
     font-weight: 500;
     position: relative; left: -10px; font-size: 1.3rem;  color: #b1e2fd8e;
-    /* animation properties */
+ 
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
@@ -616,7 +622,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
           #swirl-container{
             width: 100%;
             display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Define four equal-width columns */
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto auto; 
         grid-template-areas: 
             ". swirl1 swirl1 ."
@@ -677,12 +683,13 @@ section {width: 100%; height:fit-content; z-index: 1;}
                 
                 }
 
+                /*set to 69 instead of original 70 to keep last line cutoff happening consistently across vw's (not a special value this one just happened to work for that*/
                 article p{
-                  height: 70%; /*set to 69 instead of original 70 to keep last line cutoff happening consistently across vw's (not a special value this one just happened to work for that*/
+                  height: 70%; 
                   overflow: hidden;
                   white-space: wrap;
                   text-align: left;
-                  text-shadow: 1px 1px 1px black; /*possibly remove but it seems it may increase readability although the background is already close to black*/
+                  text-shadow: 1px 1px 1px black; 
                   font-size: .75rem;
                 }
                             article a{
@@ -728,7 +735,8 @@ footer{z-index: 1; display: flex; justify-content: center; align-items: center; 
     }
         @media screen and (max-width: 850px){
         footer{display: grid; 
-            grid-template-columns: repeat(1, 100%);     grid-template-rows: auto auto; 
+            grid-template-columns: repeat(1, 100%);     
+            grid-template-rows: auto auto; 
             grid-template-areas: 
                 "internals"
                 "socials";    
@@ -766,6 +774,7 @@ footer{z-index: 1; display: flex; justify-content: center; align-items: center; 
             text-decoration: none;
             }
             footer img {height: 1rem;}
+             
           /*  .footer-link:link, .footer:active{
               color: #e3f5ff9d;
             }
