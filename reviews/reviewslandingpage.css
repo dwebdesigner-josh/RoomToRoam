@@ -299,64 +299,80 @@ section {width: 100%; height:fit-content; z-index: 1;}
 .span-filler{height: 3rem; width: 100%;}
 #filler{height: 1000px}
 
-main h1, main h2, main h3{color: #e3f5ff; text-shadow: 1px 1px 1px black; align-self: center; padding-right: 5%; padding-left: 5%; }
-#topH1 {font-size: 4rem; margin-bottom: 1rem;}
+main h1, main h2, main h3, main p {color: #e3f5ff; text-shadow: 1px 1px 1px black; align-self: center; padding-right: 5%; padding-left: 5%; }
+#topH1 {font-size: 3.5rem; margin-bottom: 1rem;}
 main h2 {font-size: 2rem;}
 
 
 
-/*LINKS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*PLANETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-/*section - swirl animated buttons*/
+.container-container{
+  display: flex;
+  margin-left: 2vw;
+  width: 96vw;
+  height: fit-content;
+  margin-top: 1rem;
+  
+}
 
-#swirl-container{display:flex; width: 100%; z-index: 1;flex-direction: column;}
-.swirl{ flex:1; max-width: 33%; z-index: 1; opacity: .8; position: relative;} /*possibly remove opacity style*/
-.swirl-image{width: 100%; position: relative; top: 6%; z-index: 1;}
-.swirl-link{
-  display: block; width: 100%; height: 100%; 
-  justify-content: center; align-items: center; display: flex; 
-  position: relative; top: -94%; 
-  text-decoration: none;
-  z-index: 5;
-  }
-  /*
-  background-image: url("/images/swirltext.png");
-  background-size: cover;
-  background-color: transparent;*/
-
-  .swirl-text{font-weight: 700; font-size: 2rem; box-sizing: border-box; z-index: 10;text-align: center;}
-    @media screen and (min-width:850px){.swirl-text{font-size: 1rem;}}
-    @media screen and (min-width:1600px){.swirl-text{font-size: 1.5rem;}}
+.container-text{
+    display: flex;
+    text-align: right;
+    align-items: center;
     
-    .swirl-link:link, .swirl-link:active{
-      color: #fffdef;
-      /*color: #fffdef; more yellow like the belt of the black hole
-      or e3f5ff to match the rest of the site*/
-    }
-    .swirl-link:visited{
-      color: #fffdef;
-    }
-    .swirl-link:hover, .swirl-link:focus{
-      color: #a54a59; 
-    }
+  }
+    #container-text-middle{text-align: left;}
+      .text-p {font-size: .75rem;}
+      .text-h3 {text-align: center;}
+    #container-concerts{justify-content: end;}
+    #container-albums{justify-content: start;}
+    #container-musicvideos{justify-content: end;}
 
-  #swirl1{
-    width: 100%;
+
+
+  .container-planet{
     display: grid;
-grid-template-columns: repeat(1, 1fr); /* Define four equal-width columns */
-grid-template-rows: auto; 
-grid-template-areas: 
-    "swirl1";
-  }
-  .swirl-text {font-weight: 600; font-size: 1.3rem;}
-  .swirl {max-width: 50vw; width: 50vw;}
-    
-  #swirl1-img{ grid-area: swirl1;}
-   
-  #swirl-link1{grid-area: swirl1; z-index: 100; }
- 
+    width: fit-content;
+    height: fit-content;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    }
+      .planet-link{
+        grid-area: 1/1/1/1;
+        justify-self: center;
+        width: 10rem;
+        text-overflow: wrap;
+        text-align: center;
+      }
+      .planet-img{
+        grid-area: 1/1/1/1;
+        width: 10rem;
+        height: 10rem;
+      }
+      #planet-img-middle{
+        width: 16.5rem;
+        margin-left: -3.25rem;
+        margin-right: -3.25rem;
+      }
 
 
+      @media screen and (max-width: 690px){
+        .container-text{flex-direction: column; justify-content: space-evenly;}
+          #container-text-middle{flex-direction: column-reverse;}
+        .planet-link{width: 8rem;}
+        .planet-img{width: 8rem; height: 8rem;}
+          #planet-img-middle{width: 15rem; margin-left: -2.5rem; margin-right: -2.5rem;}
+        .text-h3{align-self: end;}
+          #text-h3-middle{align-self: start;}
+        
+      }
+/*
+    #planet-concerts{}
+    #planet-albums{}
+    #planet-musicvideos{}
+*/
 
 
 
