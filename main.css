@@ -581,10 +581,11 @@ section {width: 100%; height:fit-content; z-index: 1;}
           z-index: 1;
         }
 
-        #reviews>h2{
+       .review-landing-link{
           text-shadow: 1px 1px 1px black;
           padding-top: 8px;
           border-top: 1px inset #e3f5ff;
+          text-decoration: none;
         }
 
                 article {

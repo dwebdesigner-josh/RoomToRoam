@@ -84,7 +84,7 @@ a:link, a:active{
 a:visited{
   color: #e3f5ff;
 }
-a:hover{
+a:hover, a:hover *{
   color: #e3f5ff3f;
 }
 
@@ -346,6 +346,21 @@ main h2 {font-size: 2rem;}
         text-overflow: wrap;
         text-align: center;
       }
+      .planet-link:hover *, .planet-link:focus * {
+        text-shadow: 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 10px black, 0px 0px 10px black; 
+      }
+          #planet-link1:hover *{
+            color: #9a75ff; 
+          }
+          #planet-link2:hover *{
+            color: #75d3ff;   
+          }
+          #planet-link3:hover *{
+            color: #75ffba; 
+          } 
+              /*, #planet-link3:focus * removed from color styles for accessibility - less visible if the above is applied*/
+      
+      .planet-text{text-shadow: 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 10px black, 0px 0px 10px black;}
       .planet-img{
         grid-area: 1/1/1/1;
         width: 10rem;
