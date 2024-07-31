@@ -336,7 +336,7 @@ main h2 {font-size: 2rem;}
         #custom-controls-container {
           display: flex; flex-direction: row; width: 100%; justify-content: end; 
         }
-
+ 
         @media screen and (max-width: 768px){
           #custom-controls-container{position: relative; bottom: -2.2rem;}
           .anchor-h2container{margin-bottom: -1.8rem;}
@@ -366,7 +366,7 @@ main h2 {font-size: 2rem;}
             @media screen and (min-width: 0px) {#id-override-dt-column-order::before{position: relative; top: 50px;}}  
             @media screen and (min-width: 500px) {#id-override-dt-column-order::before{position: relative; top: 70px;}}  
             @media screen and (min-width: 1900px) {#id-override-dt-column-order::before{position: relative; top: 55px;}}
-
+ 
     #reviews table, #reviews label, #reviews select{color: white;}
     #reviews label{font-size: 0;}
     .dt-search{display: flex; align-items: start; z-index: 10; position: relative;}
@@ -375,12 +375,11 @@ main h2 {font-size: 2rem;}
       #reviews select option{color: black; font-weight: 300; font-size: 1rem;}
         #reviews select {font-size: 1rem;}
 
-      thead {border-bottom: 2px inset white;}
       tfoot {border-top: 2px inset white;}
       .dt-layout-table{border-bottom: 1px inset white;}
       .dt-start, .dt-end{color: #e3f5ff;}
 
-      tr {height: 10rem; padding-top: -10rem;}
+      tr {height: 10rem;}
         .th-sortlabel {position: relative; bottom: 2rem; z-index: 1;}
         .th-sortlabel .dt-column-title{position: relative; bottom: 1rem;}
             @media screen and (min-width: 1391px){
@@ -391,72 +390,62 @@ main h2 {font-size: 2rem;}
               .th-sortlabel {position: relative; bottom: .5rem;}
               .th-sortlabel .dt-column-title{position: relative; bottom: 2rem;}
             }
-        .th-hidden, .td-review-date, .td-work, .td-artist{font-size: 0; visibility: hidden; display: none;}
-        .td-details{position: relative; width: 77vw; height: 18rem;}
+        .th-hidden, .td-review-date, .td-work, .td-artist{font-size: 0; visibility: hidden; display: none; width: 0; height: 0;}
         
-
-
-
 /*DATATABLE CONTENT/ITEMS*/
 
 
-.list-artist-details{
+/*
+.list-review-details{
   z-index: 99; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  width: 90vw; position: relative; left: -1.8rem;
+  width: 100%; position: relative; left: -1.8rem;
 }
-    .list-artist-details p{width: 100%; align-self: center; color: #e3f5ff;}
+    .list-review-details p{width: 100%; align-self: center; color: #e3f5ff;}
+*/
+.td-details{
+  width: 80vw; height: 45vw;
+  display: flex; flex-direction: row;
+  align-items: center;
+}
 
-.list-artist-text{height: 4rem;
-    width: 90%; display: flex; flex-direction: row;
-    border-radius: 50px; align-items: center;
-    padding: 1rem;}
-  .list-artist-text h2{font-size: 1rem;}
-  .list-artist-text .list-slideP p{font-size: .8rem;}
-    .list-summary{text-align: center; align-self: center; justify-self: center;}
-    .continue-arrowright-container{height: 80%; width: 1.5rem; border-left: 1px inset white;}
+      .list-review-text{
+          margin-right: 2rem;
+          width: 40vw; height: fit-content; 
+          border-radius: 50px; 
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+            .list-review-text h2{font-size: 1.2rem; padding-left: 10px; padding-right: 10px; text-align: right; transition: opacity 1s ease-in-out;} 
+        
+            @media screen and (max-width: 1300px){
+              .breaker-shortborder{display: block; height: 0; width: 3rem; border-top: 1px inset white; margin-bottom: 1rem;}
+          }
 
-  
-.list-artist-details-article {display: flex; align-items: center; flex-direction: column; flex: 1; margin-right: 10px;  padding-left: 1rem; border-left: 1px inset white;} 
-    .list-artist-details-article p {
-              font-size: 1rem;
-              overflow: hidden;
-              white-space: wrap;
-              text-align: left;
-              transition: opacity 1s ease-in-out;
-              text-align: center;
+          @media screen and (min-width: 1301px){
+            .list-review-text{flex-direction: row; justify-content: space-between;}
+            .breaker-shortborder{display: block; height: 3rem; width: 0; border-right: 1px inset white; margin-right: 1rem; margin-left: 1rem;}
+        }
+
+      .list-backgroundedge-container {
+        padding: .5rem;
+        width: 40vw;
+        background-image: url(/images/back2.jpg);
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+            .list-background-img {
+              border-radius: 1rem;
+              border: 1px solid white;  overflow: hidden;
             }
+            
 
-    
-  .list-artist-name-link{z-index: 12; margin-right: 10px; z-index: 100; flex: 1; display: flex; flex-direction: column; text-decoration: none; justify-content: center; align-items: center;}
-    .list-artist-name-link h2{width: fit-content; padding-left: 10px; padding-right: 10px; text-align: center; transition: opacity 1s ease-in-out;} 
-    .list-artist-name-link h2, .list-slideP p {font-weight: 800; text-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 10px black;}
-
-  .list-artist-continue-link{
-      width: 100%;
-      display: block;
-      text-align: center;
-      text-decoration: none;
-      background-color: transparent;
-      color: #e3f5ff;
-      padding-top: 4rem;
-      margin-top: -4rem;
-      z-index: 40;
-    }    
-      .list-artist-continue-link:hover{color: #e3f5ff3f;}     
-      .list-artist-continue-link img{height: 1rem; width: 1.5rem;}
-
-
-
-
-
-/*list background img*/
-.list-background-container {width: 14rem; height: 14rem; z-index: -1; position: absolute; border: 1px solid white; border-radius: 1rem; overflow: hidden;}
-    .list-background-img {position: relative; bottom: 0px; }
-      
-  
-.list-backgroundedge-container {width: 16rem; margin-left: -1rem;  height: 16rem; z-index: -2; position: absolute; border-radius: 1rem; overflow: hidden;}
-/**/
-
+      .continue-arrowright-container{
+        display: block; height: 3rem; width: 1.5rem; border-left: 1px inset white;
+      }
 
 
 
