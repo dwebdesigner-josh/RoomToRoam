@@ -694,6 +694,14 @@ section {width: 100%; height:fit-content; z-index: 1;}
                 
                 }
 
+                .fadeouttextcover{
+                  height: 20vw;
+                  width: 50vw;
+                  background: linear-gradient(#12171d00, #12171d9d);
+                  position: absolute;
+                  z-index: 10;
+                }
+
                 /*set to 69 instead of original 70 to keep last line cutoff happening consistently across vw's (not a special value this one just happened to work for that*/
                 article p{
                   height: 70%; 
@@ -702,6 +710,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
                   text-align: left;
                   text-shadow: 1px 1px 1px black; 
                   font-size: .75rem;
+                 
                 }
                             article a{
                               border-bottom: 1px solid #e3f5ff;
