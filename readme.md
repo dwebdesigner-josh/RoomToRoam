@@ -7,7 +7,7 @@ Client Site: Room to Roam Records
 HOME PAGE NOTES:
 
 1. TODO - general:
-   - home page: accessibility and SEO overview/improvements as needed
+   - ALL PAGES: accessibility and SEO overview/improvements (most pages have some but not applied everywhere yet .. aria labels or alt labels, etc)
 
   - consider implementing startest into background image (for animated star flickering)
 

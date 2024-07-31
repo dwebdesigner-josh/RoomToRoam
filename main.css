@@ -141,6 +141,10 @@ nav {
           font-weight: 500;
           text-decoration: none;
         }
+
+      
+        @media screen and (min-width: 850px){#topnav-link-home{visibility: hidden; display: none;}}
+         
          
    /*nav-mobile*/
   /*CONSIDER CHANGING THIS MEDIA QUERY METHOD - see https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile*/
