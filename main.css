@@ -442,6 +442,13 @@ section {width: 100%; height:fit-content; z-index: 1;}
            aspect-ratio: 1350/690;
         }
 
+        #highlight h1{position: relative; top: -6vw; text-align: center; width: 80%; left: 10%; font-size: 2rem;
+          border-bottom: 1px inset white;
+        }
+        @media screen and (min-width: 500px) {
+          #highlight h1{font-size: 2.5rem;}
+        }
+
           
 /*section - highlight reel content*/
  
