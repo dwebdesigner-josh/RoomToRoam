@@ -318,11 +318,17 @@ main h2 {font-size: 2rem;}
 
 .container-container{
   display: flex;
-  margin-left: 2vw;
   width: 96vw;
   height: fit-content;
   margin-top: 1rem;
-  
+}
+
+@media screen and (min-width: 500px){
+  .container-container {margin-left: 1vw;}
+}
+
+@media screen and (min-width: 1024px){
+  .container-container {margin-left: 2vw;}
 }
 
 .container-text{
@@ -389,7 +395,7 @@ main h2 {font-size: 2rem;}
         .planet-img{width: 8rem; height: 8rem;}
           #planet-img-middle{width: 15rem; margin-left: -2.5rem; margin-right: -2.5rem;}
         .text-h3{align-self: end;}
-          #text-h3-middle{align-self: start;}
+          #text-h3-middle{align-self: start; }
         
       }
 /*
