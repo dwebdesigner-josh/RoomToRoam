@@ -363,8 +363,9 @@ main h2 {font-size: 2rem;}
           #id-override-dt-column-order {width: 3rem;}
             #id-override-dt-column-order::before{content: "A-Z" / "";}
             #id-override-dt-column-order::after{content: "Z-A" / "";}
-            @media screen and (min-width: 0px) {#id-override-dt-column-order::before{position: relative; top: 50px;}}  
-            @media screen and (min-width: 500px) {#id-override-dt-column-order::before{position: relative; top: 70px;}}  
+            @media screen and (min-width: 0px) {#id-override-dt-column-order::before{position: relative; top: 30px;}}  
+            @media screen and (min-width: 500px) {#id-override-dt-column-order::before{position: relative; top: 40px;}}  
+            @media screen and (min-width: 700px) {#id-override-dt-column-order::before{position: relative; top: 50px;}}  
             @media screen and (min-width: 1900px) {#id-override-dt-column-order::before{position: relative; top: 55px;}}
  
     #reviews table, #reviews label, #reviews select{color: white;}
@@ -379,17 +380,19 @@ main h2 {font-size: 2rem;}
       .dt-layout-table{border-bottom: 1px inset white;}
       .dt-start, .dt-end{color: #e3f5ff;}
 
-      tr {height: 10rem;}
-        .th-sortlabel {position: relative; bottom: 2rem; z-index: 1;}
-        .th-sortlabel .dt-column-title{position: relative; bottom: 1rem;}
-            @media screen and (min-width: 1391px){
-              .th-sortlabel {position: relative; bottom: 1rem;}
-              .th-sortlabel .dt-column-title{position: relative; bottom: 2rem;}
-            }
-            @media screen and (min-width: 2000px){
-              .th-sortlabel {position: relative; bottom: .5rem;}
-              .th-sortlabel .dt-column-title{position: relative; bottom: 2rem;}
-            }
+      tr {height: 6rem;}
+        /*
+      .th-sortlabel {position: relative; bottom: 2rem; z-index: 1;}
+      .th-sortlabel .dt-column-title{position: relative; bottom: 1rem;}
+          @media screen and (min-width: 1391px){
+            .th-sortlabel {position: relative; bottom: 1rem;}
+            .th-sortlabel .dt-column-title{position: relative; bottom: 2rem;}
+          }
+          @media screen and (min-width: 2000px){
+            .th-sortlabel {position: relative; bottom: .5rem;}
+            .th-sortlabel .dt-column-title{position: relative; bottom: 2rem;}
+          }*/
+
         .th-hidden, .td-review-date, .td-work, .td-artist{font-size: 0; visibility: hidden; display: none; width: 0; height: 0;}
         
 /*DATATABLE CONTENT/ITEMS*/
@@ -406,6 +409,7 @@ main h2 {font-size: 2rem;}
   width: 80vw; height: 45vw;
   display: flex; flex-direction: row;
   align-items: center;
+ 
 }
 
       .list-review-text{
