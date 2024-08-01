@@ -751,8 +751,36 @@ z-index:-3;
   display: flex;
   flex-direction: column;
     }
-        /*controls for sorting*/
+
+    .dt-layout-row .dt-length {display: flex; justify-content: start;}
+
+    #custom-controls-container {
+      display: flex; flex-direction: row; width: 100%; justify-content: space-between; 
+    }
+
+    @media screen and (max-width: 768px){
+      #custom-controls-container{position: relative; bottom: -1.2rem;}
+      #columnFilter{position:relative; bottom: 0;}
+      #artists h1{margin-bottom: -1.8rem;}
+ 
+      } 
+@media screen and (min-width: 769px){
+  #columnFilter{position:relative; bottom: -0.8rem;}
+}
+
+    .toggle-controls {display: flex; flex-direction: row; border: 1px inset white; border-radius: 5px; padding-top: .26rem; padding-bottom: .26rem; padding-left: .2rem; padding-right: .2rem; width: fit-content; }
+        .toggle-controls h3 {font-size: 1rem; color: white;}
+        .breaker2{width: .5rem; height: 0; display: block; }
+        .toggle-container{border: 1px inset white; border-radius: 5px; width: .85rem; height: .75rem; align-self: center;}
+        #alpha-toggle{width: .75rem; height: .75rem; accent-color: transparent; position: absolute;}
+    
+      #columnFilter {border: 1px inset white; border-radius: 5px;}
       
+      #artists select{background-color: transparent; height: 1.5lh; align-self: start;}
+      @media screen and (max-width: 768px){#reviews select, #reviews .toggle-controls{align-self: center;}}
+      
+        /*controls for sorting*/
+      /*
         #custom-controls-container {display: flex; flex-direction: row; width: 100%; justify-content: space-between;}
           @media screen and (max-width: 768px){
             #custom-controls-container{flex-direction: column;}
@@ -769,22 +797,38 @@ z-index:-3;
           
           #artists select{background-color: transparent; height: 1.5lh; align-self: start;}
           @media screen and (max-width: 768px){#artists select, #artists .toggle-controls{align-self: center;}}
-          
+          */
+          /*
           #id-override-dt-column-order {width: 3rem;}
             #id-override-dt-column-order::before{content: "A-Z" / "";}
             #id-override-dt-column-order::after{content: "Z-A" / "";}
             @media screen and (min-width: 0px) {#id-override-dt-column-order::before{position: relative; top: 80px;}}  
             @media screen and (min-width: 500px) {#id-override-dt-column-order::before{position: relative; top: 70px;}}  
             @media screen and (min-width: 1900px) {#id-override-dt-column-order::before{position: relative; top: 55px;}}
+*/
+            
+          #id-override-dt-column-order {width: 3rem;}
+          #id-override-dt-column-order::before{content: "A-Z" / "";}
+          #id-override-dt-column-order::after{content: "Z-A" / "";}
+          @media screen and (min-width: 0px) {#id-override-dt-column-order::before{position: relative; top: 30px;}}  
+          @media screen and (min-width: 500px) {#id-override-dt-column-order::before{position: relative; top: 40px;}}  
+          @media screen and (min-width: 700px) {#id-override-dt-column-order::before{position: relative; top: 50px;}}  
+          @media screen and (min-width: 1900px) {#id-override-dt-column-order::before{position: relative; top: 55px;}}
 
     #artists h1 {font-size: 4rem; margin-bottom: 1rem;}
 
 
     #artists table, #artists label, #artists select{color: white;}
     #artists label{font-size: 0;}
-    .dt-search{display: flex; align-items: start;}
+  /*  .dt-search{display: flex; align-items: start;}
     #dt-search-0{width: 100%; color: white; height: 2rem; font-size: 1.25rem;}
-        @media screen and (max-width: 500px){#dt-search-0{font-size: 1rem;}}
+        @media screen and (max-width: 500px){#dt-search-0{font-size: 1rem;}}*/
+        .dt-search{display: flex; align-items: start; z-index: 10; position: relative;}
+            @media screen and (max-width: 768px){.dt-search{top: -.25rem;}}
+            @media screen and (max-width: 640px){.dt-search{top: -.7rem;}}
+        #dt-search-0{width: 100%; color: white; height: 2rem; font-size: 1.25rem;}
+            @media screen and (max-width: 500px){#dt-search-0{font-size: 1rem;}}
+
       #artists select option{color: black; font-weight: 300; font-size: 1rem;}
         #artists select {font-size: 1rem;}
       
@@ -793,12 +837,13 @@ z-index:-3;
       .dt-layout-table{border-bottom: 1px inset white;}
       .dt-start, .dt-end{color: #e3f5ff;}
 
-      tr {height: 200px;}
+      tr {height: 6rem;}
         .th-hidden, .td-featured-date, .td-medium, .td-artist{font-size: 0; visibility: hidden; display: none;}
         .td-details{position: relative; width: 77vw;}
+    
         
 
-   
+    
 
 /*footer*/
 footer{z-index: 1; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100vw;}
