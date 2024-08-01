@@ -238,6 +238,7 @@ header {
 
 
 /*LOADSCREEN*/
+
       #loadcontainer{
           width: 100%;
           overflow-y: hidden;
@@ -291,6 +292,10 @@ header {
           20%{transform: translateY(10%)}
           100%{transform: translateY(100%); display: none; visibility: hidden;}
           }
+      }
+
+      @media screen and (prefers-reduced-motion){
+        .loadscreen, #loadcontainer, .loadscreen>img {display: none; visibility: hidden;}
       }
 
 /*main*/

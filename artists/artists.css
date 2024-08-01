@@ -280,6 +280,9 @@ header {
           }
       }
 
+      @media screen and (prefers-reduced-motion){
+        .loadscreen, #loadcontainer, .loadscreen>img {display: none; visibility: hidden;}
+      }
 /*main*/
 main {
   display: flex;

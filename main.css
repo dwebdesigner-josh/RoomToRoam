@@ -351,6 +351,9 @@ background-repeat: repeat;
   }
 }
 
+@media screen and (prefers-reduced-motion){
+  .loadscreen, #loadcontainer, .loadscreen>img {display: none; visibility: hidden;}
+}
 
 /*sections*/
 section {width: 100%; height:fit-content; z-index: 1;}
