@@ -340,12 +340,12 @@ main h2 {font-size: 2rem;}
         @media screen and (max-width: 768px){
           #custom-controls-container{position: relative; bottom: -2.2rem;}
           .anchor-h2container{margin-bottom: -1.8rem;}
-          #reviews h2 {margin-bottom: -1rem;}
+          .reviewsheading {margin-bottom: -1rem;}
           } 
           /*#columnFilter{margin-bottom: .3rem;}*/
           @media screen and (max-width: 640px){
             #custom-controls-container{position: relative; bottom: -2.8rem;}
-            #reviews h2 {margin-bottom: -1.8rem;}
+            .reviewsheading {margin-bottom: -1.8rem;}
             } 
 
 
@@ -411,13 +411,13 @@ main h2 {font-size: 2rem;}
       .list-review-text{
           margin-right: 2rem;
           width: 40vw; height: fit-content; 
-          border-radius: 50px; 
+          border-radius: 1rem; 
           display: flex;
           flex-direction: column;
           align-items: center;
       }
-            .list-review-text h2{font-size: 1.2rem; padding-left: 10px; padding-right: 10px; text-align: right; transition: opacity 1s ease-in-out;} 
-        
+            .list-review-text h2{font-size: 1.2rem; padding-left: 10px; padding-right: 10px; text-align: center; transition: opacity 1s ease-in-out;} 
+            .list-review-text p {text-align: center;}
             @media screen and (max-width: 1300px){
               .breaker-shortborder{display: block; height: 0; width: 3rem; border-top: 1px inset white; margin-bottom: 1rem;}
           }
@@ -426,6 +426,7 @@ main h2 {font-size: 2rem;}
             .list-review-text{flex-direction: row; justify-content: space-between;}
             .breaker-shortborder{display: block; height: 3rem; width: 0; border-right: 1px inset white; margin-right: 1rem; margin-left: 1rem;}
         }
+        .banner-container-bottom, .banner-container-top, .banner-slide-bottom, .banner-slide-top, .banner-text-bottom, .banner-text-top {display: none; visibility: hidden;}
 
       .list-backgroundedge-container {
         padding: .5rem;
@@ -448,6 +449,121 @@ main h2 {font-size: 2rem;}
       }
 
 
+
+@media screen and (max-width: 768px){
+  .banner-container-bottom, .banner-container-top, .banner-slide-bottom, .banner-slide-top, .banner-text-bottom, .banner-text-top {display: block; visibility: visible;}
+ /* .list-review-text{width: 60vw; z-index: 10; padding-bottom: 1rem;  position: relative; left: .5rem; }
+    .list-review-text h2, .list-review-text p{box-shadow: 0px 0px 10px black; background-color: #12171d9d; font-size: 1.5rem;}*/
+  .list-backgroundedge-container{width: 60vw; position: absolute;}
+  .td-details{
+    width: 80vw; height: 65vw;
+    display: flex; flex-direction: row;
+    align-items: center;
+  }
+  .list-review-text h2, .list-review-text p{display: none; visibility: hidden;}
+
+/*BANNERS*/
+.list-review-text {
+  width: 60vw; height: 60vw; z-index: 1; padding-bottom: 1rem;  position: relative; left: .5rem; top:.5rem;
+  display: flex; flex-direction: column; justify-content: space-between; align-items: center; }
+  .breaker-shortborder{display: none; visibility: hidden;}
+.banner-container-top{z-index: 2; position: relative; left: 0; top: 0; width: 100%; height: 1.5rem;  overflow: hidden; border-top-left-radius: 1rem; border-top-right-radius: 1rem;}
+.banner-slide-top{width: 100%; height: 1.5rem; overflow: hidden; text-wrap: nowrap; background-color:#12171d9d;}
+
+.banner-container-bottom{z-index: 2; position: relative; width: 100%; height: 1.5rem;  overflow: hidden; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.banner-slide-bottom{width: 100%; height: 1.5rem; overflow: hidden; text-wrap: nowrap; background-color:#12171d9d;}
+
+
+   /* animation properties */
+
+  .banner-text-top {
+    font-weight: 500;
+    position: relative; left: -10px; font-size: 1.3rem;  color: #b1e2fd8e;
+ 
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: my-animation 10s linear infinite;
+    -webkit-animation: my-animation 10s linear infinite;
+    animation: my-animation 10s linear infinite;
+  }
+
+  .banner-text-bottom {
+    font-weight: 500;
+    position: relative; left: -10px; font-size: 1.3rem;  color: #b1e2fd8e;
+ 
+    -moz-transform: translateX(-220%);
+    -webkit-transform: translateX(-220%);
+    transform: translateX(-220%);
+    
+    -moz-animation: my-animation-2 10s linear infinite;
+    -webkit-animation: my-animation-2 10s linear infinite;
+    animation: my-animation-2 10s linear infinite;
+    
+  }
+  
+/*ANIMATION 1*/
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-220%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-220%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-220%);
+    -webkit-transform: translateX(-220%);
+    transform: translateX(-220%);
+  }
+}
+
+/*ANIMATION 2*/
+/* for Firefox */
+@-moz-keyframes my-animation-2 {
+  from { -moz-transform: translateX(-220%); }
+  to { -moz-transform: translateX(100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation-2 {
+  from { -webkit-transform: translateX(-220%); }
+  to { -webkit-transform: translateX(100%); }
+}
+
+@keyframes my-animation-2 {
+  from {
+    -moz-transform: translateX(-220%);
+    -webkit-transform: translateX(-220%);
+    transform: translateX(-220%);
+  }
+  to {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+}
+
+@media screen and (prefers-reduced-motion){
+  .banner-text-top,.banner-text-bottom{-moz-transform: none;  -webkit-transform: none;  transform: none;  -moz-animation: none; -webkit-animation: none; animation: none;
+  position: relative; left: .5rem;
+  text-wrap: wrap; white-space: wrap;
+  }
+  .banner-container-top, .banner-slide-top, .banner-container-bottom, .banner-slide-bottom{ height: fit-content; }
+}
 
 
 
