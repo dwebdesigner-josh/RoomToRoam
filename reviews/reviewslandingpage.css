@@ -261,7 +261,7 @@ header {
           z-index: 20;
           display: flex;
           justify-content: center;
-          animation: scrolldown 5s linear 1;
+          animation: scrolldown 3s linear 1;
           animation-play-state: running;
           animation-iteration-count: 1;
           animation-fill-mode: both;
@@ -275,7 +275,7 @@ header {
       }
       /* ship.png would be - width: 184px; height: 255px;*/
       #loadscreen-notfirst{
-          animation: scrolldown 4s linear 1;
+          animation: scrolldown 2s linear 1;
           animation-play-state: running;
           animation-iteration-count: 1;
           animation-fill-mode: both;

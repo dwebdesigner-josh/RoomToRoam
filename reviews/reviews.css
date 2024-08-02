@@ -264,7 +264,7 @@ header {
           z-index: 20;
           display: flex;
           justify-content: center;
-          animation: scrolldown 5s linear 1;
+          animation: scrolldown 3s linear 1;
           animation-play-state: running;
           animation-iteration-count: 1;
           animation-fill-mode: both;
@@ -274,7 +274,7 @@ header {
           height: 255px;
       }
       #loadscreen-notfirst{
-          animation: scrolldown 2s linear 1;
+          animation: scrolldown 1s linear 1;
           animation-play-state: running;
           animation-iteration-count: 1;
           animation-fill-mode: both;
@@ -455,12 +455,20 @@ main h2 {font-size: 2rem;}
             .list-background-img-review-link{z-index:1;}
 
       .continue-arrowright-container{
-        display: block; height: 3rem; width: 1.5rem; border-left: 1px inset white;
+        display: block; height: 3rem; width: 1.5rem; 
+        padding-left: 40vw; margin-left: -40vw; padding-top: calc(20vw - 1.5rem); padding-bottom: calc(20vw - 1.5rem);
+        z-index: 100;
       }
+
+      .continue-arrowright {border-left: 1px inset white;}
+      
 
 
 
 @media screen and (max-width: 768px){
+  .continue-arrowright-container{
+    padding-left: calc(1.5rem + 60vw); margin-left: calc(0px - 1.5rem - 60vw); padding-top: calc(30vw - 1.5rem); padding-bottom: calc(30vw - 1.5rem);
+  }
   .banner-container-bottom, .banner-container-top, .banner-slide-bottom, .banner-slide-top, .banner-text-bottom, .banner-text-top {display: block; visibility: visible;}
  /* .list-review-text{width: 60vw; z-index: 10; padding-bottom: 1rem;  position: relative; left: .5rem; }
     .list-review-text h2, .list-review-text p{box-shadow: 0px 0px 10px black; background-color: #12171d9d; font-size: 1.5rem;}*/
