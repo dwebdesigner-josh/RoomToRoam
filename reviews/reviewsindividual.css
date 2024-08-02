@@ -72,16 +72,19 @@ body {
   :root {font-size: 40pt;  }
 }
 
-a:link, a:active{
+a {list-style-type: none; 
+  text-decoration: none;
+  z-index: 1; }
+
+a:link, a:active, a:link *, a:active *{
   color: #e3f5ff;
 }
-a:visited{
+a:visited, a:visited *{
   color: #e3f5ff;
 }
-a:hover{
+a:hover, a:hover *{
   color: #e3f5ff3f;
 }
-
 
 /*nav*/
 /*nav-desktop*/
@@ -224,62 +227,64 @@ header {
 
 /*LOADSCREEN*/
       #loadcontainer{
-          width: 100%;
-          overflow-y: hidden;
-          position: absolute;
-          top: 0;
-      }
-          /*MOBILE*/
-          @media screen and (max-width: 850px){
-          #loadcontainer {height: calc(2.5rem + 1000px + 4rem);} /*header plus main plus footer - 2rem high internals + 2rem high socials*/
-          }                                
-          /*DESKTOP*/
-          @media screen and (min-width: 850px){
-          #loadcontainer {height: calc(2.5rem + 1000px + 2rem);} /*header plus main plus footer - 2rem high internals/socials */
-          }
-      .loadscreen {
-          width: 100%;
-          height: 100%;
-          background-image: url("/images/starV1frame1.png");
-          background-repeat: repeat;
-          position: absolute;
-          top: 0;
-          transform: translateY(0);
-          z-index: 20;
-          display: flex;
-          justify-content: center;
-          animation: scrolldown 5s linear 1;
-          animation-play-state: running;
-          animation-iteration-count: 1;
-          animation-fill-mode: both;
-      }
-      .loadscreen>img{
-          width: 184px;
-          height: 255px;
-      }
-      #loadscreen-notfirst{
-          animation: scrolldown 2s linear 1;
-          animation-play-state: running;
-          animation-iteration-count: 1;
-          animation-fill-mode: both;
-      }
-      @media screen and (max-width: 850px){
-          @keyframes scrolldown {
-          0%{transform: translateY(0);}
-          20%{transform: translateY(10%);}
-          100%{transform: translateY(100%); display: none; visibility: hidden;}
-          }
-      }
-      @media screen and (min-width: 850px){
-          @keyframes scrolldown {
-          0%{transform: translateY(0);}
-          20%{transform: translateY(10%)}
-          100%{transform: translateY(100%); display: none; visibility: hidden;}
-          }
-      }
-      @media screen and (prefers-reduced-motion){
-        .loadscreen, #loadcontainer, .loadscreen>img {display: none; visibility: hidden;}
-      }
+        width: 100%;
+        overflow-y: hidden;
+        position: absolute;
+        top: 0;
+    }
+        /*MOBILE*/
+        @media screen and (max-width: 850px){
+        #loadcontainer {height: calc(2.5rem + 1000px + 4rem);} /*header plus main plus footer - 2rem high internals + 2rem high socials*/
+        }                                
+        /*DESKTOP*/
+        @media screen and (min-width: 850px){
+        #loadcontainer {height: calc(2.5rem + 1000px + 2rem);} /*header plus main plus footer - 2rem high internals/socials */
+        }
+    .loadscreen {
+        width: 100%;
+        height: 100%;
+        background-image: url("/images/starV1frame1.png");
+        background-repeat: repeat;
+        position: absolute;
+        top: 0;
+        transform: translateY(0);
+        z-index: 20;
+        display: flex;
+        justify-content: center;
+        animation: scrolldown 3s linear 1;
+        animation-play-state: running;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+    .loadscreen>img{
+        width: 184px;
+        height: 255px;
+    }
+    #loadscreen-notfirst{
+        animation: scrolldown 1s linear 1;
+        animation-play-state: running;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+    @media screen and (max-width: 850px){
+        @keyframes scrolldown {
+        0%{transform: translateY(0);}
+        20%{transform: translateY(10%);}
+        100%{transform: translateY(100%); display: none; visibility: hidden;}
+        }
+    }
+    @media screen and (min-width: 850px){
+        @keyframes scrolldown {
+        0%{transform: translateY(0);}
+        20%{transform: translateY(10%)}
+        100%{transform: translateY(100%); display: none; visibility: hidden;}
+        }
+    }
+
+    @media screen and (prefers-reduced-motion){
+      .loadscreen, #loadcontainer, .loadscreen>img {display: none; visibility: hidden;}
+    }
+
 /*main*/
 main {
   display: flex;
@@ -288,10 +293,30 @@ main {
   align-items: center;
 } 
 
-/*sections*/
+main h1, main h2, main h3{color: #e3f5ff; text-shadow: 1px 1px 1px black; }
+main h2 {font-size: 2rem;}
+
+.span-filler{height: 3rem; width: 100%;}
+#filler{height: 1000px}
+
 section {width: 100%; height:fit-content; z-index: 1;}
 
-#filler{height: 1000px}
+  #section1{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  } 
+    #link-reviews-container{width: 100vw; display: flex; justify-content: start; position: relative; left: -5vw; margin-top: 1rem; margin-bottom: -2.5rem;}
+    #link-reviews:hover *{ color: #e3f5ff;}
+      #link-reviews-container h3{padding-right: 5%; padding-left: 5%; align-self: center;}
+    #link-reviews-albums {margin-top: 1.2rem; align-self: center; padding-right: 5%; padding-left: 5%; align-self: center;}
+    
+  
+
+
+
+
+
 
 /*footer*/
 footer{z-index: 1; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100vw;}
