@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room To Roam</title>
+    <link rel="icon" href="/images/favicon.ico">
+<!--"inter" font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<!--CSS-->
+<link rel="stylesheet" href="/connect/reviewsindividual.css">
+<!--jquery plugin-->
+<script src="/scripts/jquery.min.js"></script>
+</head>
+ 
+
+<body>
+
+<!--make sure to use landmark elements rather than divs for sections of the page (nav, main, header, section,...)-->
+<!--(ACCESSIBILITY)NOTE: BUTTONS VS ANCHORS USAGE- buttons should only be used for interactive elements/forms/modules, while anchors should be used for in-site links -->
+<!--(ACCESSIBILITY)NOTE: For nav, use <nav><ul><li><a> One reason to use the <nav>, <ul>, <li> tags when building a navigation menu is that semantic markup will improve accessibility for users that require screen-readers.-->
+
+  <header>
+    <a href="/" aria-label="Home Button" id="header-link">
+      <h1 id="header-h1">Room to Roam</h1>
+      <img src="/images/logotreeV5.png" alt="" id="tree-img">
+    
+    </a>
+</header>
+
+<nav>
+    <span id="topnav-label" hidden>Navigation</span>
+
+    <button id="topnav-open" aria-expanded="false" aria-labelledby="topnav-label">
+   
+          <div class="hamburger-icon">
+            <span class="hamburger-icon-piece"></span>
+            <span class="hamburger-icon-piece"></span>
+            <span class="hamburger-icon-piece"></span>
+          </div>
+    </button>
+    
+    <div id="topnav-menu" role="dialog" aria-labelledby="topnav-label">
+      <button id="topnav-close" aria-label="Close"><div class="hamburger-icon"></div></button>
+      <ul id="topnav">
+        <li class="topnav-item">  <a class="topnav-link" id="topnav-link-home" href="/" target="_self">Home</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/artists/" target="_self">Artists</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/reviews/" target="_self">Reviews</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/connect/" target="_self">Connect</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/about-us/" target="_self">About Us</a>  </li>
+      </ul>
+    </div>  
+</nav>
+
+
+<div id="loadcontainer">
+    <div class="loadscreen" tabindex="-1">
+    <img tabindex="-1" alt="Graphic image of space ship" src="/images/ship.png" aria-label="Loading screen ship animation">
+    </div>
+</div>
+
+<main>
+
+<section id="filler">
+
+</section>
+</main>
+
+
+
+<footer>
+  <ul class="footer" id="footer-internals">
+    <li class="footer-item">  <a class="footer-link" href="/artists/" target="_self">Artists</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/reviews/" target="_self">Reviews</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/connect/" target="_self">Connect</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/about-us/" target="_self">About Us</a>  </li>
+  </ul>
+  <ul class="footer" id="footer-socials">
+    <li class="footer-item" id="insta"> <a aria-label="Room To Roam Instagram account external link" class="footer-externallink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/images/insta.png" alt=""></a></li>
+    <li class="footer-item" id="fb"> <a aria-label="Room To Roam Facebook account external link" class="footer-externallink" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/images/facebook.png" alt=""></a></li>
+    <li class="footer-item" id="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="footer-externallink" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/images/tiktok.png" alt=""></a></li>
+    <li class="footer-item" id="yt"> <a aria-label="Room To Roam YouTube account external link" class="footer-externallink" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/images/youtube.png" alt=""></a></li>
+  </ul>
+</footer>
+
+
+<script src="/scripts/loadanimation.js"></script>
+<script src="/scripts/hamburger.js"></script> 
+  
+</body>
+
+</html>
+
