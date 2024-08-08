@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room To Roam</title>
+    <link rel="icon" href="/images/favicon.ico">
+<!--"inter" font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<!--CSS-->
+<link rel="stylesheet" href="/artists/artistsindividual.css">
+<!--jquery plugin-->
+<script src="/scripts/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+<!--make sure to use landmark elements rather than divs for sections of the page (nav, main, header, section,...)-->
+<!--(ACCESSIBILITY)NOTE: BUTTONS VS ANCHORS USAGE- buttons should only be used for interactive elements/forms/modules, while anchors should be used for in-site links -->
+<!--(ACCESSIBILITY)NOTE: For nav, use <nav><ul><li><a> One reason to use the <nav>, <ul>, <li> tags when building a navigation menu is that semantic markup will improve accessibility for users that require screen-readers.-->
+
+  <header>
+    <a href="/" aria-label="Home Button" id="header-link">
+      <h1 id="header-h1">Room to Roam</h1>
+      <img src="/images/logotreeV5.png" alt="" id="tree-img">
+    
+    </a>
+</header>
+
+<nav>
+    <span id="topnav-label" hidden>Navigation</span>
+
+    <button id="topnav-open" aria-expanded="false" aria-labelledby="topnav-label">
+   
+          <div class="hamburger-icon">
+            <span class="hamburger-icon-piece"></span>
+            <span class="hamburger-icon-piece"></span>
+            <span class="hamburger-icon-piece"></span>
+          </div>
+    </button>
+    
+    <div id="topnav-menu" role="dialog" aria-labelledby="topnav-label">
+      <button id="topnav-close" aria-label="Close"><div class="hamburger-icon"></div></button>
+      <ul id="topnav">
+        <li class="topnav-item">  <a class="topnav-link" id="topnav-link-home" href="/" target="_self">Home</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/artists/" target="_self">Artists</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/reviews/" target="_self">Reviews</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/connect/" target="_self">Connect</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/about-us/" target="_self">About Us</a>  </li>
+      </ul>
+    </div>  
+</nav>
+
+
+<div id="loadcontainer">
+    <div class="loadscreen" tabindex="-1">
+    <img tabindex="-1" alt="Graphic image of space ship" src="/images/ship.png" aria-label="Loading screen ship animation">
+    </div>
+</div>
+
+<main>
+
+<section id="section-heading-links">
+  <span class="span-filler"></span>
+  <div id="link-artists-container"><a href="/artists/" target="_self" id="link-artists"> <h3><i>Artists</i></h3> </a> </div>
+    <h2 id="artistname-h2">The Technicolors</h2>
+</section>
+
+
+
+<section>
+  
+  <div class="container-container"  id="container-albums">
+    <div class="container-planet" id="planet-albums">
+      <img class="planet-img" id="planet-img-middle" src="/images/technicolors/technicolorsprofilepic.jpg" alt="image of a planet"/>
+      <a class="planet-link" id="planet-link2" href="/reviews/albums/"  target="_self"><p class="planet-text">The Technicolors</p></a>
+    </div>
+    <div class="container-text" id="container-text-middle">
+      <p class="text-p">
+        The Technicolors is a dynamic alternative rock band hailing from Phoenix, Arizona.  
+        <br><br>
+         A unique fusion of indie rock, psychedelic, and power pop.
+      </p>
+      <h3 class="text-h3" id="text-h3-middle">Text here?</h3>
+    </div>
+</div>
+
+
+        <section id="swirl-container">
+          <!-- swirl animation containers -->   
+          <div class="swirl" id="swirl1">
+              <img  class="swirl-image" src="/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
+              <a class="swirl-link" id="swirl-link1" href="/connect/"  target="_self"><p class="swirl-text">Connect</p></a>
+            </div>
+
+          <div class="swirl"  id="swirl2" >
+              <img class="swirl-image" src="/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
+              <a class="swirl-link" id="swirl-link2" href="/artists/"  target="_self"><p class="swirl-text">Artists</p></a>
+            </div>
+          
+          <div class="swirl" id="swirl3">
+              <img class="swirl-image" src="/scripts/swirl1/centeredimages/seq_0_1.jpg" alt="stardust swirl animation"/>
+              <a class="swirl-link" id="swirl-link3" href="/about-us/" target="_self"><p class="swirl-text">About</p></a> 
+            </div>  
+        </section>
+
+        <div id="highlight2">
+          <span class="breaker3"></span>
+        <section id="roots-highlight2" class="highlight-reel">
+             
+              <div class="slider">
+                  <button id="slide-left2" tabindex="0"></button> <!-- aria-pressed="false"  perhaps reintigrate this later with the slide.js-->
+                <div class="slides-container" >
+                  <a class="slide-anchor2" href="/artists/Technicolors/" inert target="_self" id="slide-21" aria-expanded="false" style="z-index: 29; left: 15%;  " >
+                    <img id="slideworksimg-1" src="/images/technicolors/technicolors-metaphysical.jpg" alt="Photo of artist's work" /></a>
+                    
+        
+                  <a class="slide-anchor2" href="/artists/Technicolors/" target="_self" id="slide-22" aria-expanded="true"  style="z-index: 30; left: 35%; " >
+                    <img id="slideworksimg-2" src="/images/technicolors/technicolors-cinemasublimina.jpg" alt="Photo of artist's work" /></a>
+                 
+                  <a class="slide-anchor2" href="/artists/Technicolors/" inert target="_self" id="slide-23" aria-expanded="false" style="z-index: 28; left: 55%; " >
+                    <img id="slideworksimg-3" src="/images/technicolors/technicolors-ultravioletdisguise.jpg" alt="Photo of artist's work" /></a>
+                    
+        
+                  
+        
+                </div>
+                  <button id="slide-right2" tabindex="0"></button>
+              </div>
+              
+                  <!--slide img positions based on size/aspect-ratio value-->
+                <!-- 33% width - left: 12.5% , 30 , 54.5-->
+                <!--33% width, 16/9 - left: 5%, 30, 60-->
+                <!--50% width, 16/9 - left: 5%, 25, 45-->
+                
+          </section></div>
+
+</section>
+<section>    
+<div class="container-container"  id="container-musicvideos">
+  <div class="container-text">
+    <h3 class="text-h3">About the artist</h3>
+    <p class="text-p">
+      The Technicolors, a dynamic alternative rock band hailing from Phoenix, Arizona, have been making waves in the music scene with their infectious sound and vibrant energy. Formed in 2013, the band quickly gained attention with their blend of gritty guitar riffs and melodic hooks, creating a unique fusion of retro and modern influences. Their debut album, "Metaphysical," showcased their ability to craft catchy, introspective tunes that resonate with a diverse audience. The Technicolors are known for their high-octane live performances and a distinctive style that combines elements of indie rock, psychedelic, and power pop.
+        <br><br>  
+        Over the years, The Technicolors have continued to evolve, experimenting with different sounds and themes while maintaining their signature groove. Their subsequent releases, including "Weird" and "Dawn," reflect a growing maturity in their songwriting and production. With a reputation for delivering electrifying shows and a loyal fan base, The Technicolors have solidified their place in the alternative rock landscape. Their music, characterized by its bold, colorful soundscapes and introspective lyrics, continues to captivate listeners and critics alike, marking them as a band to watch in the ever-changing world of rock.
+    </p>
+  </div>
+
+    <div class="container-planet" id="planet-musicvideos">
+      <img class="planet-img" src="/images/planet3.png" alt="image of a planet"/>
+      <a class="planet-link" id="planet-link3" href="/reviews/musicvideos/"  target="_self"><p class="planet-text">JUST A PIC HERE</p></a>
+    </div>
+</div>
+</section>
+
+<!--RADIO BUTTON expander/SLIDER FOR ARTIST'S PICKS SECTION HERE
+somewhat like 
+https://www.youtube.com/watch?v=45mnmy2JUl0&list=PLNYI1SZRuce6lhwBmvuwjPqUMeH81n1vR&index=20
+-->
+<section class="wrapper">
+
+  <div class="container">
+      <input type="radio" name="slide" id="c1" checked>
+      <label for="c1" class="card">
+          <div class="row">
+              <div class="icon">1</div>
+              <div class="description">
+                  <h4>Winter</h4>
+                  <p>Winter has so much to offer -
+                   creative activities</p>
+              </div>
+          </div>
+      </label>
+      <input type="radio" name="slide" id="c2" >
+      <label for="c2" class="card">
+          <div class="row">
+              <div class="icon">2</div>
+              <div class="description">
+                  <h4>Digital Technology</h4>
+                  <p>Gets better every day -
+                   stay tuned</p>
+              </div>
+          </div>
+      </label>
+      <input type="radio" name="slide" id="c3" >
+      <label for="c3" class="card">
+          <div class="row">
+              <div class="icon">3</div>
+              <div class="description">
+                  <h4>Globalization</h4>
+                  <p>Help people all over the world</p>
+              </div>
+          </div>
+      </label>
+      <input type="radio" name="slide" id="c4" >
+      <label for="c4" class="card">
+          <div class="row">
+              <div class="icon">4</div>
+              <div class="description">
+                  <h4>New technologies</h4>
+                  <p>Space engineering becomes
+                   more and more advanced</p>
+              </div>
+          </div>
+      </label>
+  </div>
+
+</section>
+
+</main>
+
+
+
+<footer>
+  <ul class="footer" id="footer-internals">
+    <li class="footer-item">  <a class="footer-link" href="/artists/" target="_self">Artists</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/reviews/" target="_self">Reviews</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/connect/" target="_self">Connect</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/about-us/" target="_self">About Us</a>  </li>
+  </ul>
+  <ul class="footer" id="footer-socials">
+    <li class="footer-item" id="insta"> <a aria-label="Room To Roam Instagram account external link" class="footer-externallink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/images/insta.png" alt=""></a></li>
+    <li class="footer-item" id="fb"> <a aria-label="Room To Roam Facebook account external link" class="footer-externallink" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/images/facebook.png" alt=""></a></li>
+    <li class="footer-item" id="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="footer-externallink" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/images/tiktok.png" alt=""></a></li>
+    <li class="footer-item" id="yt"> <a aria-label="Room To Roam YouTube account external link" class="footer-externallink" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/images/youtube.png" alt=""></a></li>
+  </ul>
+</footer>
+
+
+<script src="/scripts/loadanimation.js"></script>
+<script src="/scripts/hamburger.js"></script> 
+<script src="/scripts/swirljqueryanimation.js"></script> 
+<script src="/scripts/slideartistsindividual.js"></script>
+  
+</body>
+
+</html>
+
