@@ -301,7 +301,7 @@ main h2 {font-size: 2rem;}
 
 section {width: 100%; height:fit-content; z-index: 1;}
 
-  #section1{
+  #section-heading-links{
   width: 80%;
   display: flex;
   flex-direction: column;
