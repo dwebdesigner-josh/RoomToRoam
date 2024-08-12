@@ -41,7 +41,9 @@ mediaChange(mediaQuery);
     let slideCount1 = 1
     let slideCount2 = 2
     let slideCount3 = 3
-    const totalSlides = 3
+    let slideCount4 = 4
+    let slideCount5 = 5
+    const totalSlides = 5
     const slideLeftButton = document.querySelector('#slide-left2');
     const slideRightButton = document.querySelector('#slide-right2');
     const slideNumber = '#slide-2';
@@ -73,18 +75,42 @@ mediaChange(mediaQuery);
                 slideCount3 += 1;
                 console.log('3 up');
                 }
+
+                if (slideCount4 >= totalSlides) {
+                    slideCount4 = 1;
+                    console.log('4 is back to 1');
+                } else {
+                slideCount4 += 1;
+                console.log('4 up');
+                }
+
+                if (slideCount5 >= totalSlides) {
+                    slideCount5 = 1;
+                    console.log('5 is back to 1');
+                } else {
+                slideCount5 += 1;
+                console.log('5 up');
+                }
     var slideImage1 = document.querySelector(slideNumber+slideCount1);
     var slideImage2 = document.querySelector(slideNumber+slideCount2);
     var slideImage3 = document.querySelector(slideNumber+slideCount3);
-                slideImage1.setAttribute("style", " z-index: 29; left: 15%; "); 
-                slideImage2.setAttribute("style", " z-index: 30; left: 35%; "); 
-                slideImage3.setAttribute("style", " z-index: 28; left: 55%; "); 
+    var slideImage4 = document.querySelector(slideNumber+slideCount4);
+    var slideImage5 = document.querySelector(slideNumber+slideCount5);
+                slideImage1.setAttribute("style", " z-index: 29; left: 7%; "); 
+                slideImage2.setAttribute("style", " z-index: 31; left: 15%; "); 
+                slideImage3.setAttribute("style", " z-index: 32; left: 35%; "); 
+                slideImage4.setAttribute("style", " z-index: 30; left: 55%; "); 
+                slideImage5.setAttribute("style", " z-index: 28; left: 60%; "); 
                     slideImage1.setAttribute("aria-expanded", "false");
                     slideImage1.setAttribute("inert", "");
                     slideImage2.setAttribute("aria-expanded", "true");
-                    slideImage2.removeAttribute("inert", "");
-                    slideImage3.setAttribute("aria-expanded", "false");
-                    slideImage3.setAttribute("inert", "");
+                    slideImage2.setAttribute("inert", "");
+                    slideImage3.setAttribute("aria-expanded", "true");
+                    slideImage3.removeAttribute("inert", "");
+                    slideImage4.setAttribute("aria-expanded", "false");
+                    slideImage4.setAttribute("inert", "");
+                    slideImage5.setAttribute("aria-expanded", "false");
+                    slideImage5.setAttribute("inert", "");
             }
 
 function slideLeft(){
@@ -111,18 +137,36 @@ function slideLeft(){
                 slideCount3 -= 1;
            //     console.log('3 up');
                 }
+                if (slideCount4 <= 1) {
+                    slideCount4 = 4;
+                } else {
+                slideCount4 -= 1;
+                }
+                if (slideCount5 <= 1) {
+                    slideCount5 = 5;
+                } else {
+                slideCount5 -= 1;
+                }
     var slideImage1 = document.querySelector(slideNumber+slideCount1);
     var slideImage2 = document.querySelector(slideNumber+slideCount2);
     var slideImage3 = document.querySelector(slideNumber+slideCount3);
-            slideImage1.setAttribute("style", " z-index: 28; left: 15%; "); 
-            slideImage2.setAttribute("style", " z-index: 30; left: 35%; "); 
-            slideImage3.setAttribute("style", " z-index: 29; left: 55%; "); 
+    var slideImage4 = document.querySelector(slideNumber+slideCount4);
+    var slideImage5 = document.querySelector(slideNumber+slideCount5);
+            slideImage1.setAttribute("style", " z-index: 28; left: 7%; "); 
+            slideImage2.setAttribute("style", " z-index: 30; left: 15%; "); 
+            slideImage3.setAttribute("style", " z-index: 32; left: 35%; "); 
+            slideImage4.setAttribute("style", " z-index: 31; left: 55%; "); 
+            slideImage5.setAttribute("style", " z-index: 29; left: 60%; "); 
                 slideImage1.setAttribute("aria-expanded", "false");
                 slideImage1.setAttribute("inert","");
-                slideImage2.setAttribute("aria-expanded", "true");
-                slideImage2.removeAttribute("inert","");
-                slideImage3.setAttribute("aria-expanded", "false");
-                slideImage3.setAttribute("inert","");                
+                slideImage2.setAttribute("aria-expanded", "false");
+                slideImage2.setAttribute("inert","");   
+                slideImage3.setAttribute("aria-expanded", "true");
+                slideImage3.removeAttribute("inert","");
+                slideImage4.setAttribute("aria-expanded", "false");
+                slideImage4.setAttribute("inert", "");
+                slideImage5.setAttribute("aria-expanded", "false");
+                slideImage5.setAttribute("inert", "");             
 
 }
     function startSlideRight() {
