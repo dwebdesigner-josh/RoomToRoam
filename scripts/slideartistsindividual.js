@@ -1,4 +1,42 @@
 (() => {
+ const expandContainer = document.querySelector('#container-container2');
+ let expanded = false;
+ const mediaQuery = window.matchMedia('(max-width: 1000px)');
+
+ function expandText(){
+    if(!expanded){
+        expanded=true;
+        expandContainer.setAttribute('aria-expanded','true');
+    } else {
+        expanded = false;
+        expandContainer.setAttribute("aria-expanded", "false");
+    }
+ }
+
+
+ function mediaChange(e) {
+    if (e.matches) { // Mobile
+      expandContainer.setAttribute('tabindex','0');
+    } else{ //desktop
+      expandContainer.setAttribute('tabindex','-1');
+    }
+ }
+
+ expandContainer.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' || event.keyCode === 13) {
+        expandText();
+    }
+});
+ expandContainer.addEventListener('click', expandText);
+
+ mediaQuery.addEventListener('change', mediaChange);
+
+ // Initial check
+mediaChange(mediaQuery);
+
+})();
+
+(() => {
 
     let slideCount1 = 1
     let slideCount2 = 2
@@ -131,3 +169,5 @@ function slideLeftSingle(){
                 slideLeftButton.addEventListener('click', slideLeftSingle);
                 slideRightButton.addEventListener('click', slideRightSingle);
 })();
+
+

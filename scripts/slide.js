@@ -8,7 +8,7 @@
     const slideLeftButton = document.querySelector('#slide-left');
     const slideRightButton = document.querySelector('#slide-right');
     const slideNumber = '#slide-';
-    const mediaQuery = window.matchMedia('(max-width: 850px)');
+    //const mediaQuery = window.matchMedia('(max-width: 850px)');
     //for transition delay on single click sliding:
     const transitionTime = 300; // Transition time
     let isTransitioning = false; //prevent next transition until current is complete

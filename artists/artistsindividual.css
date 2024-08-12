@@ -316,13 +316,82 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 
 
-/*PLANETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*PLANETS */
 
 .container-container{
   display: flex;
   width: 96vw;
   height: fit-content;
   margin-top: 1rem;
+}
+
+
+.container-planet{
+  position: relative;
+  left: -10rem;
+}
+  /*display: grid;
+  width: fit-content;
+  height: fit-content;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  }
+    .planet-link, .planet-link2{
+      grid-area: 1/1/1/1;
+      justify-self: center;
+      width: 10rem;
+      text-overflow: wrap;
+      text-align: center;
+    }
+    #planet-link3:hover *, #planet-link3:focus * {
+      text-shadow: 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 10px black, 0px 0px 10px black; 
+    }
+        #planet-link3:hover *{
+          color: #75ffba; 
+        } */
+            /*, #planet-link3:focus * removed from color styles for accessibility - less visible if the above is applied*/
+    
+    .planet-text{text-shadow: 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 10px black, 0px 0px 10px black;}
+    .planet-img, .planet-img2{
+      
+      width: 10rem;
+      height: 10rem;
+    } /*grid-area: 1/1/1/1;*/
+    #planet-img-middle{
+      margin-left: .5rem;
+      margin-right: .5rem;
+    }
+
+
+    @media screen and (max-width: 690px){
+      .container-text{flex-direction: column; justify-content: space-evenly;}
+        #container-text-middle{flex-direction: column-reverse;}
+     
+      .planet-img{width: 8rem; height: 8rem;}
+      .text-h3{align-self: end;}
+        #text-h3-middle{align-self: start; }
+      
+    }/* .planet-link{width: 8rem;}*/
+/*
+  #planet-concerts{}
+  #planet-albums{}
+  #planet-musicvideos{}
+*/
+
+
+
+@media screen and (min-width: 1700px){
+.container-planet{
+  top: -2rem;
+}
+}
+
+
+@media screen and (min-width: 1700px){
+.container-planet{
+  top: -3rem;
+}
 }
 
 @media screen and (min-width: 500px){
@@ -340,69 +409,89 @@ section {width: 100%; height:fit-content; z-index: 1;}
     
   }
     #container-text-middle{text-align: left;}
-      .text-p {font-size: .75rem;}
+      .text-p, .text-p2 {font-size: .75rem;}
       .text-h3 {text-align: center;}
     #container-concerts{justify-content: end;}
     #container-albums{justify-content: start;}
     #container-musicvideos{justify-content: end;}
 
 
+    #container-text2 {display: flex; flex-direction: column; width: 92vw; position: relative;} 
+      #container-text2 h3{margin-bottom: .75rem; align-self: start;}
+      #text-p-long1 {width: 60vw; align-self: start;}
+      #text-p-long2 {text-align: left; width: 90vw;}
+      .expand-arrow-down {display: none; visibility: hidden;}
 
-  .container-planet{
-    display: grid;
-    width: fit-content;
-    height: fit-content;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    align-items: center;
+ @media screen and (max-width: 1000px){
+      #container-container2 {position: relative; justify-content: center;}
+        #container-text2 {
+          position: relative;
+          height: 3rem; width: 50vw; top: 3rem; flex-direction: row; justify-content: space-evenly; align-items: center;
+          border: 1px inset white;  padding: .75rem; border-radius: 1rem;
+          cursor: pointer;
+        }
+        #container-text2 h3{margin-bottom: 0; align-self: center;}
+        .text-p2 {display: none; visibility: hidden;}
+        .expand-arrow-down {display: block; visibility: visible; width: 2rem; height: 1rem; }
+        #text-p-long1 {
+          width: 50vw;  position: relative; left: .25rem;        
+        }
+        .container-planet{
+          left: 0;
+        }
+
+        #container-container2[aria-expanded="true"] #container-text2 {
+          height: fit-content;
+          top: 0; left: 0; right: 0; margin: 0; padding: .5rem;
+          width: 92vw;
+          display: flex; flex-direction: column; width: 92vw; position: relative; 
+        }
+        #container-container2[aria-expanded="true"] .text-p2 {
+          display: block; visibility: visible; z-index: 30;
+        }
+
+        #container-container2[aria-expanded="true"] .container-planet{
+          z-index: 20; position: absolute; 
+          height: 12rem;
+          border: 1px solid white;
+          background-image: url('/images/technicolors.jpg');
+          background-size: cover;
+          background-position: center;
+          width: 30vw;
+          left: 60vw;
+          top: 3.5rem; 
+          
+
+        }
+
+        #container-container2[aria-expanded="true"] .container-planet .planet-img2 {
+          display: none; visibility: hidden;
+        }
+  }
+
+  @media screen and (max-width: 700px){
+    #container-container2[aria-expanded="true"] .container-planet{
+      height: 13rem;
     }
-      .planet-link{
-        grid-area: 1/1/1/1;
-        justify-self: center;
-        width: 10rem;
-        text-overflow: wrap;
-        text-align: center;
-      }
-      .planet-link:hover *, .planet-link:focus * {
-        text-shadow: 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 10px black, 0px 0px 10px black; 
-      }
-          #planet-link1:hover *{
-            color: #9a75ff; 
-          }
-          #planet-link2:hover *{
-            color: #75d3ff;   
-          }
-          #planet-link3:hover *{
-            color: #75ffba; 
-          } 
-              /*, #planet-link3:focus * removed from color styles for accessibility - less visible if the above is applied*/
-      
-      .planet-text{text-shadow: 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 10px black, 0px 0px 10px black;}
-      .planet-img{
-        grid-area: 1/1/1/1;
-        width: 10rem;
-        height: 10rem;
-      }
-      #planet-img-middle{
-        margin-left: .5rem;
-        margin-right: .5rem;
-      }
+  }
 
+  @media screen and (max-width: 550px){
+    #container-container2[aria-expanded="true"] .container-planet{
+      height: 16rem;
+    }
+  }
 
-      @media screen and (max-width: 690px){
-        .container-text{flex-direction: column; justify-content: space-evenly;}
-          #container-text-middle{flex-direction: column-reverse;}
-        .planet-link{width: 8rem;}
-        .planet-img{width: 8rem; height: 8rem;}
-        .text-h3{align-self: end;}
-          #text-h3-middle{align-self: start; }
-        
-      }
-/*
-    #planet-concerts{}
-    #planet-albums{}
-    #planet-musicvideos{}
-*/
+@media screen and (max-width: 450px){
+  #container-container2[aria-expanded="true"] .container-planet{
+    height: 18rem;
+  }
+}
+
+@media screen and (max-width: 400px){
+  #container-container2[aria-expanded="true"] .container-planet{
+    height: 20rem;
+  }
+}
 
 
 /*HIGHLIGHT REEL 2*/
