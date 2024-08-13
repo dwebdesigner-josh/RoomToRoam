@@ -74,9 +74,9 @@
 <section>
   
   <div class="container-container"  id="container-albums">
-    <div class="container-planet" id="planet-albums">
-      <img class="planet-img" id="planet-img-middle" src="/images/technicolors/technicolorsprofilepic.jpg" alt="image of a planet"/>
-      <a class="planet-link" id="planet-link2" href="/reviews/albums/"  target="_self"><p class="planet-text">The Technicolors</p></a>
+    <div class="container-img">
+      <img class="artist-img" id="img-middle" src="/images/technicolors/technicolorsprofilepic.jpg" alt="image of a planet"/>
+      <a href="/reviews/albums/"  target="_self"><p class="artist-text">The Technicolors</p></a>
     </div>
     <div class="container-text" id="container-text-middle">
       <p class="text-p">
@@ -88,6 +88,7 @@
     </div>
 </div>
 
+</section>
 
         <section id="swirl-container">
           <!-- swirl animation containers -->   
@@ -114,27 +115,27 @@
               <div class="slider">
                   <button id="slide-left2" tabindex="0"></button> <!-- aria-pressed="false"  perhaps reintigrate this later with the slide.js-->
                 <div class="slides-container" >
-                  <a class="slide-anchor2" href="/artists/Technicolors/" inert target="_self" id="slide-21" aria-expanded="false" style="z-index: 28; left: 7%;  " >
-                    <img id="slideworksimg-1" src="/images/technicolors/technicolors-metaphysical.jpg" alt="Photo of artist's work" /></a>
+                  <div class="slide-anchor2"  tabindex="0" inert  id="slide-21" aria-expanded="false" style="z-index: 28; left: 7%;  " >
+                    <img id="slideworksimg-1" src="/images/technicolors/technicolors-metaphysical.jpg" alt="Photo of artist's work" /></div>
                     
         
-                  <a class="slide-anchor2" href="/artists/Technicolors/" inert target="_self" id="slide-22" aria-expanded="false"  style="z-index: 30; left: 15%; " >
-                    <img id="slideworksimg-2" src="/images/technicolors/technicolors-cinemasublimina.jpg" alt="Photo of artist's work" /></a>
+                  <div class="slide-anchor2"  tabindex="0" id="slide-22" aria-expanded="true"  style="z-index: 30; left: 15%; " >
+                    <img id="slideworksimg-2" src="/images/technicolors/technicolors-cinemasublimina.jpg" alt="Photo of artist's work" /></div>
                  
-                  <a class="slide-anchor2" href="/artists/Technicolors/" target="_self" id="slide-23" aria-expanded="true" style="z-index: 32; left: 35%; " >
-                    <img id="slideworksimg-3" src="/images/technicolors/technicolors-ultravioletdisguise.jpg" alt="Photo of artist's work" /></a>
+                  <div class="slide-anchor2"  tabindex="0" id="slide-23" aria-expanded="true" style="z-index: 32; left: 35%; " >
+                    <img id="slideworksimg-3" src="/images/technicolors/technicolors-ultravioletdisguise.jpg" alt="Photo of artist's work" /></div>
                     
-                  <a class="slide-anchor2" href="/artists/Technicolors/" inert target="_self" id="slide-24" aria-expanded="false" style="z-index: 31; left: 55%; " >
-                    <img id="slideworksimg-4" src="/images/technicolors/sweat.jpg" alt="Photo of artist's work" /></a>
+                  <div class="slide-anchor2"  tabindex="0" id="slide-24" aria-expanded="true" style="z-index: 31; left: 55%; " >
+                    <img id="slideworksimg-4" src="/images/technicolors/sweat.jpg" alt="Photo of artist's work" /></div>
                       
-                  <a class="slide-anchor2" href="/artists/Technicolors/" inert target="_self" id="slide-25" aria-expanded="false" style="z-index: 29; left: 60%; " >
-                    <img id="slideworksimg-5" src="/images/technicolors/listener.jpg" alt="Photo of artist's work" /></a>
-                        
-                  
-        
+                  <div class="slide-anchor2" tabindex="0" inert id="slide-25" aria-expanded="false" style="z-index: 29; left: 60%; " >
+                    <img id="slideworksimg-5" src="/images/technicolors/listener.jpg" alt="Photo of artist's work" /></div>
+                
                 </div>
                   <button id="slide-right2" tabindex="0"></button>
               </div>
+
+              
               
                   <!--slide img positions based on size/aspect-ratio value-->
                 <!-- 33% width - left: 12.5% , 30 , 54.5-->
@@ -143,8 +144,17 @@
                 
           </section></div>
 
-</section>
-<section id="section-container2">    
+
+  <section class="section-slideinfo">
+            <div class="slideinfo-container" id="slideinfo-1" inert style="display: none; visibility: hidden;">11111111111</div>
+            <div class="slideinfo-container" id="slideinfo-2" inert style="display: none; visibility: hidden;">2222222222</div>
+            <div class="slideinfo-container" id="slideinfo-3" inert style="display: none; visibility: hidden;">333333333</div>
+            <div class="slideinfo-container" id="slideinfo-4" inert style="display: none; visibility: hidden;">4444444444</div>
+            <div class="slideinfo-container" id="slideinfo-5" inert style="display: none; visibility: hidden;">5555555555</div>
+  </section>
+
+
+<section id="section-container">    
 <div class="container-container"  id="container-container2" aria-expanded="false">
   <div id="container-text2">
     <h3>About the artist</h3>
@@ -156,8 +166,8 @@
     </p>
   </div>
 
-    <div class="container-planet" id="planet-musicvideos">
-      <img class="planet-img2" id="max-width-exception" src="/images/technicolors/technicolorsprofilepic.jpg" alt="image of a planet"/>
+    <div class="container-img">
+      <img class="artist-img2" id="max-width-exception" src="/images/technicolors/technicolorsprofilepic.jpg" alt="image of a planet"/>
     </div>
 </div>
 </section>
@@ -238,7 +248,7 @@ https://www.youtube.com/watch?v=45mnmy2JUl0&list=PLNYI1SZRuce6lhwBmvuwjPqUMeH81n
 <script src="/scripts/loadanimation.js"></script>
 <script src="/scripts/hamburger.js"></script> 
 <script src="/scripts/swirljqueryanimation.js"></script> 
-<script src="/scripts/slideartistsindividual.js"></script>
+<script src="/scripts/artistsindividual.js"></script>
   
 </body>
 
