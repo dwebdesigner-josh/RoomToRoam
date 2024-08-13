@@ -220,153 +220,40 @@ function slideLeftSingle(){
 
 })();
 
+
 (() => {
-    const slideExpand1 = document.querySelector('#slide-21');
-    const slideExpand2 = document.querySelector('#slide-22');
-    const slideExpand3 = document.querySelector('#slide-23');
-    const slideExpand4 = document.querySelector('#slide-24');
-    const slideExpand5 = document.querySelector('#slide-25');
-    const slideInfo1 = document.querySelector('#slideinfo-1');
-    const slideInfo2 = document.querySelector('#slideinfo-2');
-    const slideInfo3 = document.querySelector('#slideinfo-3');
-    const slideInfo4 = document.querySelector('#slideinfo-4');
-    const slideInfo5 = document.querySelector('#slideinfo-5');
- //   const slideLeftButton2 = document.querySelector('#slide-left2');
-   // const slideRightButton2 = document.querySelector('#slide-right2');
-let expanded1 = false;
-let expanded2 = false;
-let expanded3 = false;
-let expanded4 = false;
-let expanded5 = false;
+    //see readme.md SAVE section for original uncompressed code of below slide info expand functions
+    // Array of slide buttons and corresponding info sections
+    const slides = [
+        { button: document.querySelector('#slide-21'), info: document.querySelector('#slideinfo-1') },
+        { button: document.querySelector('#slide-22'), info: document.querySelector('#slideinfo-2') },
+        { button: document.querySelector('#slide-23'), info: document.querySelector('#slideinfo-3') },
+        { button: document.querySelector('#slide-24'), info: document.querySelector('#slideinfo-4') },
+        { button: document.querySelector('#slide-25'), info: document.querySelector('#slideinfo-5') }
+    ];
 
-slideExpand1.addEventListener('click',
-    function(){
-if(!expanded1){
-    expanded1=true;
-    slideInfo1.setAttribute('style','display: block; visibility: visible;');
-    slideInfo1.setAttribute('aria-expanded','true');
-} else {
-    expanded1 = false;
-    slideInfo1.setAttribute('style','display: none; visibility: hidden;');
-    slideInfo1.setAttribute('aria-expanded','false');
-}
-expanded2 = false;
-slideInfo2.setAttribute('style','display: none; visibility: hidden;');
-slideInfo2.setAttribute('aria-expanded','false');
-expanded3 = false;
-slideInfo3.setAttribute('style','display: none; visibility: hidden;');
-slideInfo3.setAttribute('aria-expanded','false');
-expanded4 = false;
-slideInfo4.setAttribute('style','display: none; visibility: hidden;');
-slideInfo4.setAttribute('aria-expanded','false');
-expanded5 = false;
-slideInfo5.setAttribute('style','display: none; visibility: hidden;');
-slideInfo5.setAttribute('aria-expanded','false');
+    // Function to hide all slide info sections
+    function hideAllSlides() {
+        slides.forEach(slide => {
+            slide.info.setAttribute('style', 'display: none; visibility: hidden;');
+            slide.info.setAttribute('aria-expanded', 'false');
+        });
     }
-);
 
-slideExpand2.addEventListener('click',
-    function(){
-if(!expanded2){
-    expanded2=true;
-    slideInfo2.setAttribute('style','display: block; visibility: visible;');
-    slideInfo2.setAttribute('aria-expanded','true');
-} else {
-    expanded2 = false;
-    slideInfo2.setAttribute('style','display: none; visibility: hidden;');
-    slideInfo2.setAttribute('aria-expanded','false');
-}
-expanded1 = false;
-slideInfo1.setAttribute('style','display: none; visibility: hidden;');
-slideInfo1.setAttribute('aria-expanded','false');
-expanded3 = false;
-slideInfo3.setAttribute('style','display: none; visibility: hidden;');
-slideInfo3.setAttribute('aria-expanded','false');
-expanded4 = false;
-slideInfo4.setAttribute('style','display: none; visibility: hidden;');
-slideInfo4.setAttribute('aria-expanded','false');
-expanded5 = false;
-slideInfo5.setAttribute('style','display: none; visibility: hidden;');
-slideInfo5.setAttribute('aria-expanded','false');
+    // Function to handle slide toggle
+    function toggleSlide(index) {
+        const isCurrentlyExpanded = slides[index].info.getAttribute('aria-expanded') === 'true';
+        
+        hideAllSlides(); // Hide all slides
+
+        if (!isCurrentlyExpanded) {
+            slides[index].info.setAttribute('style', 'display: block; visibility: visible;');
+            slides[index].info.setAttribute('aria-expanded', 'true');
+        }
     }
-);
 
-slideExpand3.addEventListener('click',
-    function(){
-if(!expanded3){
-    expanded3=true;
-    slideInfo3.setAttribute('style','display: block; visibility: visible;');
-    slideInfo3.setAttribute('aria-expanded','true');
-} else {
-    expanded3 = false;
-    slideInfo3.setAttribute('style','display: none; visibility: hidden;');
-    slideInfo3.setAttribute('aria-expanded','false');
-}
-expanded2 = false;
-slideInfo2.setAttribute('style','display: none; visibility: hidden;');
-slideInfo2.setAttribute('aria-expanded','false');
-expanded1 = false;
-slideInfo1.setAttribute('style','display: none; visibility: hidden;');
-slideInfo1.setAttribute('aria-expanded','false');
-expanded4 = false;
-slideInfo4.setAttribute('style','display: none; visibility: hidden;');
-slideInfo4.setAttribute('aria-expanded','false');
-expanded5 = false;
-slideInfo5.setAttribute('style','display: none; visibility: hidden;');
-slideInfo5.setAttribute('aria-expanded','false');
-    }
-);
-
-slideExpand4.addEventListener('click',
-    function(){
-if(!expanded4){
-    expanded4=true;
-    slideInfo4.setAttribute('style','display: block; visibility: visible;');
-    slideInfo4.setAttribute('aria-expanded','true');
-} else {
-    expanded4 = false;
-    slideInfo4.setAttribute('style','display: none; visibility: hidden;');
-    slideInfo4.setAttribute('aria-expanded','false');
-}
-expanded2 = false;
-slideInfo2.setAttribute('style','display: none; visibility: hidden;');
-slideInfo2.setAttribute('aria-expanded','false');
-expanded3 = false;
-slideInfo3.setAttribute('style','display: none; visibility: hidden;');
-slideInfo3.setAttribute('aria-expanded','false');
-expanded1 = false;
-slideInfo1.setAttribute('style','display: none; visibility: hidden;');
-slideInfo1.setAttribute('aria-expanded','false');
-expanded5 = false;
-slideInfo5.setAttribute('style','display: none; visibility: hidden;');
-slideInfo5.setAttribute('aria-expanded','false');
-    }
-);
-
-slideExpand5.addEventListener('click',
-    function(){
-if(!expanded5){
-    expanded5=true;
-    slideInfo5.setAttribute('style','display: block; visibility: visible;');
-    slideInfo5.setAttribute('aria-expanded','true');
-} else {
-    expanded5 = false;
-    slideInfo5.setAttribute('style','display: none; visibility: hidden;');
-    slideInfo5.setAttribute('aria-expanded','false');
-}
-expanded2 = false;
-slideInfo2.setAttribute('style','display: none; visibility: hidden;');
-slideInfo2.setAttribute('aria-expanded','false');
-expanded3 = false;
-slideInfo3.setAttribute('style','display: none; visibility: hidden;');
-slideInfo3.setAttribute('aria-expanded','false');
-expanded4 = false;
-slideInfo4.setAttribute('style','display: none; visibility: hidden;');
-slideInfo4.setAttribute('aria-expanded','false');
-expanded1 = false;
-slideInfo1.setAttribute('style','display: none; visibility: hidden;');
-slideInfo1.setAttribute('aria-expanded','false');
-    }
-);
-
+    // Attach event listeners to each button
+    slides.forEach((slide, index) => {
+        slide.button.addEventListener('click', () => toggleSlide(index));
+    });
 })();
