@@ -103,7 +103,7 @@ mediaChange(mediaQuery);
                 slideImage5.setAttribute("style", " z-index: 28; left: 60%; "); 
                     slideImage1.setAttribute("aria-expanded", "false");
                     slideImage1.setAttribute("inert", "");
-                    slideImage2.setAttribute("aria-expanded", "true");
+                    slideImage2.setAttribute("aria-expanded", "false");
                     slideImage2.setAttribute("inert", "");
                     slideImage3.setAttribute("aria-expanded", "true");
                     slideImage3.removeAttribute("inert", "");
@@ -115,7 +115,7 @@ mediaChange(mediaQuery);
 
 function slideLeft(){
                 if (slideCount1 <= 1) {
-                    slideCount1 = 3;
+                    slideCount1 = 5;
         //            console.log('1 is back to 1');
                 } else {
                     slideCount1 -= 1;
@@ -123,7 +123,7 @@ function slideLeft(){
                 }
 
                 if (slideCount2 <= 1) {
-                    slideCount2 = 3;
+                    slideCount2 = 5;
          //           console.log('2 is back to 1');
                 } else {
                 slideCount2 -= 1;
@@ -131,14 +131,14 @@ function slideLeft(){
                 }
 
                 if (slideCount3 <= 1) {
-                    slideCount3 = 3;
+                    slideCount3 = 5;
          //           console.log('3 is back to 1');
                 } else {
                 slideCount3 -= 1;
            //     console.log('3 up');
                 }
                 if (slideCount4 <= 1) {
-                    slideCount4 = 4;
+                    slideCount4 = 5;
                 } else {
                 slideCount4 -= 1;
                 }
