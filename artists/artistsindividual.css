@@ -461,6 +461,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
           z-index: 20; position: absolute; 
           height: 12rem;
           border: 1px solid white;
+          border-radius: 1rem;
           background-image: url('/images/technicolors/technicolorsprofilepic.jpg');
           background-size: cover;
           background-position: center;
