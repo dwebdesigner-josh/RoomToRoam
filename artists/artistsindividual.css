@@ -509,22 +509,29 @@ section {width: 100%; height:fit-content; z-index: 1;}
 .swirl{ flex:1; max-width: 33%; z-index: 1; opacity: .8; position: relative;} /*possibly remove opacity style*/
 .swirl-image{width: 100%; position: relative; top: 6%; z-index: 1;}
 .swirl-link{
-  display: block; width: 100%; height: 100%; 
+  display: block; width: 25%; height: 25%; 
   justify-content: center; align-items: center; display: flex; 
-  position: relative; top: -94%; 
+  position: relative; top: -58%; left: 37%;
+  border-radius: 50%;
   text-decoration: none;
   z-index: 5;
-  
-  background-image: url("/images/swirltext.png");
+}
+
+#swirl-link1{
+  background-image: url("/images/tiktok.png");
   background-size: cover;
-  background-color: transparent;
-  
   }
 
-  .swirl-text{font-weight: 700; font-size: 2rem; box-sizing: border-box; z-index: 10; position: absolute; text-align: center; border-radius: 50%; background-color: #13181e;}
-    @media screen and (min-width:850px){.swirl-text{font-size: 1rem;}}
-    @media screen and (min-width:1600px){.swirl-text{font-size: 1.5rem;}}
-    
+#swirl-link2{
+  background-image: url("/images/insta.png");
+  background-size: cover;
+  }
+  
+#swirl-link3{
+  background-image: url("/images/youtube.png");
+  background-size: cover;
+  }
+
     .swirl-link:link, .swirl-link:active{
       color: #fffdef;
     }
@@ -541,7 +548,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
     width: 100%;
    
   }
-  .swirl-text {font-weight: 600; font-size: 1.3rem;}
+  
   .swirl {max-width: 50vw; width: 50vw;}
   
 }
