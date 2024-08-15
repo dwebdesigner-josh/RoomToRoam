@@ -518,17 +518,17 @@ section {width: 100%; height:fit-content; z-index: 1;}
 }
 
 #swirl-link1{
-  background-image: url("/images/tiktok.png");
+  background-image: url("/images/spotify.png");
   background-size: cover;
   }
 
 #swirl-link2{
-  background-image: url("/images/insta.png");
+  background-image: url("/images/instacircular.png");
   background-size: cover;
   }
   
 #swirl-link3{
-  background-image: url("/images/youtube.png");
+  background-image: url("/images/email6.png");
   background-size: cover;
   }
 
