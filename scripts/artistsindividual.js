@@ -1,4 +1,48 @@
 (() => {
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const summaryClick = document.querySelector('#artist-summary');
+    const summaryOverlay = document.querySelector('#artist-summary-text');
+    let expanded = false;
+  
+    function overlay() {
+      if (!expanded) {
+        expanded = true;
+        summaryOverlay.setAttribute('style', 'display: flex; visibility: visible;');
+      } else {
+        expanded = false;
+        summaryOverlay.setAttribute('style', 'display: none; visibility: hidden;');
+      }
+    }
+  
+    function handleKeydown(event) {
+      if (event.key === 'Enter' || event.keyCode === 13) {
+        overlay();
+      }
+    }
+  
+    function mediaChange(e) {
+      if (e.matches) { // Mobile
+        summaryOverlay.setAttribute('style', 'display: none; visibility: hidden;');
+        summaryClick.setAttribute('tabindex', '0');
+        summaryClick.addEventListener('click', overlay);
+        summaryClick.addEventListener('keydown', handleKeydown);
+      } else { // Desktop
+        summaryOverlay.setAttribute('style', 'display: flex; visibility: visible;');
+        summaryClick.removeAttribute('tabindex');
+        summaryClick.removeEventListener('click', overlay);
+        summaryClick.removeEventListener('keydown', handleKeydown);
+      }
+    }
+  
+    // Initial check
+    mediaChange(mediaQuery);
+  
+    // Listen for changes in media query
+    mediaQuery.addEventListener('change', mediaChange);
+  
+  })();
+
+(() => {
  const expandContainer = document.querySelector('#container-container2');
  let expanded = false;
  const mediaQuery = window.matchMedia('(max-width: 1000px)');
