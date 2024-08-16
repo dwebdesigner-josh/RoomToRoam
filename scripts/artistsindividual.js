@@ -237,6 +237,7 @@ function slideLeftSingle(){
         slides.forEach(slide => {
             slide.info.setAttribute('style', 'display: none; visibility: hidden;');
             slide.info.setAttribute('aria-expanded', 'false');
+            slide.info.setAttribute('inert','');
         });
     }
 
@@ -249,6 +250,7 @@ function slideLeftSingle(){
         if (!isCurrentlyExpanded) {
             slides[index].info.setAttribute('style', 'display: block; visibility: visible;');
             slides[index].info.setAttribute('aria-expanded', 'true');
+            slides[index].info.removeAttribute('inert','');
         }
     }
 

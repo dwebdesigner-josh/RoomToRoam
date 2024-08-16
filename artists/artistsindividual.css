@@ -600,6 +600,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
   /*width: 50%;*/
   width: 33%;
   transition: left 500ms ease-in-out, transform 500ms ease-in-out;
+  cursor: pointer;
 }
 
 
@@ -651,8 +652,33 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 /*section - slide info*/
 
-.slideinfo-container {color: white; font-size: 10rem;}
+.slideinfo-container {color: white; margin-left: 1rem; margin-right: 1rem; margin-top: -1rem;
+  border: 1px solid white; border-top: none; border-bottom-right-radius: 1rem; border-bottom-left-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.slideinfo-top{
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 100%; padding: 1rem;
+  justify-content: space-between;
+}
 
+.slideinfo-link-spotify{
+  display: block;
+  position: relative;
+  z-index: 100;
+  list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(/images/spotify.png);
+  background-size: cover;
+}
+/*border-top: 1px solid rgba(255, 255, 255, 0.452);*/
 
 /*RADIO BUTTON EXPANDER*/
 
