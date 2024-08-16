@@ -354,27 +354,23 @@ section {width: 100%; height:fit-content; z-index: 1;}
             /*, #planet-link3:focus * removed from color styles for accessibility - less visible if the above is applied*/
     
     .artist-text{text-shadow: 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 10px black, 0px 0px 10px black;}
-    .artist-img, .artist-img2{
-      
+    .artist-img2{
       width: 10rem;
       height: 10rem;
+      border: 1px inset white;
+      border-radius: 1rem;
     } /*grid-area: 1/1/1/1;*/
     #img-middle{
       margin-left: .5rem;
       margin-right: .5rem;
     }
 
-    .artist-img2{
-      border: 1px inset white;
-      border-radius: 1rem;
-    }
 
 
     @media screen and (max-width: 690px){
       .container-text{flex-direction: column; justify-content: space-evenly;}
         #container-text-middle{flex-direction: column-reverse;}
      
-      .artist-img{width: 8rem; height: 8rem;}
       .text-h3{align-self: end;}
         #text-h3-middle{align-self: start; }
       
@@ -501,7 +497,72 @@ section {width: 100%; height:fit-content; z-index: 1;}
   }
 }
 
+/*artist summary*/
 
+  #artist-summary{
+    width: 100%; box-sizing: border-box; padding: 1rem; padding-bottom: 0;
+    display: flex; flex-direction: row;
+  }
+
+    .artist-img{
+      width: 10rem;
+      height: 10rem;
+      border: 1px solid white;
+      border-radius: 1rem;
+    }
+
+    #artist-summary div{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-left: 1rem;
+    }
+      #artist-summary div p {
+        font-size: .75rem;
+        text-align: start;
+        width: 100%;
+      }
+
+/*summary - tablet and mobile view*/
+@media screen and (max-width: 768px){
+      #artist-summary{
+        flex-direction: column;
+        align-items: center;
+      }
+        .artist-img{
+          width: 16rem;
+          height: 16rem;
+        }        /*filter: blur(2px);*/
+
+        #artist-summary div{
+          position: relative;
+          z-index: 2;
+          bottom: calc(16rem + 1px);
+          margin-left: 0;
+          margin-bottom: -14rem;
+          
+          border-radius: 1rem;
+          height: 16rem;
+          width: 16rem;
+          background-color: #12171de7;
+        }
+        #artist-summary div p {
+          text-align: center;
+          font-size: .8rem;
+          text-shadow: 1px 4px 4px black 1px 4px 4px black 1px 4px 4px black;
+        }
+
+        main #highlight2{
+          margin-top: 6rem;
+        }
+        .slideinfo-container{
+          margin-bottom: 4rem;
+        }
+        #section-container{
+          margin-top: 2rem;
+          margin-bottom: -2rem;
+        }
+}
 
 /*section - swirl animated buttons*/
 
