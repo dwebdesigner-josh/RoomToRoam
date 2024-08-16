@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/images/starV1frame1.png");
+  background-image: url("/RoomToRoam/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -244,7 +244,7 @@ header {
     .loadscreen {
         width: 100%;
         height: 100%;
-        background-image: url("/images/starV1frame1.png");
+        background-image: url("/RoomToRoam/images/starV1frame1.png");
         background-repeat: repeat;
         position: absolute;
         top: 0;
@@ -462,7 +462,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
           height: 12rem;
           border: 1px solid white;
           border-radius: 1rem;
-          background-image: url('/images/technicolors/technicolorsprofilepic.jpg');
+          background-image: url('/RoomToRoam/images/technicolors/technicolorsprofilepic.jpg');
           background-size: cover;
           background-position: center;
           width: 30vw;
@@ -597,17 +597,17 @@ section {width: 100%; height:fit-content; z-index: 1;}
 }
 
 #swirl-link1{
-  background-image: url("/images/spotify.png");
+  background-image: url("/RoomToRoam/images/spotify.png");
   background-size: cover;
   }
 
 #swirl-link2{
-  background-image: url("/images/instacircular.png");
+  background-image: url("/RoomToRoam/images/instacircular.png");
   background-size: cover;
   }
   
 #swirl-link3{
-  background-image: url("/images/email6.png");
+  background-image: url("/RoomToRoam/images/email6.png");
   background-size: cover;
   }
 
@@ -659,13 +659,13 @@ section {width: 100%; height:fit-content; z-index: 1;}
     }
 
     #slide-left2 {/*padding-right: 5%;*/
-      background-image: url("/images/slidebuttonarrowleft.png");
+      background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
       background-size: cover;
       background-position: center;
       
     }
     #slide-right2 {/*padding-left: 5%;*/
-      background-image: url("/images/slidebuttonarrowright.png");
+      background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
       background-size: cover;
       background-position: center;
       
@@ -772,7 +772,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
       cursor: pointer;
       width: 2rem;
       height: 2rem;
-      background-image: url(/images/spotify.png);
+      background-image: url(/RoomToRoam/images/spotify.png);
       background-size: cover;
     }
     
@@ -870,16 +870,16 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-  background-image: url('/images/dianearbusbackground.jpg');
+  background-image: url('/RoomToRoam/images/dianearbusbackground.jpg');
 }
 .card[for="c2"] {
-  background-image: url('/images/chonbackground.jpg');
+  background-image: url('/RoomToRoam/images/chonbackground.jpg');
 }
 .card[for="c3"] {
-  background-image: url('/images/ChimamandaNgoziAdichiebackground.jpg');
+  background-image: url('/RoomToRoam/images/ChimamandaNgoziAdichiebackground.jpg');
 }
 .card[for="c4"] {
-  background-image: url('/images/covetbackground.jpg');
+  background-image: url('/RoomToRoam/images/covetbackground.jpg');
 }
 
 /*footer*/
