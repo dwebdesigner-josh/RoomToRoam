@@ -603,7 +603,16 @@ section {width: 100%; height:fit-content; z-index: 1;}
   cursor: pointer;
 }
 
-
+/*
+  .slide-expand-arrow{
+    display: flex; justify-content: center; width: 100%; height: 1rem; align-self: center;
+    position: relative; z-index: 2; top: -1rem;
+  }
+    .slider .slide-expand-arrow img{
+      display: block; visibility: visible;
+      width: 2rem; box-shadow: none;
+    }
+*/
       .slider {
       display: flex;
       flex-direction: row;
@@ -652,33 +661,49 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 /*section - slide info*/
 
-.slideinfo-container {color: white; margin-left: 1rem; margin-right: 1rem; margin-top: -1rem;
-  border: 1px solid white; border-top: none; border-bottom-right-radius: 1rem; border-bottom-left-radius: 1rem;
+.slideinfo-container {color:#e3f5ff; margin-left: 1rem; margin-right: 1rem; margin-top: -1rem;
+  border: 1px inset white; border-top: none; border-bottom-right-radius: 1rem; border-bottom-left-radius: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
-.slideinfo-top{
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  width: 100%; padding: 1rem;
-  justify-content: space-between;
-}
+  .slideinfo-top{
+    display: flex;
+    flex-direction: row;
+    width: 100%; box-sizing: border-box; justify-content: space-between; padding: 1rem; 
+  }
+    .slideinfo-top-details p{
+      font-size: .8rem;
+    }
+      .slideinfo-top-details .slideinfo-top-details-name{
+        font-size: 1.2rem;
+      }
 
-.slideinfo-link-spotify{
-  display: block;
-  position: relative;
-  z-index: 100;
-  list-style-type: none;
-  text-decoration: none;
-  cursor: pointer;
-  width: 2rem;
-  height: 2rem;
-  background-image: url(/images/spotify.png);
-  background-size: cover;
-}
-/*border-top: 1px solid rgba(255, 255, 255, 0.452);*/
+  .slideinfo-bottom{
+    display: flex; flex-direction: row;
+    width: 100%; box-sizing: border-box; justify-content: space-between; padding: 1rem; padding-top: 0;
+  }
+
+    .slideinfo-link-spotify{
+      display: block;
+      position: relative;
+      z-index: 100;
+      list-style-type: none;
+      text-decoration: none;
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+      background-image: url(/images/spotify.png);
+      background-size: cover;
+    }
+    
+    .slideinfo-bottom-description{width: 75%;}
+    .slideinfo-bottom-description p{
+     color:#e3f5ff;
+     text-align: end;
+    }
+/*b0b0ba e3f5ff*/
+
 
 /*RADIO BUTTON EXPANDER*/
 
