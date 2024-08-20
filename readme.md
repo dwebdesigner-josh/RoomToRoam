@@ -8,12 +8,13 @@ HOME PAGE NOTES:
 
 TODO:
 8/16
-TODO - reviews album reviews page zooms out past vw on mobile
-TODO - reformat all reviews pages to album reviews page code
-TODO - personalize concert and music video reviews pages
-TODO - artists page - featured artists description expand works but closing the expanded description doesn't work well enough - need to make the whole box clickable to close it not just the tiny up arrow button at the bottom of it
-TODO - reviews landing page - revert back to normal loadscreen most likely
-TODO- all pages - increase initial loadscreen time slightly (github test showed uncovered images still loading onto the page, looked bad, so cover them up for another second or two at the most)
+TODO - FIX - album reviews page  -  zooms out past vw on mobile
+TODO - CHANGE - artists page - featured artists description expand works but closing the expanded description doesn't work well enough - need to make the whole box clickable to close it not just the tiny up arrow button at the bottom of it
+
+TODO - COPY BOILER - reformat all reviews pages to album reviews page code
+TODO - CONTENT - personalize concert and music video reviews pages
+TODO - FIX - reviews landing page - revert back to normal loadscreen most likely
+TODO- FIX - all pages - increase initial loadscreen time slightly (github test showed uncovered images still loading onto the page, looked bad, so cover them up for another second or two at the most)
 
 
 1. TODO - general:

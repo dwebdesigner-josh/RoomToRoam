@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/RoomToRoam/images/starV1frame1.png");
+  background-image: url("/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -256,7 +256,7 @@ header {
       .loadscreen {
           width: 100%;
           height: 100%;
-          background-image: url("/RoomToRoam/images/starV1frame1.png");
+          background-image: url("/images/starV1frame1.png");
           background-repeat: repeat;
           position: absolute;
           top: 0;
@@ -440,7 +440,7 @@ main h2 {font-size: 2rem;}
       .list-backgroundedge-container {
         padding: .5rem;
         width: 40vw;
-        background-image: url(/RoomToRoam/images/back2.jpg);
+        background-image: url(/images/back2.jpg);
         border-radius: 1rem;
         display: flex;
         align-items: center;

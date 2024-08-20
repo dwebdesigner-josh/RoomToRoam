@@ -5,7 +5,7 @@
     const $element2 = $('#swirl-image2');
     const $element3 = $('#swirl-image3');
     //CHANGE the path below to match the folder containing the src imgs
-    const imagePath = '/RoomToRoam/scripts/swirl1/planetorbit1';
+    const imagePath = '/scripts/swirl1/planetorbit1';
     //TEST PATH TO MATCH GITHUB PAGES: '/scripts....' instead of '/scripts....'
     const totalFrames = 90;
     const animationDuration = 3000;

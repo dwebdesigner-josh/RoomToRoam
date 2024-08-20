@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   overflow-x: hidden; /*prevent horizontal scroll bar*/
   /*star background*/
-  background-image: url("/RoomToRoam/images/starV1frame1.png");
+  background-image: url("/images/starV1frame1.png");
   background-repeat: repeat;
   background-attachment:fixed;
   /*TODO - play with these settings and consider animating the background img using method from STARTEST
@@ -244,7 +244,7 @@ header {
     .loadscreen {
         width: 100%;
         height: 100%;
-        background-image: url("/RoomToRoam/images/starV1frame1.png");
+        background-image: url("/images/starV1frame1.png");
         background-repeat: repeat;
         position: absolute;
         top: 0;
@@ -427,10 +427,13 @@ section {width: 100%; height:fit-content; z-index: 1;}
  @media screen and (max-width: 1000px){
       #container-container2 {position: relative; justify-content: center; margin-bottom: 4rem;}
         #container-text2 {
-          width: 13rem; height:13rem; position: absolute; z-index: 10;
+          width: 20rem; height:20rem; position: absolute; z-index: 10;
           display: flex; flex-direction: column; align-items: center; justify-content: space-between;
-          border: 1px inset white;  padding: .75rem; border-radius: 1rem;
+            padding: .75rem; border-radius: 1rem;
           cursor: pointer;
+        } /*border: 1px inset white;*/
+        #container-text2 h3{
+          position: relative; bottom: .5rem;
         }
         .container-img{
           position: relative; z-index: 1;
@@ -444,7 +447,10 @@ section {width: 100%; height:fit-content; z-index: 1;}
         #text-p-long1 {
           width: 50vw;  position: relative; left: .25rem;        
         }
-        .artist-img2 {margin-left: 2rem; position: relative; right: 24vw;}
+        .artist-img2 {margin-left: 2rem; position: relative; right: 24vw; 
+          box-shadow: 0px 0px 2px 4px  #4d6583;
+            width: 16rem;
+            height: 16rem;}
 
 
         #container-container2[aria-expanded="true"] #container-text2 {
@@ -452,6 +458,10 @@ section {width: 100%; height:fit-content; z-index: 1;}
           top: 0; left: 0; right: 0; margin: 0; padding: .5rem;
           width: 92vw;
           display: flex; flex-direction: column; width: 92vw; position: relative; 
+        }
+
+        #container-container2[aria-expanded="true"] #container-text2 h3{
+          position: static;
         }
         #container-container2[aria-expanded="true"] .text-p2 {
           display: block; visibility: visible; z-index: 30;
@@ -462,7 +472,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
           height: 12rem;
           border: 1px solid white;
           border-radius: 1rem;
-          background-image: url('/RoomToRoam/images/technicolors/technicolorsprofilepic.jpg');
+          background-image: url('/images/technicolors/technicolorsprofilepic.jpg');
           background-size: cover;
           background-position: center;
           width: 30vw;
@@ -550,7 +560,11 @@ section {width: 100%; height:fit-content; z-index: 1;}
         .artist-img{
           width: 16rem;
           height: 16rem;
+          cursor: pointer;
+          box-shadow: 0px 0px 2px 4px  #4d6583;
         }        /*filter: blur(2px);*/
+
+        #artist-summary-text{cursor: pointer;}
 
         #artist-summary div{
           position: relative;
@@ -594,20 +608,20 @@ section {width: 100%; height:fit-content; z-index: 1;}
   border-radius: 50%;
   text-decoration: none;
   z-index: 5;
-}
+} 
 
 #swirl-link1{
-  background-image: url("/RoomToRoam/images/spotify.png");
+  background-image: url("/images/spotify.png");
   background-size: cover;
   }
 
 #swirl-link2{
-  background-image: url("/RoomToRoam/images/instacircular.png");
+  background-image: url("/images/instacircular.png");
   background-size: cover;
   }
   
 #swirl-link3{
-  background-image: url("/RoomToRoam/images/email6.png");
+  background-image: url("/images/email6.png");
   background-size: cover;
   }
 
@@ -621,18 +635,16 @@ section {width: 100%; height:fit-content; z-index: 1;}
       color: #a54a59; 
     }
 
-@media screen and (max-width: 850px){
-
+@media screen and (min-width: 768px){
   #swirl-container{
-    width: 100%;
-   
+    width: 60%;
   }
-  
-  .swirl {max-width: 50vw; width: 50vw;}
-  
 }
-
-
+@media screen and (min-width: 1000px){
+  #swirl-container{
+    width: 50%;
+  }
+}
 
 
 /*HIGHLIGHT REEL 2*/
@@ -659,13 +671,13 @@ section {width: 100%; height:fit-content; z-index: 1;}
     }
 
     #slide-left2 {/*padding-right: 5%;*/
-      background-image: url("/RoomToRoam/images/slidebuttonarrowleft.png");
+      background-image: url("/images/slidebuttonarrowleft.png");
       background-size: cover;
       background-position: center;
       
     }
     #slide-right2 {/*padding-left: 5%;*/
-      background-image: url("/RoomToRoam/images/slidebuttonarrowright.png");
+      background-image: url("/images/slidebuttonarrowright.png");
       background-size: cover;
       background-position: center;
       
@@ -772,7 +784,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
       cursor: pointer;
       width: 2rem;
       height: 2rem;
-      background-image: url(/RoomToRoam/images/spotify.png);
+      background-image: url(/images/spotify.png);
       background-size: cover;
     }
     
@@ -788,23 +800,25 @@ section {width: 100%; height:fit-content; z-index: 1;}
 /*RADIO BUTTON EXPANDER*/
 
 
-.wrapper {
+.radiowrapper {
   width: 100%;
-  height: 100vh;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.container {
+.container-radiocards {
   height: 400px;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: start;
+  justify-content: center;
+  align-items: center;
 }
 
-.card {
-  width: 80px;
+.radiocard {
+  width: 10vw;
+  height: 8rem;
   border-radius: .75rem;
   background-size: cover;
   cursor: pointer;
@@ -816,14 +830,17 @@ section {width: 100%; height:fit-content; z-index: 1;}
   transition: .6s cubic-bezier(.28,-0.03,0,.99);
   box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
 }
+@media screen and (max-width: 650px){
+  .radiocard {width: 20vw;}
+}
 
-.card > .row {
+.radiocard > .radiorow {
   color: white;
   display: flex;
   flex-wrap: nowrap;
 }
 
-.card > .row > .icon {
+.radiocard > .radiorow > .radioicon {
   background: #223;
   color: white;
   border-radius: 50%;
@@ -834,25 +851,24 @@ section {width: 100%; height:fit-content; z-index: 1;}
   margin: 15px;
 }
 
-.card > .row > .description {
+.radiocard > .radiorow > .radiodescription {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  overflow: hidden;
   height: 80px;
   width: 520px;
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(60px);
   transition-delay: .3s;
   transition: all .3s ease;
 }
 
-.description p {
+.radiodescription p {
   color: #b0b0ba;
   padding-top: 5px;
 }
 
-.description h4 {
+.radiodescription h4 {
   text-transform: uppercase;
 }
 
@@ -864,22 +880,34 @@ input:checked + label {
   width: 600px;
 }
 
-input:checked + label .description {
+input:checked + label .radiodescription {
   opacity: 1 !important;
-  transform: translateY(0) !important;
+  transform: translateY(-2rem) !important;
 }
 
-.card[for="c1"] {
-  background-image: url('/RoomToRoam/images/dianearbusbackground.jpg');
+.radiocard[for="c1"] {
+  background-image: url('/images/technicolors/technicolorsprofilepic.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: top;
 }
-.card[for="c2"] {
-  background-image: url('/RoomToRoam/images/chonbackground.jpg');
+.radiocard[for="c2"] {
+  background-image: url('/images/technicolors.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
 }
-.card[for="c3"] {
-  background-image: url('/RoomToRoam/images/ChimamandaNgoziAdichiebackground.jpg');
+.radiocard[for="c3"] {
+  background-image: url('/images/technicolorsv2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
 }
-.card[for="c4"] {
-  background-image: url('/RoomToRoam/images/covetbackground.jpg');
+.radiocard[for="c4"] {
+  background-image: url('/images/technicolors/technicolors-cinemasublimina.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
 }
 
 /*footer*/
