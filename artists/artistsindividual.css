@@ -384,9 +384,22 @@ section {width: 100%; height:fit-content; z-index: 1;}
 @media screen and (min-width: 1700px){
   #section-container{
     padding-top: 3rem;
+    margin-bottom: 2rem;
   }
   .container-img{
     top: -2rem;
+  }
+}
+
+
+@media screen and (min-width: 2500px){
+  #section-container{
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .container-img{
+    top: -3rem;
+    left: -15rem;
   }
 }
 
@@ -815,7 +828,10 @@ section {width: 100%; height:fit-content; z-index: 1;}
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
+
+@media screen and (min-width: 1700px){.radiowrapper {margin-bottom: 1rem;}}
 
 .container-radiocards {
   height: 400px;
