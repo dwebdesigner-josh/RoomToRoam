@@ -383,10 +383,10 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 @media screen and (min-width: 1700px){
   #section-container{
-    padding-top: 5rem;
+    padding-top: 3rem;
   }
   .container-img{
-    top: -3rem;
+    top: -2rem;
   }
 }
 
