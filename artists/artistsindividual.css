@@ -930,10 +930,10 @@ input:checked + label .radiodescription {
   background-position-y: center;
 }
 .radiocard[for="c4"] {
-  background-image: url('/images/technicolors/technicolors-cinemasublimina.jpg');
+  background-image: url('/images/technicolors/technicolors-metaphysical.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: center;
+  background-position-y: top;
 }
 
 /*footer*/
