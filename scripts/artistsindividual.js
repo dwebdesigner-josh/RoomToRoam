@@ -301,5 +301,10 @@ function slideLeftSingle(){
     // Attach event listeners to each button
     slides.forEach((slide, index) => {
         slide.button.addEventListener('click', () => toggleSlide(index));
+        slide.button.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            toggleSlide(index);
+        }
+        });
     });
 })();
