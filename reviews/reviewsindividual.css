@@ -311,8 +311,11 @@ section {width: 100%; height:fit-content; z-index: 1;}
       
       #span-slash{color: grey; margin-left: .3rem; margin-right: .2rem; margin-top: .1rem;}
   
+      
 /*MAIN CONTENT*/
 
+#link-artistname h3{color:#b1d1f8;}
+#link-artistname:hover h3{color: #e3f5ff3f;}
 
 .work-img{
   margin-top: 1rem;
@@ -327,21 +330,21 @@ main p{text-align: center;}
 
 #section-review-content{
   display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  width: 80%;
   box-sizing: border-box;
+  background-color: #12171d;
 }
 
 .p-reviewtext{margin-top: 1rem;}
 .p-quote{margin-top: 1rem; padding-left: 1rem;}
 
-.p-quotecredit{margin-top: .5rem; align-self: end; padding-right: 2rem; width: 70%; text-align: end;}
+.p-quotecredit{color:#82a9da; margin-top: .5rem; align-self: end; padding-right: 2rem; width: 70%; text-align: end;}
 
 
 
 @media screen and (min-width: 1000px){
   main p{text-align: start;}
-  #section-review-content{ padding-left: 3rem; padding-right: 3rem;}
+  
   .p-quotecredit{margin-top: .5rem; align-self: end; padding-right: 3rem; width: fit-content;}
 }
 
