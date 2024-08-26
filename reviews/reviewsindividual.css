@@ -321,6 +321,19 @@ main p{text-align: center;}
 #work-infoheader{z-index: 1; height: 18rem; width: 80%; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;}
 #work-infoheader img{flex: 2; max-width: 16rem;}
 #work-infoheader div{flex: 1;}
+  #work-info2{height: 16rem; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;}
+    
+      #work-info3 {
+        display: block;
+        z-index: 100;
+        list-style-type: none;
+        text-decoration: none;
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+        background-image: url('/images/spotify.png');
+        background-size: cover;
+      }
   #work-infoheader div p{text-align: center;}
     .work-img{
       margin-top: 1rem;
@@ -331,10 +344,29 @@ main p{text-align: center;}
       box-shadow: 0px 0px 2px 4px  #4d6583;
     }
 
-@media screen and (max-width: 1000px){
-  #work-info1, #work-info2{display: none; visibility: hidden;}
-  #work-infoheader img{flex: none; width: 16rem; height: 16rem;}
 
+@media screen and (max-width: 1000px){
+  #work-info1, #work-info2, #work-info3{display: none; visibility: hidden;}
+  #work-infoheader img{flex: none; width: 16rem; height: 16rem; z-index: 1;}
+  #work-infooverlay{
+    display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;
+    background-color: #12171de7;
+    height: 16rem; width: 16rem;
+    position: absolute; margin-top: 1rem; z-index: 2; border-radius: 1rem;
+  }
+
+  .work-infolink-spotify{
+    display: block;
+    position: relative;
+    z-index: 100;
+    list-style-type: none;
+    text-decoration: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    background-image: url('/images/spotify.png');
+    background-size: cover;
+  }
 }
 
 
@@ -361,10 +393,53 @@ main p{text-align: center;}
 }
 
 
+.artist-profileimg{
+  margin: 1rem;
+          width: 10rem;
+          height: 10rem;
+          border: 1px solid white;
+          border-radius: 1rem;
+          box-shadow: 0px 0px 2px 4px  #4d6583;
+}
 
 
 
+    #link-viewartistspage{
+      color:#b1d1f8;
+      z-index: 30;  position: relative; text-decoration: none; padding-bottom: .2rem; border-bottom: 1px inset white;
+      text-align: center;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+    }
+    #link-viewartistspage:hover {color: #e3f5ff3f;}
 
+.container-similarreviews{
+  display: flex; flex-direction: row; width: 30rem; justify-content: center;
+}
+
+    .similarreviews-img{
+      margin: 1rem;
+          width: 16rem;
+          height: 16rem;
+          border: 1px solid white;
+          border-radius: 1rem;
+          box-shadow: 0px 0px 2px 4px  #4d6583;
+    }
+
+
+@media screen and (max-width: 1000px){
+    
+
+  .container-similarreviews{
+    flex-direction: column; align-items: center;
+  }
+  .similarreviews-img{width: 16rem; height: 16rem;}
+
+}
+
+@media screen and (max-width: 340px){
+  
+ 
+}
 
 
 
