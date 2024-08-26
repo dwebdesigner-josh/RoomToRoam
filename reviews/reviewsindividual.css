@@ -270,7 +270,7 @@ header {
         @keyframes scrolldown {
         0%{transform: translateY(0);}
         20%{transform: translateY(10%);}
-        100%{transform: translateY(100%); display: none; visibility: hidden;}
+        100%{transform: translateY(100%); display: none; visibility: hidden; }
         }
     }
     @media screen and (min-width: 850px){
@@ -318,10 +318,10 @@ main p{text-align: center;}
 #link-artistname h3{color:#b1d1f8;}
 #link-artistname:hover h3{color: #e3f5ff3f;}
 
-#album-infoheader{width: 80%; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;}
-#album-infoheader img{flex: 2; max-width: 16rem;}
-#album-infoheader div{flex: 1;}
-  #album-infoheader div p{text-align: center;}
+#work-infoheader{z-index: 1; height: 18rem; width: 80%; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;}
+#work-infoheader img{flex: 2; max-width: 16rem;}
+#work-infoheader div{flex: 1;}
+  #work-infoheader div p{text-align: center;}
     .work-img{
       margin-top: 1rem;
       width: 16rem;
@@ -332,9 +332,9 @@ main p{text-align: center;}
     }
 
 @media screen and (max-width: 1000px){
-  #album-infoheader div{display: none; visibility: hidden;}
-  #album-infoheader img{flex: none; width: 16rem; height: 16rem;}
-  
+  #work-info1, #work-info2{display: none; visibility: hidden;}
+  #work-infoheader img{flex: none; width: 16rem; height: 16rem;}
+
 }
 
 

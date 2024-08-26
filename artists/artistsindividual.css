@@ -544,7 +544,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
     .artist-img{
       width: 10rem;
-      height: 10rem;
+      height: 10rem; 
       border: 1px solid white;
       border-radius: 1rem;
     }
