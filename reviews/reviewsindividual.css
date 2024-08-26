@@ -312,21 +312,33 @@ section {width: 100%; height:fit-content; z-index: 1;}
       #span-slash{color: grey; margin-left: .3rem; margin-right: .2rem; margin-top: .1rem;}
   
       
-/*MAIN CONTENT*/
+/*album info header*/
+main p{text-align: center;}
 
 #link-artistname h3{color:#b1d1f8;}
 #link-artistname:hover h3{color: #e3f5ff3f;}
 
-.work-img{
-  margin-top: 1rem;
-  width: 16rem;
-  height: 16rem;
-  border: 1px solid white;
-  border-radius: 1rem;
-  box-shadow: 0px 0px 2px 4px  #4d6583;
+#album-infoheader{width: 80%; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;}
+#album-infoheader img{flex: 2; max-width: 16rem;}
+#album-infoheader div{flex: 1;}
+  #album-infoheader div p{text-align: center;}
+    .work-img{
+      margin-top: 1rem;
+      width: 16rem;
+      height: 16rem;
+      border: 1px solid white;
+      border-radius: 1rem;
+      box-shadow: 0px 0px 2px 4px  #4d6583;
+    }
+
+@media screen and (max-width: 1000px){
+  #album-infoheader div{display: none; visibility: hidden;}
+  #album-infoheader img{flex: none; width: 16rem; height: 16rem;}
+  
 }
 
-main p{text-align: center;}
+
+
 
 #section-review-content{
   display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
