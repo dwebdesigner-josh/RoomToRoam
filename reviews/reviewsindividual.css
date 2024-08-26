@@ -291,9 +291,10 @@ main {
   flex-direction: column;
   width: 100%;
   align-items: center;
+  
 } 
 
-main h1, main h2, main h3{color: #e3f5ff; text-shadow: 1px 1px 1px black; }
+main h1, main h2, main h3, main p{color: #e3f5ff; text-shadow: 1px 1px 1px black; }
 main h2 {font-size: 2rem;}
 
 .span-filler{height: 3rem; width: 100%;}
@@ -306,16 +307,54 @@ section {width: 100%; height:fit-content; z-index: 1;}
   display: flex;
   flex-direction: column;
   } 
-    #link-reviews-container{width: 100vw; display: flex; justify-content: start; position: relative; left: -5vw; margin-top: 1rem; margin-bottom: -2.5rem;}
-    #link-reviews:hover *{ color: #e3f5ff;}
-      #link-reviews-container h3{padding-right: 5%; padding-left: 5%; align-self: center;}
-    #link-reviews-albums {margin-top: 1.2rem; align-self: center; padding-right: 5%; padding-left: 5%; align-self: center;}
-    
+    #link-reviews-container{width: 100%; display: flex; justify-content: start; position: relative; left: -5vw; margin-top: 1rem; margin-bottom: -2.5rem;}
+      
+      #span-slash{color: grey; margin-left: .3rem; margin-right: .2rem; margin-top: .1rem;}
   
+/*MAIN CONTENT*/
+
+
+.work-img{
+  margin-top: 1rem;
+  width: 16rem;
+  height: 16rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 2px 4px  #4d6583;
+}
+
+main p{text-align: center;}
+
+#section-review-content{
+  display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+.p-reviewtext{margin-top: 1rem;}
+.p-quote{margin-top: 1rem; padding-left: 1rem;}
+
+.p-quotecredit{margin-top: .5rem; align-self: end; padding-right: 2rem; width: 70%; text-align: end;}
+
+
+
+@media screen and (min-width: 1000px){
+  main p{text-align: start;}
+  #section-review-content{ padding-left: 3rem; padding-right: 3rem;}
+  .p-quotecredit{margin-top: .5rem; align-self: end; padding-right: 3rem; width: fit-content;}
+}
 
 
 
 
+
+
+
+
+
+
+/*END - MAIN CONTENT*/
 
 
 /*footer*/
