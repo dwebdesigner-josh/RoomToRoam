@@ -447,6 +447,7 @@ main h2 {font-size: 2rem;}
       .list-backgroundedge-container {
         padding: .5rem;
         width: 40vw;
+        aspect-ratio: 1/1;
         background-image: url(/images/back2.jpg);
         border-radius: 1rem;
         display: flex;
