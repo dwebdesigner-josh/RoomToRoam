@@ -441,12 +441,19 @@ main p{text-align: center;}
  
 }
 
-
-
-
 /*END - MAIN CONTENT*/
 
 
+/*spotify iframe - get with album page>share>embed>copy*/
+
+#spotify-iframe{
+  width: 80%;
+}
+    @media screen and (max-width: 450px){#spotify-iframe{zoom: .8;}}
+    @media screen and (min-width: 1400px){#spotify-iframe{max-width: 1200px;zoom: 1.1;}}
+    @media screen and (min-width: 1900px){#spotify-iframe{zoom: 1.4;}}
+    @media screen and (min-width: 2500px){#spotify-iframe{zoom: 1.7;}}
+    @media screen and (min-width: 3500px){#spotify-iframe{zoom: 2;}}
 /*footer*/
 footer{z-index: 1; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100vw;}
   .footer {
