@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room To Roam</title>
+    <link rel="icon" href="/images/favicon.ico">
+<!--"inter" font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<!--CSS-->
+<link rel="stylesheet" href="/reviews/reviewsindividual.css">
+<!--jquery plugin-->
+<script src="/scripts/jquery.min.js"></script>
+</head>
+ 
+<body>
+
+<!--make sure to use landmark elements rather than divs for sections of the page (nav, main, header, section,...)-->
+<!--(ACCESSIBILITY)NOTE: BUTTONS VS ANCHORS USAGE- buttons should only be used for interactive elements/forms/modules, while anchors should be used for in-site links -->
+<!--(ACCESSIBILITY)NOTE: For nav, use <nav><ul><li><a> One reason to use the <nav>, <ul>, <li> tags when building a navigation menu is that semantic markup will improve accessibility for users that require screen-readers.-->
+
+  <header>
+    <a href="/" aria-label="Home Button" id="header-link">
+      <h1 id="header-h1">Room to Roam</h1>
+      <img src="/images/logotreeV5.png" alt="" id="tree-img">
+    
+    </a>
+</header>
+
+<nav>
+    <span id="topnav-label" hidden>Navigation</span>
+
+    <button id="topnav-open" aria-expanded="false" aria-labelledby="topnav-label">
+   
+          <div class="hamburger-icon">
+            <span class="hamburger-icon-piece"></span>
+            <span class="hamburger-icon-piece"></span>
+            <span class="hamburger-icon-piece"></span>
+          </div>
+    </button>
+    
+    <div id="topnav-menu" role="dialog" aria-labelledby="topnav-label">
+      <button id="topnav-close" aria-label="Close"><div class="hamburger-icon"></div></button>
+      <ul id="topnav">
+        <li class="topnav-item">  <a class="topnav-link" id="topnav-link-home" href="/" target="_self">Home</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/artists/" target="_self">Artists</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/reviews/" target="_self">Reviews</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/connect/" target="_self">Connect</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/about-us/" target="_self">About Us</a>  </li>
+      </ul>
+    </div>  
+</nav>
+
+
+<div id="loadcontainer">
+    <div class="loadscreen" tabindex="-1">
+    <img tabindex="-1" alt="Graphic image of space ship" src="/images/ship.png" aria-label="Loading screen ship animation">
+    </div>
+</div>
+
+<main>
+
+<section id="section-heading-links">
+  <span class="span-filler"></span>
+  <div id="link-reviews-container">
+    <a href="/reviews/" target="_self" id="link-reviews"> <h3><i>Reviews</i></h3> </a>
+    <span id="span-slash">//</span>
+    <a href="/reviews/musicvideos/" target="_self" id="link-reviews-albums"><h3>Music Videos</h3></a> 
+  </div>
+</section>
+
+
+  <span class="span-filler"></span>
+
+  <h2>Space Cadet</h2>
+  <a id="link-artistname" href="/artists/technicolors/" target="_self"><h3>The Technicolors</h3></a>
+  
+<!--
+<div id="work-infoheader">
+  <div id="work-info1"><p>Alternative</p><p>Indie</p></div>
+  <img class="work-img" src="/images/technicolors/technicolors-cinemasublimina.jpg" alt="image of the reviewed work"/>
+  <div id="work-info2">
+    <p>2021</p>
+    <p>L.P.</p> 
+    <a id="work-info3" aria-label="Album's Spotify streaming external link" href="https://open.spotify.com/album/0ywqrwzSXOdWbICsAuICdt" target="_blank" rel="noopener noreferrer"></a>
+  </div>
+ 
+  <div id="work-infooverlay" style="display: none; visibility: hidden;">
+    <p>2021</p><p>Alternative/Indie</p><p>L.P.</p>
+    <a class="work-infolink-spotify" aria-label="Album's Spotify streaming external link" href="https://open.spotify.com/album/0ywqrwzSXOdWbICsAuICdt" target="_blank" rel="noopener noreferrer"></a>
+  </div>
+</div>
+-->
+<span class="span-filler2"></span>
+<div class="iframe-container"><iframe src="https://player.vimeo.com/video/967662374?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:relative;top:0;left:0;width:100%;height:100%;" title="embedtest"></iframe></div>
+
+<section id="section-review-content">
+  <p class="p-quote">
+  “We made something. With only acoustic guitars and beat machines and arcade synthesizers. A challenge that yielded something cool. It’s things like this that reveal our true character as musicians, songwriters, friends, people. Taken out of your comfort zone & forced to make something new of it. Venture into a new kind of thicket, a new politic, uncharted territory. I was so surprised to see what came of it, and even in doing things the opposite way we normally would, we were shocked to see how much of <i>us</i> was revealed.”
+  </p>
+    <p class="p-quotecredit">– Brennan Smiley of The Technicolors </p>
+  <p class="p-reviewtext">
+  Today, we have the immense pleasure of presenting this “new politic, uncharted territory” known as “Space Cadet”, the second single from the Sweat E.P.
+  </p>
+  <p class="p-reviewtext">
+  True to Smiley’s description, “Space Cadet” is something completely otherwordly. It is Amnesiac-era Radiohead with an extra dose of dreaminess and summery sultriness combined with the psychedelic haze of Flaming Lips to give the listener an ethereal feel. With meticulous acoustic arrangements, Smiley’s engaging vocals and soaring chorus the track is one that qualifies for instant repeat.
+  </p>
+  <p class="p-reviewtext">
+  Lyrically “Space Cadet” is introspective with the simple statement of “I’m just a space cadet, with nowhere to lay my head” and continues later with the plea of “don’t send me off”. Bringing these influences together, The Technicolors have created a fresh and exciting sound that will appeal to every alternative rock fan. And like these great bands, you will be briefly transported into another dimension, where solitude has never sounded so blissful.
+  </p> 
+    
+</section>
+
+<span class="span-filler"></span>
+
+<iframe id="spotify-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/3UGEWESDelTk6ppL1SMYM2?utm_source=generator&theme=0" width="90%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<span class="span-filler"></span>
+
+<a id="link-viewartistspage" href="/artists/technicolors/" aria-label="Continue to this artist's page." target="_self">
+  <img class="artist-profileimg" src="/images/technicolorsv2.jpg" alt="image of the artist"/>
+  <h3>View Artist's Page</h3>
+</a>
+
+
+<span class="span-filler"></span>
+
+<h2>Similar Reviews</h2>
+
+<div class="container-similarreviews">
+<a href="/reviews/technicolors-metaphysical/" aria-label="Continue to another review page for a similar work." target="_self"><img class="similarreviews-img" src="/images/technicolors/technicolors-metaphysical.jpg" alt=""/></a>
+<a href="/reviews/technicolors-ultravioletdisguise/" aria-label="Continue to another review page for a similar work." target="_self"><img class="similarreviews-img" src="/images/technicolors/technicolors-ultravioletdisguise.jpg" alt=""/></a>
+
+</div>
+
+
+
+
+</main>
+
+<footer>
+  <ul class="footer" id="footer-internals">
+    <li class="footer-item">  <a class="footer-link" href="/artists/" target="_self">Artists</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/reviews/" target="_self">Reviews</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/connect/" target="_self">Connect</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/about-us/" target="_self">About Us</a>  </li>
+  </ul>
+  <ul class="footer" id="footer-socials">
+    <li class="footer-item" id="insta"> <a aria-label="Room To Roam Instagram account external link" class="footer-externallink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/images/insta.png" alt=""></a></li>
+    <li class="footer-item" id="fb"> <a aria-label="Room To Roam Facebook account external link" class="footer-externallink" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/images/facebook.png" alt=""></a></li>
+    <li class="footer-item" id="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="footer-externallink" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/images/tiktok.png" alt=""></a></li>
+    <li class="footer-item" id="yt"> <a aria-label="Room To Roam YouTube account external link" class="footer-externallink" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/images/youtube.png" alt=""></a></li>
+  </ul>
+</footer>
+
+
+<script src="/scripts/loadanimation.js"></script>
+<script src="/scripts/hamburger.js"></script> 
+<script src="/scripts/reviewsindividual.js"></script> 
+  
+</body>
+
+</html>
+

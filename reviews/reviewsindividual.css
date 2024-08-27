@@ -298,6 +298,7 @@ main h1, main h2, main h3, main p{color: #e3f5ff; text-shadow: 1px 1px 1px black
 main h2 {font-size: 2rem;}
 
 .span-filler{height: 3rem; width: 100%;}
+.span-filler2{height: 1rem; width: 100%;}
 #filler{height: 1000px}
 
 section {width: 100%; height:fit-content; z-index: 1;}
@@ -311,7 +312,9 @@ section {width: 100%; height:fit-content; z-index: 1;}
       
       #span-slash{color: grey; margin-left: .3rem; margin-right: .2rem; margin-top: .1rem;}
   
-      
+      /*music video*/
+      .iframe-container{overflow: hidden; width: 88vw; height: 50vw;  border: 3px inset white; border-radius: 1rem; background-color: #b1d1f880;}
+                                                    /*max-height: 100svh;*/
 /*album info header*/
 main p{text-align: center;}
 
