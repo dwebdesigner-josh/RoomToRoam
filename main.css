@@ -305,6 +305,10 @@ main {
   @media screen and (min-width: 850px){
     #loadcontainer {height: calc(272vw + 438px);}
   }
+  /*Large Desktop*/
+  @media screen and (min-width: 1400px){
+    #loadcontainer {height: calc(272vw + 438px - 5vw);}
+  }
 
 .loadscreen {
   width: 100%;
@@ -319,7 +323,7 @@ background-repeat: repeat;
   z-index: 20;
   display: flex;
   justify-content: center;
-  animation: scrolldown 10s linear 1;
+  animation: scrolldown 6s linear 1;
   animation-play-state: running;
   animation-iteration-count: 1;
   animation-fill-mode: both;
@@ -332,7 +336,7 @@ background-repeat: repeat;
 }
 
 #loadscreen-notfirst{
-  animation: scrolldown 5s linear 1;
+  animation: scrolldown 3s linear 1;
   animation-play-state: running;
   animation-iteration-count: 1;
   animation-fill-mode: both;
