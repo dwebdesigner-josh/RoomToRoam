@@ -383,7 +383,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
 /* z-index: 3; */
  /*aspect-ratio: 1350/390;*/
 /*height with the above measurement was about 30vw*/
-  @media screen and (min-width: 1px){#roots-missionstatement{background-image: url("/images/testcachetest.jpg");}}
+  @media screen and (min-width: 1px){#roots-missionstatement{background-image: url("/images/missionbackV3small.png");}}
   @media screen and (min-width: 700px){#roots-missionstatement{background-image: url("/images/missionbackV3medium.png");}}   
   @media screen and (min-width: 1450px){#roots-missionstatement{background-image: url("/images/missionbackV3large.png");}}
   @media screen and (min-width: 3000px){#roots-missionstatement{ height: 450px; padding-top: 1rem;}}
