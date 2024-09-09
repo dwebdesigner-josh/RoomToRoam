@@ -305,6 +305,19 @@ section {width: 100%; height:fit-content; z-index: 1;}
    
 
 /*HIGHLIGHT REEL 1*/
+main h1{
+  font-size: 4rem;
+}
+@media screen and (max-width: 780px){
+  main h1{
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 460px){
+  main h1{
+    font-size: 2.25rem;
+  }
+}
 
 #highlight {
   margin-top: 12vw;
@@ -818,8 +831,8 @@ z-index:-3;
           @media screen and (min-width: 700px) {#id-override-dt-column-order::before{position: relative; top: 50px;}}  
           @media screen and (min-width: 1900px) {#id-override-dt-column-order::before{position: relative; top: 55px;}}
 
-    #artists h1 {font-size: 4rem; margin-bottom: 1rem;}
-
+    #artists h1 { margin-bottom: 1rem;}
+/*font-size: 4rem;*/
 
     #artists table, #artists label, #artists select{color: white;}
     #artists label{font-size: 0;}
