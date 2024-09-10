@@ -18,10 +18,12 @@ app.use(express.urlencoded({ extended: true }));
   const formSubmitLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 3, // Limit each IP to 3 requests per `windowMs`
-    message: 'Too many form submissions from this device, please try again later.',
-    standardHeaders: true, // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
+    standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
 	  legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
+    message: 'Too many form submissions from this device, please try again later.',
   });
+
+app.use(formSubmitLimiter);
 
 // Route to handle form submission
 app.post('/send-email', 
@@ -34,8 +36,7 @@ app.post('/send-email',
         next();
     },
 
-    // Apply daily rate limiter to the route
-    formSubmitLimiter,
+    
 
     // validation middleware
     [
