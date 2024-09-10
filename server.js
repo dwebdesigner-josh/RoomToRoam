@@ -8,6 +8,17 @@ const rateLimit = require('express-rate-limit'); // Added for rate limiting
 const app = express();
 const port = process.env.PORT; // Use environment variable
 
+
+
+//see end-user IP rather than cloudfare IP when limiting form submissions by IP
+app.set('trust proxy', true);
+
+// Serve static files (like your HTML form)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Middleware to parse form data
+app.use(express.urlencoded({ extended: true }));
+
   // Configure rate limiter
   const formSubmitLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
@@ -17,17 +28,9 @@ const port = process.env.PORT; // Use environment variable
     message: 'Too many form submissions from this device, please try again later.',
   });
 
-// Serve static files (like your HTML form)
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Middleware to parse form data
-app.use(express.urlencoded({ extended: true }));
-
-
-
 
 // Route to handle form submission, run express rate limiter 
-app.post('/send-email', formSubmitLimiter,
+app.post('/send-email', 
 
      // Honeypot check
      (req, res, next) => {
@@ -37,7 +40,7 @@ app.post('/send-email', formSubmitLimiter,
         next();
     },
 
-    
+    formSubmitLimiter,
 
     // validation middleware
     [
