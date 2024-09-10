@@ -1,6 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
+const { body, validationResult } = require('express-validator'); // **Added for validation**
 require('dotenv').config(); // Load environment variables from .env file
 
 const app = express();
@@ -13,17 +14,33 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
 // Route to handle form submission
-app.post('/send-email', async (req, res) => {
-  const { subject, body } = req.body;
-
-  // Configure nodemailer transport for SMTP service
-  let transporter = nodemailer.createTransport({
-    service: process.env.SMTP_SERVICE,
-    auth: {
-      user: process.env.EMAIL_USER,  // Use environment variable
-      pass: process.env.EMAIL_PASS   // Use environment variable
-    }
-  });
+app.post('/send-email', 
+    // **Added validation middleware**
+    [
+      body('subject').isLength({ min: 1 }).withMessage('Subject is required'),
+      body('body').isLength({ min: 1 }).withMessage('Message body is required')
+    ],
+    async (req, res) => {
+      const errors = validationResult(req); // **Check validation errors**
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+      }
+      
+       // Check honeypot field
+    if (req.body.honeypot) {
+        return res.status(400).send('Form submission failed.');
+      }
+      
+      const { subject, body } = req.body;
+  
+      // Configure nodemailer transport for SMTP service
+      let transporter = nodemailer.createTransport({
+        service: process.env.SMTP_SERVICE,
+        auth: {
+          user: process.env.EMAIL_USER,  // Use environment variable
+          pass: process.env.EMAIL_PASS   // Use environment variable
+        }
+      });
 
   try {
     // Send email
