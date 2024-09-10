@@ -1,2 +1,4 @@
 images/TEMP-backgroundimgseditor.psd
 images/TEMP-squareimgseditor.psd
+.env
+node_modules/
