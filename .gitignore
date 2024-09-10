@@ -14,3 +14,4 @@ build/
 .tmp/
 pm2-log-file
 package-lock.json
+*.log
