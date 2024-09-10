@@ -16,19 +16,19 @@ app.use(express.urlencoded({ extended: true }));
 app.post('/send-email', async (req, res) => {
   const { subject, body } = req.body;
 
-  // Configure nodemailer transport for Gmail
+  // Configure nodemailer transport for SMTP service
   let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'process.env.SMTP_SERVICE',
     auth: {
-      user: process.env.GMAIL_USER,  // Use environment variable
-      pass: process.env.GMAIL_PASS   // Use environment variable
+      user: process.env.EMAIL_USER,  // Use environment variable
+      pass: process.env.EMAIL_PASS   // Use environment variable
     }
   });
 
   try {
     // Send email
     let info = await transporter.sendMail({
-      from: `"RoomToRoamStudios" <${process.env.GMAIL_USER}>`,  // Use environment variable
+      from: `"RoomToRoamStudios" <${process.env.EMAIL_USER}>`,  // Use environment variable
       to: process.env.RECIPIENT_EMAIL,                // Use environment variable
       subject: subject,
       text: body,
