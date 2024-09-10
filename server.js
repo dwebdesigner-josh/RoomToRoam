@@ -18,7 +18,7 @@ app.post('/send-email', async (req, res) => {
 
   // Configure nodemailer transport for SMTP service
   let transporter = nodemailer.createTransport({
-    service: 'process.env.SMTP_SERVICE',
+    service: process.env.SMTP_SERVICE,
     auth: {
       user: process.env.EMAIL_USER,  // Use environment variable
       pass: process.env.EMAIL_PASS   // Use environment variable
