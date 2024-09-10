@@ -15,17 +15,20 @@ app.use(express.urlencoded({ extended: true }));
 
 // Route to handle form submission
 app.post('/send-email', 
-    // **Added validation middleware**
+
+     // Honeypot check
+     (req, res, next) => {
+        if (req.body.honeypot) {
+            return res.status(400).send('Form submission failed.');
+        }
+        next();
+    },
+    // validation middleware
     [
       body('subject').isLength({ min: 1 }).withMessage('Subject is required'),
       body('body').isLength({ min: 1 }).withMessage('Message body is required')
     ],
     async (req, res) => {
-
-        // Check honeypot field
-        if (req.body.honeypot) {
-            return res.status(400).send('Form submission failed.');
-        }
 
       const errors = validationResult(req); // **Check validation errors**
       if (!errors.isEmpty()) {
