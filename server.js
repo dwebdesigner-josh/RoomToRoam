@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 
   // Configure rate limiter
   const formSubmitLimiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
+    windowMs: 24 * 60 * 60 * 1000, // 24 hours
     max: 3, // Limit each IP to 3 requests per `windowMs`
     standardHeaders: true, // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
 	  legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
   });
 
 
-// Route to handle form submission, run express rate limiter 
+// Route to handle form submission 
 app.post('/send-email', 
 
      // Honeypot check
@@ -39,9 +39,10 @@ app.post('/send-email',
         }
         next();
     },
-
+    
+    // Apply rate limiter to the route
     formSubmitLimiter,
- 
+
     // validation middleware
     [
       body('subject').isLength({ min: 1 }).withMessage('Subject is required'),
