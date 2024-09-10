@@ -16,10 +16,11 @@ app.use(express.urlencoded({ extended: true }));
 
   // Configure rate limiter
   const formSubmitLimiter = rateLimit({
-    windowMs: 24 * 60 * 60 * 1000, // 24 hours
+    windowMs: 15 * 60 * 1000, // 15 minutes
     max: 3, // Limit each IP to 3 requests per `windowMs`
     message: 'Too many form submissions from this device, please try again later.',
-    headers: true, // Send rate limit headers
+    standardHeaders: true, // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
+	  legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
   });
 
 // Route to handle form submission
