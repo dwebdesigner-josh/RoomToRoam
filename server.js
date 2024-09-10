@@ -21,18 +21,20 @@ app.post('/send-email',
       body('body').isLength({ min: 1 }).withMessage('Message body is required')
     ],
     async (req, res) => {
+
+        // Check honeypot field
+        if (req.body.honeypot) {
+            return res.status(400).send('Form submission failed.');
+        }
+
       const errors = validationResult(req); // **Check validation errors**
       if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
       }
       
-       // Check honeypot field
-    if (req.body.body2) {
-        return res.status(400).send('Form submission failed.');
-      }
-
       const { subject, body } = req.body;
-  
+
+    
       // Configure nodemailer transport for SMTP service
       let transporter = nodemailer.createTransport({
         service: process.env.SMTP_SERVICE,
