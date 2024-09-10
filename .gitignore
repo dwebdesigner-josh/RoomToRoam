@@ -12,3 +12,5 @@ build/
 .idea/
 .DS_Store
 .tmp/
+pm2-log-file
+package-lock.json
