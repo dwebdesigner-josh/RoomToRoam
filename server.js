@@ -8,12 +8,6 @@ const rateLimit = require('express-rate-limit'); // Added for rate limiting
 const app = express();
 const port = process.env.PORT; // Use environment variable
 
-// Serve static files (like your HTML form)
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Middleware to parse form data
-app.use(express.urlencoded({ extended: true }));
-
   // Configure rate limiter
   const formSubmitLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
@@ -23,7 +17,14 @@ app.use(express.urlencoded({ extended: true }));
     message: 'Too many form submissions from this device, please try again later.',
   });
 
-app.use(formSubmitLimiter);
+// Serve static files (like your HTML form)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Middleware to parse form data
+app.use(express.urlencoded({ extended: true }));
+
+
+
 
 // Route to handle form submission
 app.post('/send-email', 
@@ -36,7 +37,8 @@ app.post('/send-email',
         next();
     },
 
-    
+    // Apply daily rate limiter to the route
+    formSubmitLimiter,
 
     // validation middleware
     [
