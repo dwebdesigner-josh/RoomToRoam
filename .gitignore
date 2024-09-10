@@ -1,4 +1,14 @@
 images/TEMP-backgroundimgseditor.psd
 images/TEMP-squareimgseditor.psd
-.env
 node_modules/
+.env
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+ecosystem.config.js
+dist/
+build/
+.vscode/
+.idea/
+.DS_Store
+.tmp/
