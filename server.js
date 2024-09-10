@@ -27,10 +27,10 @@ app.post('/send-email',
       }
       
        // Check honeypot field
-    if (req.body.honeypot) {
+    if (req.body.body2) {
         return res.status(400).send('Form submission failed.');
       }
-      
+
       const { subject, body } = req.body;
   
       // Configure nodemailer transport for SMTP service
