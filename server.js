@@ -4,7 +4,7 @@ const path = require('path');
 require('dotenv').config(); // Load environment variables from .env file
 
 const app = express();
-const port = process.env.PORT || 3000; // Use environment variable or default to 3000
+const port = process.env.PORT; // Use environment variable
 
 // Serve static files (like your HTML form)
 app.use(express.static(path.join(__dirname, 'public')));
