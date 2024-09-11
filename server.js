@@ -41,8 +41,8 @@ app.post('/send-email',
         console.log('Request headers:', req.headers);
         console.log('Request body:', req.body);
         next();
-    }
-    
+    },
+
      // Honeypot check
      (req, res, next) => {
         if (req.body.body2) {
