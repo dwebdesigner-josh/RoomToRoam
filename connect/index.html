@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 responseMessage.innerHTML = `<p style="color: green;">${responseBody}</p>`;
-                form.reset(); // Optionally reset the form
+                form.reset(); // reset the form
             } else if (response.status === 429) {
                 // Handle rate limit exceeded
                 responseMessage.innerHTML = `<p style="color: red;">${responseBody}</p>`;
