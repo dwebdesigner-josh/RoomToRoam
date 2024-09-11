@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="/connect/connect.css?v=1.1">
 <!--jquery plugin-->
 <script src="/scripts/jquery.min.js"></script>
+
+<style>
+  .message { margin-top: 10px; }
+  .error { color: red; }
+  .success { color: green; }
+</style>
 </head>
 
 
@@ -92,39 +98,36 @@ TEST!
     
     const form = event.target;
     const formData = new FormData(form);
-    
+    const messageDiv = document.getElementById('message');
+
     try {
       const response = await fetch(form.action, {
         method: form.method,
         body: formData,
         headers: {
-          'Accept': 'application/json'
+          'Accept': 'application/json' // This line suggests we expect JSON, but we handle other types too
         }
       });
-      
-      // Check if response is not JSON
+
+      // Determine the content type of the response
       const contentType = response.headers.get('content-type');
-      let result = {};
-      if (contentType && contentType.includes('application/json')) {
-        result = await response.json();
-      } else {
-        throw new Error('Unexpected response format');
-      }
+      let responseText = await response.text(); // Use .text() to handle plain text or HTML responses
 
-      const messageDiv = document.getElementById('message');
       if (response.ok) {
-        messageDiv.innerHTML = `<p class="success">${result.message || 'Email sent successfully!'}</p>`;
+        // Display the response text as a success message
+        messageDiv.innerHTML = `<p class="success">${responseText}</p>`;
       } else {
-        messageDiv.innerHTML = `<p class="error">${result.errors ? result.errors.map(err => err.msg).join(', ') : 'An error occurred.'}</p>`;
+        // Display the response text as an error message
+        messageDiv.innerHTML = `<p class="error">${responseText}</p>`;
       }
-
+      
     } catch (error) {
-      document.getElementById('message').innerHTML = `<p class="error">An unexpected error occurred: ${error.message}</p>`;
+      messageDiv.innerHTML = `<p class="error">An unexpected error occurred: ${error.message}</p>`;
     }
   });
 </script>
-NOT THIS
-SEE NOTES ON index.html doc for backend form setup with digitalocean droplet based node.js server<!--
+
+<!--
 SCROLL UP ON THIS CHATGPT ENTRY TO GET TO THE CODE INSPO FOR THIS, then set up digitalocean and create the actual code for this form from scratch
 https://chatgpt.com/c/7aaeeded-78fa-402c-8b03-e85eb94dbb9d
 <form id="emailForm" style="z-index: 200;">
