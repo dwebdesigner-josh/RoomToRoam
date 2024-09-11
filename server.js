@@ -1,9 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
-const { body, validationResult } = require('express-validator'); // **Added for validation**
 require('dotenv').config(); // Load environment variables from .env file
-const rateLimit = require('express-rate-limit'); // Added for rate limiting
 
 const app = express();
 const port = process.env.PORT; // Use environment variable
@@ -20,13 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
   // Configure rate limiter
-  const formSubmitLimiter = rateLimit({
-    windowMs: 24 * 60 * 60 * 1000, // 24 hours
-    max: 3, // Limit each IP to 3 requests per `windowMs`
-    standardHeaders: true, // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
-	  legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
-    message: 'Too many form submissions from this device, please try again later.',
-  });
+
 
 
 // Route to handle form submission 
@@ -40,14 +32,7 @@ app.post('/send-email',
         next();
     },
     
-    // Apply rate limiter to the route
-    formSubmitLimiter,
-
-    // validation middleware
-    [
-      body('subject').isLength({ min: 1 }).withMessage('Subject is required'),
-      body('body').isLength({ min: 1 }).withMessage('Message body is required')
-    ],
+  
 
     async (req, res) => {
       const errors = validationResult(req); //Check validation errors
