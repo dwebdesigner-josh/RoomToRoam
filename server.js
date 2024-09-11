@@ -31,29 +31,28 @@ app.use(express.urlencoded({ extended: true }));
 
 // Route to handle form submission 
 app.post('/send-email', 
-  // Honeypot check
-  (req, res, next) => {
-      if (req.body.body2) {
-          return res.status(400).send('Form submission failed.');
-      }
-      next();
-  },
-  // Apply rate limiter to the route
-  formSubmitLimiter,
 
-  // validation middleware
-  [
+     // Honeypot check
+     (req, res, next) => {
+        if (req.body.body2) {
+            return res.status(400).send('Form submission failed.');
+        }
+        next();
+    },
+    
+    // Apply rate limiter to the route
+    formSubmitLimiter,
+
+    // validation middleware
+    [
       body('subject').isLength({ min: 1 }).withMessage('Subject is required'),
       body('body').isLength({ min: 1 }).withMessage('Message body is required')
-  ],
+    ],
 
-  async (req, res) => {
-      console.log('Request Body:', req.body); // Log the request body
-
-      const errors = validationResult(req); // Check validation errors
+    async (req, res) => {
+      const errors = validationResult(req); //Check validation errors
       if (!errors.isEmpty()) {
-          console.log('Validation Errors:', errors.array()); // Log validation errors
-          return res.status(400).json({ errors: errors.array() });
+        return res.status(400).json({ errors: errors.array() });
       }
       
       const { subject, body } = req.body;
