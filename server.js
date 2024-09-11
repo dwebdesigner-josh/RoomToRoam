@@ -45,8 +45,8 @@ app.post('/send-email',
 
     // validation middleware
     [
-      body('subject').isLength({ min: 1 }).withMessage('Subject is required'),
-      body('body').isLength({ min: 1 }).withMessage('Message body is required')
+      body('subject').notEmpty().withMessage('Subject is required'),
+      body('body').notEmpty().withMessage('Message body is required')
     ],
 
     async (req, res) => {
@@ -77,10 +77,10 @@ app.post('/send-email',
     });
 
     console.log('Message sent: %s', info.messageId);
-    res.status(200).json('Email sent successfully!');
+    res.status(200).json({ message: 'Email sent successfully!' });
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json('Error sending email');
+    res.status(500).json({ message: 'Error sending email' });
   }
 });
 
