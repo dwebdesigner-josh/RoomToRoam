@@ -108,15 +108,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 // Display success message
-                responseDiv.innerHTML = '<p style="color: green;">' + 'Email sent successfully!' + '</p>';
+                responseMessage.innerHTML = '<p style="color: green;">' + 'Email sent successfully!' + '</p>';
             } else {
                 // Display validation errors
                 const errors = result.errors.map(error => `<p style="color: red;">${error.msg}</p>`).join('');
-                responseDiv.innerHTML = errors;
+                responseMessage.innerHTML = errors;
             }
         } catch (error) {
             console.error('Error:', error);
-            responseDiv.innerHTML = '<p style="color: red;">Error sending email</p>';
+            responseMessage.innerHTML = '<p style="color: red;">Error sending email</p>';
         }
     });
 });
