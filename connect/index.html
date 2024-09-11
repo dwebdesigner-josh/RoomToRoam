@@ -106,17 +106,28 @@ TEST!
         body: formData,
       });
 
-      // Read response as text for general cases
+      // Read the response as text first
       const responseText = await response.text();
 
-      if (response.ok) {
-        // Display the response text as a success message
-        messageDiv.innerHTML = `<p class="success">${responseText}</p>`;
-      } else {
-        // Display the response text as an error message
-        messageDiv.innerHTML = `<p class="error">${responseText}</p>`;
+      // Try to parse the response text as JSON
+      let responseJson;
+      try {
+        responseJson = JSON.parse(responseText);
+      } catch (error) {
+        // If parsing fails, display the raw response
+        messageDiv.innerHTML = `<p class="error">An unexpected error occurred: ${responseText}</p>`;
+        return;
       }
-      
+
+      if (response.ok) {
+        // Display success message
+        messageDiv.innerHTML = `<p class="success">${responseJson.message || 'Email sent successfully!'}</p>`;
+      } else {
+        // Handle and display validation errors
+        const errors = responseJson.errors || [{ msg: 'An unknown error occurred.' }];
+        messageDiv.innerHTML = `<p class="error">${errors.map(err => err.msg).join(', ')}</p>`;
+      }
+
     } catch (error) {
       messageDiv.innerHTML = `<p class="error">An unexpected error occurred: ${error.message}</p>`;
     }
