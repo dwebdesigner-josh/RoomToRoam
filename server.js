@@ -1,7 +1,6 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
-const {  validationResult } = require('express-validator'); // **Added for validation**
 require('dotenv').config(); // Load environment variables from .env file
 const rateLimit = require('express-rate-limit'); // Added for rate limiting
 
@@ -44,16 +43,10 @@ app.post('/send-email',
     formSubmitLimiter,
 
     // validation middleware
-   // [
-     // body('subject').isLength({ min: 1 }).withMessage('Subject is required'),
-   //   body('body').isLength({ min: 1 }).withMessage('Message body is required')
-   // ],
+
 
     async (req, res) => {
-      const errors = validationResult(req); //Check validation errors
-      if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-      }
+     
       
       const { subject, body } = req.body;
 
