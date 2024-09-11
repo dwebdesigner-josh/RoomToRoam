@@ -95,29 +95,28 @@ TEST!
 <script>
   document.getElementById('contactForm').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent the default form submission
-    
+
     const form = event.target;
     const formData = new FormData(form);
     const messageDiv = document.getElementById('message');
 
+    // Manually construct the request payload
+    const payload = {
+      subject: formData.get('subject'),
+      body: formData.get('body'),
+    };
+
     try {
       const response = await fetch(form.action, {
         method: form.method,
-        body: formData,
+        headers: {
+          'Content-Type': 'application/json', // Specify JSON content type
+        },
+        body: JSON.stringify(payload), // Convert payload to JSON
       });
 
-      // Read the response as text first
-      const responseText = await response.text();
-
-      // Try to parse the response text as JSON
-      let responseJson;
-      try {
-        responseJson = JSON.parse(responseText);
-      } catch (error) {
-        // If parsing fails, display the raw response
-        messageDiv.innerHTML = `<p class="error">An unexpected error occurred: ${responseText}</p>`;
-        return;
-      }
+      // Read the response as JSON
+      const responseJson = await response.json();
 
       if (response.ok) {
         // Display success message
