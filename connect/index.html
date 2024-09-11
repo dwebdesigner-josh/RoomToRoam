@@ -70,58 +70,48 @@
 TEST!
 </section>
 
-<form id="contact-form" action="/send-email" method="POST" style="z-index: 200;">
+<form id="contact-form" action="/send-email" method="POST">
   <div>
-    <input autocomplete="off" type="text" placeholder="Subject" name="subject" required />
+      <input autocomplete="off" type="text" placeholder="Subject" name="subject" required />
   </div>
   <div>
-    <textarea autocomplete="off" placeholder="Your message" name="body" required></textarea>
+      <textarea autocomplete="off" placeholder="Your message" name="body" required></textarea>
   </div>
-
-                            <div class="oh-no-hun" >
-                              <input tabindex="-1" autocomplete="off" type="text" name="body2" />
-                            </div>
+  <div class="oh-no-hun">
+      <input tabindex="-1" autocomplete="off" type="text" name="body2" />
+  </div>
   <div>
-    <button type="submit">Send a message</button>
+      <button type="submit">Send a message</button>
   </div>
 </form>
-
-<div id="response-message"></div> <!-- Container for status messages -->
+<div id="response-message"></div>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contact-form');
-    const responseMessage = document.getElementById('response-message');
+  document.getElementById('contact-form').addEventListener('submit', async function(event) {
+      event.preventDefault(); // Prevent the default form submission
 
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault(); // Prevent the default form submission
+      const form = event.target;
+      const formData = new FormData(form);
 
-        const formData = new FormData(form);
+      try {
+          const response = await fetch(form.action, {
+              method: 'POST',
+              body: formData,
+          });
 
-        try {
-            const response = await fetch('/send-email', {
-                method: 'POST',
-                body: formData
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                // Display success message
-                responseMessage.innerHTML = '<p style="color: green;">' + 'Email sent successfully!' + '</p>';
-            } else {
-                // Display validation errors
-                const errors = result.errors.map(error => `<p style="color: red;">${error.msg}</p>`).join('');
-                responseMessage.innerHTML = errors;
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            responseMessage.innerHTML = '<p style="color: red;">Error sending email</p>';
-        }
-    });
-});
-
-
+          const result = await response.json();
+          const responseMessageDiv = document.getElementById('response-message');
+          
+          if (response.ok) {
+              responseMessageDiv.innerHTML = `<p>${result.message}</p>`;
+          } else {
+              responseMessageDiv.innerHTML = `<p>Error: ${result.errors.map(error => error.msg).join(', ')}</p>`;
+          }
+      } catch (error) {
+          console.error('Error:', error);
+          document.getElementById('response-message').innerHTML = '<p>Error sending email.</p>';
+      }
+  });
 </script>
 
 NOT THIS
