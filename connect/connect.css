@@ -289,15 +289,6 @@ main {
 } 
 
 /*honeypot*/
-.oh-no-hun{
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0;
-  width: 0;
-  z-index: -1;
-}
 
 /*sections*/
 section {width: 100%; height:fit-content; z-index: 1;}
