@@ -89,7 +89,7 @@ TEST!
 <div id="response-message"></div> <!-- Container for status messages -->
 
 <script>
- document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contact-form');
     const responseMessage = document.getElementById('response-message');
 
@@ -104,21 +104,30 @@ TEST!
                 body: formData
             });
 
-            // Handle text response
-            if (response.ok) {
-              //handle successful response
-                const result = await response.text(); // Expecting plain text
-                responseMessage.innerHTML = `<p style="color: green;">${result}</p>`;
-                form.reset(); // Optionally reset the form
+            const contentType = response.headers.get('content-type');
+
+            let responseBody;
+
+            // Read response body based on its content type
+            if (contentType && contentType.includes('application/json')) {
+                responseBody = await response.json();
             } else {
-                // Assuming the server returns JSON on error
-                try {
-                    const errorData = await response.json(); // Expecting JSON for validation errors
-                    responseMessage.innerHTML = `<p style="color: red;">${errorData.errors.map(err => err.msg).join('<br>')}</p>`;
-                } catch (jsonError) {
-                    // If JSON parsing fails, handle it as plain text
-                    const errorText = await response.text();
-                    responseMessage.innerHTML = `<p style="color: red;">${errorText}</p>`;
+                responseBody = await response.text();
+            }
+
+            if (response.ok) {
+                responseMessage.innerHTML = `<p style="color: green;">${responseBody}</p>`;
+                form.reset(); // Optionally reset the form
+            } else if (response.status === 429) {
+                // Handle rate limit exceeded
+                responseMessage.innerHTML = `<p style="color: red;">${responseBody}</p>`;
+            } else {
+                // Handle validation and other errors
+                if (Array.isArray(responseBody.errors)) {
+                    responseMessage.innerHTML = `<p style="color: red;">${responseBody.errors.map(err => err.msg).join('<br>')}</p>`;
+                } else {
+                    // Fallback for unexpected formats
+                    responseMessage.innerHTML = `<p style="color: red;">${responseBody}</p>`;
                 }
             }
         } catch (error) {
