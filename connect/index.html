@@ -85,6 +85,39 @@ TEST!
     <button type="submit">Send a message</button>
   </div>
 </form>
+
+<div id="message" class="message"></div>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      const result = await response.json();
+      const messageDiv = document.getElementById('message');
+
+      if (response.ok) {
+        messageDiv.innerHTML = `<p class="success">${result.message || 'Email sent successfully!'}</p>`;
+      } else {
+        messageDiv.innerHTML = `<p class="error">${result.errors ? result.errors.map(err => err.msg).join(', ') : 'An error occurred.'}</p>`;
+      }
+
+    } catch (error) {
+      document.getElementById('message').innerHTML = `<p class="error">An unexpected error occurred: ${error.message}</p>`;
+    }
+  });
+</script>
 NOT THIS
 SEE NOTES ON index.html doc for backend form setup with digitalocean droplet based node.js server<!--
 SCROLL UP ON THIS CHATGPT ENTRY TO GET TO THE CODE INSPO FOR THIS, then set up digitalocean and create the actual code for this form from scratch
