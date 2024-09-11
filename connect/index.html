@@ -102,9 +102,16 @@ TEST!
         }
       });
       
-      const result = await response.json();
-      const messageDiv = document.getElementById('message');
+      // Check if response is not JSON
+      const contentType = response.headers.get('content-type');
+      let result = {};
+      if (contentType && contentType.includes('application/json')) {
+        result = await response.json();
+      } else {
+        throw new Error('Unexpected response format');
+      }
 
+      const messageDiv = document.getElementById('message');
       if (response.ok) {
         messageDiv.innerHTML = `<p class="success">${result.message || 'Email sent successfully!'}</p>`;
       } else {
