@@ -70,7 +70,7 @@
 TEST!
 </section>
 
-<form action="/send-email" method="POST" style="z-index: 200;">
+<form id="contact-form" action="/send-email" method="POST" style="z-index: 200;">
   <div>
     <input autocomplete="off" type="text" placeholder="Subject" name="subject" required />
   </div>
@@ -85,6 +85,43 @@ TEST!
     <button type="submit">Send a message</button>
   </div>
 </form>
+
+<div id="response-message"></div> <!-- Container for status messages -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const responseMessage = document.getElementById('response-message');
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Create a FormData object from the form
+        const formData = new FormData(form);
+
+        try {
+            // Send the form data via a POST request using fetch
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                const result = await response.text();
+                responseMessage.innerHTML = `<p style="color: green;">${result}</p>`;
+                form.reset(); // Optionally reset the form
+            } else {
+                const errorData = await response.json();
+                responseMessage.innerHTML = `<p style="color: red;">${errorData.errors.map(err => err.msg).join('<br>')}</p>`;
+            }
+        } catch (error) {
+            responseMessage.innerHTML = `<p style="color: red;">An error occurred: ${error.message}</p>`;
+        }
+    });
+});
+
+</script>
+
 NOT THIS
 SEE NOTES ON index.html doc for backend form setup with digitalocean droplet based node.js server<!--
 SCROLL UP ON THIS CHATGPT ENTRY TO GET TO THE CODE INSPO FOR THIS, then set up digitalocean and create the actual code for this form from scratch
