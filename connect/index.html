@@ -94,46 +94,52 @@ document.addEventListener('DOMContentLoaded', () => {
     const responseMessage = document.getElementById('response-message');
 
     form.addEventListener('submit', async (event) => {
-        event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); // Prevent the default form submission
 
-        const formData = new FormData(form);
+    const formData = new FormData(form);
+    console.log('Form Data:', formData); // Log the form data
 
-        try {
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: formData
-            });
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData
+        });
 
-            const contentType = response.headers.get('content-type');
+        console.log('Response Status:', response.status);
+        console.log('Response Headers:', response.headers);
 
-            let responseBody;
+        const contentType = response.headers.get('content-type');
+        let responseBody;
 
-            // Read response body based on its content type
-            if (contentType && contentType.includes('application/json')) {
-                responseBody = await response.json();
-            } else {
-                responseBody = await response.text();
-            }
-
-            if (response.ok) {
-                responseMessage.innerHTML = `<p style="color: green;">${responseBody}</p>`;
-                form.reset(); // Optionally reset the form
-            } else if (response.status === 429) {
-                // Handle rate limit exceeded
-                responseMessage.innerHTML = `<p style="color: red;">${responseBody}</p>`;
-            } else {
-                // Handle validation and other errors
-                if (Array.isArray(responseBody.errors)) {
-                    responseMessage.innerHTML = `<p style="color: red;">${responseBody.errors.map(err => err.msg).join('<br>')}</p>`;
-                } else {
-                    // Fallback for unexpected formats
-                    responseMessage.innerHTML = `<p style="color: red;">${responseBody}</p>`;
-                }
-            }
-        } catch (error) {
-            responseMessage.innerHTML = `<p style="color: red;">An error occurred: ${error.message}</p>`;
+        // Read response body based on its content type
+        if (contentType && contentType.includes('application/json')) {
+            responseBody = await response.json();
+        } else {
+            responseBody = await response.text();
         }
-    });
+
+        console.log('Response Body:', responseBody); // Log the response body
+
+        if (response.ok) {
+            responseMessage.innerHTML = `<p style="color: green;">${responseBody}</p>`;
+            form.reset(); // Optionally reset the form
+        } else if (response.status === 400) {
+            // Handle validation errors
+            if (Array.isArray(responseBody.errors)) {
+                responseMessage.innerHTML = `<p style="color: red;">${responseBody.errors.map(err => err.msg).join('<br>')}</p>`;
+            } else {
+                // Fallback for unexpected formats
+                responseMessage.innerHTML = `<p style="color: red;">${responseBody}</p>`;
+            }
+        } else if (response.status === 429) {
+            // Handle rate limit exceeded
+            responseMessage.innerHTML = `<p style="color: red;">${responseBody}</p>`;
+        } else {
+            responseMessage.innerHTML = `<p style="color: red;">An error occurred: ${responseBody}</p>`;
+        }
+    } catch (error) {
+        responseMessage.innerHTML = `<p style="color: red;">An error occurred: ${error.message}</p>`;
+    }
 });
 
 
