@@ -99,39 +99,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData(form);
 
         try {
-            const response = await fetch(form.action, {
+            const response = await fetch('/send-email', {
                 method: 'POST',
                 body: formData
             });
 
-            const contentType = response.headers.get('content-type');
-
-            let responseBody;
-
-            // Read response body based on its content type
-            if (contentType && contentType.includes('application/json')) {
-                responseBody = await response.json();
-            } else {
-                responseBody = await response.text();
-            }
+            const result = await response.json();
 
             if (response.ok) {
-                responseMessage.innerHTML = `<p style="color: green;">${responseBody}</p>`;
-                form.reset(); // reset the form
-            } else if (response.status === 429) {
-                // Handle rate limit exceeded
-                responseMessage.innerHTML = `<p style="color: red;">${responseBody}</p>`;
+                // Display success message
+                responseDiv.innerHTML = '<p style="color: green;">' + 'Email sent successfully!' + '</p>';
             } else {
-                // Handle validation and other errors
-                if (Array.isArray(responseBody.errors)) {
-                    responseMessage.innerHTML = `<p style="color: red;">${responseBody.errors.map(err => err.msg).join('<br>')}</p>`;
-                } else {
-                    // Fallback for unexpected formats
-                    responseMessage.innerHTML = `<p style="color: red;">${responseBody}</p>`;
-                }
+                // Display validation errors
+                const errors = result.errors.map(error => `<p style="color: red;">${error.msg}</p>`).join('');
+                responseDiv.innerHTML = errors;
             }
         } catch (error) {
-            responseMessage.innerHTML = `<p style="color: red;">An error occurred: ${error.message}</p>`;
+            console.error('Error:', error);
+            responseDiv.innerHTML = '<p style="color: red;">Error sending email</p>';
         }
     });
 });
