@@ -35,7 +35,7 @@ app.post('/send-email',
      // Honeypot check
      (req, res, next) => {
         if (req.body.body2) {
-            return res.status(400).send('Form submission failed.');
+            return res.status(400).json('Form submission failed.');
         }
         next();
     },
@@ -77,10 +77,10 @@ app.post('/send-email',
     });
 
     console.log('Message sent: %s', info.messageId);
-    res.status(200).send('Email sent successfully!');
+    res.status(200).json('Email sent successfully!');
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).send('Error sending email');
+    res.status(500).json('Error sending email');
   }
 });
 
