@@ -92,44 +92,59 @@ TEST!
 <div id="message" class="message"></div>
 
 <script>
-  document.getElementById('contact-form').addEventListener('submit', async (event) => {
-      event.preventDefault(); // Prevent the default form submission
+  document.getElementById('contactForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-      const form = event.target;
-      const formData = new FormData(form); // Automatically handles form data in x-www-form-urlencoded format
-      
-      try {
-          const response = await fetch(form.action, {
-              method: form.method,
-              body: formData, // This sends the data as x-www-form-urlencoded
-          });
+    const form = event.target;
+    const formData = new FormData(form);
+    const messageDiv = document.getElementById('message');
 
-          const contentType = response.headers.get('Content-Type');
+    // Manually construct the request payload
+    const payload = {
+      subject: formData.get('subject'),
+      body: formData.get('body'),
+    };
 
-          let responseBody;
-          if (contentType && contentType.includes('application/json')) {
-              responseBody = await response.json();
-          } else {
-              responseBody = await response.text();
-          }
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        headers: {
+          'Content-Type': 'application/json', // Specify JSON content type
+        },
+        body: JSON.stringify(payload), // Convert payload to JSON
+      });
 
-          if (!response.ok) {
-              // Handle errors based on the response format
-              if (contentType && contentType.includes('application/json')) {
-                  document.getElementById('response-message').innerHTML = `
-                      <strong>An error occurred:</strong><br>
-                      ${responseBody.errors.map(error => `${error.msg}`).join('<br>')}
-                  `;
-              } else {
-                  document.getElementById('response-message').innerText = 'An unexpected error occurred. Please try again later.';
-              }
-          } else {
-              document.getElementById('response-message').innerText = responseBody;
-          }
-      } catch (error) {
-          console.error('Fetch error:', error);
-          document.getElementById('response-message').innerText = 'An unexpected error occurred. Please try again later.';
+      // Ensure response is in JSON format and read it
+      const contentType = response.headers.get('content-type');
+      let responseJson = {};
+
+      if (contentType && contentType.includes('application/json')) {
+        try {
+          responseJson = await response.json();
+        } catch (jsonError) {
+          console.error('Failed to parse JSON:', jsonError);
+          messageDiv.innerHTML = `<p class="error">Failed to parse server response.</p>`;
+          return;
+        }
+      } else {
+        const responseText = await response.text(); // Read as text if not JSON
+        console.error('Unexpected response format:', responseText);
+        messageDiv.innerHTML = `<p class="error">Unexpected response format. Response: ${responseText}</p>`;
+        return;
       }
+
+      if (response.ok) {
+        // Display success message
+        messageDiv.innerHTML = `<p class="success">${responseJson.message || 'Email sent successfully!'}</p>`;
+      } else {
+        // Handle and display validation errors
+        const errors = responseJson.errors || [{ msg: 'An unknown error occurred.' }];
+        messageDiv.innerHTML = `<p class="error">${errors.map(err => err.msg).join(', ')}</p>`;
+      }
+
+    } catch (error) {
+      messageDiv.innerHTML = `<p class="error">An unexpected error occurred: ${error.message}</p>`;
+    }
   });
 </script>
 <!--
