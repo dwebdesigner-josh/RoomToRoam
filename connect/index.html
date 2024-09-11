@@ -89,36 +89,44 @@ TEST!
 <div id="response-message"></div> <!-- Container for status messages -->
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contact-form');
     const responseMessage = document.getElementById('response-message');
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault(); // Prevent the default form submission
 
-        // Create a FormData object from the form
         const formData = new FormData(form);
 
         try {
-            // Send the form data via a POST request using fetch
             const response = await fetch(form.action, {
                 method: 'POST',
                 body: formData
             });
 
+            // Handle text response
             if (response.ok) {
-                const result = await response.text();
+              //handle successful response
+                const result = await response.text(); // Expecting plain text
                 responseMessage.innerHTML = `<p style="color: green;">${result}</p>`;
                 form.reset(); // Optionally reset the form
             } else {
-                const errorData = await response.json();
-                responseMessage.innerHTML = `<p style="color: red;">${errorData.errors.map(err => err.msg).join('<br>')}</p>`;
+                // Assuming the server returns JSON on error
+                try {
+                    const errorData = await response.json(); // Expecting JSON for validation errors
+                    responseMessage.innerHTML = `<p style="color: red;">${errorData.errors.map(err => err.msg).join('<br>')}</p>`;
+                } catch (jsonError) {
+                    // If JSON parsing fails, handle it as plain text
+                    const errorText = await response.text();
+                    responseMessage.innerHTML = `<p style="color: red;">${errorText}</p>`;
+                }
             }
         } catch (error) {
             responseMessage.innerHTML = `<p style="color: red;">An error occurred: ${error.message}</p>`;
         }
     });
 });
+
 
 </script>
 
