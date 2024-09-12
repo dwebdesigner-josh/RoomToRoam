@@ -91,6 +91,7 @@ TEST!
 
 <div id="message" class="message"></div>
 
+
 <script>
   document.getElementById('contactForm').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent the default form submission
@@ -99,19 +100,16 @@ TEST!
     const formData = new FormData(form);
     const messageDiv = document.getElementById('message');
 
-    // Manually construct the request payload
-    const payload = {
-      subject: formData.get('subject'),
-      body: formData.get('body'),
-    };
+    // Convert FormData to URL-encoded string
+    const urlEncodedData = new URLSearchParams(formData).toString();
 
     try {
       const response = await fetch(form.action, {
         method: form.method,
         headers: {
-          'Content-Type': 'application/json', // Specify JSON content type
+          'Content-Type': 'application/x-www-form-urlencoded', // Specify URL-encoded content type
         },
-        body: JSON.stringify(payload), // Convert payload to JSON
+        body: urlEncodedData, // Use URL-encoded string as the body
       });
 
       // Ensure response is in JSON format and read it
@@ -149,6 +147,7 @@ TEST!
     }
   });
 </script>
+
 <!--
 SCROLL UP ON THIS CHATGPT ENTRY TO GET TO THE CODE INSPO FOR THIS, then set up digitalocean and create the actual code for this form from scratch
 https://chatgpt.com/c/7aaeeded-78fa-402c-8b03-e85eb94dbb9d
