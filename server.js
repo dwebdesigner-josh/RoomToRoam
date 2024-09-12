@@ -44,13 +44,22 @@ const formSubmitLimiter = rateLimit({
 app.post('/send-email',
   // Honeypot check
   (req, res, next) => {
+    // Check if req.body.body2 has any content
     if (req.body.body2 && req.body.body2.length > 0) {
       return res.status(400).json({ message: 'Form submission failed.' });
-    }
+  }
+    // If body2 is empty, pass control to the next middleware
     next();
-  },
+},
+  
+  // Apply rate limiter to the route
+  formSubmitLimiter,
 
-  formSubmitLimiter, // Rate limiter
+  // Validation middleware
+  validate([
+    body('subject').isLength({ min: 1 }).withMessage('Subject is required')
+  ]),
+
 
   // Validation middleware
   validate([
@@ -68,23 +77,32 @@ app.post('/send-email',
   ]),
 
   async (req, res) => {
-    const errors = validationResult(req);
+    const errors = validationResult(req); // Check validation errors
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
+    
+    const { subject, body } = req.body;
 
-    const { subject, body, preferredcontact, contactreason } = req.body;
+    // Configure nodemailer transport for SMTP service
+    let transporter = nodemailer.createTransport({
+      service: process.env.SMTP_SERVICE,
+      auth: {
+        user: process.env.EMAIL_USER,  // Use environment variable
+        pass: process.env.EMAIL_PASS   // Use environment variable
+      }
+    });
 
-    // Email sending logic (unchanged)
     try {
       // Send email
       let info = await transporter.sendMail({
-        from: `"RoomToRoamStudios" <${process.env.EMAIL_USER}>`,
-        to: process.env.RECIPIENT_EMAIL,
+        from: `"RoomToRoamStudios" <${process.env.EMAIL_USER}>`,  // Use environment variable
+        to: process.env.RECIPIENT_EMAIL,                // Use environment variable
         subject: subject,
-        text: `Contact method: ${preferredcontact}, Reason: ${contactreason}, Message: ${body || 'No additional info provided'}`,
+        text: body,
       });
 
+      console.log('Message sent: %s', info.messageId);
       res.status(200).json({ message: 'Email sent successfully!' });
     } catch (error) {
       console.error('Error sending email:', error);
@@ -92,7 +110,6 @@ app.post('/send-email',
     }
   }
 );
-
 
 // Start server
 app.listen(port, () => {
