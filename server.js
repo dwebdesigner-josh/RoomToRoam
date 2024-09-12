@@ -41,6 +41,7 @@ const formSubmitLimiter = rateLimit({
 });
 
 // Route to handle form submission
+
 app.post('/send-email',
   // Honeypot check
   (req, res, next) => {
@@ -51,10 +52,8 @@ app.post('/send-email',
     // If body2 is empty, pass control to the next middleware
     next();
 },
-  
-  // Apply rate limiter to the route
-  formSubmitLimiter,
 
+  formSubmitLimiter, // Rate limiter
 
   // Validation middleware
   validate([
@@ -72,31 +71,32 @@ app.post('/send-email',
   ]),
 
   async (req, res) => {
-    const errors = validationResult(req); // Check validation errors
+    const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    
-    const { subject, body } = req.body;
 
-    // Configure nodemailer transport for SMTP service
-    let transporter = nodemailer.createTransport({
-      service: process.env.SMTP_SERVICE,
-      auth: {
-        user: process.env.EMAIL_USER,  // Use environment variable
-        pass: process.env.EMAIL_PASS   // Use environment variable
-      }
-    });
+    const { subject, body, preferredcontact, contactreason } = req.body;
+  //  const { subject, body } = req.body;
 
-    try {
+  // Configure nodemailer transport for SMTP service
+  let transporter = nodemailer.createTransport({
+    service: process.env.SMTP_SERVICE,
+    auth: {
+      user: process.env.EMAIL_USER,  // Use environment variable
+      pass: process.env.EMAIL_PASS   // Use environment variable
+    }
+  });
+
+  try {
       // Send email
       let info = await transporter.sendMail({
-        from: `"RoomToRoamStudios" <${process.env.EMAIL_USER}>`,  // Use environment variable
-        to: process.env.RECIPIENT_EMAIL,                // Use environment variable
+        from: `"RoomToRoamStudios" <${process.env.EMAIL_USER}>`,
+        to: process.env.RECIPIENT_EMAIL,
         subject: subject,
-        text: body,
+        text: `Contact method: ${preferredcontact}, Reason: ${contactreason}, Message: ${body || 'No additional info provided'}`,
       });
-
+      
       console.log('Message sent: %s', info.messageId);
       res.status(200).json({ message: 'Email sent successfully!' });
     } catch (error) {
