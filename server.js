@@ -125,7 +125,7 @@ app.post('/send-email',
       let info = await transporter.sendMail({
         from: `"RoomToRoamStudios" <${process.env.EMAIL_USER}>`,
         to: process.env.RECIPIENT_EMAIL,
-        subject: subject,
+        subject:`${contactreason} | ${subject}`, 
         text: `Contact method: ${preferredcontact} (${contactDetails}),
            Contact reason: ${contactreason} (${contactReasonDetails}),
            Additional info: ${body || 'No additional info provided'}`,
