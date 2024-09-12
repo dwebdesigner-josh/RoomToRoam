@@ -34,7 +34,7 @@ app.use(express.json()); // For application/json
 // Configure rate limiter
 const formSubmitLimiter = rateLimit({
   windowMs: 24 * 60 * 60 * 1000, // 24 hours
-  max: 10, // Limit each IP to 10 requests per `windowMs`
+  max: 3, // Limit each IP to 10 requests per `windowMs`
   standardHeaders: true, // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
   message: 'Too many form submissions from this device, please try again later.',
