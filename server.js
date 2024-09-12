@@ -45,7 +45,7 @@ app.post('/send-email',
   // Honeypot check
   (req, res, next) => {
     if (req.body.body2) {
-      return res.status(400).send('Form submission failed.');
+      return res.status(400).json('Form submission failed.');
     }
     next();
   },
