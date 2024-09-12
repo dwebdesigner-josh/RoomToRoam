@@ -23,9 +23,7 @@ const validate = validations => {
 
 // See end-user IP rather than Cloudflare IP when limiting form submissions by IP
 app.set('trust proxy', 2);
-app.get('/ip', (request, response) => response.send(request.ip))
-app.get('/x-forwarded-for', (request, response) => response.send(request.headers['x-forwarded-for']))
-
+//https://github.com/express-rate-limit/express-rate-limit/wiki/Troubleshooting-Proxy-Issues
 
 // Serve static files (like your HTML form)
 app.use(express.static(path.join(__dirname, 'public')));
@@ -84,16 +82,16 @@ app.post('/send-email',
   
 
     // Capture the IP address of the user to watch for repeat senders and add as a signature to their sent form emails
-  //function getClientIp(req) {
-    //const xForwardedFor = req.headers['x-forwarded-for'];
-    //if (xForwardedFor) {
-      //return xForwardedFor.split(',')[0].trim();
-   // }
-    //return req.ip;
- // }
+  function getClientIp(req) {
+    const xForwardedFor = req.headers['x-forwarded-for'];
+    if (xForwardedFor) {
+      return xForwardedFor.split(',')[0].trim();
+    }
+    return req.ip;
+  }
   
   // Use this function to get the IP address
-  //const ip = getClientIp(req);
+  const ip = getClientIp(req);
   
 
 
@@ -147,12 +145,12 @@ app.post('/send-email',
         text: `Contact method: ${preferredcontact} (${contactDetails}),
            Contact reason: ${contactreason} (${contactReasonDetails}),
            Additional info: ${body || 'No additional info provided'},
-           `,
+           Submitter IP: ${ip} (if multiple messages are received by this IP they are coming from the same device-treat with caution)`,
       });
-      //Submitter IP: ${ip} (if multiple messages are received by this IP they are coming from the same device-treat with caution)
-
-
       
+
+
+
       console.log('Message sent: %s', info.messageId);
       res.status(200).json({ message: 'Email sent successfully!' });
     } catch (error) {
