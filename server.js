@@ -44,11 +44,14 @@ const formSubmitLimiter = rateLimit({
 app.post('/send-email',
   // Honeypot check
   (req, res, next) => {
-    if (req.body.body2) {
-      return res.status(400).json('Form submission failed.');
+    // Check if req.body.body2 has any content
+    if (req.body.body2 && req.body.body2.length > 0) {
+        // If body2 has any content, respond with an error
+        return res.status(400).send('Form submission failed.');
     }
+    // If body2 is empty, pass control to the next middleware
     next();
-  },
+}
   
   // Apply rate limiter to the route
   formSubmitLimiter,
