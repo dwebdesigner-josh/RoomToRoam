@@ -15,6 +15,11 @@
 <script src="/scripts/jquery.min.js"></script>
 <style>
   #message{color: red;}
+  #contactForm *{color: white;}
+  fieldset{display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;}
+  .fieldset-mc{display:flex; flex-direction: column;}
+  .mc-answerfield{width: 100%; height: 100%; font-size: 1rem; background-color: #12171d; color: white;}
+  .contact-input{width: 60%; height: 2rem;}
 </style>
 </head>
 
@@ -66,19 +71,73 @@
 
 <main>
 
-  
-
-
-<section id="filler">
-TEST!
-</section>
-
+  <section class="filler"></section>
+<!--CONTACT FORM-->
 <form id="contactForm" action="/send-email" method="POST" style="z-index: 200;">
-  <div>
-    <input autocomplete="off" type="text" placeholder="Subject" name="subject" required />
+  <fieldset>
+    <legend>How do you want to be contacted?</legend>
+  <div class="fieldset-mc">
+    <div>
+      <input type="radio" id="preferredcontact-phone" name="preferredcontact" value="phone" checked />
+      <label for="phone">Phone</label>
+          
+    </div>
+  
+    <div>
+      <input type="radio" id="preferredcontact-email" name="preferredcontact" value="email" />
+      <label for="email">Email</label>
+          
+    </div>
+  
+    <div>
+      <input type="radio" id="preferredcontact-other" name="preferredcontact" value="other" />
+      <label for="other">Other</label>
+          
+    </div>
   </div>
+    <div id="phone-input" class="contact-input">
+      <input class="mc-answerfield" type="tel" id="phone-number" name="phone-number" placeholder="Phone Number"/>
+    </div>
+    <div id="email-input" class="contact-input" style="display: none;">
+      <input class="mc-answerfield" type="email" id="email-address" name="email-address" placeholder="Email"/>
+    </div>
+    <div id="other-input" class="contact-input" style="display: none;">
+      <input class="mc-answerfield" type="text" id="other-method" name="other-method" placeholder="Other contact information"/>
+    </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend>How can we help you?</legend>
+  <div class="fieldset-mc">
+    <div>
+      <input type="radio" id="contactreason-artist" name="contactreason" value="artist" checked />
+      <label for="phone">I'm thinking about joining the label</label>
+          
+    </div>
+  
+    <div>
+      <input type="radio" id="contactreason-businessinquiry" name="contactreason" value="business" />
+      <label for="email">I have a business inquiry</label>
+          
+    </div>
+  
+    <div>
+      <input type="radio" id="contactreason-other" name="contactreason" value="other" />
+      <label for="other">Other</label>
+          <div id="reason-other-input" class="reason-input" style="display: none;">
+            <input class="mc-answerfield" type="text" id="other-reason" name="other-reason" placeholder="How can we help you?"/>
+          </div>
+    </div>
+
+  </fieldset>
+
   <div>
-    <textarea autocomplete="off" placeholder="Your message" name="body" required></textarea>
+    <input autocomplete="off" type="text" placeholder="Your name" name="subject" required />
+  </div>
+
+  <div> 
+    <textarea autocomplete="off" placeholder="Additional info" name="body" required></textarea>
   </div>
 
                             <div class="oh-no-hun" >
@@ -87,7 +146,43 @@ TEST!
   <div>
     <button type="submit">Send a message</button>
   </div>
+
 </form>
+
+<script>
+  // Functionality for the "How do you want to be contacted?" section
+  document.querySelectorAll('input[name="preferredcontact"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      document.querySelectorAll('.contact-input').forEach(input => {
+        input.style.display = 'none';
+      });
+      
+      const selectedInput = document.getElementById(this.value + '-input');
+      if (selectedInput) {
+        selectedInput.style.display = 'block';
+      }
+    });
+  });
+
+  // Initialize the display based on the default checked radio button
+  document.querySelector('input[name="preferredcontact"]:checked').dispatchEvent(new Event('change'));
+
+  // Functionality for the "How can we help you?" section
+  document.querySelectorAll('input[name="contactreason"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      const reasonInput = document.getElementById('reason-other-input');
+      
+      if (this.value === 'other') {
+        reasonInput.style.display = 'block';
+      } else {
+        reasonInput.style.display = 'none';
+      }
+    });
+  });
+
+  // Initialize the "How can we help you?" section based on the default checked radio button
+  document.querySelector('input[name="contactreason"]:checked').dispatchEvent(new Event('change'));
+</script>
 
 <div id="message" class="message"></div>
 
@@ -148,23 +243,7 @@ TEST!
   });
 </script>
 
-<!--
-SCROLL UP ON THIS CHATGPT ENTRY TO GET TO THE CODE INSPO FOR THIS, then set up digitalocean and create the actual code for this form from scratch
-https://chatgpt.com/c/7aaeeded-78fa-402c-8b03-e85eb94dbb9d
-<form id="emailForm" style="z-index: 200;">
-  <div>
-    <input type="text" placeholder="Subject" name="subject" required />
-  </div>
-  <div>
-    <textarea placeholder="Your message" name="body" required></textarea>
-  </div>
-  <div>
-    <button type="submit">Send a message</button>
-  </div>
-</form>
 
-
--->
 
 </main>
 

@@ -675,9 +675,135 @@ app.listen(port, () => {
 
 
 
+new working with ajax
+
+const express = require('express');
+const nodemailer = require('nodemailer');
+const path = require('path');
+const { body, validationResult } = require('express-validator'); // For validation
+require('dotenv').config(); // Load environment variables from .env file
+const rateLimit = require('express-rate-limit'); // For rate limiting
+
+const app = express();
+const port = process.env.PORT; // Use environment variable
+
+// Reusable validation runner
+const validate = validations => {
+  return async (req, res, next) => {
+    for (const validation of validations) {
+      const result = await validation.run(req);
+      if (!result.isEmpty()) {
+        return res.status(400).json({ errors: result.array() });
+      }
+    }
+    next();
+  };
+};
+
+// See end-user IP rather than Cloudflare IP when limiting form submissions by IP
+app.set('trust proxy', true);
+
+// Serve static files (like your HTML form)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Middleware to parse form data
+app.use(express.urlencoded({ extended: true })); // For x-www-form-urlencoded
+app.use(express.json()); // For application/json
+
+// Configure rate limiter
+const formSubmitLimiter = rateLimit({
+  windowMs: 24 * 60 * 60 * 1000, // 24 hours
+  max: 3, // Limit each IP to 10 requests per `windowMs`
+  standardHeaders: true, // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
+  message: 'Too many form submissions from this device, please try again later.',
+});
+
+// Route to handle form submission
+app.post('/send-email',
+  // Honeypot check
+  (req, res, next) => {
+    // Check if req.body.body2 has any content
+    if (req.body.body2 && req.body.body2.length > 0) {
+      return res.status(400).json({ message: 'Form submission failed.' });
+  }
+    // If body2 is empty, pass control to the next middleware
+    next();
+},
+  
+  // Apply rate limiter to the route
+  formSubmitLimiter,
+
+  // Validation middleware
+  validate([
+    body('subject').isLength({ min: 1 }).withMessage('Subject is required'),
+    body('body').isLength({ min: 1 }).withMessage('Message body is required')
+  ]),
+
+  async (req, res) => {
+    const errors = validationResult(req); // Check validation errors
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+    
+    const { subject, body } = req.body;
+
+    // Configure nodemailer transport for SMTP service
+    let transporter = nodemailer.createTransport({
+      service: process.env.SMTP_SERVICE,
+      auth: {
+        user: process.env.EMAIL_USER,  // Use environment variable
+        pass: process.env.EMAIL_PASS   // Use environment variable
+      }
+    });
+
+    try {
+      // Send email
+      let info = await transporter.sendMail({
+        from: `"RoomToRoamStudios" <${process.env.EMAIL_USER}>`,  // Use environment variable
+        to: process.env.RECIPIENT_EMAIL,                // Use environment variable
+        subject: subject,
+        text: body,
+      });
+
+      console.log('Message sent: %s', info.messageId);
+      res.status(200).json({ message: 'Email sent successfully!' });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      res.status(500).json({ message: 'Error sending email' });
+    }
+  }
+);
+
+// Start server
+app.listen(port, () => {
+  console.log(`Server listening on http://localhost:${port}`);
+});
 
 
-save script
+
+
+html
+<form id="contactForm" action="/send-email" method="POST" style="z-index: 200;">
+  <div>
+    <input autocomplete="off" type="text" placeholder="Subject" name="subject" required />
+  </div>
+  <div> 
+    <textarea autocomplete="off" placeholder="Your message" name="body" required></textarea>
+  </div>
+
+                            <div class="oh-no-hun" >
+                              <input tabindex="-1" autocomplete="off" type="text" name="body2" />
+                            </div>
+  <div>
+    <button type="submit">Send a message</button>
+  </div>
+</form>
+
+<div id="message" class="message"></div>
+
+
+script
   document.getElementById('contactForm').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent the default form submission
 
@@ -685,19 +811,16 @@ save script
     const formData = new FormData(form);
     const messageDiv = document.getElementById('message');
 
-    // Manually construct the request payload
-    const payload = {
-      subject: formData.get('subject'),
-      body: formData.get('body'),
-    };
+    // Convert FormData to URL-encoded string
+    const urlEncodedData = new URLSearchParams(formData).toString();
 
     try {
       const response = await fetch(form.action, {
         method: form.method,
         headers: {
-          'Content-Type': 'application/json', // Specify JSON content type
+          'Content-Type': 'application/x-www-form-urlencoded', // Specify URL-encoded content type
         },
-        body: JSON.stringify(payload), // Convert payload to JSON
+        body: urlEncodedData, // Use URL-encoded string as the body
       });
 
       // Ensure response is in JSON format and read it
@@ -735,14 +858,5 @@ save script
     }
   });
 script
-
-
-
-
-
-
-
-
-
 
 
