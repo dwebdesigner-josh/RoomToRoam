@@ -34,7 +34,7 @@ app.use(express.json()); // For application/json
 // Configure rate limiter
 const formSubmitLimiter = rateLimit({
   windowMs: 24 * 60 * 60 * 1000, // 24 hours
-  max: 3, // Limit each IP to 10 requests per `windowMs`
+  max: 10, // Limit each IP to 10 requests per `windowMs`
   standardHeaders: true, // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
   message: 'Too many form submissions from this device, please try again later.',
@@ -78,8 +78,40 @@ app.post('/send-email',
 
     const { subject, body, preferredcontact, contactreason } = req.body;
   //  const { subject, body } = req.body;
+ 
+  // Determine the contact method text based on the selected option- to be added to email text
+ let contactDetails = '';
+ switch (preferredcontact) {
+   case 'phone':
+     contactDetails = `Phone Number: ${req.body['phone-number'] || 'N/A'}`;
+     break;
+   case 'email':
+     contactDetails = `Email Address: ${req.body['email-address'] || 'N/A'}`;
+     break;
+   case 'other':
+     contactDetails = `Other Contact Info: ${req.body['other-method'] || 'N/A'}`;
+     break;
+   default:
+     contactDetails = 'No contact details provided';
+ }
 
-  // Configure nodemailer transport for SMTP service
+ // Determine the contact reason text based on the selected option - to be added to email text
+ let contactReasonDetails = '';
+ switch (contactreason) {
+   case 'artist':
+     contactReasonDetails = "Reason: I'm thinking about joining the label";
+     break;
+   case 'business':
+     contactReasonDetails = "Reason: I have a business inquiry";
+     break;
+   case 'other':
+     contactReasonDetails = `Other Reason: ${req.body['other-reason'] || 'N/A'}`;
+     break;
+   default:
+     contactReasonDetails = 'No reason provided';
+ }
+ 
+ // Configure nodemailer transport for SMTP service
   let transporter = nodemailer.createTransport({
     service: process.env.SMTP_SERVICE,
     auth: {
@@ -94,7 +126,9 @@ app.post('/send-email',
         from: `"RoomToRoamStudios" <${process.env.EMAIL_USER}>`,
         to: process.env.RECIPIENT_EMAIL,
         subject: subject,
-        text: `Contact method: ${preferredcontact}, Reason: ${contactreason}, Message: ${body || 'No additional info provided'}`,
+        text: `Contact method: ${preferredcontact} (${contactDetails}),
+           Contact reason: ${contactreason} (${contactReasonDetails}),
+           Additional info: ${body || 'No additional info provided'}`,
       });
       
       console.log('Message sent: %s', info.messageId);
