@@ -55,11 +55,6 @@ app.post('/send-email',
   // Apply rate limiter to the route
   formSubmitLimiter,
 
-  // Validation middleware
-  validate([
-    body('subject').isLength({ min: 1 }).withMessage('Subject is required')
-  ]),
-
 
   // Validation middleware
   validate([
