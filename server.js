@@ -34,7 +34,7 @@ app.use(express.json()); // For application/json
 // Configure rate limiter
 const formSubmitLimiter = rateLimit({
   windowMs: 24 * 60 * 60 * 1000, // 24 hours
-  max: 10, // Limit each IP to 10 requests per `windowMs`
+  max: 4, // Limit each IP to 10 requests per `windowMs`
   standardHeaders: true, // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
   message: 'Too many form submissions from this device, please try again later.',
@@ -78,7 +78,8 @@ app.post('/send-email',
 
     const { subject, body, preferredcontact, contactreason } = req.body;
   //  const { subject, body } = req.body;
- 
+  const ip = req.ip; // Capture the IP address
+
   // Determine the contact method text based on the selected option- to be added to email text
  let contactDetails = '';
  switch (preferredcontact) {
@@ -128,7 +129,8 @@ app.post('/send-email',
         subject:`${contactreason} | ${subject}`, 
         text: `Contact method: ${preferredcontact} (${contactDetails}),
            Contact reason: ${contactreason} (${contactReasonDetails}),
-           Additional info: ${body || 'No additional info provided'}`,
+           Additional info: ${body || 'No additional info provided'},
+           Submitter IP: ${ip} (if multiple messages are received by this IP they are coming from the same device-treat with caution)`,
       });
       
       console.log('Message sent: %s', info.messageId);
