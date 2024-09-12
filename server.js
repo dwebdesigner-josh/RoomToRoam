@@ -51,7 +51,7 @@ app.post('/send-email',
     }
     // If body2 is empty, pass control to the next middleware
     next();
-}
+},
   
   // Apply rate limiter to the route
   formSubmitLimiter,
