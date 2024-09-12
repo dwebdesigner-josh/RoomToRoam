@@ -76,9 +76,23 @@ app.post('/send-email',
       return res.status(400).json({ errors: errors.array() });
     }
 
+//  const { subject, body } = req.body;
     const { subject, body, preferredcontact, contactreason } = req.body;
-  //  const { subject, body } = req.body;
-  const ip = req.ip; // Capture the IP address
+  
+
+    // Capture the IP address of the user to watch for repeat senders and add as a signature to their sent form emails
+  function getClientIp(req) {
+    const xForwardedFor = req.headers['x-forwarded-for'];
+    if (xForwardedFor) {
+      return xForwardedFor.split(',')[0].trim();
+    }
+    return req.ip;
+  }
+  
+  // Use this function to get the IP address
+  const ip = getClientIp(req);
+  
+
 
   // Determine the contact method text based on the selected option- to be added to email text
  let contactDetails = '';
