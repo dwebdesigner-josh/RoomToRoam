@@ -667,3 +667,82 @@ app.post('/send-email',
 app.listen(port, () => {
   console.log(`Server listening on http://localhost:${port}`);
 });
+
+
+
+
+
+
+
+
+
+
+save script
+  document.getElementById('contactForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const form = event.target;
+    const formData = new FormData(form);
+    const messageDiv = document.getElementById('message');
+
+    // Manually construct the request payload
+    const payload = {
+      subject: formData.get('subject'),
+      body: formData.get('body'),
+    };
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        headers: {
+          'Content-Type': 'application/json', // Specify JSON content type
+        },
+        body: JSON.stringify(payload), // Convert payload to JSON
+      });
+
+      // Ensure response is in JSON format and read it
+      const contentType = response.headers.get('content-type');
+      let responseJson = {};
+
+      if (contentType && contentType.includes('application/json')) {
+        try {
+          responseJson = await response.json();
+        } catch (jsonError) {
+          console.error('Failed to parse JSON:', jsonError);
+          messageDiv.innerHTML = `<p class="error">Failed to parse server response.</p>`;
+          return;
+        }
+      } else {
+        const responseText = await response.text(); // Read as text if not JSON
+        console.error('Unexpected response format:', responseText);
+        messageDiv.innerHTML = `<p class="error">Unexpected response format. Response: ${responseText}</p>`;
+        return;
+      }
+
+      if (response.ok) {
+        // Display success message
+        messageDiv.innerHTML = `<p class="success">${responseJson.message || 'Email sent successfully!'}</p>`;
+        // Reset the form after successful submission
+        form.reset();
+      } else {
+        // Handle and display validation errors
+        const errors = responseJson.errors || [{ msg: 'An unknown error occurred.' }];
+        messageDiv.innerHTML = `<p class="error">${errors.map(err => err.msg).join(', ')}</p>`;
+      }
+
+    } catch (error) {
+      messageDiv.innerHTML = `<p class="error">An unexpected error occurred: ${error.message}</p>`;
+    }
+  });
+script
+
+
+
+
+
+
+
+
+
+
+
