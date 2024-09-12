@@ -19,7 +19,7 @@ const validate = validations => {
     }
     next();
   };
-};
+}; 
 
 // See end-user IP rather than Cloudflare IP when limiting form submissions by IP
 app.set('trust proxy', 2);
