@@ -97,7 +97,7 @@
       <input class="mc-answerfield" type="email" id="email-address" name="email-address" placeholder="Email" />
     </div>
     <div id="other-input" class="contact-input" style="display: none;">
-      <input class="mc-answerfield" type="text" id="other-method" name="other-method" placeholder="Other contact information" />
+      <input class="mc-answerfield" type="text" id="other-method" name="other-method" placeholder="Contact info" />
     </div>
   </fieldset>
 
@@ -143,18 +143,40 @@
 
 
 <script>
-  // Functionality for the "How do you want to be contacted?" section
+ 
+  // Function to initialize the display of contact inputs based on the default checked radio button
+  function initializeContactInputs() {
+    const preferredContact = document.querySelector('input[name="preferredcontact"]:checked');
+    if (preferredContact) {
+      document.querySelectorAll('.contact-input').forEach(input => input.style.display = 'none');
+      const selectedInput = document.getElementById(preferredContact.value + '-input');
+      if (selectedInput) {
+        selectedInput.style.display = 'block';
+      }
+    }
+  }
+
+  // Function to initialize the display of reason input based on the default checked radio button
+  function initializeReasonInput() {
+    const contactReason = document.querySelector('input[name="contactreason"]:checked');
+    const reasonInput = document.getElementById('reason-other-input');
+    if (contactReason) {
+      reasonInput.style.display = contactReason.value === 'other' ? 'block' : 'none';
+    }
+  }
+
+  // Event listener for the "How do you want to be contacted?" section
   document.querySelectorAll('input[name="preferredcontact"]').forEach(radio => {
     radio.addEventListener('change', function() {
       document.querySelectorAll('.contact-input').forEach(input => input.style.display = 'none');
-      document.getElementById(this.value + '-input').style.display = 'block';
+      const selectedInput = document.getElementById(this.value + '-input');
+      if (selectedInput) {
+        selectedInput.style.display = 'block';
+      }
     });
   });
 
-  // Initialize the display based on the default checked radio button
-  document.querySelector('input[name="preferredcontact"]:checked').dispatchEvent(new Event('change'));
-
-  // Functionality for the "How can we help you?" section
+  // Event listener for the "How can we help you?" section
   document.querySelectorAll('input[name="contactreason"]').forEach(radio => {
     radio.addEventListener('change', function() {
       const reasonInput = document.getElementById('reason-other-input');
@@ -162,8 +184,11 @@
     });
   });
 
-  // Initialize the "How can we help you?" section based on the default checked radio button
-  document.querySelector('input[name="contactreason"]:checked').dispatchEvent(new Event('change'));
+  // Initialize the displays on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    initializeContactInputs();
+    initializeReasonInput();
+  });
 </script>
 
 
