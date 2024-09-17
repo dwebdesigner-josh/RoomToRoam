@@ -94,6 +94,11 @@ app.post('/send-email',
   // Use this function to get the IP address
   const ip = getClientIp(req);
   
+ function getIpDetails(req) {
+  // Extract IP address from the request
+  const ip = getClientIp(req);
+  
+  // Define the URL with the extracted IP address
   const ipDetailsUrl = `https://ipinfo.io/${ip}/json`;
   
   let ipDetails = '';
@@ -111,6 +116,8 @@ app.post('/send-email',
   
   return ipDetails;
 }
+
+const ipLocation = getIpDetails(req);
 
   // Determine the contact method text based on the selected option- to be added to email text
  let contactDetails = '';
@@ -162,7 +169,7 @@ app.post('/send-email',
         text: `Contact method: ${preferredcontact} (${contactDetails}),
            Contact reason: ${contactreason} (${contactReasonDetails}),
            Additional info: ${body || 'No additional info provided'},
-           Submitter Location: ${ipDetails},
+           Submitter Location: ${ipLocation},
            Submitter IP: ${ip} (if multiple messages are received by this IP they are coming from the same device-treat with caution)`,
       });
       
