@@ -102,6 +102,16 @@ app.post('/send-email',
     ipDetails =`Error fetching IP Location details: ${error.message}`;
   }
 
+  // Extract relevant details
+const city = ipDetails.city || 'N/A';
+const region = ipDetails.region || 'N/A';
+const country = ipDetails.country || 'N/A';
+const timezone = ipDetails.timezone || 'N/A';
+
+// Format the details
+const ipDetailsText = `City: ${city}, Region: ${region}, Country: ${country}, Timezone: ${timezone}`;
+
+
   // Determine the contact method text based on the selected option- to be added to email text
  let contactDetails = '';
  switch (preferredcontact) {
@@ -152,7 +162,7 @@ app.post('/send-email',
         text: `Contact method: ${preferredcontact} (${contactDetails}),
            Contact reason: ${contactreason} (${contactReasonDetails}),
            Additional info: ${body || 'No additional info provided'},
-           Submitter Location: ${JSON.stringify(ipDetails)},
+           Submitter Location: ${ipDetailsText},
            Submitter IP: ${ip} (if multiple messages are received by this IP they are coming from the same device-treat with caution)`,
       });
       
