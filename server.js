@@ -109,10 +109,7 @@ const country = ipDetails.country || 'N/A';
 const timezone = ipDetails.timezone || 'N/A';
 
 // Format the details
-const ipDetailsText = `City: ${city},
-Region: ${region}, 
-Country: ${country}, 
-Timezone: ${timezone}`;
+const ipDetailsText = `City: ${city},Region: ${region},Country: ${country},Timezone: ${timezone}`;
 
 
   // Determine the contact method text based on the selected option- to be added to email text
@@ -168,7 +165,7 @@ Contact reason: ${contactreason} (${contactReasonDetails}),
 Additional info: ${body || 'No additional info provided'},
         SECURITY SIGNATURE:
            Submitter IP: ${ip} (if multiple messages are received by this IP they are coming from the same device-treat with caution),
-           Submitter Location: ${ipDetailsText},`,
+           Submitter Location: ${ipDetailsText} (check for accuracy to their provided details and be wary of any non-US locations),`,
           });
       
 
