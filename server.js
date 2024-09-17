@@ -99,7 +99,7 @@ app.post('/send-email',
     const ipDetailsResponse = await axios.get(`https://ipconfig.io/${ip}/json`);
     ipDetails = ipDetailsResponse.data;
   } catch (error) {
-    console.error('Error fetching IP Location details:', error.message);
+    ipDetails =`Error fetching IP Location details: ${error.message}`;
   }
 
   // Determine the contact method text based on the selected option- to be added to email text
