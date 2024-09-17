@@ -94,7 +94,7 @@ app.post('/send-email',
   // Use this function to get the IP address
   const ip = getClientIp(req);
   
-  let ipDetails = '';
+  let ipDetails = {};
   try {
     const response = await axios.get('https://ipconfig.io/${ip}/json');
     ipDetails = response.json;
