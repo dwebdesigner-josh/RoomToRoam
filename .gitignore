@@ -15,3 +15,10 @@ build/
 pm2-log-file
 package-lock.json
 *.log
+
+# GeoIP-lite data folder
+node_modules/geoip-lite/data/
+
+# Optional logs or temp files
+geoip-update.log
+geoip-lite/tmp/

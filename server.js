@@ -4,6 +4,7 @@ const path = require('path');
 const { body, validationResult } = require('express-validator'); // For validation
 require('dotenv').config(); // Load environment variables from .env file
 const rateLimit = require('express-rate-limit'); // For rate limiting
+const axios = require('axios');
 
 const app = express();
 const port = process.env.PORT; // Use environment variable
@@ -93,7 +94,13 @@ app.post('/send-email',
   // Use this function to get the IP address
   const ip = getClientIp(req);
   
-
+  let ipDetails = '';
+  try {
+    const response = await axios.get('https://ipconfig.io/${ip}/json');
+    ipDetails = response.json;
+  } catch (error) {
+    console.error('Error fetching IP Location details:', error.message);
+  }
 
   // Determine the contact method text based on the selected option- to be added to email text
  let contactDetails = '';
@@ -145,6 +152,7 @@ app.post('/send-email',
         text: `Contact method: ${preferredcontact} (${contactDetails}),
            Contact reason: ${contactreason} (${contactReasonDetails}),
            Additional info: ${body || 'No additional info provided'},
+           Submitter Location: ${ipDetails},
            Submitter IP: ${ip} (if multiple messages are received by this IP they are coming from the same device-treat with caution)`,
       });
       
