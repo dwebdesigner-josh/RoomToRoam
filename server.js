@@ -96,8 +96,8 @@ app.post('/send-email',
   
   let ipDetails = {};
   try {
-    const response = await axios.get('https://ipconfig.io/${ip}/json');
-    ipDetails = response.data;
+    const ipDetailsResponse = await axios.get('https://ipconfig.io/${ip}/json');
+    ipDetails = ipDetailsResponse.data;
   } catch (error) {
     console.error('Error fetching IP Location details:', error.message);
   }
