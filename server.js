@@ -110,9 +110,9 @@ const timezone = ipDetails.timezone || 'N/A';
 
 // Format the details
 const ipDetailsText = `City: ${city}, 
-Region: ${region}, 
-Country: ${country}, 
-Timezone: ${timezone}`;
+                       Region: ${region}, 
+                       Country: ${country}, 
+                       Timezone: ${timezone}`;
 
 
   // Determine the contact method text based on the selected option- to be added to email text
@@ -162,10 +162,11 @@ Timezone: ${timezone}`;
         from: `"RoomToRoamStudios" <${process.env.EMAIL_USER}>`,
         to: process.env.RECIPIENT_EMAIL,
         subject:`${contactreason} | ${subject}`, 
-        text: `Contact method: ${preferredcontact} (${contactDetails}),
+        text: 
+           `Contact method: ${preferredcontact} (${contactDetails}),
            Contact reason: ${contactreason} (${contactReasonDetails}),
            Additional info: ${body || 'No additional info provided'},
-           
+        SECURITY SIGNATURE:
            Submitter IP: ${ip} (if multiple messages are received by this IP they are coming from the same device-treat with caution),
            Submitter Location: ${ipDetailsText},`,
           });
