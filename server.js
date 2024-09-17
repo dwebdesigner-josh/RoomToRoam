@@ -94,13 +94,23 @@ app.post('/send-email',
   // Use this function to get the IP address
   const ip = getClientIp(req);
   
+  const ipDetailsUrl = `https://ipinfo.io/${ip}/json`;
+  
   let ipDetails = '';
-  try {
-    const ipDetailsResponse = await axios.get(`https://ipinfo.io/${ip}/json`);
-    ipDetails = JSON.stringify(ipDetailsResponse, null, 2);
-  } catch (error) {
-    ipDetails =`Error fetching IP Location details: ${error.message}`;
-  }
+
+  // Perform the Axios GET request
+  axios.get(ipDetailsUrl)
+    .then(response => {
+      // Assign the response data to ipDetails
+      ipDetails = JSON.stringify(response.data, null, 2);
+    })
+    .catch(error => {
+      // Handle errors and assign error message to ipDetails
+      ipDetails = `Error fetching IP Location details: ${error.message}`;
+    });
+  
+  return ipDetails;
+}
 
   // Determine the contact method text based on the selected option- to be added to email text
  let contactDetails = '';
