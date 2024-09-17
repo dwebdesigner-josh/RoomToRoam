@@ -97,7 +97,7 @@ app.post('/send-email',
   let ipDetails = {};
   try {
     const ipDetailsResponse = await axios.get(`https://ipinfo.io/${ip}/json`);
-    ipDetails = ipDetailsResponse;
+    ipDetails = ipDetailsResponse.data;
   } catch (error) {
     ipDetails =`Error fetching IP Location details: ${error.message}`;
   }
@@ -152,7 +152,7 @@ app.post('/send-email',
         text: `Contact method: ${preferredcontact} (${contactDetails}),
            Contact reason: ${contactreason} (${contactReasonDetails}),
            Additional info: ${body || 'No additional info provided'},
-           Submitter Location: ${ipDetails},
+           Submitter Location: ${JSON.stringify(ipDetails)},
            Submitter IP: ${ip} (if multiple messages are received by this IP they are coming from the same device-treat with caution)`,
       });
       
