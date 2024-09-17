@@ -165,7 +165,8 @@ Contact reason: ${contactreason} (${contactReasonDetails}),
 Additional info: ${body || 'No additional info provided'},
         SECURITY SIGNATURE:
            Submitter IP: ${ip} (if multiple messages are received by this IP they are coming from the same device-treat with caution),
-           Submitter Location: ${ipDetailsText} (check for accuracy to their provided details and be wary of any non-US locations),`,
+           Submitter Location: ${ipDetailsText} 
+           (check location for accuracy to their provided details and be wary of any non-US locations)`,
           });
       
 
