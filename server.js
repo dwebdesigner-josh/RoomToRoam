@@ -94,30 +94,13 @@ app.post('/send-email',
   // Use this function to get the IP address
   const ip = getClientIp(req);
   
- function getIpDetails(req) {
-  // Extract IP address from the request
-  const ip = getClientIp(req);
-  
-  // Define the URL with the extracted IP address
-  const ipDetailsUrl = `https://ipinfo.io/${ip}/json`;
-  
-  let ipDetails = '';
-
-  // Perform the Axios GET request
-  axios.get(ipDetailsUrl)
-    .then(response => {
-      // Assign the response data to ipDetails
-      ipDetails = JSON.stringify(response.data, null, 2);
-    })
-    .catch(error => {
-      // Handle errors and assign error message to ipDetails
-      ipDetails = `Error fetching IP Location details: ${error.message}`;
-    });
-  
-  return ipDetails;
-}
-
-const ipLocation = getIpDetails(req);
+  let ipDetails = {};
+  try {
+    const ipDetailsResponse = await axios.get(`https://ipinfo.io/${ip}/json`);
+    ipDetails = ipDetailsResponse;
+  } catch (error) {
+    ipDetails =`Error fetching IP Location details: ${error.message}`;
+  }
 
   // Determine the contact method text based on the selected option- to be added to email text
  let contactDetails = '';
@@ -169,7 +152,7 @@ const ipLocation = getIpDetails(req);
         text: `Contact method: ${preferredcontact} (${contactDetails}),
            Contact reason: ${contactreason} (${contactReasonDetails}),
            Additional info: ${body || 'No additional info provided'},
-           Submitter Location: ${ipLocation},
+           Submitter Location: ${ipDetails},
            Submitter IP: ${ip} (if multiple messages are received by this IP they are coming from the same device-treat with caution)`,
       });
       
