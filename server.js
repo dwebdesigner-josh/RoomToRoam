@@ -134,7 +134,7 @@ const ipDetailsText = `City: ${city} | Region: ${region} | Country: ${country} |
  let contactReasonDetails = '';
  switch (contactreason) {
    case 'artist':
-     contactReasonDetails = "Reason: I'm thinking about joining the label";
+     contactReasonDetails = "Reason: I'd like to join the label";
      break;
    case 'business':
      contactReasonDetails = "Reason: I have a business inquiry";
