@@ -39,7 +39,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
       if (response.ok) {
         // Display success message
-        messageDiv.innerHTML = `<p class="success">${responseJson.message || 'Email sent successfully!'}</p>`;
+        messageDiv.innerHTML = `<p class="success">${responseJson.message || 'Form submitted successfully'}</p>`;
         
         form.reset(); // Reset the form after successful submission
         initializeContactInputs(); // Call the function to reset contact input visibility

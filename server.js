@@ -177,10 +177,10 @@ Additional info: ${body || 'No additional info provided'},
 
 
       console.log('Message sent: %s', info.messageId);
-      res.status(200).json({ message: 'Email sent successfully!' });
+      res.status(200).json({ message: 'Form submitted successfully' });
     } catch (error) {
-      console.error('Error sending email:', error);
-      res.status(500).json({ message: 'Error sending email' });
+      console.error('Error submitting form:', error);
+      res.status(500).json({ message: 'Error submitting form' });
     }
   }
 );
