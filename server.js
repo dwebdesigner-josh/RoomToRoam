@@ -55,7 +55,7 @@ app.post('/send-email',
     next();
 },
 
-  formSubmitLimiter, // Rate limiter
+
 
   // Validation middleware
   validate([
@@ -71,6 +71,8 @@ app.post('/send-email',
     // Conditional validation for other reason input
     body('other-reason').if(body('contactreason').equals('other')).isLength({ min: 1 }).withMessage('Please specify your reason'),
   ]),
+
+  formSubmitLimiter, // Rate limiter
 
   async (req, res) => {
     const errors = validationResult(req);
@@ -163,6 +165,8 @@ const ipDetailsText = `City: ${city},Region: ${region},Country: ${country},Timez
 `Contact method: ${preferredcontact} (${contactDetails}),
 Contact reason: ${contactreason} (${contactReasonDetails}),
 Additional info: ${body || 'No additional info provided'},
+
+
         SECURITY SIGNATURE:
            Submitter IP: ${ip} (if multiple messages are received by this IP they are coming from the same device-treat with caution),
            Submitter Location: ${ipDetailsText} 
