@@ -320,7 +320,9 @@ padding-top: 2.5rem;
 =45rem mobile, 41rem desktop
 
 */
-#message{color: red;}
+#message{color: #ffffffc4; background-color:#12171d; padding: .5rem; border-radius: .5rem; border: 1px dashed rgb(216, 200, 128); text-align: center; width: fit-content; align-self: center;}
+  /*border green for good rgb(185, 216, 128)*/
+
 #contactForm{display: flex; flex-direction: column; height: fit-content; }
 #contactForm input, #contactForm textarea{background-color: #12171d;}
 #contactForm * {color: white; font-size: 1rem;}
