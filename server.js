@@ -111,7 +111,7 @@ const country = ipDetails.country || 'N/A';
 const timezone = ipDetails.timezone || 'N/A';
 
 // Format the details
-const ipDetailsText = `City: ${city},Region: ${region},Country: ${country},Timezone: ${timezone}`;
+const ipDetailsText = `City: ${city} | Region: ${region} | Country: ${country} | Timezone: ${timezone}`;
 
 
   // Determine the contact method text based on the selected option- to be added to email text
