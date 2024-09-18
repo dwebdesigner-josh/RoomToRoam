@@ -252,8 +252,10 @@
       if (response.ok) {
         // Display success message
         messageDiv.innerHTML = `<p class="success">${responseJson.message || 'Email sent successfully!'}</p>`;
-        // Reset the form after successful submission
-        form.reset();
+        
+        form.reset(); // Reset the form after successful submission
+        initializeContactInputs(); // Call the function to reset contact input visibility
+        initializeReasonInput();    // Call the function to reset reason input visibility
       } else {
         // Handle and display validation errors
         const errors = responseJson.errors || [{ msg: 'An unknown error occurred.' }];
