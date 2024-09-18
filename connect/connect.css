@@ -329,7 +329,7 @@ padding-top: 2.5rem;
   .input-textinputs{width: 95%;}
     #textinputs-additionalinfo{height: 6rem;}
 
-#contactForm *::placeholder {color: rgba(255, 255, 255, 0.719);}
+#contactForm *::placeholder {color: #ffffffc4;}
 fieldset{display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;}
 .fieldset-mc{display:flex; flex-direction: column;}
 .mc-answerfield{width: 100%; height: 100%; font-size: 1rem; background-color: #12171d; color: white;}
@@ -337,24 +337,30 @@ fieldset{display: flex; flex-direction: row; justify-content: space-evenly; alig
 
 .mc-radioinput{border-radius: .01rem; width: .75rem; height: .75rem; accent-color: #12171d;}
 
+#contactForm .fieldset-mc label{color: #e3f5ff; }
+@media screen and (max-width: 850px){
+  #contactForm .fieldset-mc label{ font-weight: 700;}
+}
 .fieldset-mc label {
   display: inline-block;
-  background-color: #ddd;
+  color: black;
+  background-color: #12171d;
   padding: 10px 20px;
   font-family: sans-serif, Arial;
   font-size: 16px;
   border: 2px solid #444;
   border-radius: 4px;
 }
-.mc-radioinput[type="radio"]:checked + label {
-  background-color:#bfb;
-  border-color: #4c4;
+#contactForm .mc-radioinput[type="radio"]:checked + label {
+  background-color:#9acce7f8;
+  border-color: #ddd;
+  color: #12171d;
 }
-.mc-radioinput[type="radio"]:focus + label {
-  border: 2px dashed #444;
+#contactForm .mc-radioinput[type="radio"]:focus + label {
+  border: 2px solid #444; color: #12171d;
 }
-.fieldset-mc label:hover {
-background-color: #dfd;
+#contactForm .fieldset-mc label:hover {
+background-color: #4b607a; color: #f3fbff;
 }
 
 #container-submitbutton{align-self: center;}
