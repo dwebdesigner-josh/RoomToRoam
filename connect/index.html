@@ -256,6 +256,10 @@
         form.reset(); // Reset the form after successful submission
         initializeContactInputs(); // Call the function to reset contact input visibility
         initializeReasonInput();    // Call the function to reset reason input visibility
+              //^^^ NOTE FOR FUTURE AS THESE initialize FUNCTIONS ARE FROM THE 1st SCRIPT NOT THIS ONE - 
+              //Just make sure that the functions are defined and accessible in the same scope where you are calling them. 
+              //Since you did not combine the scripts, as long as those functions are defined in the global scope (or the same script), it will work without issues.
+            
       } else {
         // Handle and display validation errors
         const errors = responseJson.errors || [{ msg: 'An unknown error occurred.' }];
