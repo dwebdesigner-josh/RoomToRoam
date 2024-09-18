@@ -50,7 +50,7 @@
         <li class="topnav-item">  <a class="topnav-link" href="/artists/" target="_self">Artists</a>  </li>
         <li class="topnav-item">  <a class="topnav-link" href="/reviews/" target="_self">Reviews</a>  </li>
         <li class="topnav-item">  <a class="topnav-link" href="/connect/" target="_self">Connect</a>  </li>
-        <li class="topnav-item">  <a class="topnav-link" href="/about-us/" target="_self">About Us</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/about/" target="_self">About</a>  </li>
       </ul>
     </div>  
 </nav>
@@ -86,19 +86,19 @@
       </div>
     </div>
     <div id="phone-input" class="contact-input">
-      <input class="mc-answerfield" type="tel" id="phone-number" name="phone-number" placeholder="Phone Number" />
+      <input class="mc-answerfield" type="tel" id="phone-number" name="phone-number" placeholder="Enter phone number" />
     </div>
     <div id="email-input" class="contact-input" style="display: none;">
-      <input class="mc-answerfield" type="email" id="email-address" name="email-address" placeholder="Email" />
+      <input class="mc-answerfield" type="email" id="email-address" name="email-address" placeholder="Enter your email" />
     </div>
     <div id="other-input" class="contact-input" style="display: none;">
-      <input class="mc-answerfield" type="text" id="other-method" name="other-method" placeholder="Contact info" />
+      <input class="mc-answerfield" type="text" id="other-method" name="other-method" placeholder="Enter contact info" />
     </div>
   </fieldset>
 
   <fieldset>
     <legend>How can we help you?</legend>
-    <div class="fieldset-mc">
+    <div class="fieldset-mc" id="fieldset-mc2">
       <div>
         <input class="mc-radioinput" type="radio" id="contactreason-artist" name="contactreason" value="artist" checked />
         <label for="contactreason-artist">I'd like to join the label</label>
@@ -118,11 +118,11 @@
   </fieldset>
 
   <div class="div-textinputs">
-    <input class="input-textinputs" autocomplete="off" type="text" placeholder="Your name" name="subject" required />
+    <input id="textinputs-name" autocomplete="off" type="text" placeholder="Your name" name="subject" required />
   </div>
 
   <div class="div-textinputs">
-    <textarea id="textinputs-additionalinfo" class="input-textinputs" autocomplete="off" placeholder="Additional info" name="body"></textarea> <!-- No longer required -->
+    <textarea id="textinputs-additionalinfo" autocomplete="off" placeholder="Additional info" name="body"></textarea> <!-- No longer required -->
   </div>
 
                                 <div class="oh-no-hun">
@@ -152,7 +152,7 @@
     <li class="footer-item">  <a class="footer-link" href="/artists/" target="_self">Artists</a>  </li>
     <li class="footer-item">  <a class="footer-link" href="/reviews/" target="_self">Reviews</a>  </li>
     <li class="footer-item">  <a class="footer-link" href="/connect/" target="_self">Connect</a>  </li>
-    <li class="footer-item">  <a class="footer-link" href="/about-us/" target="_self">About Us</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/about/" target="_self">About</a>  </li>
   </ul>
   <ul class="footer" id="footer-socials">
     <li class="footer-item" id="insta"> <a aria-label="Room To Roam Instagram account external link" class="footer-externallink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/images/insta.png" alt=""></a></li>
