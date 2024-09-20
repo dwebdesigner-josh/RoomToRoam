@@ -343,10 +343,12 @@ p.success{animation: fadeOut 3s forwards; /* Fade out over 3 seconds */}
       opacity: 1; /* Start fully visible */
   }
   70% {
-      opacity: .7; /* Remain visible until just before the end */
+      opacity: 1; /* Remain visible until just before the end */
+      font-size: 1rem;
   }
   100% {
       opacity: 0; /* Fade to invisible */
+      font-size: 0;
   }
 }
 
