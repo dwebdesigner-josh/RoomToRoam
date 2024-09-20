@@ -57,4 +57,21 @@ document.getElementById('contactForm').addEventListener('submit', async function
     } catch (error) {
       messageDiv.innerHTML = `<p class="error">An unexpected error occurred: ${error.message}</p>`;
     }
+    
+    // Function to remove the <p> with class "success" after 3 seconds
+function removeSuccessMessage() {
+  // Select the <p> element with the class "success"
+  const successMessage = document.querySelector('p.success');
+
+  // Check if the element exists
+  if (successMessage) {
+      // Set a timeout to remove the element after 3 seconds
+      setTimeout(() => {
+          successMessage.remove(); // Remove the element from the DOM
+      }, 3000); // 3000 milliseconds = 3 seconds
+  }
+}
+
+// Call the function to start the process
+removeSuccessMessage();
   });
