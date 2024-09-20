@@ -342,7 +342,7 @@ p .success{animation: fadeOut 3s forwards; /* Fade out over 3 seconds */}
   0% {
       opacity: 1; /* Start fully visible */
   }
-  90% {
+  70% {
       opacity: .7; /* Remain visible until just before the end */
   }
   100% {
