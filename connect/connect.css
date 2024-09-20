@@ -336,6 +336,19 @@ padding-top: 2.5rem;
     @media screen and (max-width: 550px){#message{max-width: 55vw;}}
     @media screen and (max-width: 450px){#message{max-width: 65vw;}}
 
+p .success{animation: fadeOut 3s forwards; /* Fade out over 3 seconds */}
+/*fade out animation for success class p*/
+@keyframes fadeOut {
+  0% {
+      opacity: 1; /* Start fully visible */
+  }
+  90% {
+      opacity: .7; /* Remain visible until just before the end */
+  }
+  100% {
+      opacity: 0; /* Fade to invisible */
+  }
+}
 
 #contactForm{display: flex; flex-direction: column; height: fit-content; }
 #contactForm input, #contactForm textarea{background-color: #12171d;}
