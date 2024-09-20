@@ -68,7 +68,7 @@ function removeSuccessMessage() {
       // Set a timeout to remove the element after 3 seconds
       setTimeout(() => {
           successMessage.remove(); // Remove the element from the DOM
-      }, 3000); // 3000 milliseconds = 3 seconds
+      }, 5000); // 5000 milliseconds = 5 seconds
   }
 }
 
