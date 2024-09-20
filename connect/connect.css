@@ -336,7 +336,7 @@ padding-top: 2.5rem;
     @media screen and (max-width: 550px){#message{max-width: 55vw;}}
     @media screen and (max-width: 450px){#message{max-width: 65vw;}}
 
-p .success{animation: fadeOut 3s forwards; /* Fade out over 3 seconds */}
+p.success{animation: fadeOut 3s forwards; /* Fade out over 3 seconds */}
 /*fade out animation for success class p*/
 @keyframes fadeOut {
   0% {
