@@ -310,7 +310,7 @@ width: 100%;
 height: 4rem;
 padding-top: 2.5rem;
 }
-.heading h1{color: white; font-size: 2rem;}
+.heading h1{color: white; font-size: 2rem; text-align: center;}
 
 /*form*/
 
@@ -417,7 +417,76 @@ background-color: #4b607a; color: #f3fbff;
 
 
 
+/*section - swirl animated buttons*/
+@media screen and (min-width: 551px){
+#swirl-container{display:flex; width: 80%; z-index: 1;}
+.swirl{ flex:1; max-width: 33%; z-index: 1; opacity: .8; position: relative;} /*possibly remove opacity style*/
+}
 
+.swirl-image{width: 100%; position: relative; top: 6%; z-index: 1;}
+.swirl-link{
+  display: block; width: 25%; height: 25%; 
+  justify-content: center; align-items: center; display: flex; 
+  position: relative; top: -58%; left: 37%;
+  border-radius: 50%;
+  text-decoration: none;
+  z-index: 5;
+} 
+@media screen and (max-width: 550px){
+
+#swirl-container{display:flex; width: 100%; z-index: 1; flex-wrap: wrap; justify-content: center;}
+.swirl{width: 40%; z-index: 1; opacity: .8; position: relative;}
+}
+
+#swirl-link1{
+  background-image: url("/images/instacircular.png");
+  background-size: cover;
+  }
+
+#swirl-link2{
+  background-image: url("/images/facebook.png");
+  background-size: cover;
+  }
+  
+#swirl-link3{
+  background-image: url("/images/tiktok.png");
+  background-size: cover;
+  }
+#swirl-link4{
+  background-image: url("/images/youtube.png");
+  background-size: cover;
+  }
+
+    .swirl-link:link, .swirl-link:active{
+      color: #fffdef;
+    }
+    .swirl-link:visited{
+      color: #fffdef;
+    }
+    .swirl-link:hover, .swirl-link:focus{
+      color: #a54a59; 
+    }
+
+
+@media screen and (min-width: 1000px){
+  #swirl-container{
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1500px){
+  #swirl-container{
+    width: 60%;
+  }
+}
+@media screen and (min-width: 2500px){
+  #swirl-container{
+    width: 50%;
+  }
+}
+
+
+/*filler*/
+.span-filler{height: 3rem; width: 100%;}
 
 /*footer*/
 footer{z-index: 1; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100vw;}
