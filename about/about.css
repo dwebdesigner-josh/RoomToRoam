@@ -5,7 +5,6 @@
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight:300;
-  max-width: 100vw;
   
 }
 
@@ -198,15 +197,15 @@ nav {
 
 /*header*/
                             
-header {
-  display: flex;
-  width: 100%;
-  height: 2.5rem;
-  align-items: center;
-  justify-content: start;
-  z-index: 29;
-  border-bottom: 1px inset #e3f5ff;
-  position: fixed;
+  header {
+    display: flex;
+    width: 100%;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: start;
+    z-index: 29;
+    border-bottom: 1px inset #e3f5ff;
+    position: fixed;
   }
   #header-link{
       width: 70%; 
@@ -248,7 +247,7 @@ header {
           z-index: 20;
           display: flex;
           justify-content: center;
-          animation: scrolldown 5s linear 1;
+          animation: scrolldown 2s linear 1;
           animation-play-state: running;
           animation-iteration-count: 1;
           animation-fill-mode: both;
@@ -258,7 +257,7 @@ header {
           height: 255px;
       }
       #loadscreen-notfirst{
-          animation: scrolldown 2s linear 1;
+          animation: scrolldown 1s linear 1;
           animation-play-state: running;
           animation-iteration-count: 1;
           animation-fill-mode: both;
@@ -281,18 +280,158 @@ header {
         .loadscreen, #loadcontainer, .loadscreen>img {display: none; visibility: hidden;}
       }
 /*main*/
-main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-} 
+
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    z-index: 1;
+  } 
+
+  main h1, main h2, main h3,  main p{color: #e3f5ff; text-shadow: 1px 1px 1px black; align-self: center;}
+  main h2 {font-size: 2rem;}
+
+  .span-filler{height: 3rem; width: 100%;}
+  #filler{height: 1000px}
+
 
 /*sections*/
-section {width: 100%; height:fit-content; z-index: 1;}
+  section {width: 100%; height:fit-content; z-index: 1;}
 
-#filler{height: 1000px}
 
+  .heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+  padding-top: 3rem;
+  }
+  .heading h1{color: white; font-size: 2rem; text-align: center;}
+
+/*about summaries with image*/
+
+  .about-summary{
+    width: 100%; box-sizing: border-box; padding: 1rem; padding-bottom: 0;
+    display: flex; flex-direction: row;
+  }
+        #about-summary2{flex-direction: row-reverse;}
+        #about-summary2 div{margin-left: 1rem;}
+
+    .concert-imgcontainer{
+      flex: 1;
+      margin: .5rem;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .about-img{
+      width: 5rem;
+      height: 9rem; 
+      margin: 1rem;
+      border: 1px solid white;
+      border-radius: 1rem;
+    }
+
+    .about-summary div{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+      .about-summary div p {
+        font-size: .75rem;
+        text-align: start;
+        width: 100%;
+      }
+
+
+  .about-summary-textunder{
+    margin-left: 2rem;
+    font-size: .75rem;
+        text-align: start;
+        width: 80%;
+  }
+
+  @media screen and (min-width: 0px){
+    .about-summary-textlast{
+      display:none;
+    }
+    .about-summary-textunder{
+      display:block;
+    }
+  }
+  @media screen and (min-width: 550px){
+    .about-summary-textlast{
+      display:block;
+    }
+    .about-summary-textunder{
+      display:none;
+    }
+  }
+
+
+/*image automatic slide reel*/
+
+
+  .banner-container{z-index: 3; position: relative; left: 0; top: 0; width: 100%; height: 12rem;  overflow: hidden; }
+  .banner-slide{width: 100%; height: 12rem;}
+
+  .banner-slide-content {
+    display: flex; flex-direction: row;
+    width: fit-content;
+    position: relative; left: -10px;
+ 
+
+    
+    -moz-animation: my-animation 6s linear infinite;
+    -webkit-animation: my-animation 6s linear infinite;
+    animation: my-animation 6s linear infinite;
+  }
+  .banner-slide-img{
+    height: 12rem; 
+    width: 20rem;
+  }
+    
+  /*ANIMATION 1*/
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateX(0); }
+    to { -moz-transform: translateX(-120rem); }
+  }
+
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(0); }
+    to { -webkit-transform: translateX(-120rem); }
+  }
+
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(0);
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    to {
+      -moz-transform: translateX(-120rem);
+      -webkit-transform: translateX(-120rem);
+      transform: translateX(-120rem);
+    }
+  }
+
+
+/*about text only paragraph*/
+
+.about-text{
+  display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.about-text p{margin-top: 1rem; font-size: .75rem; text-align: start;}
+
+
+  
 /*footer*/
 footer{z-index: 1; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100vw;}
   .footer {
