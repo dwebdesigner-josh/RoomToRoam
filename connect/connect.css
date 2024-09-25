@@ -418,10 +418,7 @@ background-color: #4b607a; color: #f3fbff;
 
 
 /*section - swirl animated buttons*/
-@media screen and (min-width: 551px){
-#swirl-container{display:flex; width: 80%; z-index: 1;}
-.swirl{ flex:1; max-width: 33%; z-index: 1; opacity: .8; position: relative;} /*possibly remove opacity style*/
-}
+
 
 .swirl-image{width: 100%; position: relative; top: 6%; z-index: 1;}
 .swirl-link{
@@ -432,11 +429,19 @@ background-color: #4b607a; color: #f3fbff;
   text-decoration: none;
   z-index: 5;
 } 
-@media screen and (max-width: 550px){
+@media screen and (min-width: 0px){
 
 #swirl-container{display:flex; width: 100%; z-index: 1; flex-wrap: wrap; justify-content: center;}
-.swirl{width: 40%; z-index: 1; opacity: .8; position: relative;}
+.swirl{width: 40%; z-index: 1; opacity: .8; position: relative; margin-bottom: -12%; }
+  .swirl-image{border-radius: 50%; overflow: hidden;}
+.div-filler{display: block; width: 29%;}
+.div-filler2{display: block; width: 15%;}
 }
+
+@media screen and (min-width: 550px){
+  #swirl-container{display:flex; width: 80%; z-index: 1;}
+  .swirl{ width: 30%} 
+  }
 
 #swirl-link1{
   background-image: url("/images/instacircular.png");
@@ -486,7 +491,7 @@ background-color: #4b607a; color: #f3fbff;
 
 
 /*filler*/
-.span-filler{height: 3rem; width: 100%;}
+.span-filler{height: 6rem; width: 100%;}
 
 /*footer*/
 footer{z-index: 1; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100vw;}
