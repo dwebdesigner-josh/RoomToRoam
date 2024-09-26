@@ -316,7 +316,7 @@ main h1, main h2, main h3{color: #e3f5ff; text-shadow: 1px 1px 1px black; align-
 
 main h2 {font-size: 2rem;}
 
-.anchor-h2container{width: 100vw; display: flex; justify-content: start; position: relative; left: -10vw; margin-top: 1rem; margin-bottom: -2.5rem;}
+.anchor-h2container{width: 100%; display: flex; justify-content: start; position: relative; left: -10vw; margin-top: 1rem; margin-bottom: -2.5rem;}
 .anchor-h2container:hover *{ color: #e3f5ff;}
 #reviews h2 {margin-top: 1rem; margin-bottom: 1.2rem;}
 @media screen and (max-width: 422px) {
