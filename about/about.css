@@ -293,7 +293,14 @@ nav {
   main h1, main h2, main h3,  main p{color: #e3f5ff; text-shadow: 1px 1px 1px black; align-self: center;}
   main h2 {font-size: 2rem;}
 
-  .span-filler{height: 3rem; width: 100%;}
+  .span-filler-text{height: 1rem; width: 100%;}
+  .span-filler{height: 3rem; width: 100%; display: block;}
+  .span-filler2{height: 1rem; width: 100%; display: block;}
+  .span-filler3{height: 2rem; width: 100%; display: block;}
+    @media screen and (min-width:550px) {
+      .span-filler3{height: 1rem;}
+    }
+  
   #filler{height: 1000px}
 
 
@@ -312,13 +319,14 @@ nav {
   .heading h1{color: white; font-size: 2rem; text-align: center;}
 
 /*about summaries with image*/
-
+.about-summary-container{
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
   .about-summary{
-    width: 100%; box-sizing: border-box; padding: 1rem; padding-bottom: 0;
-    display: flex; flex-direction: row;
+    width: 80%; box-sizing: border-box; 
+    display: flex; flex-direction: row; justify-content: center;
   }
         #about-summary2{flex-direction: row-reverse;}
-        #about-summary2 div{margin-left: 1rem;}
 
     .concert-imgcontainer{
       flex: 1;
@@ -328,11 +336,14 @@ nav {
     }
     .about-img{
       width: 5rem;
-      height: 9rem; 
-      margin: 1rem;
+      height: 9rem;       
+      margin-right: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
       border: 1px solid white;
       border-radius: 1rem;
-    }
+    }   
+        #about-img2{margin-right: 0; margin-left: 1rem;}
 
     .about-summary div{
       display: flex;
@@ -347,7 +358,6 @@ nav {
 
 
   .about-summary-textunder{
-    margin-left: 2rem;
     font-size: .75rem;
         text-align: start;
         width: 80%;
@@ -374,26 +384,40 @@ nav {
 /*image automatic slide reel*/
 
 
-  .banner-container{z-index: 3; position: relative; left: 0; top: 0; width: 100%; height: 12rem;  overflow: hidden; }
-  .banner-slide{width: 100%; height: 12rem;}
+  .banner-container{z-index: 3; position: relative; left: 0; top: 0; width: 100%; height: fit-content;  overflow: hidden; }
+  .banner-slide{width: 100%; height: fit-content;}
 
-  .banner-slide-content {
+  .banner-slide-content1 {
     display: flex; flex-direction: row;
     width: fit-content;
     position: relative; left: -10px;
  
+    -moz-animation: my-animation 25s linear reverse infinite;
+    -webkit-animation: my-animation 25s linear reverse infinite;
+    animation: my-animation 25s linear reverse infinite;
 
-    
-    -moz-animation: my-animation 6s linear infinite;
-    -webkit-animation: my-animation 6s linear infinite;
-    animation: my-animation 6s linear infinite;
   }
-  .banner-slide-img{
-    height: 12rem; 
-    width: 20rem;
+      .banner-slide-content1 img{
+        height: 10rem; 
+        width: 20rem;
+      }
+  .banner-slide-content2 {
+    display: flex; flex-direction: row;
+    width: fit-content;
+    position: relative; left: -10px;
+ 
+    -moz-animation: my-animation 20s linear forwards infinite;
+    -webkit-animation: my-animation 20s linear forwards infinite;
+    animation: my-animation 20s linear forwards infinite;
   }
+
+      .banner-slide-content2 img{
+        height: 20rem; 
+        width: 15rem;
+      }
     
   /*ANIMATION 1*/
+  /*translateX amount = - total width of non-repeats (ex: -120rem translateX for 6 images in the reel, with copies of the 1st 4 images rotated in after for smoothness)*/
   /* for Firefox */
   @-moz-keyframes my-animation {
     from { -moz-transform: translateX(0); }
@@ -422,13 +446,22 @@ nav {
 
 /*about text only paragraph*/
 
-.about-text{
-  display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
-  width: 80%;
-  box-sizing: border-box;
+.about-text {
+  display: flex; flex-direction: row;
+  justify-content: center;
 }
 
-.about-text p{margin-top: 1rem; font-size: .75rem; text-align: start;}
+.about-text div{
+  display: flex; flex-direction: column;
+  width: 80%;
+}
+
+.about-text p{
+  width: 100%;
+  text-align: start;
+  font-size: .85rem; text-align: start;
+  font-weight: 400;
+}
 
 
   
