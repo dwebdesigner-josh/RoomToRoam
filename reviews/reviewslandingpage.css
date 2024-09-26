@@ -340,13 +340,27 @@ main h2 {font-size: 2rem;}
   }
     #container-text-middle{text-align: left;}
       .text-p {font-size: .75rem;}
-      .text-h3 {text-align: center;}
+      .text-h3-2 {
+        position: relative;
+        left: 3%;
+      }
+      .text-h3-2 h3{
+        text-align: center;
+      }
+      #text-h3-2middle{position: relative;
+        left: -4%;
+      }
+
     #container-concerts{justify-content: end;}
     #container-albums{justify-content: start;}
     #container-musicvideos{justify-content: end;}
 
 
-
+  
+    .text-h3{display: none;}  
+    .text-h3-2, .text-h3-2 h3{display: block;}
+    
+  
   .container-planet{
     display: grid;
     width: fit-content;
@@ -395,10 +409,13 @@ main h2 {font-size: 2rem;}
         .planet-link{width: 8rem;}
         .planet-img{width: 8rem; height: 8rem;}
           #planet-img-middle{width: 15rem; margin-left: -2.5rem; margin-right: -2.5rem;}
-        .text-h3{align-self: end;}
+  
+        .text-h3{display: block; align-self: end; text-align: center;}
           #text-h3-middle{align-self: start; }
-        
+          
+        .text-h3-2, .text-h3-2 h3{display: none;}
       }
+
 /*
     #planet-concerts{}
     #planet-albums{}
