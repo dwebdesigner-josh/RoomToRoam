@@ -72,9 +72,20 @@
 
 <section id="reviews">
 
-  <a href="/reviews/" target="_self" class="anchor-h2container"> <h3><i>Reviews</i></h3> </a> <h2 id="reviewsheadingalbums" class="reviewsheading">Concerts</h2>
     <!--  <label for="columnFilter">Filter Reviews by Type:</label> -->
-   
+    <div id="custom-controls-container">  
+    <!--  <select id="columnFilter">
+          <option value="">Filter Reviews by Type</option>
+      </select>-->
+      <div class="toggle-controls">
+        <h3>Recent Reviews</h3>
+        <div class="breaker2"></div>
+        <div class="toggle-container">
+          <label for="alpha-toggle">Show recently published reviews</label>
+          <input type="checkbox" id="alpha-toggle">
+        </div>
+      </div>
+    </div>  
 
     <table id="mytable" class="display" style="width:100%">
       <thead>
