@@ -345,13 +345,14 @@ main h2 {font-size: 2rem;}
         @media screen and (max-width: 768px){
           #custom-controls-container{position: relative; bottom: -2.2rem;}
           .anchor-h2container{margin-bottom: -1.8rem;}
-          .reviewsheading {margin-bottom: -1rem;}
-          } 
+          #reviews .reviewsheading {margin-bottom: -1rem;}
+          }  
           /*#columnFilter{margin-bottom: .3rem;}*/
           @media screen and (max-width: 640px){
             #custom-controls-container{position: relative; bottom: -2.8rem;}
-            .reviewsheading {margin-bottom: -1.8rem;
-              position:relative; top: .5rem;
+            #reviews .reviewsheading {
+              margin-bottom: -.5rem;
+              position:relative; top: 1.2rem;
             }
             } 
 
