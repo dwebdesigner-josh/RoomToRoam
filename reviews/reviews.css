@@ -335,12 +335,6 @@ main h2 {font-size: 2rem;}
   flex-direction: column;
     } 
 
-    #reviews .heading-container-widthlimiter{
-      width: 100%;
-      max-width: 100vw;
-      display: flex;
-      flex-direction: column;
-    }
         /*controls for sorting*/
       
         .dt-layout-row .dt-length {display: flex; justify-content: start;}
