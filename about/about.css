@@ -300,6 +300,7 @@ nav {
     @media screen and (min-width:550px) {
       .span-filler3{height: 1rem;}
     }
+  .span-filler4{height: 2rem; width: 100%; display: block;}
   
   #filler{height: 1000px}
 
@@ -345,6 +346,9 @@ nav {
     }   
         #about-img2{margin-right: 0; margin-left: 1rem;}
 
+        @media screen and (min-width:850px){
+          .about-img{width: 9rem; height: 9rem; flex-shrink: 0; flex-grow: 0 0 9rem;}
+        }
     .about-summary div{
       display: flex;
       flex-direction: column;
@@ -363,15 +367,18 @@ nav {
         width: 80%;
   }
 
-  @media screen and (min-width: 0px){
+  @media screen and (max-width: 550px){
     .about-summary-textlast{
       display:none;
     }
     .about-summary-textunder{
       display:block;
     }
+    .about-summary div p { font-size: .8rem;}
+    .about-summary-textunder{
+      font-size: .8rem;}
   }
-  @media screen and (min-width: 550px){
+  @media screen and (min-width: 551px){
     .about-summary-textlast{
       display:block;
     }
@@ -384,38 +391,51 @@ nav {
 /*image automatic slide reel*/
 
 
-  .banner-container{z-index: 3; position: relative; left: 0; top: 0; width: 100%; height: fit-content;  overflow: hidden; }
-  .banner-slide{width: 100%; height: fit-content;}
+  .banner-container{z-index: 3; position: relative; left: 0; top: 0; width: 100%; height: fit-content;  overflow: hidden; 
+  }
+    #banner-container-1{    border-top: 3px inset #b1d1f880;
+    }
+    #banner-container-2{    border-bottom: 3px inset #b1d1f880;
+    }
+  
+  .banner-slide{width: 100%; height: fit-content;
+  }
+    #banner-slide-1{    border-top: 1px solid #ffffffd7;
+    }
+    #banner-slide-2{    border-bottom: 1px solid #ffffffd7;
+    }
 
   .banner-slide-content1 {
     display: flex; flex-direction: row;
     width: fit-content;
     position: relative; left: -10px;
  
-    -moz-animation: my-animation 25s linear reverse infinite;
-    -webkit-animation: my-animation 25s linear reverse infinite;
-    animation: my-animation 25s linear reverse infinite;
+    -moz-animation: my-animation 50s linear reverse infinite;
+    -webkit-animation: my-animation 50s linear reverse infinite;
+    animation: my-animation 50s linear reverse infinite;
 
   }
       .banner-slide-content1 img{
-        height: 10rem; 
+        height: 13.28rem; 
         width: 20rem;
-      }
+      } /*native img aspect ratio: 996px H x 1500px W => 83/125 Aspect Ratio ~> for 20rem W, this is about 13.28rem H ~= 13rem but will try it with the decimal accuracy to see if there are any issues with this level of precision*/
   .banner-slide-content2 {
     display: flex; flex-direction: row;
     width: fit-content;
     position: relative; left: -10px;
  
-    -moz-animation: my-animation 20s linear forwards infinite;
-    -webkit-animation: my-animation 20s linear forwards infinite;
-    animation: my-animation 20s linear forwards infinite;
+    -moz-animation: my-animation 40s linear forwards infinite;
+    -webkit-animation: my-animation 40s linear forwards infinite;
+    animation: my-animation 40s linear forwards infinite;
   }
 
       .banner-slide-content2 img{
-        height: 20rem; 
+        height: 22.5rem; 
         width: 15rem;
+      } /*native img aspect ratio: 2250px H x 1500px W => 3/2 Aspect Ratio => for 15rem W, this is 22.5rem H*/
+      .banner-slide-content2 pre{
+        color:#b1e3fd;
       }
-    
   /*ANIMATION 1*/
   /*translateX amount = - total width of non-repeats (ex: -120rem translateX for 6 images in the reel, with copies of the 1st 4 images rotated in after for smoothness)*/
   /* for Firefox */
@@ -446,17 +466,20 @@ nav {
 
 /*about text only paragraph*/
 
-.about-text {
+.mission-text {
   display: flex; flex-direction: row;
   justify-content: center;
-}
+} /*overflow hidden to hide the top and bottom of the box shadow on the div below (UNUSED -looks bad)*/
 
-.about-text div{
+.mission-text div{
   display: flex; flex-direction: column;
   width: 80%;
-}
+  height: fit-content;
+  padding: .5rem;
+}/*  border-top: 1px inset #e3f5ffa8;
+  border-bottom: 1px ridge #e3f5ffa8; (UNUSED -looks bad)*/
 
-.about-text p{
+.mission-text p{
   width: 100%;
   text-align: start;
   font-size: .85rem; text-align: start;
