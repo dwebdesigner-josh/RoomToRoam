@@ -449,8 +449,20 @@ nav {
   -webkit-animation: my-animation2 14s ease-in forwards infinite;
   animation: my-animation2 14s ease-in forwards infinite;
 }
+    @media screen and (max-width: 850px){
+      .banner-slide-contentbug {
+        -moz-animation: my-animation2 10s ease-in forwards infinite;
+        -webkit-animation: my-animation2 10s ease-in forwards infinite;
+        animation: my-animation2 10s ease-in forwards infinite;
+    }
+  }
 .banner-slide-contentbug img{
   width: 7rem; height: 7rem;
+  
+}
+.banner-slide-contentbug h2{
+  width: 100%;
+  position: absolute; left: 7rem;
 }
   
   /*ANIMATION (keyframe) 1*/
@@ -484,13 +496,13 @@ nav {
 /*ANIMATION (keyframe) 2*/
 @-moz-keyframes my-animation2 {
   from { -moz-transform: translateX(0); }
-  to { -moz-transform: translateX(-150%); }
+  to { -moz-transform: translateX(-200%); }
 }
 
 /* for Chrome */
 @-webkit-keyframes my-animation2 {
   from { -webkit-transform: translateX(0); }
-  to { -webkit-transform: translateX(-150%); }
+  to { -webkit-transform: translateX(-200%); }
 }
 
 @keyframes my-animation2 {
@@ -500,9 +512,9 @@ nav {
     transform: translateX(0);
   }
   to {
-    -moz-transform: translateX(-150%);
-    -webkit-transform: translateX(-150%);
-    transform: translateX(-150%);
+    -moz-transform: translateX(-200%);
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
   }
 }
 
