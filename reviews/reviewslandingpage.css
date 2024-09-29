@@ -275,23 +275,25 @@ header {
       /* bigger ship with background trail included would be - width: 600px; height: 900px;  position: relative; bottom: 900px;*/
       
       #loadscreen-notfirst{
-          animation: scrolldown 1s linear 1;
+          animation: scrolldown 2s linear 1;
           animation-play-state: running;
           animation-iteration-count: 1;
           animation-fill-mode: both;
       }
       @media screen and (max-width: 850px){
-          @keyframes scrolldown {
-          0%{transform: translateY(0);}
-          100%{transform: translateY(180%); display: none; visibility: hidden;}
-          }
-      }
-      @media screen and (min-width: 850px){
-          @keyframes scrolldown {
-          0%{transform: translateY(0);}
-          100%{transform: translateY(180%); display: none; visibility: hidden;}
-          }
-      }
+        @keyframes scrolldown {
+        0%{transform: translateY(0);}
+        20%{transform: translateY(10%);}
+        100%{transform: translateY(100%); display: none; visibility: hidden;}
+        }
+    }
+    @media screen and (min-width: 850px){
+        @keyframes scrolldown {
+        0%{transform: translateY(0);}
+        20%{transform: translateY(10%)}
+        100%{transform: translateY(100%); display: none; visibility: hidden;}
+        }
+    }
 
       @media screen and (prefers-reduced-motion){
         .loadscreen, #loadcontainer, .loadscreen>img {display: none; visibility: hidden;}

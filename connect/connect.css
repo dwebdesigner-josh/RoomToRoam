@@ -232,7 +232,7 @@ header {
       }
           /*MOBILE*/
           @media screen and (max-width: 850px){
-          #loadcontainer {height: calc(55rem);} /*45 calculated in form section +9 more for added changes*/
+          #loadcontainer {height: calc(55rem +100vw);} /*45 calculated in form section +9 more for added changes*/
           }                                
           /*DESKTOP*/
           @media screen and (min-width: 850px){
