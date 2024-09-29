@@ -166,8 +166,8 @@ nav {
     margin: 0;
     padding: 0;
     border: 0;
-    top: 0;
-    right: 0;
+    top: 4px;
+    right: 3px;
   }
   #topnav-menu{
     width: 10rem; height: 14rem; margin: 0; position: fixed; top: 3px; right: 3px; /*fix: added measurements here instead of on nav element - this way the nav doesn't stay while only its content is translated*/

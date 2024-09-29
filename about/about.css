@@ -158,8 +158,8 @@ nav {
     margin: 0;
     padding: 0;
     border: 0;
-    top: 0;
-    right: 0;
+    top: 4px;
+    right: 3px;
   }
   #topnav-menu{
     width: 10rem; height: 14rem; margin: 0; position: fixed; top: 3px; right: 3px; /*fix: added measurements here instead of on nav element - this way the nav doesn't stay while only its content is translated*/
@@ -201,6 +201,7 @@ nav {
     display: flex;
     width: 100%;
     height: 2.5rem;
+    min-height: 48px;
     align-items: center;
     justify-content: start;
     z-index: 29;
@@ -317,7 +318,10 @@ nav {
   height: 4rem;
   padding-top: 3rem;
   }
-  .heading h1{color: white; font-size: 2rem; text-align: center;}
+    @media screen and (max-width: 450px){
+      .heading{padding-top: 4rem;}
+    }
+  .heading h1{color: white; font-size: 2rem; text-align: center; width: 95%;}
 
 /*about summaries with image*/
 .about-summary-container{
