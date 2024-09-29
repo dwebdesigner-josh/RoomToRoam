@@ -303,7 +303,7 @@ main h2 {font-size: 2rem;}
 .span-filler{height: 3rem; width: 100%;}
 .span-filler2{height: 1rem; width: 100%;}
 #filler{height: 1000px}
-
+/*sections*/
 section {width: 100%; height:fit-content; z-index: 1;}
 
   #section-heading-links{
