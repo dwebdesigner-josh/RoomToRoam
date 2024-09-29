@@ -204,6 +204,7 @@ header {
   display: flex;
   width: 100%;
   height: 2.5rem;
+  min-height: 48px;
   align-items: center;
   justify-content: start;
   z-index: 29;
@@ -295,8 +296,9 @@ main {
 .breaker3{height: 1rem; width: 90vw; display: block; margin: 0; padding: 0; align-self: center;}
 
 /*sections*/
-
+.span-filler-h1{height: 3.5rem; width: 100%;}
 .span-filler{height: 3rem; width: 100%;}
+.span-filler-2{height: 1rem; width: 100%;}
 
 section {width: 100%; height:fit-content; z-index: 1;}
 
@@ -306,9 +308,9 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 /*HIGHLIGHT REEL 1*/
 main h1{
-  font-size: 4rem;
+  font-size: 3.8rem;
 }
-@media screen and (max-width: 780px){
+@media screen and (max-width: 790px){
   main h1{
     font-size: 3rem;
   }
@@ -594,7 +596,7 @@ border-bottom: none;
 .artist-details[aria-expanded="true"] p { text-align: center;}
 
 .artist-details[aria-expanded="true"] .slideP-expanded {
-  display: block; visibility: visible; margin-top: 2rem; text-align: center;
+  display: block; visibility: visible; margin-top: 2rem; text-align: center; font-size: .85rem;
 }
 
 .artist-details[aria-expanded="true"] .artist-continue-link {
