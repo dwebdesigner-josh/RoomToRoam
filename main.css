@@ -452,6 +452,18 @@ section {width: 100%; height:fit-content; z-index: 1;}
            aspect-ratio: 1350/690;
         }
 
+        #highlight-h1-anchor{text-decoration: none;}
+
+        #highlight-h1-anchor:link h1, #highlight-h1-anchor:active h1{
+          color: #e3f5ff;
+        }
+        #highlight-h1-anchor:visited h1{
+          color: #e3f5ff;
+        }
+        #highlight-h1-anchor:hover h1{
+          color: #e3f5ff3f;
+        }
+
         #highlight h1{position: relative; top: -6vw; text-align: center; width: 80%; left: 10%; font-size: 2rem;
           border-bottom: 1px inset white;
         }

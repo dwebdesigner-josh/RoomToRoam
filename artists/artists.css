@@ -520,7 +520,7 @@ main h1{
 */
 /*HIGHLIGHT REEL 2*/
 
-.works-wrap {height: fit-content; padding: .5rem; border: 1px inset white; border-radius: 1rem; display: flex; flex-direction: column; align-items: center;}
+.works-wrap {height: fit-content; padding: .5rem; display: flex; flex-direction: column; align-items: center;}
 
 
 #highlight2 {
