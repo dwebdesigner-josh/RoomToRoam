@@ -472,7 +472,6 @@ main p{text-align: start;}
 .spotify-iframe{
   width: 80%;
 }
-@media screen and (max-width: 550px){.spotify-iframe{height: 22rem;}}
 
     @media screen and (max-width: 450px){.spotify-iframe{zoom: .8;}}
     @media screen and (min-width: 1400px){.spotify-iframe{max-width: 1200px;zoom: 1.1;}}
