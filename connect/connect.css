@@ -231,12 +231,15 @@ header {
           top: 0;
       }
           /*MOBILE*/
-          @media screen and (max-width: 850px){
-          #loadcontainer {height: calc(55rem +100vw);} /*45 calculated in form section +9 more for added changes*/
+          @media screen and (min-width: 0px){
+            #loadcontainer {height: calc(63rem + 120vw);} /*45 calculated in form section +9 more for added changes + orbit swirl buttons*/
+            }     
+          @media screen and (min-width: 550px){
+          #loadcontainer {height: calc(50rem + 100vw);} /*45 calculated in form section +9 more for added changes + orbit swirl buttons*/
           }                                
           /*DESKTOP*/
           @media screen and (min-width: 850px){
-          #loadcontainer {height: calc(50rem);} /*41 +9more for added changes */
+          #loadcontainer {height: 80rem;} /*41 +9more for added changes ... */
           }
       .loadscreen {
           width: 100%;
@@ -249,7 +252,7 @@ header {
           z-index: 20;
           display: flex;
           justify-content: center;
-          animation: scrolldown 2s linear 1;
+          animation: scrolldown 3s linear 1;
           animation-play-state: running;
           animation-iteration-count: 1;
           animation-fill-mode: both;
@@ -259,7 +262,7 @@ header {
           height: 255px;
       }
       #loadscreen-notfirst{
-          animation: scrolldown 1s linear 1;
+          animation: scrolldown 2s linear 1;
           animation-play-state: running;
           animation-iteration-count: 1;
           animation-fill-mode: both;
