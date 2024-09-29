@@ -22,9 +22,9 @@
             3: ['/images/novaliz1.jpg', '/images/novaliz3.jpg', '/images/novaliz2.jpg']
         };
         const worksLinks = {
-            1: ['/reviews/albums/jw-abstractsinblackandwhite', '/reviews/albums/jw-abstractsinblackandwhite', '/reviews/albums/jw-abstractsinblackandwhite'],
-            2: ['/reviews/albums/technicolors-metaphysical', '/reviews/albums/technicolors-cinemasublimina', '/reviews/albums/technicolors-ultravioletdisguise'],
-            3: ['/reviews/albums/novaliz-concepts', '/reviews/albums/novaliz-concerts', '/reviews/albums/novaliz-selfportraits']
+            1: ['/reviews/works/jw-abstractsinblackandwhite', '/reviews/works/jw-abstractsinblackandwhite', '/reviews/works/jw-abstractsinblackandwhite'],
+            2: ['/reviews/works/technicolors-metaphysical', '/reviews/works/technicolors-cinemasublimina', '/reviews/works/technicolors-ultravioletdisguise'],
+            3: ['/reviews/works/novaliz-concepts', '/reviews/works/novaliz-concerts', '/reviews/works/novaliz-selfportraits']
         };
 
         const currentArtistWorks = worksImages[slideCount2];
