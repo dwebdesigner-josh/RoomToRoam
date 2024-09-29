@@ -235,11 +235,11 @@ header {
     }
         /*MOBILE*/
         @media screen and (max-width: 850px){
-        #loadcontainer {height: calc(2.5rem + 1000px + 4rem);} /*header plus main plus footer - 2rem high internals + 2rem high socials*/
+        #loadcontainer {height: calc(2.5rem + 200svh + 4rem);} /* OLD height: calc(2.5rem + 200svh + 4rem) header plus main plus footer - 2rem high internals + 2rem high socials*/
         }                                
         /*DESKTOP*/
         @media screen and (min-width: 850px){
-        #loadcontainer {height: calc(2.5rem + 1000px + 2rem);} /*header plus main plus footer - 2rem high internals/socials */
+        #loadcontainer {height: calc(2.5rem + 200svh + 2rem);} /*header plus main plus footer - 2rem high internals/socials */
         }
     .loadscreen {
         width: 100%;
@@ -472,6 +472,8 @@ main p{text-align: start;}
 .spotify-iframe{
   width: 80%;
 }
+@media screen and (max-width: 550px){.spotify-iframe{height: 22rem;}}
+
     @media screen and (max-width: 450px){.spotify-iframe{zoom: .8;}}
     @media screen and (min-width: 1400px){.spotify-iframe{max-width: 1200px;zoom: 1.1;}}
     @media screen and (min-width: 1900px){.spotify-iframe{zoom: 1.4;}}
