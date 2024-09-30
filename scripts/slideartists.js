@@ -17,12 +17,12 @@
 
     function updateSecondSlider() {
         const worksImages = {
-            1: ['/images/jw2.jpg', '/images/jw3.jpg', '/images/jw4.jpg'],
+            1: ['/artists/flooko/images/flooko1-1.jpg', '/artists/flooko/images/flooko1-2.jpg', '/artists/flooko/images/flooko1-3.jpg'],
             2: ['/images/technicolors/technicolors-metaphysical.jpg', '/images/technicolors/technicolors-cinemasublimina.jpg', '/images/technicolors/technicolors-ultravioletdisguise.jpg'],
             3: ['/images/novaliz1.jpg', '/images/novaliz3.jpg', '/images/novaliz2.jpg']
         };
         const worksLinks = {
-            1: ['/reviews/works/jw-abstractsinblackandwhite', '/reviews/works/jw-abstractsinblackandwhite', '/reviews/works/jw-abstractsinblackandwhite'],
+            1: ['/reviews/works/flooko-astronautadventures', '/reviews/works/flooko-astronautadventures', '/reviews/works/flooko-astronautadventures'],
             2: ['/reviews/works/technicolors-metaphysical', '/reviews/works/technicolors-cinemasublimina', '/reviews/works/technicolors-ultravioletdisguise'],
             3: ['/reviews/works/novaliz-concepts', '/reviews/works/novaliz-concerts', '/reviews/works/novaliz-selfportraits']
         };

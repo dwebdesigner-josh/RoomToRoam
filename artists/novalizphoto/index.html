@@ -6,43 +6,40 @@
     <title>Room To Roam</title>
     <link rel="icon" href="/images/favicon.ico">
 <!--"inter" font-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<!--"inter" font-->
+<link href="/fonts/inter.css" rel="stylesheet">
 <!--CSS-->
-<link rel="stylesheet" href="/artists/artistsindividual.css">
+<link rel="stylesheet" href="/artists/artistsindividual.css?v=1.0">
 <!--jquery plugin-->
 <script src="/scripts/jquery.min.js"></script>
 <style>
-    #container-container2[aria-expanded="true"] .container-img{
-          background-image: url('/images/novaliz2.jpg');
-        }
-    
-.radiocard[for="c1"] {
-  background-image: url('/images/novaliz1.jpg');
+#container-container2[aria-expanded="true"] .container-img{
+  background-image: url('/images/technicolors/technicolorsprofilepic.jpg'); 
+}
+  .radiocard[for="c1"] {
+  background-image: url('/images/technicolors/technicolorsprofilepic.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: top;
+}
+.radiocard[for="c2"] {
+  background-image: url('/images/technicolors.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
 }
-.radiocard[for="c2"] {
-  background-image: url('/images/novaliz2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: top;
-}
 .radiocard[for="c3"] {
-  background-image: url('/images/novaliz3.jpg');
+  background-image: url('/images/technicolorsv2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: top;
+  background-position-y: center;
 }
 .radiocard[for="c4"] {
-  background-image: url('/images/novalizbackground.jpg');
+  background-image: url('/images/technicolors/technicolors-cinemasublimina.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: top;
 }
-
 </style>
 </head>
 
@@ -114,17 +111,17 @@
         <section id="swirl-container">
           <!-- swirl animation containers -->   
           <div class="swirl">
-              <img  class="swirl-image" src="/scripts/swirl1/planetorbit1/planetorbit_90.jpg" alt="stardust swirl animation"/>
+              <img  class="swirl-image" src="/scripts/swirl1/planetorbit1/planetorbit_90.jpg" alt=""/>
               <a class="swirl-link" id="swirl-link1" aria-label="Artist's Spotify account external link" href="https://open.spotify.com/artist/6hQS54VPpxunuwR0W7usuo" target="_blank" rel="noopener noreferrer"></a>
             </div>
 
           <div class="swirl">
-              <img id="swirl-image2" class="swirl-image" src="/scripts/swirl1/planetorbit1/planetorbit_21.jpg" alt="stardust swirl animation"/>
+              <img id="swirl-image2" class="swirl-image" src="/scripts/swirl1/planetorbit1/planetorbit_21.jpg" alt=""/>
               <a class="swirl-link" id="swirl-link2" aria-label="Artist's Instagram account external link" href="https://www.instagram.com/thetechnicolors/?hl=en" target="_blank" rel="noopener noreferrer"></a>
             </div>
           
           <div class="swirl">
-              <img id="swirl-image3" class="swirl-image" src="/scripts/swirl1/planetorbit1/planetorbit_90.jpg" alt="stardust swirl animation"/>
+              <img id="swirl-image3" class="swirl-image" src="/scripts/swirl1/planetorbit1/planetorbit_90.jpg" alt=""/>
               <a class="swirl-link" id="swirl-link3" aria-label="External link to send an email to the artist." href="mailto:test@example.com" target="_blank" rel="noopener noreferrer"></a>
             </div>  
         </section>
@@ -186,7 +183,9 @@
                     <p>This album creates a profound listening experience through its intricate layers and emotional depth.</p>
                   </div>
               </div>
+              <a class="slideinfo-optionallink-review" href="/reviews/works/technicolors-metaphysical/" aria-label="Continue to the review page for this work." target="_self">Read review</a>
             </div>
+
             <div class="slideinfo-container" id="slideinfo-2" inert style="display: none; visibility: hidden;">
               <div class="slideinfo-top">
                   <div class="slideinfo-top-details">
@@ -203,7 +202,9 @@
                     <p>Rich textures and evocative melodies define this album, offering a unique auditory journey.</p>
                   </div>
               </div>
+              <a class="slideinfo-optionallink-review" href="/reviews/works/technicolors-cinemasublimina/" aria-label="Continue to the review page for this work." target="_self">Read review</a>
             </div>
+
             <div class="slideinfo-container" id="slideinfo-3" inert style="display: none; visibility: hidden;">
               <div class="slideinfo-top">
                   <div class="slideinfo-top-details">
@@ -218,10 +219,11 @@
                   <div class="slideinfo-bottom-description">
                     <p>"Ultraviolet Disguise" by The Technicolors immerses listeners in a rich blend of atmospheric soundscapes and evocative lyrics.</p>
                     <p> Its innovative arrangements and compelling grooves create a distinctive and captivating listening experience.</p>
-                    
                   </div>
               </div>
+              <a class="slideinfo-optionallink-review" href="/reviews/works/technicolors-ultravioletdisguise/" aria-label="Continue to the review page for this work." target="_self">Read review</a>
             </div>
+
             <div class="slideinfo-container" id="slideinfo-4" inert style="display: none; visibility: hidden;">
               <div class="slideinfo-top">
                   <div class="slideinfo-top-details">
@@ -269,7 +271,7 @@
         <br><br></p>  
      <p class="text-p2" id="text-p-long2">Over the years, The Technicolors have continued to evolve, experimenting with different sounds and themes while maintaining their signature groove. Their subsequent releases, including "Weird" and "Dawn," reflect a growing maturity in their songwriting and production. With a reputation for delivering electrifying shows and a loyal fan base, The Technicolors have solidified their place in the alternative rock landscape. Their music, characterized by its bold, colorful soundscapes and introspective lyrics, continues to captivate listeners and critics alike, marking them as a band to watch in the ever-changing world of rock.
     </p>
-  </div>
+  </div> 
 
     <div class="container-img">
       <img class="artist-img2" id="max-width-exception" src="/images/technicolors/technicolorsprofilepic.jpg" alt="image of the artist"/>
@@ -283,9 +285,9 @@ https://www.youtube.com/watch?v=45mnmy2JUl0&list=PLNYI1SZRuce6lhwBmvuwjPqUMeH81n
 -->
 <section class="radiowrapper">
 
-  <div class="container-radiocards">
-      <input type="radio" name="slide" id="c1" checked>
-      <label for="c1" class="radiocard">
+  <div class="container-radiocards" aria-label="Artist fun facts slides">
+      <input type="radio" name="slide" id="c1" checked >
+      <label for="c1" class="radiocard" >
           <div class="radiorow">
               <div class="radioicon"></div>
               <div class="radiodescription">
@@ -320,7 +322,7 @@ https://www.youtube.com/watch?v=45mnmy2JUl0&list=PLNYI1SZRuce6lhwBmvuwjPqUMeH81n
               <div class="radioicon"></div>
               <div class="radiodescription">
                   <h4>Latest Release</h4>
-                  <p>Metaphysical</p>
+                  <p>Cinema Sublimina</p>
               </div>
           </div>
       </label>
@@ -348,10 +350,10 @@ https://www.youtube.com/watch?v=45mnmy2JUl0&list=PLNYI1SZRuce6lhwBmvuwjPqUMeH81n
 </footer>
 
 
-<script src="/scripts/loadanimation.js"></script>
-<script src="/scripts/hamburger.js"></script> 
-<script src="/scripts/orbitjqueryanimation.js"></script> 
-<script src="/scripts/artistsindividual.js"></script>
+<script src="/scripts/loadanimation.js?v=1.0"></script>
+<script src="/scripts/hamburger.js?v=1.0"></script> 
+<script src="/scripts/orbitjqueryanimation.js?v=1.0"></script> 
+<script src="/scripts/artistsindividual.js?v=1.0"></script>
   
 </body>
 
