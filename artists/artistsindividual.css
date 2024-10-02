@@ -332,6 +332,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
   position: relative;
   left: -10rem;
 }
+
   /*display: grid;
   width: fit-content;
   height: fit-content;
@@ -433,7 +434,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
       #section-container {width: 100vw; overflow: hidden; display: flex; justify-content: center; height: fit-content;}
 /*FIX: (implemented) overflow hidden value added to section container as this section was causing the vw to be expanded past the body */
-@media screen and (min-width: 1001px){
+@media screen and (min-width: 1000px){
   #container-container2 {position: relative; left: 2vw;}
 }
  @media screen and (max-width: 1000px){
