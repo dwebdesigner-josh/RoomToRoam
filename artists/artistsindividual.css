@@ -299,6 +299,7 @@ main h1, main h2, main h3,  main p{color: #e3f5ff; text-shadow: 1px 1px 1px blac
 main h2 {font-size: 2rem;}
 
 .span-filler{height: 3rem; width: 100%;}
+.span-filler-portrait{height: 15vw; width: 100%;}
 #filler{height: 1000px}
 
 section {width: 100%; height:fit-content; z-index: 1;}
@@ -700,8 +701,8 @@ section {width: 100%; height:fit-content; z-index: 1;}
       background-position: center;
       
     }
-
-.slide-anchor2 {
+/*default slide size: square*/
+.slide-anchor2 { 
               
   border: none;
   position: absolute;
@@ -711,6 +712,18 @@ section {width: 100%; height:fit-content; z-index: 1;}
   transition: left 500ms ease-in-out, transform 500ms ease-in-out;
   cursor: pointer;
 }
+/*alternative slide size: portrait*/
+.slide-anchor2-portrait{
+  border: none;
+  position: absolute;
+  aspect-ratio: 6/9; /*SLIDE IMAGE THUMBNAIL SIZE HERE*/
+  /*width: 50%;*/
+  width: 33%;
+  transition: left 500ms ease-in-out, transform 500ms ease-in-out;
+  cursor: pointer;
+}
+/*alternative slide size: landscape - TODO*/
+
 
 /*
   .slide-expand-arrow{
