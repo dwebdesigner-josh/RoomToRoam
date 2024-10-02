@@ -13,9 +13,12 @@
 <!--jquery plugin-->
 <script src="/scripts/jquery.min.js"></script>
 <style>
-#container-container2[aria-expanded="true"] .container-img{
-  background-image: url('/images/technicolors/technicolorsprofilepic.jpg'); 
-}
+
+@media screen and (max-width: 1000px){
+  #container-container2[aria-expanded="true"] .container-img{
+    background-image: url('/images/technicolors/technicolorsprofilepic.jpg'); 
+    background-repeat: none;
+}}
   .radiocard[for="c1"] {
   background-image: url('/images/technicolors/technicolorsprofilepic.jpg');
   background-size: cover;
