@@ -819,7 +819,7 @@ footer{z-index: 1; display: flex; justify-content: center; align-items: center; 
                 background-color: #12171d9d;
                 padding: 1rem;
                 border-radius: 1rem;
-            }
+            } 
         }
             .footer-item{list-style-type: none;}
             .footer-link{

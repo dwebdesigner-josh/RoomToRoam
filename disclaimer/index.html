@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +11,17 @@
 <!--"inter" font-->
 <link href="/fonts/inter.css" rel="stylesheet">
 <!--CSS-->
-<link rel="stylesheet" href="/reviews/reviewslandingpage.css?v=1.3">
+<link rel="stylesheet" href="/connect/connect.css?v=1.4">
 <!--jquery plugin-->
 <script src="/scripts/jquery.min.js"></script>
+<style>
+.privacy-policy{width: 80%;}
+.privacy-policy *{color: white;}
+*{max-width: 100%;}
+</style>
 </head>
 
-
+ 
 <body>
 
 <!--make sure to use landmark elements rather than divs for sections of the page (nav, main, header, section,...)-->
@@ -53,89 +61,29 @@
 </nav>
 
 
-<div id="loadcontainer">
-    <div class="loadscreen" tabindex="-1">
-    <img tabindex="-1" alt="Graphic image of space ship" src="/images/ship.png" aria-label="Loading screen ship animation">
-    </div>
-</div>
-
-<!--MAIN~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <main>
 
-  <span class="span-filler"></span>
+  <div class="filler" style="height: 3rem; ">
+  </div>
 
-  
-<h1 id="topH1">Let's Dive Into It!</h1>
 
-<section>
+<section class="privacy-policy" style="max-width: 100vw;">
+    <h1>Disclaimer</h1>
+
+    <p>This website has been created as a display for the potential of a business for an unnamed client, and therefore has been filled with example content that does not reflect the actual properites of the owner of the full site. The content on this website is intended solely for demonstration purposes and is not meant for commercial use. I do not own or claim to own any copyrighted material displayed on this site. Any materials that are not my own are utilized solely to illustrate how a client's website would look when populated with their own content.</p>
     
-    <div class="container-container" id="container-concerts">
-      <div class="container-text">
-        <h3 class="text-h3">Concerts &#x2022; Shows</h3>
-        <div class="text-h3-2">
-            <h3>Concerts</h3>
-            <h3>&#x2022;</h3>
-            <h3>Shows</h3>
-        </div>
-        <p class="text-p">
-          Reflecting on live performances, we capture the energy, skill, and atmosphere our artists create, helping you decide which shows should top your bucket list.
-        </p>
-      </div>
-
-      <div class="container-planet" id="planet-concerts">
-          <img class="planet-img" src="/images/planet1.png" alt="image of a planet"/>
-          <a class="planet-link" id="planet-link1" href="/reviews/concerts/"  target="_self"><p class="planet-text">CONCERT REVIEWS</p></a>
-        </div>
-    </div>
-
-    <div class="container-container"  id="container-albums">
-        <div class="container-planet" id="planet-albums">
-          <img class="planet-img" id="planet-img-middle" src="/images/planet2.png" alt="image of a planet"/>
-          <a class="planet-link" id="planet-link2" href="/reviews/works/"  target="_self"><p class="planet-text">ALBUM REVIEWS</p></a>
-        </div>
-
-        <div class="container-text" id="container-text-middle">
-            <p class="text-p" id="text-p-middle">
-            Delving into album reviews, we explore the artistry, production quality, and emotional depth of each release, offering an in-depth look at the music's impact and essence.
-            </p>
-            <h3 class="text-h3" id="text-h3-middle">Albums &#x2022; Works</h3>
-            <div class="text-h3-2" id="text-h3-2middle">
-              <h3>Albums</h3>
-              <h3>&#x2022;</h3>
-              <h3>Works</h3>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-container"  id="container-musicvideos">
-      <div class="container-text">
-        <h3 class="text-h3">Videos &#x2022; Film</h3>
-        <div class="text-h3-2">
-          <h3>Videos</h3>
-          <h3>&#x2022;</h3>
-          <h3>Film</h3>
-      </div>
-        <p class="text-p">
-          Exploring music videos, we analyze the visual storytelling, direction, and creative execution of each video, providing a detailed look at how the medium enhances the music.
-        </p>
-      </div>
-
-        <div class="container-planet" id="planet-musicvideos">
-          <img class="planet-img" src="/images/planet3.png" alt="image of a planet"/>
-          <a class="planet-link" id="planet-link3" href="/reviews/musicvideos/"  target="_self"><p class="planet-text">MUSIC VIDEO REVIEWS</p></a>
-        </div>
-    </div>
-
+    <p>If you are the owner of any copyrighted material and have concerns about its use on this site, please contact me, and I will promptly address the issue.</p>
+    
+    <p>Thank you for your understanding.</p>
+    
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+    <ul>
+    <li>By visiting the connect page on our website: 
+        <a href="/connect" target="_self">Connect</a></li>
+    </ul>
 </section>
-
-  
-
-<!--<div style="display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; margin: 0;">
-<a target="_self" href="/reviews/works/">ALBUM REVIEWS</a>
-<a target="_self" href="/reviews/concerts/">CONCERT/SHOW REVIEWS</a>
-<a target="_self" href="/reviews/musicvideos/">MUSIC VIDEO REVIEWS</a>
-</div>-->
 
 </main>
 
@@ -161,7 +109,7 @@
   <li class="footer-item"><a class="footer-link" href="/disclaimer/" target="_self">Disclaimer</a></li>
 </ul>
 
-
+ 
 <script src="/scripts/loadanimation.js?v=1.0"></script>
 <script src="/scripts/hamburger.js?v=1.0"></script> 
   
