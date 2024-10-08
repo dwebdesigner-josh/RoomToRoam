@@ -577,7 +577,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
           box-shadow: 0px 0px 2px 4px  #4d6583;
         }        /*filter: blur(2px);*/
 
-        #artist-summary-text{cursor: pointer;}
+        #artist-summary-text{cursor: pointer; padding: .5rem; box-sizing: border-box;}
 
         #artist-summary div{
           position: relative;
@@ -632,6 +632,10 @@ section {width: 100%; height:fit-content; z-index: 1;}
 #swirl-link1{
   background-image: url("/images/spotify.png");
   background-size: cover;
+  }
+  #swirl-link-website{
+    background-image: url("/images/websitelink.png");
+    background-size: cover;
   }
 
 #swirl-link2{
@@ -821,6 +825,18 @@ section {width: 100%; height:fit-content; z-index: 1;}
       width: 2rem;
       height: 2rem;
       background-image: url('/images/spotify.png');
+      background-size: cover;
+    }
+    .slideinfo-link-insta{
+      display: block;
+      position: relative;
+      z-index: 100;
+      list-style-type: none;
+      text-decoration: none;
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+      background-image: url('/images/insta.png');
       background-size: cover;
     }
 
