@@ -13,32 +13,35 @@
 <!--jquery plugin-->
 <script src="/scripts/jquery.min.js"></script>
 <style>
-#container-container2[aria-expanded="true"] .container-img{
-  background-image: url('/images/technicolors/technicolorsprofilepic.jpg'); 
-}
+
+@media screen and (max-width: 1000px){
+  #container-container2[aria-expanded="true"] .container-img{
+    background-image: url('/artists/arcticmonkeys/images/arcticmonkeys1-2.jpg'); 
+    background-repeat: none;
+}}
   .radiocard[for="c1"] {
-  background-image: url('/images/technicolors/technicolorsprofilepic.jpg');
+    background-image: url('/artists/arcticmonkeys/images/arcticmonkeys1-1.jpg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: top;
 }
 .radiocard[for="c2"] {
-  background-image: url('/images/technicolors.jpg');
+    background-image: url('/artists/arcticmonkeys/images/arcticmonkeys1-favouriteworstnightmare.jpg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
 }
 .radiocard[for="c3"] {
-  background-image: url('/images/technicolorsv2.jpg');
+    background-image: url('/artists/arcticmonkeys/images/arcticmonkeys1-2.jpg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
 }
 .radiocard[for="c4"] {
-  background-image: url('/images/technicolors/technicolors-cinemasublimina.jpg');
+    background-image: url('/artists/arcticmonkeys/images/arcticmonkeys1-thecar.jpg'); 
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: top;
+  background-position-y: center;
 }
 </style>
 </head>
@@ -90,21 +93,22 @@
 </div>
 
 <main>
-
+ 
 <section id="section-heading-links">
   <span class="span-filler"></span>
   <div id="link-artists-container"><a href="/artists/" target="_self" id="link-artists"> <h3><i>Artists</i></h3> </a> </div>
-    <h2 id="artistname-h2">The Technicolors</h2>
+    <h2 id="artistname-h2">Arctic Monkeys</h2>
 </section>
 
 
 
 <section id="artist-summary">
-  <img class="artist-img" src="/images/technicolorsv2.jpg" alt="image of the artist"/>
+  <img class="artist-img" src="/artists/arcticmonkeys/images/arcticmonkeys1-1.jpg" alt="image of the artist"/>
   <div id="artist-summary-text" style="display:none; visibility: hidden;">
-    <p>The Technicolors blend classic rock with a modern edge, creating an energetic and dynamic sound.</p>
-    <p>Since 2012, they've captivated fans with vibrant live performances and catchy, memorable tunes.</p>
-    <p>Their growing discography showcases their unique style and creative evolution.</p>
+    <p>Arctic Monkeys, a British rock band renowned for their sharp lyrics and infectious rhythms, have become a staple in the indie rock scene.</p>
+    <p>Rising to fame with their breakthrough album "AM" the band captivated audiences across the world with their energetic performances and relatable tales of modern life.</p>
+    <p>Their evolving sound, blending rock, punk, and even jazz influences, continues to showcase their versatility and innovative approach to music.</p>
+    
   </div>
 </section>
 
@@ -112,12 +116,12 @@
           <!-- swirl animation containers -->   
           <div class="swirl">
               <img  class="swirl-image" src="/scripts/swirl1/planetorbit1/planetorbit_90.jpg" alt=""/>
-              <a class="swirl-link" id="swirl-link1" aria-label="Artist's Spotify account external link" href="https://open.spotify.com/artist/6hQS54VPpxunuwR0W7usuo" target="_blank" rel="noopener noreferrer"></a>
+              <a class="swirl-link" id="swirl-link1" aria-label="Artist's Spotify account external link" href="https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH" target="_blank" rel="noopener noreferrer"></a>
             </div>
 
           <div class="swirl">
               <img id="swirl-image2" class="swirl-image" src="/scripts/swirl1/planetorbit1/planetorbit_21.jpg" alt=""/>
-              <a class="swirl-link" id="swirl-link2" aria-label="Artist's Instagram account external link" href="https://www.instagram.com/thetechnicolors/?hl=en" target="_blank" rel="noopener noreferrer"></a>
+              <a class="swirl-link" id="swirl-link2" aria-label="Artist's Instagram account external link" href="https://www.instagram.com/arcticmonkeys/?hl=en" target="_blank" rel="noopener noreferrer"></a>
             </div>
           
           <div class="swirl">
@@ -134,22 +138,20 @@
                   <button id="slide-left2" tabindex="0"></button> <!-- aria-pressed="false"  perhaps reintigrate this later with the slide.js-->
                 <div class="slides-container" >
                   <div class="slide-anchor2"  tabindex="0" inert  id="slide-21" aria-expanded="false" style="z-index: 28; left: 7%;  " >
-                    <img id="slideworksimg-1" src="/images/technicolors/technicolors-metaphysical.jpg" alt="Photo of artist's work" />
-                <!--    <div class="slide-expand-arrow"><img alt="" src="/images/expandarrowdown.png"></div> -->
+                    <img id="slideworksimg-1" src="/artists/arcticmonkeys/images/arcticmonkeys1-favouriteworstnightmare.jpg" alt="Photo of artist's work" />
                   </div>
-                    
-        
+    
                   <div class="slide-anchor2"  tabindex="0" id="slide-22" aria-expanded="true"  style="z-index: 30; left: 15%; " >
-                    <img id="slideworksimg-2" src="/images/technicolors/technicolors-cinemasublimina.jpg" alt="Photo of artist's work" /></div>
+                    <img id="slideworksimg-2" src="/artists/arcticmonkeys/images/arcticmonkeys1-humbug.jpg" alt="Photo of artist's work" /></div>
                  
                   <div class="slide-anchor2"  tabindex="0" id="slide-23" aria-expanded="true" style="z-index: 32; left: 35%; " >
-                    <img id="slideworksimg-3" src="/images/technicolors/technicolors-ultravioletdisguise.jpg" alt="Photo of artist's work" /></div>
+                    <img id="slideworksimg-3" src="/artists/arcticmonkeys/images/arcticmonkeys1-suckitandsee.jpg" alt="Photo of artist's work" /></div>
                     
                   <div class="slide-anchor2"  tabindex="0" id="slide-24" aria-expanded="true" style="z-index: 31; left: 55%; " >
-                    <img id="slideworksimg-4" src="/images/technicolors/sweat.jpg" alt="Photo of artist's work" /></div>
+                    <img id="slideworksimg-4" src="/artists/arcticmonkeys/images/arcticmonkeys1-am.jpg" alt="Photo of artist's work" /></div>
                       
                   <div class="slide-anchor2" tabindex="0" inert id="slide-25" aria-expanded="false" style="z-index: 29; left: 60%; " >
-                    <img id="slideworksimg-5" src="/images/technicolors/listener.jpg" alt="Photo of artist's work" /></div>
+                    <img id="slideworksimg-5" src="/artists/arcticmonkeys/images/arcticmonkeys1-thecar.jpg" alt="Photo of artist's work" /></div>
                 
                 </div>
                   <button id="slide-right2" tabindex="0"></button>
@@ -165,100 +167,108 @@
           </section></div>
 
 
-  <section class="section-slideinfo">
+          <section class="section-slideinfo">
             <div class="slideinfo-container" id="slideinfo-1" inert style="display: none; visibility: hidden;">
-              <div class="slideinfo-top">
-                  <div class="slideinfo-top-details">
-                    <p class="slideinfo-top-details-name">Metaphysical</p>
-                    <p>Alternative/Indie LP</p>
-                    <h5></h5>
-                  </div>
-                  <p class="slideinfo-top-date">2017</p>
-              </div>
-              <div class="slideinfo-bottom">
-                  <a class="slideinfo-link-spotify" aria-label="Album's Spotify streaming external link" href="https://open.spotify.com/album/0oWKnbYnV4rzCcZoo6DWP2" target="_blank" rel="noopener noreferrer"></a>
-                  <div class="slideinfo-bottom-description">
-                    <p>
-                      "Metaphysical" by The Technicolors intertwines introspective lyrics with expansive, atmospheric soundscapes.</p>
-                    <p>This album creates a profound listening experience through its intricate layers and emotional depth.</p>
-                  </div>
-              </div>
-              <a class="slideinfo-optionallink-review" href="/reviews/works/technicolors-metaphysical/" aria-label="Continue to the review page for this work." target="_self">Read review</a>
-            </div>
+                <div class="slideinfo-top">
+                    <div class="slideinfo-top-details">
+                        <p class="slideinfo-top-details-name">Favourite Worst Nightmare</p>
+                        <p>Post-Punk Revival LP</p>
+                        <h5></h5>
+                    </div>
+                    <p class="slideinfo-top-date">2007</p>
+                </div>
+                <div class="slideinfo-bottom">
+                    <a class="slideinfo-link-spotify" aria-label="Album's Spotify streaming external link" href="https://open.spotify.com/album/6rsQnwaoJHxXJRCDBPkBRw" target="_blank" rel="noopener noreferrer"></a>
+                    <div class="slideinfo-bottom-description">
+                        <p>Arctic Monkeys' second album, "Favourite Worst Nightmare," solidified their place in the indie rock scene with its raw energy and sharp lyrics.</p>
+                        <p>The album features fast-paced tracks and dark, complex themes.</p>
+                        <p>It’s a fan-favorite that highlights their signature sound while pushing their music in new, exciting directions.</p>
 
+                    </div>
+                </div>
+            </div>
+        
             <div class="slideinfo-container" id="slideinfo-2" inert style="display: none; visibility: hidden;">
-              <div class="slideinfo-top">
-                  <div class="slideinfo-top-details">
-                    <p class="slideinfo-top-details-name">Cinema Sublimina</p>
-                    <p>Alternative/Indie LP</p>
-                    <h5></h5>
-                  </div>
-                  <p class="slideinfo-top-date">2021</p>
-              </div>
-              <div class="slideinfo-bottom">
-                  <a class="slideinfo-link-spotify" aria-label="Album's Spotify streaming external link" href="https://open.spotify.com/album/0ywqrwzSXOdWbICsAuICdt" target="_blank" rel="noopener noreferrer"></a>
-                  <div class="slideinfo-bottom-description">
-                    <p>"Cinema Sublimina" by The Technicolors crafts cinematic atmospheres with lush, immersive soundscapes.</p>
-                    <p>Rich textures and evocative melodies define this album, offering a unique auditory journey.</p>
-                  </div>
-              </div>
-              <a class="slideinfo-optionallink-review" href="/reviews/works/technicolors-cinemasublimina/" aria-label="Continue to the review page for this work." target="_self">Read review</a>
+                <div class="slideinfo-top">
+                    <div class="slideinfo-top-details">
+                        <p class="slideinfo-top-details-name">Humbug</p>
+                        <p>Psychedelic/Desert Rock LP</p>
+                        <h5></h5>
+                    </div>
+                    <p class="slideinfo-top-date">2009</p>
+                </div>
+                <div class="slideinfo-bottom">
+                    <a class="slideinfo-link-spotify" aria-label="Album's Spotify streaming external link" href="https://open.spotify.com/album/5IEoiwkThhRmSMBANhpxl2" target="_blank" rel="noopener noreferrer"></a>
+                    <div class="slideinfo-bottom-description">
+                        <p>Humbug by Arctic Monkeys marks a bold departure from their earlier sound, with darker, more brooding tones and a heavier emphasis on psychedelic rock influences.</p> 
+                        <p>The album showcases a matured band exploring deeper lyrical themes and experimental production, thanks in part to producer Josh Homme of Queens of the Stone Age.</p> 
+                        
+                    </div>
+                </div>
             </div>
-
+            
+        
             <div class="slideinfo-container" id="slideinfo-3" inert style="display: none; visibility: hidden;">
-              <div class="slideinfo-top">
-                  <div class="slideinfo-top-details">
-                    <p class="slideinfo-top-details-name">Ultraviolet Disguise</p>
-                    <p>Alternative/Indie LP</p>
-                    <h5></h5>
-                  </div>
-                  <p class="slideinfo-top-date">2015</p>
-              </div>
-              <div class="slideinfo-bottom">
-                  <a class="slideinfo-link-spotify" aria-label="Album's Spotify streaming external link" href="https://open.spotify.com/album/3FpGaltgrkpihz2wL76YRm" target="_blank" rel="noopener noreferrer"></a>
-                  <div class="slideinfo-bottom-description">
-                    <p>"Ultraviolet Disguise" by The Technicolors immerses listeners in a rich blend of atmospheric soundscapes and evocative lyrics.</p>
-                    <p> Its innovative arrangements and compelling grooves create a distinctive and captivating listening experience.</p>
-                  </div>
-              </div>
-              <a class="slideinfo-optionallink-review" href="/reviews/works/technicolors-ultravioletdisguise/" aria-label="Continue to the review page for this work." target="_self">Read review</a>
+                
+                <div class="slideinfo-top">
+                    <div class="slideinfo-top-details">
+                        <p class="slideinfo-top-details-name">Suck It and See</p>
+                        <p>Alternative/Indie LP</p>
+                        <h5></h5>
+                    </div>
+                    <p class="slideinfo-top-date">2011</p>
+                </div>
+                <div class="slideinfo-bottom">
+                    <a class="slideinfo-link-spotify" aria-label="Album's Spotify streaming external link" href="https://open.spotify.com/album/2ym2jcqckXqWeTDoxz3Kst" target="_blank" rel="noopener noreferrer"></a>
+                    <div class="slideinfo-bottom-description">
+                        <p>Suck It and See by Arctic Monkeys returns to a lighter, more melodic sound after the darker tones of Humbug, blending jangly guitars with witty, romantic lyrics.</p> 
+                        <p>The album explores themes of love, vulnerability, and nostalgia, with a more accessible and upbeat approach compared to their previous work.</p> 
+                    </div>
+                </div>
             </div>
-
+              
+        
             <div class="slideinfo-container" id="slideinfo-4" inert style="display: none; visibility: hidden;">
-              <div class="slideinfo-top">
-                  <div class="slideinfo-top-details">
-                    <p class="slideinfo-top-details-name">Sweat</p>
-                    <p>Alternative/Indie EP</p>
-                    <h5></h5>
-                  </div>
-                  <p class="slideinfo-top-date">2017</p>
-              </div>
-              <div class="slideinfo-bottom">
-                  <a class="slideinfo-link-spotify" aria-label="Album's Spotify streaming external link" href="https://open.spotify.com/album/3UGEWESDelTk6ppL1SMYM2" target="_blank" rel="noopener noreferrer"></a>
-                  <div class="slideinfo-bottom-description">
-                    <p>The "Sweat" E.P. delivers a vibrant mix of energetic and introspective tracks. </p>
-                    <p>Featuring catchy melodies and dynamic instrumentation, this E.P. has a very distinctive sound and mood.</p>
-                  </div>
-              </div>
+                <div class="slideinfo-top">
+                    <div class="slideinfo-top-details">
+                        <p class="slideinfo-top-details-name">AM</p>
+                        <p>Indie/Contemporary R&B LP</p>
+                        <h5></h5>
+                    </div>
+                    <p class="slideinfo-top-date">2013</p>
+                </div>
+                <div class="slideinfo-bottom">
+                    <a class="slideinfo-link-spotify" aria-label="Album's Spotify streaming external link" href="https://open.spotify.com/album/78bpIziExqiI9qztvNFlQu" target="_blank" rel="noopener noreferrer"></a>
+                    <div class="slideinfo-bottom-description">
+                        <p>AM by Arctic Monkeys is a bold, genre-blending album that merges rock, hip-hop beats, and sultry grooves, marking a new era for the band.</p>
+                        <p>Known for its moody and confident atmosphere, the album explores themes of late-night encounters, longing, and desire.</p>
+                        <p>Standout tracks like "Do I Wanna Know?" and "R U Mine?" became instant hits, cementing AM as one of the band's most iconic releases.</p>
+                        
+                    </div>
+                </div>
             </div>
+        
             <div class="slideinfo-container" id="slideinfo-5" inert style="display: none; visibility: hidden;">
-              <div class="slideinfo-top">
-                  <div class="slideinfo-top-details">
-                    <p class="slideinfo-top-details-name">Listener</p>
-                    <p>Pop Rock/Britpop LP</p>
-                    <h5></h5>
-                  </div>
-                  <p class="slideinfo-top-date">2012</p>
-              </div>
-              <div class="slideinfo-bottom">
-                  <a class="slideinfo-link-spotify" aria-label="Album's Spotify streaming external link" href="https://open.spotify.com/intl-it/album/37gkoTqU1O4Kb88SCunw9g" target="_blank" rel="noopener noreferrer"></a>
-                  <div class="slideinfo-bottom-description">
-                    <p>"Listener" by The Technicolors offers a compelling blend of immersive melodies and intricate rhythms.</p>
-                    <p>This album creates a cohesive soundscape which captures a range of emotions and textures.</p>
-                  </div>
-              </div>
+                <div class="slideinfo-top">
+                    <div class="slideinfo-top-details">
+                        <p class="slideinfo-top-details-name">The Car</p>
+                        <p>Funk/Baroque LP</p>
+                        <h5></h5>
+                    </div>
+                    <p class="slideinfo-top-date">2022</p>
+                </div>
+                <div class="slideinfo-bottom">
+                    <a class="slideinfo-link-spotify" aria-label="Album's Spotify streaming external link" href="https://open.spotify.com/album/1kqHAucTGT1dJAtNXY8QDW" target="_blank" rel="noopener noreferrer"></a>
+                    <div class="slideinfo-bottom-description">
+                        <p>The Car is Arctic Monkeys' sixth studio album, showcasing a more mature sound that blends orchestral elements with their signature rock style.</p>
+                        <p>This album delves into themes of love, loss, and introspection, reflecting the band's evolution as artists.</p>
+                        <p>The album invites listeners into a cinematic experience, highlighting the band's lyrical depth and musical sophistication.</p>
+                        
+                    </div>
+                </div>
             </div>
-  </section>
+        </section>
+        
 
 
 <section id="section-container">    
@@ -267,14 +277,20 @@
     <h3>About the artist</h3>
     <img class="expand-arrow-down" alt="" src="/images/expandarrowdown.png">
     <p class="text-p2" id="text-p-long1">
-      The Technicolors, a dynamic alternative rock band hailing from Phoenix, Arizona, have been making waves in the music scene with their infectious sound and vibrant energy. Formed in 2013, the band quickly gained attention with their blend of gritty guitar riffs and melodic hooks, creating a unique fusion of retro and modern influences. Their debut album, "Metaphysical," showcased their ability to craft catchy, introspective tunes that resonate with a diverse audience. The Technicolors are known for their high-octane live performances and a distinctive style that combines elements of indie rock, psychedelic, and power pop.
-        <br><br></p>  
-     <p class="text-p2" id="text-p-long2">Over the years, The Technicolors have continued to evolve, experimenting with different sounds and themes while maintaining their signature groove. Their subsequent releases, including "Weird" and "Dawn," reflect a growing maturity in their songwriting and production. With a reputation for delivering electrifying shows and a loyal fan base, The Technicolors have solidified their place in the alternative rock landscape. Their music, characterized by its bold, colorful soundscapes and introspective lyrics, continues to captivate listeners and critics alike, marking them as a band to watch in the ever-changing world of rock.
+        The Arctic Monkeys are an iconic British rock band known for their dynamic sound, clever lyrics, and the ability to evolve with each album. Formed in Sheffield in 2002, the band consists of Alex Turner (lead vocals, guitar), Jamie Cook (guitar), Nick O'Malley (bass guitar), and Matt Helders (drums, backing vocals). The Arctic Monkeys quickly rose to prominence, becoming one of the defining bands of the 21st century. Throughout their career, the Arctic Monkeys have maintained a reputation for electrifying live performances, characterized by Turner's charismatic stage presence and the band's tight musicianship. 
+     <br><br>
+     <br><br>
+
+    </p>
+    <p class="text-p2" id="text-p-long2">
+        They've headlined major festivals worldwide, including Glastonbury, and have won numerous awards, including the prestigious Mercury Prize and multiple Brit Awards. Beyond their musical achievements, the Arctic Monkeys have influenced countless bands and artists, leaving an indelible mark on modern rock music. Their ability to adapt and reinvent themselves has kept them relevant and beloved by fans across generations.
+        <br><br>
+
     </p>
   </div> 
 
     <div class="container-img">
-      <img class="artist-img2" id="max-width-exception" src="/images/technicolors/technicolorsprofilepic.jpg" alt="image of the artist"/>
+      <img class="artist-img2" id="max-width-exception" src="/artists/arcticmonkeys/images/arcticmonkeys1-2.jpg" alt="image of the artist"/>
     </div>
 </div>
 </section>
@@ -292,7 +308,7 @@ https://www.youtube.com/watch?v=45mnmy2JUl0&list=PLNYI1SZRuce6lhwBmvuwjPqUMeH81n
               <div class="radioicon"></div>
               <div class="radiodescription">
                 <h4>Location</h4>
-                  <p>Pheonix, Arizona</p>
+                  <p>Sheffield, UK</p>
             </div>
           </div>
       </label>
@@ -302,7 +318,7 @@ https://www.youtube.com/watch?v=45mnmy2JUl0&list=PLNYI1SZRuce6lhwBmvuwjPqUMeH81n
               <div class="radioicon"></div>
               <div class="radiodescription">
                 <h4>Creative Inspiration</h4>
-                <p>Led Zeppelin, Portishead, The Goonies</p>
+                <p>David Bowie, Milburn, Richard Hawley</p>
               </div>
           </div>
       </label>
@@ -312,7 +328,7 @@ https://www.youtube.com/watch?v=45mnmy2JUl0&list=PLNYI1SZRuce6lhwBmvuwjPqUMeH81n
               <div class="radioicon"></div>
               <div class="radiodescription">
                 <h4>Stylistic Inspiration</h4>
-                <p>A fusion of 2000s garage rock with mid-90s Brit-pop</p>
+                <p>Garage rock, psychedelic, and post-punk revival</p>
               </div>
           </div>
       </label>
@@ -322,7 +338,7 @@ https://www.youtube.com/watch?v=45mnmy2JUl0&list=PLNYI1SZRuce6lhwBmvuwjPqUMeH81n
               <div class="radioicon"></div>
               <div class="radiodescription">
                   <h4>Latest Release</h4>
-                  <p>Cinema Sublimina</p>
+                  <p>The Car</p>
               </div>
           </div>
       </label>
