@@ -757,6 +757,12 @@ section {width: 100%; height:fit-content; z-index: 1;}
           color: white;
           background-color: transparent;
         }
+
+        .slider>.slidebutton-portrait{
+          height: 130%;
+          position: relative;
+          top: 15%;
+        }
            
 
         .slides-container{
@@ -840,6 +846,18 @@ section {width: 100%; height:fit-content; z-index: 1;}
       background-size: cover;
     }
 
+    .slideinfo-link-expand{
+      display: block;
+      position: relative;
+      z-index: 100;
+      list-style-type: none;
+      text-decoration: none;
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+      background-image: url('/images/expand.png');
+      background-size: cover;
+    }
     
     .slideinfo-bottom-description{width: 75%;}
     .slideinfo-bottom-description p{
