@@ -894,18 +894,22 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 #slideexpand-fullscreencontainer[aria-expanded="true"]{
   z-index: 100;
-  display: block;
   visibility: visible;
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #12171d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #slideexpand-close{
   display: block;
-  position: relative;
-  z-index: 100;
+  position: absolute;
+  right: 0;
+  top:0;
+  z-index: 101;
   list-style-type: none;
   text-decoration: none;
   cursor: pointer;
@@ -913,6 +917,44 @@ section {width: 100%; height:fit-content; z-index: 1;}
   height: 2rem;
   background-image: url('/images/fullscreenclose.png');
   background-size: cover;
+}
+
+#slideexpand-imgcontainer {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+/*
+@media screen and (max-width: 530px){
+  #slideexpand-imgcontainer {
+
+    width: 100vw;
+    aspect-ratio: 6/9;
+  }
+  #slideexpand-imgcontainer img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 530px){
+  #slideexpand-imgcontainer {
+
+    max-height: 100svh;
+    width: auto;
+    aspect-ratio: 6/9;
+  }
+  #slideexpand-imgcontainer img {
+    width: 100%;
+    height: 100%;
+    
+  }
+}*/
+
+#slideexpand-imgcontainer {
+  height: 100%;
+  width: auto;
+  max-width: 100vw;
+  max-height: 100svh;
+  aspect-ratio: 6/9;
 }
 
 /*RADIO BUTTON EXPANDER*/
