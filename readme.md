@@ -7,6 +7,10 @@ Client Site: Room to Roam Records
 HOME PAGE NOTES:
 
 TODO:
+10/16:
+TODO - CHECK: make sure the keydown (any key) closing event on the visual artist slide fullscreen expand function isn't bad for accessibility or anything.. which honestly it probably is so just change it (do what you meant to do at the start before going that easy route - make the rest of the page inert somehow, possibly with visibility hidden on main and nav, etc, when the fullscreen is open)
+
+
 8/16
 TODO - FIX - album reviews page  -  zooms out past vw on mobile
 TODO - FIX - artists individual pages - radio buttons not tabable 
