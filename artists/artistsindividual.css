@@ -881,6 +881,39 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 /*b0b0ba e3f5ff*/
 
+/*slide full screen expander*/
+
+#slideexpand-fullscreencontainer{
+  z-index: 100;
+  display: none;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: fixed;
+}
+
+#slideexpand-fullscreencontainer[aria-expanded="true"]{
+  z-index: 100;
+  display: block;
+  visibility: visible;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #12171d;
+}
+
+#slideexpand-close{
+  display: block;
+  position: relative;
+  z-index: 100;
+  list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background-image: url('/images/fullscreenclose.png');
+  background-size: cover;
+}
 
 /*RADIO BUTTON EXPANDER*/
 
