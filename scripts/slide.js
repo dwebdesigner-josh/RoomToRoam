@@ -115,17 +115,17 @@ function slideLeft(){
 
 
 //hover sliding:
-    function startSlideRight() {
-        slideInterval = setInterval(slideRight, 500); 
-    }
+ //   function startSlideRight() {
+ //       slideInterval = setInterval(slideRight, 500); 
+ //   }
 
-    function startSlideLeft() {
-        slideInterval = setInterval(slideLeft, 500); 
-    }
+ //   function startSlideLeft() {
+  //      slideInterval = setInterval(slideLeft, 500); 
+ //   }
 
-    function stopSlide() {
-        clearInterval(slideInterval);
-    }
+ //   function stopSlide() {
+ //       clearInterval(slideInterval);
+ //   }
 
 
 //single click sliding:
@@ -140,7 +140,7 @@ function slideRightSingle(){
     setTimeout(() => {
         isTransitioning = false; // Reset the flag after transition time
     }, transitionTime);
-    stopSlide();
+ //   stopSlide();
 }
 
 function slideLeftSingle(){
@@ -153,7 +153,7 @@ function slideLeftSingle(){
     setTimeout(() => {
         isTransitioning = false; // Reset the flag after transition time
     }, transitionTime);
-    stopSlide();
+ //   stopSlide();
 }
 
 //single slide for accessibility (tab+enter)

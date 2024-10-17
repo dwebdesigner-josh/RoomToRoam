@@ -213,15 +213,15 @@ function slideLeft(){
                 slideImage5.setAttribute("inert", "");             
 
 }
-    function startSlideRight() {
-        slideInterval = setInterval(slideRight, 500); 
-    }
-    function startSlideLeft() {
-        slideInterval = setInterval(slideLeft, 500); 
-    }
-    function stopSlide() {
-        clearInterval(slideInterval);
-    }
+ //   function startSlideRight() {
+ //       slideInterval = setInterval(slideRight, 500); 
+//    }
+//    function startSlideLeft() {
+//        slideInterval = setInterval(slideLeft, 500); 
+ //   }
+  //  function stopSlide() {
+ //       clearInterval(slideInterval);
+//    }
 function slideRightSingle(){ 
     if (isTransitioning) return;
         isTransitioning = true; 
@@ -229,7 +229,7 @@ function slideRightSingle(){
     setTimeout(() => {
         isTransitioning = false;
     }, transitionTime);
-    stopSlide();
+ //   stopSlide();
 }
 
 function slideLeftSingle(){
@@ -242,7 +242,7 @@ function slideLeftSingle(){
     setTimeout(() => {
         isTransitioning = false;
     }, transitionTime);
-    stopSlide();
+ //   stopSlide();
 }
 
 
