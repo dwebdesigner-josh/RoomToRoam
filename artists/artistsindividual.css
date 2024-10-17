@@ -917,8 +917,9 @@ section {width: 100%; height:fit-content; z-index: 1;}
   list-style-type: none;
   text-decoration: none;
   cursor: pointer;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
+  opacity: .7;
   background-image: url('/images/fullscreenclose.png');
   background-size: cover;
 }
