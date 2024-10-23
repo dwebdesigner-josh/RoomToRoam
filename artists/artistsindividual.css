@@ -715,7 +715,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
   width: 33%;
   transition: left 500ms ease-in-out, transform 500ms ease-in-out;
   cursor: pointer;
-}
+} 
 /*alternative slide size: portrait*/
 .slide-anchor2-portrait{
   border: none;
@@ -726,9 +726,21 @@ section {width: 100%; height:fit-content; z-index: 1;}
   transition: left 500ms ease-in-out, transform 500ms ease-in-out;
   cursor: pointer;
 }
-/*alternative slide size: landscape - TODO*/
+/*alternative slide size: landscape*/
+.slide-anchor2-landscape{
+  border: none;
+  position: absolute;
+  aspect-ratio: 9/6; /*SLIDE IMAGE THUMBNAIL SIZE HERE*/
+  /*width: 50%;*/
+  width: 50vw;
+  transition: left 500ms ease-in-out, transform 500ms ease-in-out;
+  cursor: pointer;
+}
 
-
+#slides-container-landscape{
+  position: relative;
+   left: -12%;
+}
 /*
   .slide-expand-arrow{
     display: flex; justify-content: center; width: 100%; height: 1rem; align-self: center;
@@ -924,11 +936,7 @@ section {width: 100%; height:fit-content; z-index: 1;}
   background-size: cover;
 }
 
-#slideexpand-imgcontainer {
-display: flex;
-align-items: center;
-justify-content: center;
-}
+
 /*
 @media screen and (max-width: 530px){
   #slideexpand-imgcontainer {
@@ -953,14 +961,26 @@ justify-content: center;
     
   }
 }*/
-
+/*fullscreen img portrait*/
 #slideexpand-imgcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: auto;
   max-width: 100vw;
   max-height: 100svh;
   aspect-ratio: 6/9;
 }
-
+/*fullscreen img landscape*/
+#slideexpand-imgcontainer-landscape{
+display: flex;
+align-items: center;
+justify-content: center;
+width: auto;
+max-width: 100vw;
+max-height: 100svh;
+aspect-ratio: 9/6;
+}
 
 /*RADIO BUTTON EXPANDER*/
 
