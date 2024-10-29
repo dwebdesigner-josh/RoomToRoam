@@ -274,12 +274,16 @@ header {
       /* ship.png would be - width: 184px; height: 255px;*/
       /* bigger ship with background trail included would be - width: 600px; height: 900px;  position: relative; bottom: 900px;*/
       
-      #loadscreen-notfirst{
-          animation: scrolldown 2s linear 1;
-          animation-play-state: running;
-          animation-iteration-count: 1;
-          animation-fill-mode: both;
-      }
+     /* #loadscreen-notfirst{
+      animation: scrolldown 1s linear 1;
+      animation-play-state: running;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      }*/ /*REMOVED AND REPLACED WITH BELOW 2 LINES - for UX.. may revert this change later*/
+      #loadscreen-notfirst{ background-image: none; display: none; visibility: hidden; width: 0; height: 0;}
+      #loadscreen-notfirst>img{display: none; visibility: hidden; width: 0; height: 0;}
+
+
       @media screen and (max-width: 850px){
         @keyframes scrolldown {
         0%{transform: translateY(0);}
