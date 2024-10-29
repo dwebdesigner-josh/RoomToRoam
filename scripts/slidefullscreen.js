@@ -78,7 +78,11 @@
     slidebuttonCloseFullscreen.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' || event.keyCode === 13) {
             closeSlideFullscreen();
+        } else if (event.key === 'Escape' || event.keyCode === 27) {
+            // Call a function to exit fullscreen or handle escape
+            closeSlideFullscreen();
         }
     });
+    
 })();
 
