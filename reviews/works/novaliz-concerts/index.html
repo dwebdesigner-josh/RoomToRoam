@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room To Roam</title>
+    <link rel="icon" href="/images/favicon.ico?v=1.1">
+<!--"inter" font-->
+<link href="/fonts/inter.css" rel="stylesheet">
+<!--CSS-->
+<link rel="stylesheet" href="/reviews/reviewsindividual.css?v=1.1">
+<!--jquery plugin-->
+<script src="/scripts/jquery.min.js"></script>
+</head>
+ 
+<body>
+
+<!--make sure to use landmark elements rather than divs for sections of the page (nav, main, header, section,...)-->
+<!--(ACCESSIBILITY)NOTE: BUTTONS VS ANCHORS USAGE- buttons should only be used for interactive elements/forms/modules, while anchors should be used for in-site links -->
+<!--(ACCESSIBILITY)NOTE: For nav, use <nav><ul><li><a> One reason to use the <nav>, <ul>, <li> tags when building a navigation menu is that semantic markup will improve accessibility for users that require screen-readers.-->
+
+  <header>
+    <a href="/" aria-label="Home Button" id="header-link">
+      <h1 id="header-h1">Room to Roam</h1>
+      <img src="/images/logotreeV5.png" alt="" id="tree-img">
+    
+    </a>
+</header>
+
+<nav>
+    <span id="topnav-label" hidden>Navigation</span>
+
+    <button id="topnav-open" aria-expanded="false" aria-labelledby="topnav-label">
+   
+          <div class="hamburger-icon">
+            <span class="hamburger-icon-piece"></span>
+            <span class="hamburger-icon-piece"></span>
+            <span class="hamburger-icon-piece"></span>
+          </div>
+    </button>
+    
+    <div id="topnav-menu" role="dialog" aria-labelledby="topnav-label">
+      <button id="topnav-close" aria-label="Close"><div class="hamburger-icon"></div></button>
+      <ul id="topnav">
+        <li class="topnav-item">  <a class="topnav-link" id="topnav-link-home" href="/" target="_self">Home</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/artists/" target="_self">Artists</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/reviews/" target="_self">Reviews</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/connect/" target="_self">Connect</a>  </li>
+        <li class="topnav-item">  <a class="topnav-link" href="/about/" target="_self">About</a>  </li>
+      </ul>
+    </div>  
+</nav>
+
+
+<div id="loadcontainer">
+    <div class="loadscreen" tabindex="-1">
+    <img tabindex="-1" alt="Graphic image of space ship" src="/images/ship.png" aria-label="Loading screen ship animation">
+    </div>
+</div>
+
+<main>
+
+<section id="section-heading-links">
+  <span class="span-filler"></span>
+  <div id="link-reviews-container">
+    <a href="/reviews/" target="_self" id="link-reviews"> <h3><i>Reviews</i></h3> </a>
+    <span id="span-slash">//</span>
+    <a href="/reviews/works/" target="_self" id="link-reviews-albums"><h3>Works</h3></a> 
+  </div>
+</section>
+
+
+  <span class="span-filler"></span>
+
+  <h2 class="longh2header">Concert Photography</h2>
+  <a id="link-artistname" href="/artists/novalizphoto/" target="_self"><h3>Nova Liz</h3></a>
+
+  <img class="work-img-portrait" src="/images/aboutreel2-2.jpg" alt="image of the reviewed work"/>
+ 
+<span class="span-filler-widescreen"></span>
+
+<section id="section-review-content">
+  <div class="review-subsection"> 
+    <img class="work-img-portrait-float" src="/images/aboutimg2.jpg" alt="image of the reviewed work"/>
+
+
+        <p class="p-reviewtext-float">
+          Nova Liz’s concert photography captures the electrifying atmosphere of live music, immersing viewers in the raw energy of performances. Their ability to freeze moments in time showcases not only the artists on stage but also the palpable connection between performer and audience, creating an intimate narrative that resonates deeply.
+        </p>
+
+        <p class="p-reviewtext-float">
+          Through dynamic angles and vivid lighting, Nova Liz transforms standard concert images into powerful visual experiences. The use of movement and depth elevates their work, conveying the intensity of live shows and the unique emotions that arise in these shared moments. Each photograph invites viewers to feel the beat of the music and the pulse of the crowd, encapsulating the essence of the genre.
+        </p>
+        <img class="work-img-portrait-nonfloat" src="/images/aboutimg2.jpg" alt="image of the reviewed work"/>
+
+    </div>
+  </div>
+
+  <div class="review-subsection"> 
+    <img class="work-img-portrait-float" id="img-floatleft" src="/images/aboutreel2-5.jpg" alt="image of the reviewed work"/>
+
+        <p class="p-reviewtext-float">
+          Their keen eye for detail and composition allows Nova Liz to portray the nuances of performance, from the exuberance of a lead singer to the unity of a band. This approach not only celebrates the artists but also emphasizes the importance of the audience's role in the live music experience. The resulting images serve as a testament to the power of music to forge connections and evoke passion.
+        </p>
+        <p class="p-reviewtext-float">
+          With a portfolio that showcases a range of genres and settings, Nova Liz's concert photography reflects a profound appreciation for the artistry of live performance, inviting fans to relive the magic of their favorite shows. This photography feels as alive as the shows themselves, making each shot a lasting reminder of the connection, passion, and movement that define the world of live music.
+        </p>
+        <img class="work-img-portrait-nonfloat" src="/images/aboutreel2-5.jpg" alt="image of the reviewed work"/>
+
+  </div>
+
+  <p class="p-reviewtext-standalone">
+    Nova Liz’s work goes beyond capturing performances; it’s about the intense connections sparked in those moments. Each image feels like a gateway, letting viewers experience the fleeting unity and thrill of a live show. For a look at how Nova Liz captures this energy, explore their artist page below.
+  </p>
+
+</section>
+
+
+<span class="span-filler"></span>
+
+<a id="link-viewartistspage" href="/artists/novalizphoto/" aria-label="Continue to this artist's page." target="_self">
+  <img class="artist-profileimg" src="/artists/novalizphoto/images/novalizphoto1-2.jpg" alt="image of the artist"/>
+  <h3>View Artist's Page</h3>
+</a>
+
+
+<span class="span-filler"></span>
+
+<h2>Similar Reviews</h2>
+
+<div class="container-similarreviews">
+  <a href="/reviews/works/novaliz-concepts/" aria-label="Continue to another review page for a similar work." target="_self"><img class="similarreviews-img-portrait" src="/artists/novalizphoto/images/novalizphoto2-holdofme.jpg" alt=""/></a>
+  <a href="/reviews/works/technicolors-ultravioletdisguise/" aria-label="Continue to another review page for a similar work." target="_self"><img class="similarreviews-img" src="/images/technicolors/technicolors-ultravioletdisguise.jpg" alt=""/></a>
+
+</div>
+
+
+
+
+</main>
+
+<footer>
+  <ul class="footer" id="footer-internals">
+    <li class="footer-item">  <a class="footer-link" href="/artists/" target="_self">Artists</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/reviews/" target="_self">Reviews</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/connect/" target="_self">Connect</a>  </li>
+    <li class="footer-item">  <a class="footer-link" href="/about/" target="_self">About</a>  </li>
+  </ul>
+  <ul class="footer" id="footer-socials">
+    <li class="footer-item" id="insta"> <a aria-label="Room To Roam Instagram account external link" class="footer-externallink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="/images/insta.png" alt=""></a></li>
+    <li class="footer-item" id="fb"> <a aria-label="Room To Roam Facebook account external link" class="footer-externallink" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="/images/facebook.png" alt=""></a></li>
+    <li class="footer-item" id="tiktok"> <a aria-label="Room To Roam TikTok account external link" class="footer-externallink" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><img src="/images/tiktok.png" alt=""></a></li>
+    <li class="footer-item" id="yt"> <a aria-label="Room To Roam YouTube account external link" class="footer-externallink" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="/images/youtube.png" alt=""></a></li>
+  </ul>
+</footer>
+
+<ul class="footer" style="z-index: 1;">
+  <li class="footer-item"><a class="footer-link" href="/privacypolicy/" target="_self">Privacy Policy</a></li>
+  <li class="footer-item"><a class="footer-link" href="/disclaimer/" target="_self">Disclaimer</a></li>
+</ul>
+
+
+<script src="/scripts/loadanimation.js?v=1.0"></script>
+<script src="/scripts/hamburger.js?v=1.0"></script> 
+<script src="/scripts/reviewsindividual.js?v=1.0"></script> 
+  
+</body>
+
+</html>
+
