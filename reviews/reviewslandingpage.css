@@ -231,24 +231,24 @@ header {
 
 
 /*LOADSCREEN*/
-      #loadcontainer{
+ /*     #loadcontainer{
           width: 100%;
           overflow-y: hidden;
           position: absolute;
           top: 0;
           pointer-events: none;
       }
-          /*small*/
+          
           @media screen and (min-width: 0px){
-          #loadcontainer {height: 46.5rem;} /* - 1.5rem for unexpected crap + 3rem + 7rem + 1rem + 30rem + 3rem + 4rem  - 3rem span-filler at top + 3.5rem h1 height (x2 when it wraps at 643px) + 1rem h1 marginbottom + 3x10rem height planet images + 3x1rem container marginbottom + 2rem footer (x2 under 850px) */
+          #loadcontainer {height: 46.5rem;}
           }  
-          /*medium*/
+          
           @media screen and (min-width: 644px){
-            #loadcontainer {height: 45.5rem;} /*3rem + 3.5rem + 1rem + 30rem + 3rem + 4rem*/
+            #loadcontainer {height: 45.5rem;} 
             }                                  
-          /*large*/
+          
           @media screen and (min-width: 851px){
-            #loadcontainer {height: 43.5rem;} /*3rem + 3.5rem + 1rem + 30rem + 3rem + 2rem*/
+            #loadcontainer {height: 43.5rem;} 
             } 
       .loadscreen {
         pointer-events: none;
@@ -271,18 +271,16 @@ header {
           width: 184px;
           height: 255px;
       }
-      /* ship.png would be - width: 184px; height: 255px;*/
-      /* bigger ship with background trail included would be - width: 600px; height: 900px;  position: relative; bottom: 900px;*/
       
-     /* #loadscreen-notfirst{
+      #loadscreen-notfirst{
       animation: scrolldown 1s linear 1;
       animation-play-state: running;
       animation-iteration-count: 1;
       animation-fill-mode: both;
       }*/ /*REMOVED AND REPLACED WITH BELOW 2 LINES - for UX.. may revert this change later*/
-      #loadscreen-notfirst{ background-image: none; display: none; visibility: hidden; width: 0; height: 0;}
+  /*    #loadscreen-notfirst{ background-image: none; display: none; visibility: hidden; width: 0; height: 0;}
       #loadscreen-notfirst>img{display: none; visibility: hidden; width: 0; height: 0;}
-
+*/
 
       @media screen and (max-width: 850px){
         @keyframes scrolldown {

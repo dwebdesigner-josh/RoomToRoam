@@ -7,7 +7,9 @@ Client Site: Room to Roam Records
 HOME PAGE NOTES:
 
 TODO
-test fix: removed notfirst loadingscreen on reviews landing page using styles for quicker UX - TODO: fix flickering image on page reload, consider readding the loadscreen 
+- test fix: removed notfirst loadingscreen on reviews landing page using styles for quicker UX - TODO: fix flickering image on page reload, consider readding the loadscreen 
+
+- add "read review" link to artist individual page slide info cards where applicable (sweat needs one, all nova's slides need them, etc.)
 
 TODO:
 10/16:
