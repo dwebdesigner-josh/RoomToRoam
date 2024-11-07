@@ -336,7 +336,7 @@ background-repeat: repeat;
 }
 
 #loadscreen-notfirst{
-  animation: scrolldown 3s linear 1;
+  animation: scrolldown 2s linear 1;
   animation-play-state: running;
   animation-iteration-count: 1;
   animation-fill-mode: both;
