@@ -24,7 +24,7 @@
         const worksLinks = {
             1: ['/reviews/works/flooko-astronautadventures', '/reviews/works/flooko-astronautadventures', '/reviews/works/flooko-astronautadventures'],
             2: ['/reviews/works/technicolors-metaphysical', '/reviews/works/technicolors-cinemasublimina', '/reviews/works/technicolors-ultravioletdisguise'],
-            3: ['/reviews/works/novaliz-concepts', '/reviews/works/novaliz-concerts', '/reviews/works/novaliz-selfportraits']
+            3: ['/reviews/works/novaliz-concepts', '/reviews/works/novaliz-concerts', '/reviews/works/novaliz-concepts']
         };
 
         const currentArtistWorks = worksImages[slideCount2];
