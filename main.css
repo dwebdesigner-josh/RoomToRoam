@@ -240,7 +240,7 @@ height: 100svh;
 }
 
 @media screen and (min-width: 850px){
-  header{height: 50vw;}
+  header{height: 50vw; margin-top: 20svh;}
 } /*fix for overlap happening with only 500px min height on small desktop windows, also fix extra space on tablets with height 50vw instead of minheight 50vw*/
 
     header>.logo {width: 100%; grid-area: 1/1/1/1; margin:0; padding:0;border:0;} /*use grid to overlap the imgs by forcing into the same grid space*/
