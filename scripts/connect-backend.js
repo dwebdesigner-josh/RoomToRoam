@@ -53,8 +53,10 @@ document.getElementById('contactForm').addEventListener('submit', async function
       } else {
         // Handle and display validation errors
         const errors = responseJson.errors || [{ msg: 'An unknown error occurred.' }];
-        messageDiv.innerHTML = `<p class="error">${errors.map(err => err.msg).join(', ')}</p>`;
-      }
+        console.error('Form submission error:', errors.map(err => err.msg).join(', '));
+
+       
+      } //REMOVED FROM VISIBLE PAGE messageDiv.innerHTML = `<p class="error">${errors.map(err => err.msg).join(', ')}</p>`;
 
     } catch (error) {
       messageDiv.innerHTML = `<p class="error">An unexpected error occurred: ${error.message}</p>`;
