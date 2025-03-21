@@ -30,6 +30,12 @@ document.getElementById('contactForm').addEventListener('submit', async function
           messageDiv.innerHTML = `<p class="error">Failed to parse server response.</p>`;
           return;
         }
+      } else if (contentType && contentType.includes('text/html')) {
+        // Handle HTML response (e.g., Cloudflare 504 error page)
+        const responseText = await response.text(); // Read as text
+        console.error('Unexpected response format (HTML):', responseText);
+        messageDiv.innerHTML = `<p class="error">The server took too long to respond. Please try again later.</p>`;
+        return;
       } else {
         const responseText = await response.text(); // Read as text if not JSON
         console.error('Unexpected response format:', responseText);
