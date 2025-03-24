@@ -231,7 +231,7 @@ header {
 
 
 /*LOADSCREEN*/
- /*     #loadcontainer{
+      #loadcontainer{
           width: 100%;
           overflow-y: hidden;
           position: absolute;
@@ -277,7 +277,7 @@ header {
       animation-play-state: running;
       animation-iteration-count: 1;
       animation-fill-mode: both;
-      }*/ /*REMOVED AND REPLACED WITH BELOW 2 LINES - for UX.. may revert this change later*/
+      } /*REMOVED AND REPLACED WITH BELOW 2 LINES - for UX.. may revert this change later*/
   /*    #loadscreen-notfirst{ background-image: none; display: none; visibility: hidden; width: 0; height: 0;}
       #loadscreen-notfirst>img{display: none; visibility: hidden; width: 0; height: 0;}
 */

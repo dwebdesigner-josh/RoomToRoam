@@ -39,12 +39,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
         
       } else {
         const responseText = await response.text(); // Read as text if not JSON
-        console.error('Unexpected TESTESETESTETST format:', responseText);
+        console.error('Unexpected response format:', responseText);
         messageDiv.innerHTML = `<p class="error">Unexpected response format.</p>`;
         return;
       } 
       // removed as this is sensitive info that shouldn't show up for viewers of the site, and looks horrible:         
-      // messageDiv.innerHTML = `<p class="error">Unexpected REMOVED format. Response: ${responseText}</p>`;
 
 
       if (response.ok) {
