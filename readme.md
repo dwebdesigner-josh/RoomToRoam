@@ -801,7 +801,7 @@ html
     <textarea autocomplete="off" placeholder="Your message" name="body" required></textarea>
   </div>
 
-                            <div class="oh-no-hun" >
+                            <div class="div-textinputs-website" >
                               <input tabindex="-1" autocomplete="off" type="text" name="body2" />
                             </div>
   <div>
