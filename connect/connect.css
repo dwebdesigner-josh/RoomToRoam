@@ -293,14 +293,12 @@ main {
 } 
 
 /*honeypot*/
-.div-textinputs-company{
-  opacity: 0;
+.div-textinputs-company, .div-textinputs-company *{
   position: absolute;
   top: 0;
-  left: 0;
-  height: 0;
-  width: 0;
-  z-index: -1;
+  left: -9999px;
+  height: 1px;
+  width: 1px;
 }
 
 /*sections*/
