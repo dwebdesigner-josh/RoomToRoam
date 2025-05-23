@@ -36,7 +36,7 @@ app.use(express.json()); // For application/json
 // Configure rate limiter
 const formSubmitLimiter = rateLimit({
   windowMs: 24 * 60 * 60 * 1000, // 24 hours
-  max: 4, // Limit each IP to 10 requests per `windowMs`
+  max: 3, // Limit each IP to 10 requests per `windowMs`
   standardHeaders: true, // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
   message: 'Too many form submissions from this device, please try again later.',
@@ -47,11 +47,11 @@ const formSubmitLimiter = rateLimit({
 app.post('/send-email',
   // Honeypot check
   (req, res, next) => {
-    // Check if req.body.body2 has any content
-    if (req.body.body2 && req.body.body2.length > 0) {
+    // Check if req.body.company has any content (honeypot)
+    if (req.body.company && req.body.company.length > 0) {
       return res.status(400).json({ message: 'Form submission failed.' });
   }
-    // If body2 is empty, pass control to the next middleware
+    // If company (honeypot) field  is empty, pass control to the next middleware
     next();
 },
 
@@ -152,7 +152,9 @@ const ipDetailsText = `City: ${city} | Region: ${region} | Country: ${country} |
     auth: {
       user: process.env.EMAIL_USER,  // Use environment variable
       pass: process.env.EMAIL_PASS   // Use environment variable
-    }
+    },
+  debug: true, // show debug output
+  logger: true // log information in console
   });
 
   try {
