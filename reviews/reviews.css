@@ -395,8 +395,8 @@ main h2 {font-size: 2rem;}
       .dt-layout-table{border-bottom: 1px inset white;}
       .dt-start, .dt-end{color: #e3f5ff;}
 
-      tr {height: 6rem;}
-      td { margin-top: 1rem; margin-bottom: 1rem;}
+      tr{height: 6rem; padding-top: 1rem; padding-bottom: 1rem;}
+      tbody{height: fit-content;}
         /*
       .th-sortlabel {position: relative; bottom: 2rem; z-index: 1;}
       .th-sortlabel .dt-column-title{position: relative; bottom: 1rem;}
@@ -450,7 +450,7 @@ main h2 {font-size: 2rem;}
 
       .list-backgroundedge-container {
         padding: .5rem;
-        width: 20rem;
+        width: 20rem; 
         aspect-ratio: 1/1;
         background-image: url(/images/back2.jpg);
         border-radius: 1rem;
