@@ -425,8 +425,8 @@ background-color: #4b607a; color: #f3fbff;
 /*section - swirl animated buttons*/
 
 
-#swirl-container{display:flex; width: 100%; z-index: 1; flex-wrap: wrap; justify-content: center; border: 1px solid blue;}
-.swirl{width: 40%; z-index: 1; opacity: .8; position: relative; margin-bottom: -12%; aspect-ratio: 1/1; border: 1px solid red;}
+#swirl-container{display:flex; width: 100%; z-index: 1; flex-wrap: wrap; justify-content: center;}
+.swirl{width: 40%; z-index: 1; opacity: .8; position: relative; margin-bottom: -12%; aspect-ratio: 1/1;}
 
 .swirl-image{border-radius: 50%; overflow: hidden; width: 100%; position: relative; top: 0; z-index: 1;}
   
@@ -436,11 +436,11 @@ background-color: #4b607a; color: #f3fbff;
   position: relative; top: -50%; left: 37%;
   border-radius: 50%;
   text-decoration: none;
-  z-index: 5; border: 1px solid white;
+  z-index: 5;
 } 
 
-.div-filler{display: block; width: 29%; border: 1px solid green;}
-.div-filler2{display: block; width: 15%; border: 1px solid yellow;}
+.div-filler{display: block; width: 29%;}
+.div-filler2{display: block; width: 15%;}
 
 
 @media screen and (min-width: 550px){
