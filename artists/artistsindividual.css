@@ -617,9 +617,9 @@ section {width: 100%; height:fit-content; z-index: 1;}
 
 /*section - swirl animated buttons*/
 
-#swirl-container{display:flex; width: 100%; z-index: 1; aspect-ratio: 3/1;}
-.swirl{ flex:1; max-width: 33%; z-index: 1; opacity: .8; position: relative;} /*possibly remove opacity style*/
-.swirl-image{width: 100%; position: relative; top: 6%; z-index: 1;}
+#swirl-container{display:flex; width: 100%; z-index: 1; aspect-ratio: 3/1; border: 1px solid red;}
+.swirl{ flex:1; max-width: 33%; z-index: 1; opacity: .8; aspect-ratio: 1/1; position: relative; border: 1px solid white;} /*possibly remove opacity style*/
+.swirl-image{width: 100%; position: relative; top: 6%; z-index: 1; border: 1px solid blue;}
 .swirl-link{
   display: block; width: 25%; aspect-ratio: 1/1; height: auto; 
   justify-content: center; align-items: center; display: flex; 
