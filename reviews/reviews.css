@@ -395,7 +395,7 @@ main h2 {font-size: 2rem;}
       .dt-layout-table{border-bottom: 1px inset white;}
       .dt-start, .dt-end{color: #e3f5ff;}
 
-      tr{height: 6rem; padding-top: 1rem; padding-bottom: 1rem;}
+      tr{height: 6rem; margin-top: 1rem; margin-bottom: 1rem;}
       tbody{height: fit-content;}
         /*
       .th-sortlabel {position: relative; bottom: 2rem; z-index: 1;}
